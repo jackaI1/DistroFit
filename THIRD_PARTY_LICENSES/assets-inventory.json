@@ -1,0 +1,2459 @@
+[
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-arccos.csv",
+    "sha256": "c81973f2be919e701885d9686f3186a3614a63e0e849341a3f6eb2f35dfc6b72",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-arccosh.csv",
+    "sha256": "d065deed71b56778d701c2be3a5128b7f0dfdcc7ad0d04a56e6dcc27ffe23109",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-arcsin.csv",
+    "sha256": "c3f4afd8d0e7fa62d9480a9be7a253da0e1ba81cf16008a179d5b11ee7fcdae5",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-arcsinh.csv",
+    "sha256": "0d9acc6286596723350c3c97354c52973c7a6ce81a8e74522d6033c5c3dc93c9",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-arctan.csv",
+    "sha256": "d1aa2c5d9fbd0d84e8a74963e1b7dc04dc1856f8d9756d7785b3114d1453995d",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-arctanh.csv",
+    "sha256": "1c42bd78fc753a42ab5c82a4314574231ae6b03a8896029d76223e2ef176276d",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-cbrt.csv",
+    "sha256": "bfce7931366287e7d9a7f1ae103b2ddaa688b315386bbbe501b788272db12a97",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-cos.csv",
+    "sha256": "d0f3670ea2a4a2467b11154381b7acf0a35973e21226b65495565ce4b916d7c1",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-cosh.csv",
+    "sha256": "24a0b89caaf7c13cc0fd7352890bd552af73918cb8763bedbb6fa3e1967fece7",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-exp.csv",
+    "sha256": "ad401621bbf278a87dacf7e9da7d19abb00aabf9ef1e981b8332e3025961b1e9",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-exp2.csv",
+    "sha256": "763a2c4feddf4e988dfdfff658eba680cbae2a00bf5e1a553be42c505c08eae5",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-expm1.csv",
+    "sha256": "2bb8cbe8de0a4065fbd5f8f986f624cdc31793b32641eb3c170acd7f2acfa605",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-log.csv",
+    "sha256": "ca7cdb55b2b1173c56170c479f15fb1699bebdad3da08de82b5fe54ded7d838c",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-log10.csv",
+    "sha256": "34e043fab39623f14f1b85666f3bb726d5fd500f37f1fd80683140fb06a2a860",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-log1p.csv",
+    "sha256": "b5d6d858fa96233f0111b232925ca787fb69409ce8f7bd0475de1e93a0ec3dbf",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-log2.csv",
+    "sha256": "dfd1140f4bc531bc32a17a0e8600a689de8d78401053b15fed01633ec54e6c81",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-sin.csv",
+    "sha256": "f0f5239d0fd87e6c456f8d9726bbe9be691e4a910e9445d298dbc82b85607c03",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-sinh.csv",
+    "sha256": "5ceb0152e3dc32388efe97af31a96999dd2246fda09a787dbbb6d5f592cb83c2",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-tan.csv",
+    "sha256": "1efd9650c22c71fbd0279639062a6e1e4e28138558e9029b429fe4351742a984",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/_core/tests/data/umath-validation-set-tanh.csv",
+    "sha256": "8a895917f30ec964606126be4ac0f875fe669f214ad7cceb20223be34496a137",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/lib/tests/data/py2-objarr.npz",
+    "sha256": "c68d771c14f415b159daabd9cf42d61836f74ae40049269787baca7d57098f1e",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/lib/tests/data/py3-objarr.npz",
+    "sha256": "bd5465f7f359effabe86376e52bf185a7cd1cbc1123659af30f95a4920baf5f9",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/random/tests/data/mt19937-testset-1.csv",
+    "sha256": "5e479fe34d80541f9e660610915b68c444479317df080f49cadfe831bb491b06",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/random/tests/data/mt19937-testset-2.csv",
+    "sha256": "9ec04440d9df7fe6858c760ae2d863bd42b8c525c349fbf96936dc139f693a41",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/random/tests/data/pcg64-testset-1.csv",
+    "sha256": "c41d340e99271944d30b10ebf4be9a368f47b3eb1fcc431b5124b8b75d534df1",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/random/tests/data/pcg64-testset-2.csv",
+    "sha256": "3537734cabc6d94eff5b253f228414b4ccd4de412f0c7dfd0a09d1e95ce14e4c",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/random/tests/data/pcg64dxsm-testset-1.csv",
+    "sha256": "bcd4944fe8174bfa04c3f6b04773b7d338953b8b1e34f52fd54219d3549f5672",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/random/tests/data/pcg64dxsm-testset-2.csv",
+    "sha256": "bb2952f0f536008299d7ce4e0b4e1106bfce78fc1e191b6f9fe744e18374c980",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/random/tests/data/philox-testset-1.csv",
+    "sha256": "49e751688cb9cc569d9a4ef59caac6c42159e81c0acfc83503df8e669dc89246",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/random/tests/data/philox-testset-2.csv",
+    "sha256": "756102b7eb1b7ef69288af3e620a7902aca3a0de62dba5443ab5ea834d6b9378",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/random/tests/data/sfc64-testset-1.csv",
+    "sha256": "887b3a897e8a47c6f11b02a4fb7b5e74074c3f3e995bcb250d25040a402a0bc4",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.4",
+    "file": "numpy/random/tests/data/sfc64-testset-2.csv",
+    "sha256": "1480c80c509a3d97d6512c6c24c01ee7c84f36632b536ee409df45842118b7f9",
+    "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://numpy.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/cmex10.afm",
+    "sha256": "6e54771119ab5415795ca9009c30a3e0d31e6158331fb717b49deee7dbbd1ae1",
+    "license": "BaKoMa permissive font license",
+    "evidence": "Matplotlib wheel LICENSE, BaKoMa section",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/cmmi10.afm",
+    "sha256": "e6ac043a979d128efa6c351a872bae175ab4703f38b51ad7f95438a773257c1a",
+    "license": "BaKoMa permissive font license",
+    "evidence": "Matplotlib wheel LICENSE, BaKoMa section",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/cmr10.afm",
+    "sha256": "583be00bf0f752418983dbbe27453a45a4f4da5178a33de54311ed835af7958c",
+    "license": "BaKoMa permissive font license",
+    "evidence": "Matplotlib wheel LICENSE, BaKoMa section",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/cmsy10.afm",
+    "sha256": "01b9b3bc255605c78745f9917de27d13ac733904c52e4d14d730dfa5fdff31a3",
+    "license": "BaKoMa permissive font license",
+    "evidence": "Matplotlib wheel LICENSE, BaKoMa section",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/cmti10.afm",
+    "sha256": "04d9dfff74b594974e0764539fba5221668cf2a05647a0a2973c3dda2533370f",
+    "license": "BaKoMa permissive font license",
+    "evidence": "Matplotlib wheel LICENSE, BaKoMa section",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/cmtt10.afm",
+    "sha256": "e238bbfe64e979631af77a3f5070563ca0a7aac05f84924d9656add65240acfe",
+    "license": "BaKoMa permissive font license",
+    "evidence": "Matplotlib wheel LICENSE, BaKoMa section",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pagd8a.afm",
+    "sha256": "8e316b8a0c244e960ba9adba729cd9bca40d068f8fb85e1b98356a68ce29316c",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pagdo8a.afm",
+    "sha256": "b2035075e632c7c27e8ad1b0f61df5cbde5a301893091be63523d35f0c12ef18",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pagk8a.afm",
+    "sha256": "654b5f1cf96836a72f18c1ccc5a2834a5b2184e723c21794c75e37470a467485",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pagko8a.afm",
+    "sha256": "623d70060e89b2aab3d4a05f851a09dc0091f82310a25f058ff64ce4d6758039",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pbkd8a.afm",
+    "sha256": "665e68e89fdd8bd6398f61291ed8dec3efec7e0efe5a879598ef4fcce6124d47",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pbkdi8a.afm",
+    "sha256": "2403a7a3ddf4893c9f6482cc7f5d6f5ad89a4e0ac970fa4fe8545346110c303e",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pbkl8a.afm",
+    "sha256": "509a898ce27ac500e00c12d7d79ee62a9a2120915598733e37ac76f83886bf5e",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pbkli8a.afm",
+    "sha256": "0168ac959da10dbb34a31fea396444ba0b1b4bcffc9692f8f0b3cc478d2aa62d",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pcrb8a.afm",
+    "sha256": "ea3d534b651cec359273ef25e364c60dcd6ed0583c26ca5e59fc456b28d4c22f",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pcrbo8a.afm",
+    "sha256": "b268379a397d41a043b5022dd3a928e46bdac4bb0ef50b53bd800db84e617c6d",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pcrr8a.afm",
+    "sha256": "ee7c45af4121cf8139286ff3484e5264e871447f0cc9f9c26f0fbbc79c2eeedc",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pcrro8a.afm",
+    "sha256": "34a133ed7b5d16487d700f0cbd8f92dd4399955d98fc9ded3045851718fb4128",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/phvb8a.afm",
+    "sha256": "340c783381e32fbbc034225b73eb64d38564a25f93d28697790dd3da1f9752f3",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/phvb8an.afm",
+    "sha256": "f1efe6c83f80424345eeaf5734b6f69bbebf957d9352bddae70a20fcb204d6c9",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/phvbo8a.afm",
+    "sha256": "f1f90146627e49663662b060f1f1728c9cab269f1d690e893cee8bbe133cc4f2",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/phvbo8an.afm",
+    "sha256": "69e551bd5e2bd79041bf1b91274306f191ee1f61d58ae22209892fb9aa669263",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/phvl8a.afm",
+    "sha256": "23231833e6e097e808eab1b412e659d8e2f397125f19e4a1f31aac874b7e7894",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/phvlo8a.afm",
+    "sha256": "b35d82f9e3672031c9fd455bba2a6b8f10630a21c86d2dd8f0e4530bea93a6e2",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/phvr8a.afm",
+    "sha256": "2adf0a69189db6cf3d10120adbd5f62689835040f1beba1e689cff44d4e2eabe",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/phvr8an.afm",
+    "sha256": "94be5f0074d1c0e0e5fac079987ec87ec0f5b679de6b8c9150afbf09ad9b4073",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/phvro8a.afm",
+    "sha256": "dcaa8adde7a3891e21205054ca7b925ffe2531d1365764f9f31385f255fe7f07",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/phvro8an.afm",
+    "sha256": "571f6b45fdd87dab0c63bb73fa78d2c73ebbc472a4f9f36437bc818b45f620fd",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pncb8a.afm",
+    "sha256": "6a85dea5370342d41afe6b297e530990414a79fcd71e8ca3cfa8a825523460d7",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pncbi8a.afm",
+    "sha256": "a42596d4c620cb4126bf0698b1a60968023f2dfaec2a60c0347bbb3e4d116a25",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pncr8a.afm",
+    "sha256": "d02201d812def6bfbafd697939b4534dff7c50eadece6190f193ae057e642e4b",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pncri8a.afm",
+    "sha256": "e51fa92d93a7687346f298d5e8c3f7022f9dd8e4d0611fdc6026f9cd08737d25",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pplb8a.afm",
+    "sha256": "dc4cd46cd9d7af916de5e14b634d16f685aee7dac73918035d4b8968ea0a379f",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pplbi8a.afm",
+    "sha256": "5fff6d56ca6fadc31eaf7392f2abddc23145aa90176199dec822f634703dd368",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pplr8a.afm",
+    "sha256": "8a331be3dec50c9f6755d54c6f6d45ed6dfe72ef6c6fff67174a2b885a529fc9",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pplri8a.afm",
+    "sha256": "f0a2136daadc514322fe176844b2e6347b65aacd13b4e48aaad3c57eded7e676",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/psyr.afm",
+    "sha256": "232b7c6a31380764e6df8a018f6a4ab5cb487fd90f7ead39b2e41e7eaf29dd1a",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/ptmb8a.afm",
+    "sha256": "6cbd5f035342e3f9d6d7866b9f1cf89c795725be1dcc42c93efa1da8a9d878c8",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/ptmbi8a.afm",
+    "sha256": "fbf522e9794a6854c71279284bffb51ad22be55b466b78054367b32ce607b34f",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/ptmr8a.afm",
+    "sha256": "20472c59c9b32728c2c2482cc38a3a848326ce5c975209496adf6cd4f64d9c45",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/ptmri8a.afm",
+    "sha256": "e3d7d0320e5f20682e67bae073fdacb7230ae793efe5b3d3b3bc02ceaa5c1a99",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/putb8a.afm",
+    "sha256": "a8c6874dda64acd2fe9b80d6863a712424a6818902bf5a88ccb9457ccd2b978d",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/putbi8a.afm",
+    "sha256": "83b015272893c5e329364ff57127e6620334f6e3547cf959c961afdc3d6f7009",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/putr8a.afm",
+    "sha256": "5d898d0b919081254064a4c861d61e364b04eb39cd9bd185ff44a6425ae2ab1d",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/putri8a.afm",
+    "sha256": "8bb7d57be88bc8bb50c427c06b82317711feb9f70798c93b85b0861b94f1018e",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pzcmi8a.afm",
+    "sha256": "c32ba821611939ca17ad2975b4fccb9046a18a4ee41a2f752498feb641511b80",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/afm/pzdr.afm",
+    "sha256": "3328cb027cca61175005fa1fd56de4fe17f7d0cbea3a4a8bfff1b6da6439c70c",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/pdfcorefonts/Courier-Bold.afm",
+    "sha256": "b080c323e07cd956770b4988fe61c5213099ecf567dfb00860cbf50ab1d7e2c1",
+    "license": "Adobe AFM permissive grant",
+    "evidence": "Matplotlib fonts/pdfcorefonts/readme.txt (preserved as Adobe-AFM-readme.txt)",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/pdfcorefonts/Courier-BoldOblique.afm",
+    "sha256": "ce0eb54286c3dd853d5017c25e6be684135a14a9e8fb18fcb18d1bd91a607cbc",
+    "license": "Adobe AFM permissive grant",
+    "evidence": "Matplotlib fonts/pdfcorefonts/readme.txt (preserved as Adobe-AFM-readme.txt)",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/pdfcorefonts/Courier-Oblique.afm",
+    "sha256": "bd1426e63d6c4d4378862713d4f71567d3fd0d34d41e11337cf5ea514cd56611",
+    "license": "Adobe AFM permissive grant",
+    "evidence": "Matplotlib fonts/pdfcorefonts/readme.txt (preserved as Adobe-AFM-readme.txt)",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/pdfcorefonts/Courier.afm",
+    "sha256": "31d72adad79910126b22a5579ec9e179eee86674ecebe3fcff6f76916193af0e",
+    "license": "Adobe AFM permissive grant",
+    "evidence": "Matplotlib fonts/pdfcorefonts/readme.txt (preserved as Adobe-AFM-readme.txt)",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/pdfcorefonts/Helvetica-Bold.afm",
+    "sha256": "8b697881c8ee617a177f6f2e2bbc88570b9fd2b9f0e89ecfc0f5507878f988fc",
+    "license": "Adobe AFM permissive grant",
+    "evidence": "Matplotlib fonts/pdfcorefonts/readme.txt (preserved as Adobe-AFM-readme.txt)",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/pdfcorefonts/Helvetica-BoldOblique.afm",
+    "sha256": "526e4eeaa2b5d435cbb7cba3ff42285a473ce132aa1caddb39b48a52cc10aaf6",
+    "license": "Adobe AFM permissive grant",
+    "evidence": "Matplotlib fonts/pdfcorefonts/readme.txt (preserved as Adobe-AFM-readme.txt)",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/pdfcorefonts/Helvetica-Oblique.afm",
+    "sha256": "8556038366f9da4aad6d5782ce68afdb96d6d7261da64652f8b5e519110dd91b",
+    "license": "Adobe AFM permissive grant",
+    "evidence": "Matplotlib fonts/pdfcorefonts/readme.txt (preserved as Adobe-AFM-readme.txt)",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/pdfcorefonts/Helvetica.afm",
+    "sha256": "db772f2830fb6d000907791d8d26a12524d96943a9a739e520ee855c6b25c96f",
+    "license": "Adobe AFM permissive grant",
+    "evidence": "Matplotlib fonts/pdfcorefonts/readme.txt (preserved as Adobe-AFM-readme.txt)",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/pdfcorefonts/Symbol.afm",
+    "sha256": "3f951aa17af8cb4aa1e1288c6b9baa8a30d3e990ebdbe8cf9a3d5acabcb9f771",
+    "license": "Adobe AFM permissive grant",
+    "evidence": "Matplotlib fonts/pdfcorefonts/readme.txt (preserved as Adobe-AFM-readme.txt)",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/pdfcorefonts/Times-Bold.afm",
+    "sha256": "7104e6af62c53f029013fb0641a81e31c98589c8f27b5ea6289b25b092c74321",
+    "license": "Adobe AFM permissive grant",
+    "evidence": "Matplotlib fonts/pdfcorefonts/readme.txt (preserved as Adobe-AFM-readme.txt)",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/pdfcorefonts/Times-BoldItalic.afm",
+    "sha256": "a7358e772726e91aa87015a001563926ad33dc5a7b2eea9680b34cc78aba385c",
+    "license": "Adobe AFM permissive grant",
+    "evidence": "Matplotlib fonts/pdfcorefonts/readme.txt (preserved as Adobe-AFM-readme.txt)",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/pdfcorefonts/Times-Italic.afm",
+    "sha256": "6cae69b92329193fd85082f0c89ad7a318df8fb5c939d7efe5343f88ab09473c",
+    "license": "Adobe AFM permissive grant",
+    "evidence": "Matplotlib fonts/pdfcorefonts/readme.txt (preserved as Adobe-AFM-readme.txt)",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/pdfcorefonts/Times-Roman.afm",
+    "sha256": "86136b527a5acee0c3283d56a6b68fc6a3d60982eb3bb0fb6cc54e83ecc8d77a",
+    "license": "Adobe AFM permissive grant",
+    "evidence": "Matplotlib fonts/pdfcorefonts/readme.txt (preserved as Adobe-AFM-readme.txt)",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/pdfcorefonts/ZapfDingbats.afm",
+    "sha256": "66e3a6b7d19c2a87e374eabc92a84f86d00884ec242f6ad3253999c408c56a40",
+    "license": "Adobe AFM permissive grant",
+    "evidence": "Matplotlib fonts/pdfcorefonts/readme.txt (preserved as Adobe-AFM-readme.txt)",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf",
+    "sha256": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
+    "license": "Bitstream-Vera",
+    "evidence": "Matplotlib wheel LICENSE_DEJAVU",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/DejaVuSans-BoldOblique.ttf",
+    "sha256": "6edf0283160186af451cbee71e7b845f2e4cabf264bb992ce668c83c25465e6f",
+    "license": "Bitstream-Vera",
+    "evidence": "Matplotlib wheel LICENSE_DEJAVU",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/DejaVuSans-Oblique.ttf",
+    "sha256": "ccdf74b350f11fd3dd5774de50e5e6346a1a5da1f5b7d5fb83590665e97a5213",
+    "license": "Bitstream-Vera",
+    "evidence": "Matplotlib wheel LICENSE_DEJAVU",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf",
+    "sha256": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
+    "license": "Bitstream-Vera",
+    "evidence": "Matplotlib wheel LICENSE_DEJAVU",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/DejaVuSansDisplay.ttf",
+    "sha256": "82099dcfba5aa868cdfc27451989525fe3292f737fb3c9e0328ce9cef59652f6",
+    "license": "Bitstream-Vera",
+    "evidence": "Matplotlib wheel LICENSE_DEJAVU",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Bold.ttf",
+    "sha256": "baada9a5172fe20886251aff0433fc38461912d5daf07287e7bee56620a8da96",
+    "license": "Bitstream-Vera",
+    "evidence": "Matplotlib wheel LICENSE_DEJAVU",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-BoldOblique.ttf",
+    "sha256": "a69081c15c76c827e0a27a5a7f5c74b6135c843499955495ffa8c20d3a98288b",
+    "license": "Bitstream-Vera",
+    "evidence": "Matplotlib wheel LICENSE_DEJAVU",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/DejaVuSansMono-Oblique.ttf",
+    "sha256": "28052813f7a709fc89f52d192dc995ef4f0fdc5c3d7b73a49d6849b1916d0cd0",
+    "license": "Bitstream-Vera",
+    "evidence": "Matplotlib wheel LICENSE_DEJAVU",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/DejaVuSansMono.ttf",
+    "sha256": "602ec86b8948cfcd956482fe64f94c36c867770149ef2f791d4613f443bcecb3",
+    "license": "Bitstream-Vera",
+    "evidence": "Matplotlib wheel LICENSE_DEJAVU",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Bold.ttf",
+    "sha256": "c3753f2ed6bc673f15846dc45addbeb3b9c872f32fb18fd53a21f1bef1ed7676",
+    "license": "Bitstream-Vera",
+    "evidence": "Matplotlib wheel LICENSE_DEJAVU",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/DejaVuSerif-BoldItalic.ttf",
+    "sha256": "d93efec7a9d2e826768d1a2ee95b95870e15e29599a84f3484af1de1cec2e181",
+    "license": "Bitstream-Vera",
+    "evidence": "Matplotlib wheel LICENSE_DEJAVU",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/DejaVuSerif-Italic.ttf",
+    "sha256": "3e7994fbc54fa10ce3352a42d548fadd7d9cadb69cb1109bc9d960f6dac57f04",
+    "license": "Bitstream-Vera",
+    "evidence": "Matplotlib wheel LICENSE_DEJAVU",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/DejaVuSerif.ttf",
+    "sha256": "107244956e9962b9e96faccdc551825e0ae0898ae13737133e1b921a2fd35ffa",
+    "license": "Bitstream-Vera",
+    "evidence": "Matplotlib wheel LICENSE_DEJAVU",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/DejaVuSerifDisplay.ttf",
+    "sha256": "2914f32e47c777c27be5677afae7db4de79f9e45de6fc9097d9949c23c14f7d5",
+    "license": "Bitstream-Vera",
+    "evidence": "Matplotlib wheel LICENSE_DEJAVU",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/LastResortHE-Regular.ttf",
+    "sha256": "60c48abfc05e9f2ba33599c4dcba40105d1ece71d3761f0b26f75a38b5b17895",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXGeneral.ttf",
+    "sha256": "167378031e2dddc6216d67819c9260e9a06ffc4c478e4e23cb98a6fd44b183c2",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXGeneralBol.ttf",
+    "sha256": "e8533dc7083fa346bda1933d60ea4a83b67d0945bceaf1b3541f82b4a0e2c6a0",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXGeneralBolIta.ttf",
+    "sha256": "98788fd4ba48dfbb2bd026c0e20a247a8b06c7372879628b7a6bb0d5bb09736c",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXGeneralItalic.ttf",
+    "sha256": "6cfcb333d22b7c3c623bdfd40174f14c85c3d6731ca6166c1edc80140eae8527",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXNonUni.ttf",
+    "sha256": "5256f7e021335ac4854d180f0e8bf198964ec2fc820176276e16aabc6537bb57",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXNonUniBol.ttf",
+    "sha256": "5d106a5b78d1ffc30174553439b86257bfa45f088120cb3b4150a51dc4f9b60b",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXNonUniBolIta.ttf",
+    "sha256": "a5bdb60e76c37f6c90aa2ce8b5cdf0043a85182fe0dbb61c086262bc7f7e2def",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXNonUniIta.ttf",
+    "sha256": "04cafda56881bf660865dab4e17e1cdc280be8d3cb50fae5eb8695d4de30f548",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXSizFiveSymReg.ttf",
+    "sha256": "c18b87d60614a42baeb2a22d447e647fda7fb3a9940fef57dcbe51bd1b4a4b1b",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXSizFourSymBol.ttf",
+    "sha256": "c8d76f8d4a129ac64250b983ed256af4769b9dd1bd3f874f85ba0bd49a407f4b",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXSizFourSymReg.ttf",
+    "sha256": "fbdc553182f8ff5adc3bc16208aac27d1e0f69298ab40e3675d2c6ab0b5e8b5c",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXSizOneSymBol.ttf",
+    "sha256": "7187b1ca8f2b65c76a325a5af5f345e5ad88a172d44d9b88be1d090f5429d22e",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXSizOneSymReg.ttf",
+    "sha256": "d256c7ce99ddcc998ef12e369a5921b33e4d6ef24b402687e4c71ced06510f37",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymBol.ttf",
+    "sha256": "dde05cf95b586e1414dc19f18b2a5f3ba780cc4bbc05d0efb4825215b912da86",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXSizThreeSymReg.ttf",
+    "sha256": "5c548a0a9b5b11233cbb11ed5054805767326f0c614a377c756541caae9fdf0d",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymBol.ttf",
+    "sha256": "3140981eb03466a162484fcf8c81a525980cbafefd694810a84ec3b6ede4ba8d",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/STIXSizTwoSymReg.ttf",
+    "sha256": "fec7710ee130043b400e9bbd0b221743157bb08a80d93655042522523ab95029",
+    "license": "OFL-1.1",
+    "evidence": "Matplotlib wheel LICENSE / LICENSE_STIX",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/cmb10.ttf",
+    "sha256": "074497b50c43ea57597181591f9893d38fc12a87e95104f5657fc2481f61a23a",
+    "license": "BaKoMa permissive font license",
+    "evidence": "Matplotlib wheel LICENSE, BaKoMa section",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/cmex10.ttf",
+    "sha256": "af28f0c170723ac776a71bfa595aca09e98d15ae5c3d54ce19afd5619c96a905",
+    "license": "BaKoMa permissive font license",
+    "evidence": "Matplotlib wheel LICENSE, BaKoMa section",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/cmmi10.ttf",
+    "sha256": "3092965b8811fd6a6765799664845181fc1dd1330b937f915808c485d316234d",
+    "license": "BaKoMa permissive font license",
+    "evidence": "Matplotlib wheel LICENSE, BaKoMa section",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/cmr10.ttf",
+    "sha256": "4dd9761b058c009db9b2145f55ee6617d093c273dd3d6c5b3e43ff6110fa9bf6",
+    "license": "BaKoMa permissive font license",
+    "evidence": "Matplotlib wheel LICENSE, BaKoMa section",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/cmss10.ttf",
+    "sha256": "7df91a83d05b2e471ec638cb0b435a360a3c792b09fc42a7da67e91f2e79115a",
+    "license": "BaKoMa permissive font license",
+    "evidence": "Matplotlib wheel LICENSE, BaKoMa section",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/cmsy10.ttf",
+    "sha256": "bb226ed932f3f100cd0e52f5e4912ee553b41b69e7bfdb8d3854db0eb6605232",
+    "license": "BaKoMa permissive font license",
+    "evidence": "Matplotlib wheel LICENSE, BaKoMa section",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/cmti10.ttf",
+    "sha256": "f9f1f9f654308ae82f7be4441ae89b080896b34cc220bbea173c5e9adcfe3ef7",
+    "license": "BaKoMa permissive font license",
+    "evidence": "Matplotlib wheel LICENSE, BaKoMa section",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/fonts/ttf/cmtt10.ttf",
+    "sha256": "6211f09ae93599991afda970c24669dad1a77e253d915624fbf212f702f071d7",
+    "license": "BaKoMa permissive font license",
+    "evidence": "Matplotlib wheel LICENSE, BaKoMa section",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/back-symbolic.svg",
+    "sha256": "3a48ffadeb2c6647dee84c2ffe8ec6179b68739a9609e164436707436e417551",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/back.pdf",
+    "sha256": "651ec2268fdd01e08cf8a95a1afb2482d1d0c91b6b3c8a2573c4443a6728a899",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/back.png",
+    "sha256": "1387467f81a7cf5c49d6fdad33280757460d4204a1ade0de540a5a31bfbbe265",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/back.svg",
+    "sha256": "3a48ffadeb2c6647dee84c2ffe8ec6179b68739a9609e164436707436e417551",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/back_large.png",
+    "sha256": "f40ea151241eb3385838d13866e1f792f388b4cd097c356eead91fae89826ec4",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/filesave-symbolic.svg",
+    "sha256": "74c197bcb48e1cfbb8e24896819c7e07f332fed2d668fe89e8683125f2f8156d",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/filesave.pdf",
+    "sha256": "3f510f3d5da0e74593b7c51a5feea41684d9335c55aa8e92d87e8527a65dd5e7",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/filesave.png",
+    "sha256": "6fb72db9caccfc5da61be0f271379d1bf6bfcb8a47931dc5fb333b975f062e19",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/filesave.svg",
+    "sha256": "74c197bcb48e1cfbb8e24896819c7e07f332fed2d668fe89e8683125f2f8156d",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/filesave_large.png",
+    "sha256": "2cd6d10f9299dca7fb9dba7eb2dc7f6b5ffa5df18149651f0dda609a7ce846f9",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/forward-symbolic.svg",
+    "sha256": "90e88aab76b89a278c44b542c1005d38c4d1ad61b634e5ffe7eadb0051e97664",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/forward.pdf",
+    "sha256": "288a882f8608778dcb91c3b157f4d3e6ebf3d523fc939894354789980125315f",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/forward.png",
+    "sha256": "a4a6cb7a98068867b26364c2065f2cbe3be6ed9e024b78b2b05c5cab8191fb09",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/forward.svg",
+    "sha256": "90e88aab76b89a278c44b542c1005d38c4d1ad61b634e5ffe7eadb0051e97664",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/forward_large.png",
+    "sha256": "dfa87b9bb0d90c7aa5ea491da4d3dc9328b62ca09eff1861c9abd6011cffda44",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/hand.pdf",
+    "sha256": "86ca7090d63dd7928f0fb00c5a7550b3b2c53ceb65723d155222eeefa74c69b4",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/hand.png",
+    "sha256": "d9c7214444c629ad2160d294c672400709326171013ea272fd5a923e54f45b64",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/hand.svg",
+    "sha256": "871c41b5a91a54503b9a964e19a92fa3441471bdb1d3aae88de4b9827566cae7",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/help-symbolic.svg",
+    "sha256": "5d570572ecdc2f7490dcb8df49bb5d2d80e3a01e585248f68e4d8693cbda645f",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/help.pdf",
+    "sha256": "09e13defc20c8b4616ce758a8c84f547c22b3f82a16744bbbac3d4beb79281c0",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/help.png",
+    "sha256": "b38a50aea690d29cbc23bbdcf61bf7048dc33bfb64cbeed804ca5a1ee0430816",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/help.svg",
+    "sha256": "5d570572ecdc2f7490dcb8df49bb5d2d80e3a01e585248f68e4d8693cbda645f",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/help_large.png",
+    "sha256": "d48c04c967c64609e809633eafd0891c4a204c9543e67d5cf0b5d32b8009e111",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/home-symbolic.svg",
+    "sha256": "a6daeeb3c8793d94e2f5a8587e76b3fae67c3001c2afbd9a3de316e3c4c147d4",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/home.pdf",
+    "sha256": "7b47b4a48f9746d3e6bd4096d954ca2f50de62ed69bcf99451e4528046d69a29",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/home.png",
+    "sha256": "21c15d00051aebf034aadf083b723ca78ae95e942002527c9dd04408287b0b5c",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/home.svg",
+    "sha256": "a6daeeb3c8793d94e2f5a8587e76b3fae67c3001c2afbd9a3de316e3c4c147d4",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/home_large.png",
+    "sha256": "bb14b63b7b5638787589abbb09a555e1eae6209699d34ee26e6e59de2f245d88",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/matplotlib.pdf",
+    "sha256": "0644947fedb1a228fe7977e9576b7bcb5245286d730f582d57a6808375e2ff01",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/matplotlib.png",
+    "sha256": "c3c28b45855afafa146576b8d618096ae42ea288acdb77f73457dd73bda95186",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/matplotlib.svg",
+    "sha256": "4224c872a950c066953ed1ec124fafb66264d70c70652be28e1a817bf6fd5422",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/matplotlib_large.png",
+    "sha256": "125468b9ef60ad4aa4657267824fa7be1e0629fa6f278804ebd5abca309b5f95",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/move-symbolic.svg",
+    "sha256": "fee6a62e78d0db48b04ae29b77c26f4d7505691ab8db4e8cae9156bed12bafc2",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/move.pdf",
+    "sha256": "0979373c62bd58be6dfb927e1b65f94e5fa76fa95c12b4c14b9a148f64ade9a5",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/move.png",
+    "sha256": "4e68d1e352334b3c466e1894715eb85f4cf1d818ebc5b587ddc48abe71b6bf37",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/move.svg",
+    "sha256": "fee6a62e78d0db48b04ae29b77c26f4d7505691ab8db4e8cae9156bed12bafc2",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/move_large.png",
+    "sha256": "4a48f3da75bf453039b3fd20f3c81dab686b55b9ba0ce71f616e05bb8d859fd5",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/qt4_editor_options.pdf",
+    "sha256": "daabba195c81ac9bd51f1c9c850a095225cf63107295b1f68fdd109f2b57b3fc",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/qt4_editor_options.png",
+    "sha256": "12bc908d0e61876770988c6dcc216230dd54e939ddd75a750837e01f96478cd3",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/qt4_editor_options.svg",
+    "sha256": "b1dacd231613f812ef277d004a76914393f1177481e35fa981d688253d0aa818",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/qt4_editor_options_large.png",
+    "sha256": "f8f77ef55879688af73d96bc3ba19efc12e8e35922127a6691d0e3f1ad752646",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/subplots-symbolic.svg",
+    "sha256": "1aae1f0d24bdf51bf9adb47cfe77a757a8dc63956c28f01159e1fe059064f425",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/subplots.pdf",
+    "sha256": "434b323cc23912fb6033e084f985ca3a42fd7855006678ff5f6221a23e91e29e",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/subplots.png",
+    "sha256": "3147c222dab7ff2cdbf724627863a09699f463be21f0803b9b98bbd01eb78917",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/subplots.svg",
+    "sha256": "1aae1f0d24bdf51bf9adb47cfe77a757a8dc63956c28f01159e1fe059064f425",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/subplots_large.png",
+    "sha256": "11dbbd4b054c4045c9679a205397325bb54b7305c976175ff84b71c66c5d908b",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/zoom_to_rect-symbolic.svg",
+    "sha256": "b8c99d1a43b8dd91e57b392989e477fcc8aa944739bd139f7d10ce858e2cc66e",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/zoom_to_rect.pdf",
+    "sha256": "484bcf736e207d946997e747bfb9f1f0a9313f253ae8aab8ce0413bc6166f4a0",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/zoom_to_rect.png",
+    "sha256": "68dcf741906b220c6ef44f9f15f690c1e095362b46b83505a02dbb7b9354d8be",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/zoom_to_rect.svg",
+    "sha256": "b8c99d1a43b8dd91e57b392989e477fcc8aa944739bd139f7d10ce858e2cc66e",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/images/zoom_to_rect_large.png",
+    "sha256": "57aa64c669ba570144c5d83f3c425674adfb1c1ee4ddc13f728acb6bb45b50c9",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/sample_data/Minduka_Present_Blue_Pack.png",
+    "sha256": "5e72868826a7a4329a950e5a9efa393594807833fb7f27e5cd001a8afb9cd081",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/sample_data/Stocks.csv",
+    "sha256": "ef6f3bf1a64d5c6c5de702ef154c3fae78fe9df83882ab6bb9c6638bec3cdf47",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/sample_data/data_x_x2_x3.csv",
+    "sha256": "034494ddbb8e506853f8d23fe8b43aa7bd1f152214de22c5760cefceb291e921",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/sample_data/goog.npz",
+    "sha256": "400917cf30e6b664f7b0da93d7c745860d3aa9008da8b7f160d2dd12e6a318b1",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/sample_data/grace_hopper.jpg",
+    "sha256": "a8ca6d734765703b09728ab47fe59f473d93ae3967fc24c7c0288c3c7adb7130",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/sample_data/jacksboro_fault_dem.npz",
+    "sha256": "d493f50a33e82a4420494c54d1fca1539d177bdc27ab190bc5fe6e92f62fb637",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/sample_data/logo2.png",
+    "sha256": "0d7371e055decaac47cb6e809af3442e9c1ecd02f1c1e2d063d1cfee4b4a21d7",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/sample_data/msft.csv",
+    "sha256": "180aca6f43b70e029946c29d25fea55f7acc49ff8f09e908881a0b35d805ecc9",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "matplotlib",
+    "version": "3.11.2",
+    "file": "matplotlib/mpl-data/sample_data/topobathy.npz",
+    "sha256": "0244e03291702df45024dcb5cacbc4f3d4cb30d72dfa7fd371c4ac61c42b4fbf",
+    "license": "Matplotlib (PSF-based permissive license)",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://matplotlib.org"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/favicon.png",
+    "sha256": "89fe5c560c3b6b3c4a3af5791691a2c606bb24b9f6deb7e71dccb509d588d7e1",
+    "license": "Apache-2.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_AMS-Regular.BQhdFMY1.woff2",
+    "sha256": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2",
+    "sha256": "de7701e42cf1f4cf0b766c03fb27977207eee2f4fd5d76fa82188406da43ea4c",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2",
+    "sha256": "5d53e70ad607c2352162dec9e0923fb54ecdafaccbf604cd8dcf7d00facb989b",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Fraktur-Bold.CL6g_b3V.woff2",
+    "sha256": "74444efd593c005e3f4573b44524704c0af0a937fe911cca9e94068d0d140d3f",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Fraktur-Regular.CTYiF6lA.woff2",
+    "sha256": "51814d270d06ff0255dba0799994fa4d8c84d11f09951d47595f4abb1f3602dc",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Main-Bold.Cx986IdX.woff2",
+    "sha256": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2",
+    "sha256": "99cd42a3c072d918f2f44984a807cf7aa16e13545fd0875fc07c6c65f99e715b",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Main-Italic.NWA7e6Wa.woff2",
+    "sha256": "97479ca6cce906abc961ecac96faa5f9ca2e61b8e7670d475826bcdee9a7c267",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Main-Regular.B22Nviop.woff2",
+    "sha256": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2",
+    "sha256": "dc47344dbb6cb5b655c8460d561f4df5f501b90c804ad3c6cec65fe322351ab1",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Math-Italic.t53AETM-.woff2",
+    "sha256": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_SansSerif-Bold.D1sUS0GD.woff2",
+    "sha256": "e99ae51144bf1232efcc1bfe5add36262c6866b0faab24fa75740e1b98577a62",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_SansSerif-Italic.C3H0VqGB.woff2",
+    "sha256": "00b26ac825e2095056396e0553b8ac26d3f8ad158c3826e28b4c45b385c4714a",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2",
+    "sha256": "68e8c73ef42afd3ccec58bf0fba302cce448938e7fc020a5e31f8a952eee1342",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Script-Regular.D3wIWfF6.woff2",
+    "sha256": "036d4e95149b69ff9bcc0cd55771efeb25ffa3947293e69acd78d5ac328c684b",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Size1-Regular.mCD8mA8B.woff2",
+    "sha256": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Size2-Regular.Dy4dx90m.woff2",
+    "sha256": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Size4-Regular.Dl5lxZxV.woff2",
+    "sha256": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/KaTeX_Typewriter-Regular.CO6r4hn1.woff2",
+    "sha256": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b",
+    "license": "MIT",
+    "evidence": "KaTeX entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/MaterialSymbols-Rounded.D_GK7ERd.woff2",
+    "sha256": "d80b2b1be308087205839b37bc64ddf13a754987caffaad8fca32399b981dd99",
+    "license": "Apache-2.0",
+    "evidence": "Material Icons entry in exact-release Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/SourceCodeVF-Italic.ttf.Ba1oaZG1.woff2",
+    "sha256": "720e47a2e54568db2908bfbb32894c1c298fd948cc8942426987c2d29f7ebd9e",
+    "license": "OFL-1.1",
+    "evidence": "Exact-release Source font license and Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/SourceCodeVF-Upright.ttf.BjWn63N-.woff2",
+    "sha256": "d95dc751b4d82141259f5c00c9838addaadd3b4eac30dd7db4a0da4921d77792",
+    "license": "OFL-1.1",
+    "evidence": "Exact-release Source font license and Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/SourceSansVF-Italic.ttf.Bt9VkdQ3.woff2",
+    "sha256": "b4959abc0569392f87c6c6ac612f90e3fe0104d283724189b7d8b6f61af347d3",
+    "license": "OFL-1.1",
+    "evidence": "Exact-release Source font license and Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/SourceSansVF-Upright.ttf.BsWL4Kly.woff2",
+    "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+    "license": "OFL-1.1",
+    "evidence": "Exact-release Source font license and Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/SourceSerifVariable-Italic.ttf.CVdzAtxO.woff2",
+    "sha256": "9d28b5749a1ad096a295cb607c521bd1af4cd9979b6f37332daf70143149fb44",
+    "license": "OFL-1.1",
+    "evidence": "Exact-release Source font license and Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/SourceSerifVariable-Roman.ttf.mdpVL9bi.woff2",
+    "sha256": "940a76eda1388de39d38c8e7a79bf6ea058a387faee0a9f33c8d25c6ba05e1be",
+    "license": "OFL-1.1",
+    "evidence": "Exact-release Source font license and Streamlit NOTICES",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/balloon-0.Czj7AKwE.png",
+    "sha256": "a46efdd79216954c7f9e70d75a62ca62ee67a532a9b044ea03432a5a372b396b",
+    "license": "Apache-2.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/balloon-1.CNvFFrND.png",
+    "sha256": "49693f2424ecc42af33f7462c1689f3c396bd94b74578c1f1ab598f5c5be46ba",
+    "license": "Apache-2.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/balloon-2.DTvC6B1t.png",
+    "sha256": "82cce62f6a160cff8446ebb965106ba7375408eedc320af377a2c18d6e3c2e46",
+    "license": "Apache-2.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/balloon-3.CgSk4tbL.png",
+    "sha256": "bdf4e628699b6428714e51c470cbe788a3e5c1af9735bd060e5ae66ba5efb256",
+    "license": "Apache-2.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/balloon-4.mbtFrzxf.png",
+    "sha256": "d1d2e0eeed565167f867f25d7ca42c8a6324dbcd5503333018e29052349d2e73",
+    "license": "Apache-2.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/balloon-5.CSwkUfRA.png",
+    "sha256": "aa4590966b89f503b89759fa91608ae71edfa56460c7ecf32f6d0c63cde36568",
+    "license": "Apache-2.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/fireworks.B4d-_KUe.gif",
+    "sha256": "64ed55f1c8f15df3c664c45a2085a6e2df34bef7982d9df399a590391a50d338",
+    "license": "Apache-2.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/flake-0.DgWaVvm5.png",
+    "sha256": "9b0a7fd5983ad5c649ee38288857eb9276a420603f87822423c686c5733423fd",
+    "license": "Apache-2.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/flake-1.B2r5AHMK.png",
+    "sha256": "860d955fa3bdae67d045b8f1443150107d6ce039c8354f755cfa87663836a394",
+    "license": "Apache-2.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/flake-2.BnWSExPC.png",
+    "sha256": "362f9c20f89ed59fb4189a01a116afc87e3f22d7fe8c253eb77dc3fc924028f4",
+    "license": "Apache-2.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "streamlit",
+    "version": "1.66.0",
+    "file": "streamlit/static/static/media/snowflake.JU2jBHL8.svg",
+    "sha256": "4a87bc72191ab1a5e1c4c60e6a43005d1475044bb65e9d36868b19ad25c5ea57",
+    "license": "Apache-2.0",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://streamlit.io"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/fftpack/tests/fftw_double_ref.npz",
+    "sha256": "a60c649415b645223924d8342ccc5c097801c86901287a369e53fc9259f5ec4e",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/fftpack/tests/fftw_longdouble_ref.npz",
+    "sha256": "a406cbd4dad04d0c59dd38f54416fb49424c82229c1a074b6a44ec0cde2000e3",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/fftpack/tests/fftw_single_ref.npz",
+    "sha256": "276a9141318e6fc36e4ab6ff54a61b64054ef8849b660f17359e5f541b43c526",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/fftpack/tests/test.npz",
+    "sha256": "36de804a22d8fdea054590ce49ddf3c859838b7d89193c56b3bcb660cbf43797",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/interpolate/tests/data/bug-1310.npz",
+    "sha256": "8d6803c0b398f2704c236f1d1b9e8e5ede06bd165a0abb0f228281abbd455ae9",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/interpolate/tests/data/gcvspl.npz",
+    "sha256": "03ce8155a6cba0c1bf0a2441a10c228191f916dec36cb820723429811296bba8",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-1234Hz-le-1ch-10S-20bit-extra.wav",
+    "sha256": "87c097b16e7f4a1291d7deedfddf935139600ea399fbbc0afc47151ae711f9a6",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-44100Hz-2ch-32bit-float-be.wav",
+    "sha256": "823bfffe783dc47fec9b7e21cb109b0a03b800ffbe3d901f0ce02b1f9a269233",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-44100Hz-2ch-32bit-float-le.wav",
+    "sha256": "1f42cbcafda573682ecd81a7c780d65d4eaf079ec9ad15fe1bd0dde2a1a1d213",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-44100Hz-be-1ch-4bytes.wav",
+    "sha256": "28acfd497bff477817fc055e103dafca16278f806f0f5bb20e22a9093dee959d",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-44100Hz-le-1ch-4bytes-early-eof-no-data.wav",
+    "sha256": "617d60f2a7423801b5eaf5fd1baab84ac7c28f6655935f7d8f30d0f12d335982",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-44100Hz-le-1ch-4bytes-early-eof.wav",
+    "sha256": "6c5aec46ac344179ac683b630fa4c53fc859e631183326829adfa46bf0ba18d9",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-44100Hz-le-1ch-4bytes-incomplete-chunk.wav",
+    "sha256": "ccc9e1bd9beb3f893239629529f6c19decafd37c6fce0a976211cdc6c0310c9e",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-44100Hz-le-1ch-4bytes-rf64.wav",
+    "sha256": "1922690ae7b396f1db84fdc2af88cd5a6cf8cc6e3a5d9ea3722d9f5ad88c3749",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-44100Hz-le-1ch-4bytes.wav",
+    "sha256": "f6a4c2be981dcf7ada79c54dd558a08073e742305fe3bc665e877d8820ec1229",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-48000Hz-2ch-64bit-float-le-wavex.wav",
+    "sha256": "12a6019c4813c532af69302d740e47225e3b0821488def77cb885ac11e8fcaed",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-8000Hz-be-3ch-5S-24bit.wav",
+    "sha256": "84661c8714058ebb6f642068d142e2fb1759f24aea5dc29d4e5dcd4947ea7bc9",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-8000Hz-le-1ch-1byte-ulaw.wav",
+    "sha256": "0685020dcb771a263f24957f1e88211779b301e6d3d7c8f4d9cf8c3a7d7d2b15",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-8000Hz-le-2ch-1byteu.wav",
+    "sha256": "47a109b21bd0a79615478181f6ee0a867e4733554c7c9523d3cda2f2d901209f",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-8000Hz-le-3ch-5S-24bit-inconsistent.wav",
+    "sha256": "b76320ae2de1e892d00de92bc0884304e686e3a394cc7ca7533d2929bbcea4d5",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-8000Hz-le-3ch-5S-24bit-rf64.wav",
+    "sha256": "8921b2aa8b97e7735a101df7b732976b5d4d44863dec61b8d3fa6a585fe4e4b4",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-8000Hz-le-3ch-5S-24bit.wav",
+    "sha256": "c82bf4ba1faec7fb2426cc5e3a3ce88346019376503bf930e4724732ab55c88d",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-8000Hz-le-3ch-5S-36bit.wav",
+    "sha256": "a22315b1057dfaa181cff670b1f024800f416573635db1f8cf1086bef753d116",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-8000Hz-le-3ch-5S-45bit.wav",
+    "sha256": "7bded7a0facf1890c887c9ceea68a2fff562639c95966b783a73d0a03375763b",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-8000Hz-le-3ch-5S-53bit.wav",
+    "sha256": "c1ba272a5cefcd0fdb418c81b23f86c278a164e867d2ec5f2a12ff9c434218d7",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-8000Hz-le-3ch-5S-64bit.wav",
+    "sha256": "52ee503d071bb671659f139de33146c698930b8c20769e893a8609d95319214d",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-8000Hz-le-4ch-9S-12bit.wav",
+    "sha256": "d45ebb87cb6bdb1cf40b92b6d53f72f60b29706034aa748ecec976be302b00cb",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/io/tests/data/test-8000Hz-le-5ch-9S-5bit.wav",
+    "sha256": "4c9bc653b1a9817742addae3ccc943b6989e0cc9c32be95630caa55a34f6dc16",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/linalg/tests/data/carex_15_data.npz",
+    "sha256": "13f3e1491a876bbf59d7ea10ad29c1f9b5996a2ab99216f31d5bfcd659012c1e",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/linalg/tests/data/carex_18_data.npz",
+    "sha256": "59f839467f2752b7df6fb6d4094396edd32a5929b764f7ffa1e6666431e6cac6",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/linalg/tests/data/carex_19_data.npz",
+    "sha256": "38e8fc7b041df0b23d7e5ca15ead1a065e6467611ef9a848cc7db93f80adfd87",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/linalg/tests/data/carex_20_data.npz",
+    "sha256": "14e222d34a7118c7284a1675c6feceee77b84df951a5c6ba2a5ee9ff3054fa1d",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/linalg/tests/data/carex_6_data.npz",
+    "sha256": "1b2a0736b541ebf5c4b9b4c00d6dab281e73c9fb9913c6e2581a781b37b602f9",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/linalg/tests/data/gendare_20170120_data.npz",
+    "sha256": "a3dfab451d9d5c20243e0ed85cd8b6c9657669fb9a0f83b5be165585783d55b5",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/ndimage/tests/dots.png",
+    "sha256": "b20b56fadc7471c0694d3e8148d9e28a83d7967bac16bf8852094afea3950414",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/signal/tests/data/GLB.Ts+dSST.csv",
+    "sha256": "1a3544d90d7e880ac4560dcd3d8db022a58a16b2960848564cfaca60ec1b98f5",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/sparse/linalg/tests/propack_test_data.npz",
+    "sha256": "25d42e05bb6cb5672db22ebf8df7f113e4cb21b1817491fadc996341a542346d",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/spatial/tests/data/degenerate_pointset.npz",
+    "sha256": "048abc1ddd924bf2d4d1f216015552ed9431f9e99546fbf382768eda58788175",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/special/tests/data/boost.npz",
+    "sha256": "57b5c2b67ee01c741536aae6ad9f8f128106b7fdff152afcf3d8f774b0645844",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/special/tests/data/gsl.npz",
+    "sha256": "cbf1afdd27999806a710279910a2eb2f9f7f559033c7ecb796deaa10c44feb31",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/special/tests/data/local.npz",
+    "sha256": "6c29e58ce827084f84db9f1bba96045a61ce69f1d3ea3d7c828a79c133cf88f2",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "file": "scipy/stats/_sobol_direction_numbers.npz",
+    "sha256": "4859931147d42ce465b8605cb277f957d98b839d03194fdf06579357906d193b",
+    "license": "BSD-3-Clause",
+    "evidence": "Parent distribution license; no distinct license asserted",
+    "source": "https://scipy.org/"
+  }
+]

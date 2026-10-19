@@ -36,3 +36,7 @@ python -m compileall -q DistroFit.py analysis.py tests
 ```
 
 Direct dependencies are pinned to the tested Python 3.12 environment. No separate lint, typecheck or packaging build is configured. At least eight finite, varying observations are required. Nonfinite observations are removed with a count; Z-score/IQR outlier filtering is optional and occurs before splitting, so filtering can change the target population and hide tails. AIC/BIC/SSE describe training fit and do not select the winner. Infinite held-out or scenario loss means a model rejects at least one observation outside its support. Tail flags use an exploratory 95% binomial prediction interval, without multiple-test correction. Repeatedly tuning against the same held-out sample makes it less independent. Manual adjustments and scenario rankings do not change the held-out winner. Distribution fits are exploratory and need independent validation before use in decisions.
+## License
+
+MIT, see LICENSE. Third-party components are listed in THIRD_PARTY_NOTICES.md.
+

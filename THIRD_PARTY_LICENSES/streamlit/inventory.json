@@ -1,0 +1,2879 @@
+[
+  {
+    "name": "@antfu/install-pkg",
+    "version": "1.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/antfu/install-pkg.git"
+  },
+  {
+    "name": "@babel/code-frame, @babel/generator, @babel/helper-globals, @babel/helper-module-imports, @babel/helper-string-parser, @babel/helper-validator-identifier, @babel/runtime, @babel/template, @babel/traverse, @babel/types",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/babel/babel.git"
+  },
+  {
+    "name": "@babel/parser",
+    "version": "7.29.7",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/babel/babel.git"
+  },
+  {
+    "name": "@braintree/sanitize-url",
+    "version": "7.1.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/braintree/sanitize-url.git"
+  },
+  {
+    "name": "@carto/api-client",
+    "version": "0.5.24",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/CartoDB/carto-api-client.git"
+  },
+  {
+    "name": "@chevrotain/types, dompurify, flatbuffers, long",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "https://github.com/Chevrotain/chevrotain.git"
+  },
+  {
+    "name": "@deck.gl/aggregation-layers, @deck.gl/carto, @deck.gl/core, @deck.gl/extensions, @deck.gl/geo-layers, @deck.gl/json, @deck.gl/layers, @deck.gl/mesh-layers, @deck.gl/react, @deck.gl/widgets, @probe.gl/env, @probe.gl/log, @probe.gl/stats",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/visgl/deck.gl.git"
+  },
+  {
+    "name": "@emotion/babel-plugin, @emotion/cache, @emotion/hash, @emotion/is-prop-valid, @emotion/memoize, @emotion/react, @emotion/serialize, @emotion/sheet, @emotion/styled, @emotion/unitless, @emotion/use-insertion-effect-with-fallbacks, @emotion/utils, @emotion/weak-memoize",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/emotion-js/emotion/tree/main/packages/babel-plugin"
+  },
+  {
+    "name": "@floating-ui/core, @floating-ui/dom, @floating-ui/react, @floating-ui/utils",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/floating-ui/floating-ui.git"
+  },
+  {
+    "name": "@glideapps/glide-data-grid, @glideapps/glide-data-grid-cells, @glideapps/glide-data-grid-source",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/glideapps/glide-data-grid.git"
+  },
+  {
+    "name": "@hpcc-js/wasm",
+    "version": "2.22.4",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "https://github.com/hpcc-systems/hpcc-js-wasm.git"
+  },
+  {
+    "name": "@iconify/types",
+    "version": "2.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/iconify/iconify.git"
+  },
+  {
+    "name": "@iconify/utils",
+    "version": "3.1.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/iconify/iconify.git"
+  },
+  {
+    "name": "@internationalized/date, @internationalized/number, @internationalized/string, react-aria, react-aria-components, react-stately",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "https://github.com/adobe/react-spectrum/tree/main/packages/@internationalized/date"
+  },
+  {
+    "name": "@jridgewell/gen-mapping, @jridgewell/sourcemap-codec, @jridgewell/trace-mapping",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/jridgewell/sourcemaps.git"
+  },
+  {
+    "name": "@jridgewell/resolve-uri",
+    "version": "3.1.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/jridgewell/resolve-uri"
+  },
+  {
+    "name": "@linaria/core",
+    "version": "6.3.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/callstack/linaria.git"
+  },
+  {
+    "name": "@loaders.gl/3d-tiles, @loaders.gl/compression, @loaders.gl/core, @loaders.gl/crypto, @loaders.gl/csv, @loaders.gl/draco, @loaders.gl/geoarrow, @loaders.gl/gis, @loaders.gl/gltf, @loaders.gl/images, @loaders.gl/loader-utils, @loaders.gl/math, @loaders.gl/mvt, @loaders.gl/schema, @loaders.gl/schema-utils, @loaders.gl/terrain, @loaders.gl/textures, @loaders.gl/tiles, @loaders.gl/wms, @loaders.gl/worker-utils, @loaders.gl/xml, @loaders.gl/zip",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/visgl/loaders.gl"
+  },
+  {
+    "name": "@luma.gl/core, @luma.gl/engine, @luma.gl/gltf, @luma.gl/gpgpu, @luma.gl/shadertools, @luma.gl/webgl",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/visgl/luma.gl"
+  },
+  {
+    "name": "@mapbox/geojson-rewind",
+    "version": "0.5.2",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/geojson-rewind.git"
+  },
+  {
+    "name": "@mapbox/geojson-types",
+    "version": "1.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/streamlit/streamlit/tree/1.66.0/frontend/app/src/assets"
+  },
+  {
+    "name": "@mapbox/jsonlint-lines-primitives",
+    "version": "2.0.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/jsonlint.git"
+  },
+  {
+    "name": "@mapbox/mapbox-gl-supported",
+    "version": "1.5.0",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/mapbox-gl-supported.git"
+  },
+  {
+    "name": "@mapbox/martini",
+    "version": "0.2.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/streamlit/streamlit/tree/1.66.0/frontend/app/src/assets"
+  },
+  {
+    "name": "@mapbox/point-geometry",
+    "version": "0.1.0, 1.1.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/point-geometry.git"
+  },
+  {
+    "name": "@mapbox/point-geometry",
+    "version": "0.1.0, 1.1.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/point-geometry.git"
+  },
+  {
+    "name": "@mapbox/tiny-sdf",
+    "version": "1.2.5, 2.2.0",
+    "license": "BSD-2-Clause",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/tiny-sdf.git"
+  },
+  {
+    "name": "@mapbox/tiny-sdf",
+    "version": "1.2.5, 2.2.0",
+    "license": "BSD-2-Clause",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/tiny-sdf.git"
+  },
+  {
+    "name": "@mapbox/unitbezier",
+    "version": "0.0.0, 1.0.0",
+    "license": "BSD-2-Clause",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/unitbezier.git"
+  },
+  {
+    "name": "@mapbox/vector-tile",
+    "version": "1.3.1, 3.0.0",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/vector-tile-js.git"
+  },
+  {
+    "name": "@mapbox/vector-tile",
+    "version": "1.3.1, 3.0.0",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/vector-tile-js.git"
+  },
+  {
+    "name": "@mapbox/whoots-js",
+    "version": "3.1.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/whoots-js.git"
+  },
+  {
+    "name": "@maplibre/geojson-vt",
+    "version": "6.1.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/maplibre/geojson-vt"
+  },
+  {
+    "name": "@maplibre/maplibre-gl-style-spec",
+    "version": "26.4.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/maplibre/maplibre-style-spec"
+  },
+  {
+    "name": "@maplibre/mlt",
+    "version": "1.3.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/maplibre/maplibre-tile-spec"
+  },
+  {
+    "name": "@maplibre/vt-pbf",
+    "version": "4.3.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/maplibre/vt-pbf"
+  },
+  {
+    "name": "@math.gl/core, @math.gl/culling, @math.gl/geospatial, @math.gl/polygon, @math.gl/sun, @math.gl/types, @math.gl/web-mercator",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/visgl/math.gl.git"
+  },
+  {
+    "name": "@mermaid-js/parser",
+    "version": "1.2.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mermaid-js/mermaid.git"
+  },
+  {
+    "name": "@microlink/react-json-view",
+    "version": "1.31.40",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/microlinkhq/react-json-view.git"
+  },
+  {
+    "name": "@plotly/d3",
+    "version": "3.8.2",
+    "license": "BSD-2-Clause",
+    "class": "permissive",
+    "source": "https://github.com/plotly/d3.git"
+  },
+  {
+    "name": "@plotly/d3-sankey, d3-sankey",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/plotly/d3-sankey.git"
+  },
+  {
+    "name": "@plotly/d3-sankey-circular",
+    "version": "0.33.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/plotly/d3-sankey-circular.git"
+  },
+  {
+    "name": "@plotly/point-cluster, regl-error2d, regl-line2d, regl-scatter2d",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/plotly/point-cluster.git"
+  },
+  {
+    "name": "@plotly/regl, regl",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/plotly/regl.git"
+  },
+  {
+    "name": "@sindresorhus/is, @sindresorhus/slugify, @sindresorhus/transliterate, ansi-regex, ansi-styles, escape-string-regexp, filter-obj, find-up, get-east-asian-width, get-stream, import-fresh, is-plain-obj, locate-path, p-limit, p-locate, parse-json, query-string, split-on-first, string-width, strip-ansi, wrap-ansi, yocto-queue",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/sindresorhus/is.git"
+  },
+  {
+    "name": "@streamlit/component-v2-lib",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "https://github.com/streamlit/streamlit.git"
+  },
+  {
+    "name": "@swc/helpers",
+    "version": "0.5.21",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "https://github.com/swc-project/swc.git"
+  },
+  {
+    "name": "@turf/area, @turf/boolean-clockwise, @turf/centroid, @turf/clone, @turf/helpers, @turf/invariant, @turf/meta, @turf/rewind",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/Turfjs/turf.git"
+  },
+  {
+    "name": "@types/brotli, @types/crypto-js, @types/d3, @types/d3-array, @types/d3-axis, @types/d3-brush, @types/d3-chord, @types/d3-color, @types/d3-contour, @types/d3-delaunay, @types/d3-dispatch, @types/d3-drag, @types/d3-dsv, @types/d3-ease, @types/d3-fetch, @types/d3-force, @types/d3-format, @types/d3-geo, @types/d3-hierarchy, @types/d3-interpolate, @types/d3-path, @types/d3-polygon, @types/d3-quadtree, @types/d3-random, @types/d3-scale, @types/d3-scale-chromatic, @types/d3-selection, @types/d3-shape, @types/d3-time, @types/d3-time-format, @types/d3-timer, @types/d3-transition, @types/d3-zoom, @types/debug, @types/estree, @types/estree-jsx, @types/geojson, @types/hammerjs, @types/hast, @types/katex, @types/lodash, @types/mapbox-gl, @types/mdast, @types/ms, @types/node, @types/offscreencanvas, @types/pako, @types/parse-json, @types/prismjs, @types/trusted-types, @types/unist",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+  },
+  {
+    "name": "@ungap/structured-clone",
+    "version": "1.3.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/ungap/structured-clone.git"
+  },
+  {
+    "name": "@upsetjs/venn.js",
+    "version": "2.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/upsetjs/venn.js.git"
+  },
+  {
+    "name": "@wyw-in-js/processor-utils, @wyw-in-js/shared",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/streamlit/streamlit/tree/1.66.0/frontend/app/src/assets"
+  },
+  {
+    "name": "a5-js",
+    "version": "0.10.0",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "https://github.com/felixpalmer/a5.git"
+  },
+  {
+    "name": "acorn",
+    "version": "7.4.1, 8.16.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/acornjs/acorn.git"
+  },
+  {
+    "name": "ansi-regex, ansi-styles, callsites, is-finite, is-fullwidth-code-point, parent-module, path-exists, path-type, resolve-from, skin-tone, string-width, strip-ansi",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/chalk/ansi-regex.git"
+  },
+  {
+    "name": "apache-arrow",
+    "version": "21.2.0",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "https://github.com/apache/arrow-js.git"
+  },
+  {
+    "name": "argparse",
+    "version": "1.0.10, 2.0.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/nodeca/argparse.git"
+  },
+  {
+    "name": "aria-hidden",
+    "version": "1.2.6",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/theKashey/aria-hidden.git"
+  },
+  {
+    "name": "array-find-index, buf-compare, core-assert, deep-strict-equal, is-obj, is-plain-obj, math-log2, number-is-integer, object-assign",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/sindresorhus/array-find-index.git"
+  },
+  {
+    "name": "array-range, mouse-event-offset, parse-unit, webgl-context",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mattdesl/array-range.git"
+  },
+  {
+    "name": "async-function, async-generator-function",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/ljharb/async-function.git"
+  },
+  {
+    "name": "asynckit",
+    "version": "0.4.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/alexindigo/asynckit.git"
+  },
+  {
+    "name": "attr-accept",
+    "version": "4.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/react-dropzone/attr-accept.git"
+  },
+  {
+    "name": "axios",
+    "version": "1.20.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/axios/axios.git"
+  },
+  {
+    "name": "babel-plugin-macros",
+    "version": "3.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/kentcdodds/babel-plugin-macros"
+  },
+  {
+    "name": "bail, ccount, character-entities, character-entities-html4, character-entities-legacy, character-reference-invalid, fault, mdast-util-to-string, unist-util-find-after, unist-util-position, unist-util-visit",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/wooorm/bail.git"
+  },
+  {
+    "name": "balanced-match",
+    "version": "1.0.2, 4.0.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/juliangruber/balanced-match.git"
+  },
+  {
+    "name": "base64-arraybuffer",
+    "version": "1.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/niklasvh/base64-arraybuffer"
+  },
+  {
+    "name": "base64-js",
+    "version": "1.5.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/beatgammit/base64-js.git"
+  },
+  {
+    "name": "bidi-js",
+    "version": "1.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/lojjic/bidi-js.git"
+  },
+  {
+    "name": "binary-search-bounds",
+    "version": "2.0.5",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mikolalysenko/binary-search-bounds.git"
+  },
+  {
+    "name": "bit-twiddle, dup, strongly-connected-components, typedarray-pool",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mikolalysenko/bit-twiddle.git"
+  },
+  {
+    "name": "bl",
+    "version": "2.2.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/rvagg/bl.git"
+  },
+  {
+    "name": "brace-expansion, isarray",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/juliangruber/brace-expansion.git"
+  },
+  {
+    "name": "buffer-from",
+    "version": "1.1.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/LinusU/buffer-from.git"
+  },
+  {
+    "name": "call-bind-apply-helpers, es-define-property, es-errors, es-object-atoms",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/ljharb/call-bind-apply-helpers.git"
+  },
+  {
+    "name": "canvas-hypertxt",
+    "version": "1.0.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/glideapps/canvas-hypertxt.git"
+  },
+  {
+    "name": "char-regex",
+    "version": "1.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/Richienb/char-regex.git"
+  },
+  {
+    "name": "charenc, crypt",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/pvorb/node-charenc.git"
+  },
+  {
+    "name": "clamp",
+    "version": "1.0.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/hughsk/clamp"
+  },
+  {
+    "name": "classnames",
+    "version": "2.5.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/JedWatson/classnames.git"
+  },
+  {
+    "name": "cliui",
+    "version": "8.0.1, 9.0.1",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/yargs/cliui.git"
+  },
+  {
+    "name": "clsx, escalade",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/lukeed/clsx.git"
+  },
+  {
+    "name": "color",
+    "version": "4.2.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/Qix-/color.git"
+  },
+  {
+    "name": "color-convert",
+    "version": "2.0.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/Qix-/color-convert.git"
+  },
+  {
+    "name": "color-name",
+    "version": "1.1.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/colorjs/color-name.git"
+  },
+  {
+    "name": "color-parse",
+    "version": "1.4.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/colorjs/color-parse"
+  },
+  {
+    "name": "color-space",
+    "version": "2.0.1",
+    "license": "Unlicense",
+    "class": "permissive",
+    "source": "http://github.com/colorjs/color-space.git"
+  },
+  {
+    "name": "color-string",
+    "version": "1.9.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/Qix-/color-string.git"
+  },
+  {
+    "name": "color2k",
+    "version": "2.0.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/ricokahler/color2k.git"
+  },
+  {
+    "name": "colorbrewer",
+    "version": "1.5.6",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "https://github.com/saikocat/colorbrewer"
+  },
+  {
+    "name": "combined-stream, delayed-stream",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/felixge/node-combined-stream.git"
+  },
+  {
+    "name": "comma-separated-tokens, hast-util-is-element, hast-util-parse-selector, hast-util-to-parse5, hast-util-whitespace, html-element-attributes, html-void-elements, is-alphabetical, is-alphanumerical, is-decimal, is-hexadecimal, lowlight, mdast-util-to-hast, rehype-raw, space-separated-tokens, unist-util-remove-position, unist-util-stringify-position, unist-util-visit-parents, vfile-location, web-namespaces, zwitch",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/wooorm/comma-separated-tokens.git"
+  },
+  {
+    "name": "commander",
+    "version": "2.20.3, 7.2.0, 8.3.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/tj/commander.js.git"
+  },
+  {
+    "name": "concat-stream",
+    "version": "1.6.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "http://github.com/maxogden/concat-stream.git"
+  },
+  {
+    "name": "convert-source-map",
+    "version": "1.9.0, 2.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/thlorenz/convert-source-map.git"
+  },
+  {
+    "name": "core-util-is",
+    "version": "1.0.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/isaacs/core-util-is"
+  },
+  {
+    "name": "cose-base",
+    "version": "1.0.3, 2.2.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/iVis-at-Bilkent/cose-base.git"
+  },
+  {
+    "name": "cosmiconfig, tabbable",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/davidtheclark/cosmiconfig.git"
+  },
+  {
+    "name": "country-iso-search",
+    "version": "0.1.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/plotly/country-iso-search.git"
+  },
+  {
+    "name": "css-font",
+    "version": "1.2.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/dy/css-font.git"
+  },
+  {
+    "name": "css-font-size-keywords, css-font-stretch-keywords, css-font-style-keywords, css-font-weight-keywords, css-global-keywords, css-system-font-keywords",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/jedmao/css-font-size-keywords.git"
+  },
+  {
+    "name": "csstype",
+    "version": "3.2.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/frenic/csstype"
+  },
+  {
+    "name": "culori",
+    "version": "4.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/Evercoder/culori.git"
+  },
+  {
+    "name": "cytoscape",
+    "version": "3.34.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/cytoscape/cytoscape.js.git"
+  },
+  {
+    "name": "cytoscape-cose-bilkent",
+    "version": "4.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/cytoscape/cytoscape.js-cose-bilkent.git"
+  },
+  {
+    "name": "cytoscape-fcose",
+    "version": "2.2.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/iVis-at-Bilkent/cytoscape.js-fcose.git"
+  },
+  {
+    "name": "d, es6-symbol, esniff",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/medikoo/d.git"
+  },
+  {
+    "name": "d3, d3-array",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3.git"
+  },
+  {
+    "name": "d3-array, d3-dispatch, d3-force, d3-hierarchy, d3-quadtree, d3-time, d3-timer",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-array.git"
+  },
+  {
+    "name": "d3-array",
+    "version": "1.2.4, 2.12.1, 3.2.4",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-array.git"
+  },
+  {
+    "name": "d3-axis, d3-brush, d3-chord, d3-dispatch, d3-drag, d3-force, d3-hierarchy, d3-interpolate, d3-polygon, d3-quadtree, d3-random, d3-scale, d3-selection, d3-time-format, d3-timer, d3-transition, d3-zoom",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-axis.git"
+  },
+  {
+    "name": "d3-collection",
+    "version": "1.0.7",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-collection.git"
+  },
+  {
+    "name": "d3-color, d3-shape, d3-time",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-color.git"
+  },
+  {
+    "name": "d3-contour",
+    "version": "4.0.2",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-contour.git"
+  },
+  {
+    "name": "d3-delaunay",
+    "version": "6.0.4",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-delaunay.git"
+  },
+  {
+    "name": "d3-dsv",
+    "version": "1.2.0, 3.0.1",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-dsv.git"
+  },
+  {
+    "name": "d3-dsv",
+    "version": "1.2.0, 3.0.1",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-dsv.git"
+  },
+  {
+    "name": "d3-ease",
+    "version": "3.0.1",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-ease.git"
+  },
+  {
+    "name": "d3-fetch",
+    "version": "3.0.1",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-fetch.git"
+  },
+  {
+    "name": "d3-format",
+    "version": "1.4.5, 3.1.2",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-format.git"
+  },
+  {
+    "name": "d3-format, d3-shape",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-format.git"
+  },
+  {
+    "name": "d3-geo",
+    "version": "1.12.1, 3.1.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-geo.git"
+  },
+  {
+    "name": "d3-geo",
+    "version": "1.12.1, 3.1.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-geo.git"
+  },
+  {
+    "name": "d3-geo-projection",
+    "version": "2.9.0, 4.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-geo-projection.git"
+  },
+  {
+    "name": "d3-geo-projection",
+    "version": "2.9.0, 4.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-geo-projection.git"
+  },
+  {
+    "name": "d3-graphviz",
+    "version": "5.6.0",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/magjac/d3-graphviz.git"
+  },
+  {
+    "name": "d3-hexbin",
+    "version": "0.2.2",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-hexbin.git"
+  },
+  {
+    "name": "d3-path",
+    "version": "1.0.9, 3.1.0",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-path.git"
+  },
+  {
+    "name": "d3-path",
+    "version": "1.0.9, 3.1.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-path.git"
+  },
+  {
+    "name": "d3-scale-chromatic",
+    "version": "3.1.0",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-scale-chromatic.git"
+  },
+  {
+    "name": "d3-time-format",
+    "version": "2.3.0, 4.1.0",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/d3/d3-time-format.git"
+  },
+  {
+    "name": "dagre-d3-es",
+    "version": "7.0.14",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/tbo47/dagre-es.git"
+  },
+  {
+    "name": "dayjs",
+    "version": "1.11.23",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/iamkun/dayjs.git"
+  },
+  {
+    "name": "debug",
+    "version": "2.6.9, 3.2.7, 4.4.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/visionmedia/debug.git"
+  },
+  {
+    "name": "decode-named-character-reference, micromark-extension-gfm-footnote",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/wooorm/decode-named-character-reference.git"
+  },
+  {
+    "name": "decode-uri-component",
+    "version": "0.5.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/SamVerschueren/decode-uri-component.git"
+  },
+  {
+    "name": "defined, minimist, resolve, shallow-copy",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/inspect-js/defined.git"
+  },
+  {
+    "name": "delaunator, supercluster",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/delaunator.git"
+  },
+  {
+    "name": "dequal",
+    "version": "2.0.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/lukeed/dequal.git"
+  },
+  {
+    "name": "devlop",
+    "version": "1.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/wooorm/devlop.git"
+  },
+  {
+    "name": "dom-helpers",
+    "version": "5.2.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/react-bootstrap/dom-helpers.git"
+  },
+  {
+    "name": "dunder-proto, math-intrinsics",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/es-shims/dunder-proto.git"
+  },
+  {
+    "name": "duplexify, end-of-stream, protocol-buffers-schema",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mafintosh/duplexify"
+  },
+  {
+    "name": "earcut",
+    "version": "2.2.4, 3.2.3",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/earcut.git"
+  },
+  {
+    "name": "earcut",
+    "version": "2.2.4, 3.2.3",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/earcut.git"
+  },
+  {
+    "name": "echarts",
+    "version": "6.1.0",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "https://github.com/apache/echarts.git"
+  },
+  {
+    "name": "elementary-circuits-directed-graph",
+    "version": "1.3.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/antoinerg/elementary-circuits-directed-graph.git"
+  },
+  {
+    "name": "emojilib",
+    "version": "2.4.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/muan/emojilib.git"
+  },
+  {
+    "name": "emoticon, markdown-table",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/wooorm/emoticon.git"
+  },
+  {
+    "name": "entities",
+    "version": "4.5.0",
+    "license": "BSD-2-Clause",
+    "class": "permissive",
+    "source": "https://github.com/fb55/entities.git"
+  },
+  {
+    "name": "error-ex, is-arrayish",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/qix-/node-error-ex.git"
+  },
+  {
+    "name": "es-set-tostringtag",
+    "version": "2.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/es-shims/es-set-tostringtag.git"
+  },
+  {
+    "name": "es-toolkit",
+    "version": "1.46.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/toss/es-toolkit.git"
+  },
+  {
+    "name": "es5-ext",
+    "version": "0.10.64",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/medikoo/es5-ext.git"
+  },
+  {
+    "name": "es6-iterator",
+    "version": "2.0.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/medikoo/es6-iterator.git"
+  },
+  {
+    "name": "es6-weak-map",
+    "version": "2.0.3",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/medikoo/es6-weak-map.git"
+  },
+  {
+    "name": "escodegen",
+    "version": "2.1.0",
+    "license": "BSD-2-Clause",
+    "class": "permissive",
+    "source": "http://github.com/estools/escodegen.git"
+  },
+  {
+    "name": "esprima",
+    "version": "4.0.1",
+    "license": "BSD-2-Clause",
+    "class": "permissive",
+    "source": "https://github.com/jquery/esprima.git"
+  },
+  {
+    "name": "estraverse, esutils",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "BSD-2-Clause",
+    "class": "permissive",
+    "source": "http://github.com/estools/estraverse.git"
+  },
+  {
+    "name": "estree-util-is-identifier-name, mdast-util-gfm-autolink-literal, mdast-util-gfm-strikethrough, mdast-util-gfm-table, mdast-util-gfm-task-list-item, mdast-util-math, mdast-util-mdx-expression, mdast-util-mdx-jsx, mdast-util-mdxjs-esm, micromark-extension-gfm, micromark-extension-gfm-autolink-literal, micromark-extension-gfm-strikethrough, micromark-extension-gfm-tagfilter, micromark-extension-gfm-task-list-item, micromark-extension-math",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/syntax-tree/estree-util-is-identifier-name.git"
+  },
+  {
+    "name": "event-emitter",
+    "version": "0.3.5",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/medikoo/event-emitter.git"
+  },
+  {
+    "name": "events",
+    "version": "3.3.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/Gozala/events.git"
+  },
+  {
+    "name": "ext",
+    "version": "1.7.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/medikoo/es5-ext#ext"
+  },
+  {
+    "name": "extend",
+    "version": "3.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/justmoon/node-extend.git"
+  },
+  {
+    "name": "falafel, resolve",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/substack/node-falafel.git"
+  },
+  {
+    "name": "fast-isnumeric",
+    "version": "1.1.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/plotly/fast-isnumeric.git"
+  },
+  {
+    "name": "fast-json-patch",
+    "version": "3.1.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/Starcounter-Jack/JSON-Patch.git"
+  },
+  {
+    "name": "fast-xml-builder",
+    "version": "1.1.9",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/NaturalIntelligence/fast-xml-builder.git"
+  },
+  {
+    "name": "fast-xml-parser",
+    "version": "5.7.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/NaturalIntelligence/fast-xml-parser.git"
+  },
+  {
+    "name": "fetch-blob",
+    "version": "3.2.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/node-fetch/fetch-blob.git"
+  },
+  {
+    "name": "fflate",
+    "version": "0.7.5",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/101arrowz/fflate"
+  },
+  {
+    "name": "file-selector",
+    "version": "5.0.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/react-dropzone/file-selector.git"
+  },
+  {
+    "name": "find-root",
+    "version": "1.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/js-n/find-root.git"
+  },
+  {
+    "name": "flatten-vertex-data",
+    "version": "1.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/glo-js/flatten-vertex-data.git"
+  },
+  {
+    "name": "follow-redirects",
+    "version": "1.16.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/follow-redirects/follow-redirects.git"
+  },
+  {
+    "name": "font-atlas",
+    "version": "2.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/hughsk/font-atlas.git"
+  },
+  {
+    "name": "form-data",
+    "version": "4.0.6",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/form-data/form-data.git"
+  },
+  {
+    "name": "from2, glsl-resolve, map-limit",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/hughsk/from2"
+  },
+  {
+    "name": "function-bind",
+    "version": "1.1.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/Raynos/function-bind.git"
+  },
+  {
+    "name": "generator-function",
+    "version": "2.0.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/TimothyGu/generator-function.git"
+  },
+  {
+    "name": "geojson-vt",
+    "version": "3.2.1",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/geojson-vt.git"
+  },
+  {
+    "name": "get-caller-file",
+    "version": "2.0.5",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/stefanpenner/get-caller-file.git"
+  },
+  {
+    "name": "get-canvas-context, glsl-token-inject-block",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/Jam3/get-canvas-context.git"
+  },
+  {
+    "name": "get-intrinsic",
+    "version": "1.3.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/ljharb/get-intrinsic.git"
+  },
+  {
+    "name": "get-proto",
+    "version": "1.0.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/ljharb/get-proto.git"
+  },
+  {
+    "name": "gl-mat4",
+    "version": "1.2.0",
+    "license": "Zlib",
+    "class": "permissive",
+    "source": "https://github.com/stackgl/gl-mat4"
+  },
+  {
+    "name": "gl-matrix",
+    "version": "3.4.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/toji/gl-matrix.git"
+  },
+  {
+    "name": "gl-text, regl-splom",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/a-vis/gl-text.git"
+  },
+  {
+    "name": "glsl-inject-defines, glsl-token-assignments, glsl-token-defines, glsl-token-depth, glsl-token-descope, glsl-token-properties, glsl-token-scope, glsl-token-string",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mattdesl/glsl-inject-defines.git"
+  },
+  {
+    "name": "glsl-token-whitespace-trim",
+    "version": "1.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/hughsk/glsl-token-whitespace-trim.git"
+  },
+  {
+    "name": "glsl-tokenizer",
+    "version": "2.1.5",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/gl-modules/glsl-tokenizer.git"
+  },
+  {
+    "name": "glslify",
+    "version": "7.1.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/stackgl/glslify.git"
+  },
+  {
+    "name": "glslify-bundle",
+    "version": "5.1.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/stackgl/glslify-bundle.git"
+  },
+  {
+    "name": "gopd",
+    "version": "1.2.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/ljharb/gopd.git"
+  },
+  {
+    "name": "graceful-fs",
+    "version": "4.2.11",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/isaacs/node-graceful-fs"
+  },
+  {
+    "name": "grid-index",
+    "version": "1.1.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/grid-index.git"
+  },
+  {
+    "name": "h3-js",
+    "version": "4.4.0",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "https://github.com/uber/h3-js.git"
+  },
+  {
+    "name": "hachure-fill",
+    "version": "0.5.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/pshihn/hachure-fill.git"
+  },
+  {
+    "name": "hammerjs",
+    "version": "2.0.8",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/hammerjs/hammer.js.git"
+  },
+  {
+    "name": "has-passive-events, parse-rect, to-float32",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/dfcreative/has-passive-events.git"
+  },
+  {
+    "name": "has-symbols",
+    "version": "1.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/inspect-js/has-symbols.git"
+  },
+  {
+    "name": "has-tostringtag",
+    "version": "1.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/inspect-js/has-tostringtag.git"
+  },
+  {
+    "name": "hasown",
+    "version": "2.0.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/inspect-js/hasOwn.git"
+  },
+  {
+    "name": "hast-util-from-dom",
+    "version": "5.0.1",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/syntax-tree/hast-util-from-dom.git"
+  },
+  {
+    "name": "hast-util-from-html",
+    "version": "2.0.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/syntax-tree/hast-util-from-html.git"
+  },
+  {
+    "name": "hast-util-from-html-isomorphic",
+    "version": "2.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/syntax-tree/hast-util-from-html-isomorphic.git"
+  },
+  {
+    "name": "hast-util-from-parse5, hast-util-raw, hast-util-to-jsx-runtime, hastscript, mdast-util-directive, mdast-util-find-and-replace, mdast-util-from-markdown, mdast-util-gfm, mdast-util-gfm-footnote, mdast-util-to-markdown, micromark, micromark-core-commonmark, micromark-extension-directive, micromark-extension-gfm-table, micromark-factory-destination, micromark-factory-label, micromark-factory-space, micromark-factory-title, micromark-factory-whitespace, micromark-util-character, micromark-util-chunked, micromark-util-classify-character, micromark-util-combine-extensions, micromark-util-decode-numeric-character-reference, micromark-util-decode-string, micromark-util-encode, micromark-util-html-tag-name, micromark-util-normalize-identifier, micromark-util-resolve-all, micromark-util-sanitize-uri, micromark-util-subtokenize, micromark-util-symbol, micromark-util-types, remark-directive, remark-gfm, remark-rehype",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/syntax-tree/hast-util-from-parse5.git"
+  },
+  {
+    "name": "hast-util-to-text",
+    "version": "4.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/syntax-tree/hast-util-to-text.git"
+  },
+  {
+    "name": "highlight.js",
+    "version": "10.7.3",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/highlightjs/highlight.js.git"
+  },
+  {
+    "name": "hoist-non-react-statics",
+    "version": "3.3.2",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/mridgway/hoist-non-react-statics.git"
+  },
+  {
+    "name": "hotkeys-js",
+    "version": "4.0.8",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/jaywcjlove/hotkeys-js.git"
+  },
+  {
+    "name": "html-url-attributes",
+    "version": "3.0.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/rehypejs/rehype-minify/tree/main/packages/html-url-attributes"
+  },
+  {
+    "name": "iconv-lite",
+    "version": "0.4.24, 0.6.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/ashtuchkin/iconv-lite.git"
+  },
+  {
+    "name": "ieee754",
+    "version": "1.2.1",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/feross/ieee754.git"
+  },
+  {
+    "name": "iframe-resizer",
+    "version": "4.3.11",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/davidjbradshaw/iframe-resizer.git"
+  },
+  {
+    "name": "image-size",
+    "version": "2.0.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://codeberg.org/image-size/image-size.git"
+  },
+  {
+    "name": "immediate",
+    "version": "3.0.6",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/calvinmetcalf/immediate.git"
+  },
+  {
+    "name": "immer",
+    "version": "11.1.21",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/immerjs/immer.git"
+  },
+  {
+    "name": "import-meta-resolve",
+    "version": "4.2.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/wooorm/import-meta-resolve.git"
+  },
+  {
+    "name": "inherits",
+    "version": "2.0.4",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/isaacs/inherits"
+  },
+  {
+    "name": "inline-style-parser",
+    "version": "0.2.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/remarkablemark/inline-style-parser"
+  },
+  {
+    "name": "internmap",
+    "version": "1.0.1, 2.0.3",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mbostock/internmap.git"
+  },
+  {
+    "name": "invariant, prop-types",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/zertosh/invariant"
+  },
+  {
+    "name": "is-browser",
+    "version": "2.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/ForbesLindesay/is-browser.git"
+  },
+  {
+    "name": "is-buffer, safe-buffer",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/feross/is-buffer.git"
+  },
+  {
+    "name": "is-core-module",
+    "version": "2.16.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/inspect-js/is-core-module.git"
+  },
+  {
+    "name": "is-error",
+    "version": "2.2.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mk-pmb/is-error-js.git"
+  },
+  {
+    "name": "is-firefox",
+    "version": "1.0.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/gillstrom/is-firefox.git"
+  },
+  {
+    "name": "is-string-blank",
+    "version": "1.0.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/plotly/is-string-blank.git"
+  },
+  {
+    "name": "js-tokens",
+    "version": "10.0.0, 4.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/lydell/js-tokens.git"
+  },
+  {
+    "name": "jsep",
+    "version": "0.3.5, 1.4.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/EricSmekens/jsep.git"
+  },
+  {
+    "name": "json-parse-even-better-errors",
+    "version": "2.3.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/npm/json-parse-even-better-errors"
+  },
+  {
+    "name": "json-stringify-pretty-compact",
+    "version": "4.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/lydell/json-stringify-pretty-compact.git"
+  },
+  {
+    "name": "json-with-bigint",
+    "version": "3.5.10",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/Ivan-Korolenko/json-with-bigint"
+  },
+  {
+    "name": "json5",
+    "version": "2.2.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/json5/json5.git"
+  },
+  {
+    "name": "jszip",
+    "version": "3.10.1",
+    "license": "MIT (selected; also offered under GPL-3.0)",
+    "class": "permissive",
+    "source": "https://github.com/Stuk/jszip.git"
+  },
+  {
+    "name": "katex",
+    "version": "0.16.47",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/KaTeX/KaTeX.git"
+  },
+  {
+    "name": "kdbush, quickselect",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mourner/kdbush.git"
+  },
+  {
+    "name": "kdbush",
+    "version": "3.0.0, 4.1.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mourner/kdbush.git"
+  },
+  {
+    "name": "khroma",
+    "version": "2.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/fabiospampinato/khroma.git"
+  },
+  {
+    "name": "ktx-parse",
+    "version": "0.7.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/donmccurdy/ktx-parse.git"
+  },
+  {
+    "name": "layout-base",
+    "version": "1.0.2, 2.0.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/iVis-at-Bilkent/layout-base.git"
+  },
+  {
+    "name": "lie",
+    "version": "3.3.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/calvinmetcalf/lie.git"
+  },
+  {
+    "name": "lines-and-columns",
+    "version": "1.2.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/eventualbuddha/lines-and-columns.git"
+  },
+  {
+    "name": "lodash, lodash-es, lodash.merge",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/lodash/lodash.git"
+  },
+  {
+    "name": "long",
+    "version": "3.2.0, 5.3.2",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "https://github.com/dcodeIO/long.js.git"
+  },
+  {
+    "name": "longest-streak, parse-entities, property-information, stringify-entities, trim-lines",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/wooorm/longest-streak.git"
+  },
+  {
+    "name": "loose-envify",
+    "version": "1.4.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/zertosh/loose-envify.git"
+  },
+  {
+    "name": "mapbox-gl",
+    "version": "1.13.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/mapbox-gl-js.git"
+  },
+  {
+    "name": "maplibre-gl",
+    "version": "6.11.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/maplibre/maplibre-gl-js"
+  },
+  {
+    "name": "marked",
+    "version": "16.4.2, 18.1.0, 4.3.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/markedjs/marked.git"
+  },
+  {
+    "name": "material-colors",
+    "version": "1.2.6",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/shuhei/material-colors.git"
+  },
+  {
+    "name": "md5",
+    "version": "2.3.0",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/pvorb/node-md5.git"
+  },
+  {
+    "name": "mdast-util-phrasing",
+    "version": "4.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/syntax-tree/mdast-util-phrasing.git"
+  },
+  {
+    "name": "memoize-one",
+    "version": "6.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/alexreardon/memoize-one.git"
+  },
+  {
+    "name": "mermaid",
+    "version": "11.17.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mermaid-js/mermaid"
+  },
+  {
+    "name": "meshoptimizer",
+    "version": "1.2.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/zeux/meshoptimizer"
+  },
+  {
+    "name": "mime-db",
+    "version": "1.52.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/jshttp/mime-db.git"
+  },
+  {
+    "name": "mime-types",
+    "version": "2.1.35",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/jshttp/mime-types.git"
+  },
+  {
+    "name": "minimatch",
+    "version": "10.2.6, 5.1.9, 9.0.9",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/isaacs/minimatch.git"
+  },
+  {
+    "name": "mjolnir.js",
+    "version": "2.7.3, 3.1.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/visgl/mjolnir.js"
+  },
+  {
+    "name": "moment",
+    "version": "2.31.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/moment/moment.git"
+  },
+  {
+    "name": "moment-duration-format",
+    "version": "2.3.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/jsmreese/moment-duration-format.git"
+  },
+  {
+    "name": "moment-timezone",
+    "version": "0.6.5",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/moment/moment-timezone.git"
+  },
+  {
+    "name": "ms",
+    "version": "2.0.0, 2.1.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/zeit/ms.git"
+  },
+  {
+    "name": "ms",
+    "version": "2.0.0, 2.1.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/vercel/ms.git"
+  },
+  {
+    "name": "native-file-system-adapter",
+    "version": "3.0.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/jimmywarting/native-file-system-adapter.git"
+  },
+  {
+    "name": "needle",
+    "version": "2.9.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/tomas/needle.git"
+  },
+  {
+    "name": "next-tick",
+    "version": "1.1.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/medikoo/next-tick.git"
+  },
+  {
+    "name": "node-domexception",
+    "version": "1.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/jimmywarting/node-domexception.git"
+  },
+  {
+    "name": "node-emoji",
+    "version": "2.2.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/omnidan/node-emoji"
+  },
+  {
+    "name": "normalize-svg-path",
+    "version": "1.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/jkroso/normalize-svg-path.git"
+  },
+  {
+    "name": "numbro",
+    "version": "2.5.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/BenjaminVanRyseghem/numbro"
+  },
+  {
+    "name": "once, semver, wrappy",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/isaacs/once"
+  },
+  {
+    "name": "orderedmap, w3c-keyname",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/marijnh/orderedmap.git"
+  },
+  {
+    "name": "package-manager-detector",
+    "version": "1.8.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/antfu-collective/package-manager-detector.git"
+  },
+  {
+    "name": "pako",
+    "version": "1.0.11",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/nodeca/pako.git"
+  },
+  {
+    "name": "parenthesis",
+    "version": "3.1.8",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/dy/parenthesis.git"
+  },
+  {
+    "name": "parse-svg-path",
+    "version": "0.1.2, 0.2.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/jkroso/parse-svg-path.git"
+  },
+  {
+    "name": "parse5",
+    "version": "7.1.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/inikulin/parse5.git"
+  },
+  {
+    "name": "path-data-parser, points-on-curve",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/pshihn/path-data-parser.git"
+  },
+  {
+    "name": "path-expression-matcher",
+    "version": "1.5.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/NaturalIntelligence/path-expression-matcher"
+  },
+  {
+    "name": "path-parse",
+    "version": "1.0.7",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/jbgutierrez/path-parse.git"
+  },
+  {
+    "name": "pbf",
+    "version": "3.3.0, 5.1.2",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/pbf.git"
+  },
+  {
+    "name": "pbf",
+    "version": "3.3.0, 5.1.2",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/pbf.git"
+  },
+  {
+    "name": "performance-now",
+    "version": "2.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/braveg1rl/performance-now.git"
+  },
+  {
+    "name": "picocolors",
+    "version": "1.1.1",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/alexeyraspopov/picocolors.git"
+  },
+  {
+    "name": "plotly.js",
+    "version": "4.1.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/plotly/plotly.js.git"
+  },
+  {
+    "name": "point-in-polygon",
+    "version": "1.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/substack/point-in-polygon.git"
+  },
+  {
+    "name": "points-on-path",
+    "version": "0.2.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/pshihn/points-on-path.git"
+  },
+  {
+    "name": "polybooljs",
+    "version": "1.2.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/velipso/polybooljs"
+  },
+  {
+    "name": "potpack",
+    "version": "1.0.2, 2.1.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/potpack.git"
+  },
+  {
+    "name": "potpack",
+    "version": "1.0.2, 2.1.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/potpack.git"
+  },
+  {
+    "name": "preact",
+    "version": "10.29.8",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/preactjs/preact.git"
+  },
+  {
+    "name": "prismjs",
+    "version": "1.30.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/PrismJS/prism.git"
+  },
+  {
+    "name": "probe-image-size",
+    "version": "7.4.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/nodeca/probe-image-size.git"
+  },
+  {
+    "name": "process-nextick-args",
+    "version": "2.0.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/calvinmetcalf/process-nextick-args.git"
+  },
+  {
+    "name": "property-information",
+    "version": "6.5.0, 7.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/wooorm/property-information.git"
+  },
+  {
+    "name": "prosemirror-commands, prosemirror-history, prosemirror-inputrules, prosemirror-keymap, prosemirror-model, prosemirror-state, prosemirror-transform, prosemirror-view",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/prosemirror/prosemirror-commands.git"
+  },
+  {
+    "name": "protobufjs",
+    "version": "8.8.0",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/protobufjs/protobuf.js.git"
+  },
+  {
+    "name": "proxy-from-env",
+    "version": "2.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/Rob--W/proxy-from-env.git"
+  },
+  {
+    "name": "quickselect",
+    "version": "2.0.0, 3.0.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mourner/quickselect.git"
+  },
+  {
+    "name": "raf",
+    "version": "3.4.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/chrisdickinson/raf.git"
+  },
+  {
+    "name": "rc-overflow, rc-resize-observer",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/react-component/overflow.git"
+  },
+  {
+    "name": "rc-util",
+    "version": "5.44.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/react-component/util.git"
+  },
+  {
+    "name": "re-resizable",
+    "version": "6.11.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/bokuweb/react-resizable-box.git"
+  },
+  {
+    "name": "react, react-dom, react-is, scheduler",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/facebook/react.git"
+  },
+  {
+    "name": "react-base16-styling",
+    "version": "0.10.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/reduxjs/redux-devtools.git"
+  },
+  {
+    "name": "react-color, reactcss",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/casesandberg/react-color.git"
+  },
+  {
+    "name": "react-dropzone",
+    "version": "20.1.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/react-dropzone/react-dropzone.git"
+  },
+  {
+    "name": "react-fast-compare",
+    "version": "3.2.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/FormidableLabs/react-fast-compare"
+  },
+  {
+    "name": "react-feather",
+    "version": "2.0.10",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/feathericons/react-feather.git"
+  },
+  {
+    "name": "react-helmet-async",
+    "version": "3.0.0",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "http://github.com/staylor/react-helmet-async"
+  },
+  {
+    "name": "react-html-attributes",
+    "version": "1.4.6",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/jackyho112/react-html-attributes"
+  },
+  {
+    "name": "react-lifecycles-compat",
+    "version": "3.0.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/reactjs/react-lifecycles-compat.git"
+  },
+  {
+    "name": "react-map-gl",
+    "version": "5.3.21",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/visgl/react-map-gl.git"
+  },
+  {
+    "name": "react-markdown",
+    "version": "10.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/remarkjs/react-markdown.git"
+  },
+  {
+    "name": "react-plotly.js",
+    "version": "4.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/plotly/react-plotly.js.git"
+  },
+  {
+    "name": "react-responsive-carousel",
+    "version": "3.2.23",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/leandrowd/react-responsive-carousel.git"
+  },
+  {
+    "name": "react-select",
+    "version": "5.10.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/JedWatson/react-select/tree/master/packages/react-select"
+  },
+  {
+    "name": "react-syntax-highlighter",
+    "version": "16.1.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/react-syntax-highlighter/react-syntax-highlighter.git"
+  },
+  {
+    "name": "react-textarea-autosize",
+    "version": "8.5.9",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/Andarist/react-textarea-autosize.git"
+  },
+  {
+    "name": "react-transition-group",
+    "version": "4.4.5",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/reactjs/react-transition-group.git"
+  },
+  {
+    "name": "react-webcam",
+    "version": "7.2.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mozmorris/react-webcam.git"
+  },
+  {
+    "name": "readable-stream",
+    "version": "1.0.34, 2.3.8",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/isaacs/readable-stream"
+  },
+  {
+    "name": "readable-stream",
+    "version": "1.0.34, 2.3.8",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/nodejs/readable-stream"
+  },
+  {
+    "name": "refractor",
+    "version": "5.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/wooorm/refractor.git"
+  },
+  {
+    "name": "remark-emoji",
+    "version": "5.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/rhysd/remark-emoji.git"
+  },
+  {
+    "name": "remark-parse, remark-stringify",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/remarkjs/remark/tree/main/packages/remark-parse"
+  },
+  {
+    "name": "remend",
+    "version": "1.4.0",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "https://github.com/vercel/streamdown.git"
+  },
+  {
+    "name": "require-directory",
+    "version": "2.1.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/troygoode/node-require-directory.git"
+  },
+  {
+    "name": "require-from-string",
+    "version": "2.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/floatdrop/require-from-string.git"
+  },
+  {
+    "name": "resize-observer-polyfill",
+    "version": "1.5.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/que-etc/resize-observer-polyfill.git"
+  },
+  {
+    "name": "resolve-protobuf-schema",
+    "version": "2.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mafintosh/resolve-protobuf-schema.git"
+  },
+  {
+    "name": "robust-predicates",
+    "version": "3.0.2",
+    "license": "Unlicense",
+    "class": "permissive",
+    "source": "https://github.com/mourner/robust-predicates.git"
+  },
+  {
+    "name": "rope-sequence",
+    "version": "1.3.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/marijnh/rope-sequence.git"
+  },
+  {
+    "name": "roughjs",
+    "version": "4.6.6",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/pshihn/rough.git"
+  },
+  {
+    "name": "rw",
+    "version": "1.3.3",
+    "license": "BSD-2-Clause",
+    "class": "permissive",
+    "source": "http://github.com/mbostock/rw.git"
+  },
+  {
+    "name": "safer-buffer",
+    "version": "2.1.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/ChALkeR/safer-buffer.git"
+  },
+  {
+    "name": "sax",
+    "version": "1.4.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/isaacs/sax-js.git"
+  },
+  {
+    "name": "setimmediate",
+    "version": "1.0.5",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/YuzuJS/setImmediate.git"
+  },
+  {
+    "name": "shallowequal",
+    "version": "1.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/dashed/shallowequal.git"
+  },
+  {
+    "name": "simple-swizzle",
+    "version": "0.2.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/qix-/node-simple-swizzle.git"
+  },
+  {
+    "name": "snappyjs",
+    "version": "0.6.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/zhipeng-jia/snappyjs.git"
+  },
+  {
+    "name": "source-map",
+    "version": "0.5.7, 0.6.1",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "http://github.com/mozilla/source-map.git"
+  },
+  {
+    "name": "sprintf-js",
+    "version": "1.0.3",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/alexei/sprintf.js.git"
+  },
+  {
+    "name": "stack-trace",
+    "version": "0.0.9",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/felixge/node-stack-trace.git"
+  },
+  {
+    "name": "static-eval",
+    "version": "2.1.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/browserify/static-eval.git"
+  },
+  {
+    "name": "stream-parser",
+    "version": "0.3.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/TooTallNate/node-stream-parser.git"
+  },
+  {
+    "name": "stream-shift",
+    "version": "1.0.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mafintosh/stream-shift.git"
+  },
+  {
+    "name": "string_decoder",
+    "version": "0.10.31, 1.1.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/rvagg/string_decoder.git"
+  },
+  {
+    "name": "string_decoder",
+    "version": "0.10.31, 1.1.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/nodejs/string_decoder.git"
+  },
+  {
+    "name": "strnum",
+    "version": "2.2.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/NaturalIntelligence/strnum"
+  },
+  {
+    "name": "style-to-js",
+    "version": "1.1.16",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/remarkablemark/style-to-js"
+  },
+  {
+    "name": "style-to-object",
+    "version": "1.0.8",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/remarkablemark/style-to-object"
+  },
+  {
+    "name": "stylis",
+    "version": "4.2.0, 4.4.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/thysultan/stylis.js"
+  },
+  {
+    "name": "supports-preserve-symlinks-flag",
+    "version": "1.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/inspect-js/node-supports-preserve-symlinks-flag.git"
+  },
+  {
+    "name": "svg-arc-to-cubic-bezier",
+    "version": "3.2.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/colinmeinke/svg-arc-to-cubic-bezier"
+  },
+  {
+    "name": "svg-path-sdf",
+    "version": "2.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/dy/svg-path-sdf.git"
+  },
+  {
+    "name": "texture-compressor",
+    "version": "1.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/streamlit/streamlit/tree/1.66.0/frontend/app/src/assets"
+  },
+  {
+    "name": "through2",
+    "version": "0.6.5, 2.0.5",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/rvagg/through2.git"
+  },
+  {
+    "name": "through2",
+    "version": "0.6.5, 2.0.5",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/rvagg/through2.git"
+  },
+  {
+    "name": "tinycolor2",
+    "version": "1.6.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/bgrins/TinyColor.git"
+  },
+  {
+    "name": "tinyexec",
+    "version": "1.3.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/tinylibs/tinyexec.git"
+  },
+  {
+    "name": "tinyqueue",
+    "version": "2.0.3, 3.0.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/mourner/tinyqueue.git"
+  },
+  {
+    "name": "to-px",
+    "version": "1.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mikolalysenko/to-px.git"
+  },
+  {
+    "name": "topojson-client",
+    "version": "3.1.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/topojson/topojson-client.git"
+  },
+  {
+    "name": "trough",
+    "version": "2.2.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/wooorm/trough.git"
+  },
+  {
+    "name": "ts-dedent",
+    "version": "2.2.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/tamino-martinius/node-ts-dedent.git"
+  },
+  {
+    "name": "ts-invariant",
+    "version": "0.10.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/apollographql/invariant-packages.git"
+  },
+  {
+    "name": "tslib",
+    "version": "2.3.0, 2.8.1",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/Microsoft/tslib.git"
+  },
+  {
+    "name": "type",
+    "version": "2.7.3",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/medikoo/type.git"
+  },
+  {
+    "name": "typed-signals",
+    "version": "3.0.0",
+    "license": "CC0-1.0",
+    "class": "permissive",
+    "source": "https://github.com/Lusito/typed-signals.git"
+  },
+  {
+    "name": "typedarray",
+    "version": "0.0.6",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/substack/typedarray.git"
+  },
+  {
+    "name": "undici-types",
+    "version": "7.24.6",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/nodejs/undici.git"
+  },
+  {
+    "name": "unified, vfile",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/unifiedjs/unified.git"
+  },
+  {
+    "name": "unist-util-is",
+    "version": "6.0.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/syntax-tree/unist-util-is.git"
+  },
+  {
+    "name": "unquote",
+    "version": "1.1.1",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/lakenen/node-unquote.git"
+  },
+  {
+    "name": "urlpattern-polyfill",
+    "version": "10.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/kenchris/urlpattern-polyfill"
+  },
+  {
+    "name": "util-deprecate",
+    "version": "1.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/TooTallNate/util-deprecate.git"
+  },
+  {
+    "name": "uuid",
+    "version": "14.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/uuidjs/uuid.git"
+  },
+  {
+    "name": "vega, vega-canvas, vega-crossfilter, vega-dataflow, vega-encode, vega-event-selector, vega-expression, vega-force, vega-format, vega-functions, vega-geo, vega-hierarchy, vega-interpreter, vega-label, vega-loader, vega-parser, vega-projection, vega-regression, vega-runtime, vega-scale, vega-scenegraph, vega-selections, vega-statistics, vega-time, vega-transforms, vega-typings, vega-util, vega-view, vega-view-transforms, vega-voronoi, vega-wordcloud",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/vega/vega.git"
+  },
+  {
+    "name": "vega-embed",
+    "version": "7.3.0",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/vega/vega-embed.git"
+  },
+  {
+    "name": "vega-lite",
+    "version": "6.4.3",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/vega/vega-lite.git"
+  },
+  {
+    "name": "vega-schema-url-parser",
+    "version": "3.0.2",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/vega/schema.git"
+  },
+  {
+    "name": "vega-themes",
+    "version": "3.0.0",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/vega/vega-themes.git"
+  },
+  {
+    "name": "vega-tooltip",
+    "version": "1.1.0",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/vega/vega-tooltip.git"
+  },
+  {
+    "name": "vfile-message",
+    "version": "4.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/vfile/vfile-message.git"
+  },
+  {
+    "name": "vt-pbf",
+    "version": "3.1.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/mapbox/vt-pbf.git"
+  },
+  {
+    "name": "wavesurfer.js",
+    "version": "8.0.2",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/katspaugh/wavesurfer.js.git"
+  },
+  {
+    "name": "web-streams-polyfill",
+    "version": "3.3.3",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/MattiasBuelens/web-streams-polyfill.git"
+  },
+  {
+    "name": "world-calendars",
+    "version": "1.0.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/plotly/world-calendars.git"
+  },
+  {
+    "name": "xtend",
+    "version": "2.2.0, 4.0.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/Raynos/xtend.git"
+  },
+  {
+    "name": "xxhashjs",
+    "version": "0.2.2",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/pierrec/js-xxhash"
+  },
+  {
+    "name": "y18n",
+    "version": "5.0.8",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/yargs/y18n.git"
+  },
+  {
+    "name": "yaml",
+    "version": "1.10.3, 2.9.1",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/eemeli/yaml.git"
+  },
+  {
+    "name": "yargs",
+    "version": "17.7.2, 18.0.0, 18.1.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/yargs/yargs.git"
+  },
+  {
+    "name": "yargs-parser",
+    "version": "21.1.1, 22.0.0",
+    "license": "ISC",
+    "class": "permissive",
+    "source": "https://github.com/yargs/yargs-parser.git"
+  },
+  {
+    "name": "zrender",
+    "version": "6.1.0",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/ecomfe/zrender.git"
+  },
+  {
+    "name": "@linaria/react",
+    "version": "6.3.0",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/callstack/linaria.git"
+  },
+  {
+    "name": "react-number-format",
+    "version": "5.4.4",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/s-yadav/react-number-format"
+  },
+  {
+    "name": "Source Code",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "OFL-1.1",
+    "class": "weak copyleft (font only)",
+    "source": "https://github.com/streamlit/streamlit/tree/1.66.0/frontend/app/src/assets"
+  },
+  {
+    "name": "Source Sans",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "OFL-1.1",
+    "class": "weak copyleft (font only)",
+    "source": "https://github.com/streamlit/streamlit/tree/1.66.0/frontend/app/src/assets"
+  },
+  {
+    "name": "Source Serif",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "OFL-1.1",
+    "class": "weak copyleft (font only)",
+    "source": "https://github.com/streamlit/streamlit/tree/1.66.0/frontend/app/src/assets"
+  },
+  {
+    "name": "Material Icons",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "Apache-2.0",
+    "class": "permissive",
+    "source": "https://github.com/streamlit/streamlit/tree/1.66.0/frontend/app/src/assets"
+  },
+  {
+    "name": "Open Iconic",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/streamlit/streamlit/tree/1.66.0/frontend/app/src/assets"
+  },
+  {
+    "name": "react bootstrap",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/streamlit/streamlit/tree/1.66.0/frontend/app/src/assets"
+  },
+  {
+    "name": "fzyjs",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/streamlit/streamlit/tree/1.66.0/frontend/app/src/assets"
+  },
+  {
+    "name": "sprintfjs",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "BSD-3-Clause",
+    "class": "permissive",
+    "source": "https://github.com/streamlit/streamlit/tree/1.66.0/frontend/app/src/assets"
+  },
+  {
+    "name": "decamelize",
+    "version": "bundled with Streamlit 1.66.0; upstream notice gives no separate version",
+    "license": "MIT",
+    "class": "permissive",
+    "source": "https://github.com/streamlit/streamlit/tree/1.66.0/frontend/app/src/assets"
+  }
+]
