@@ -2,7 +2,7 @@
 
 A local Streamlit application that fits probability distributions on training observations, ranks them by held-out loss and exports the analysis with its data.
 
-https://github.com/user-attachments/assets/5dd039d0-0a6c-4b1d-8c2b-f692d58ff349
+https://github.com/user-attachments/assets/22ecb55e-d376-41b3-9a65-00a335085e1f
 
 ## Overview
 
