@@ -46,3 +46,8 @@ and used 12 pt labels for dense charts. The final local LibreOffice render
 shows the zero baseline and every candidate name without clipping. All 176
 Python tests pass, with zero schema errors across five files. The owned viewer
 process group 67087 exited and process/port checks found nothing remaining.
+
+Rebased onto 722f316 after the Excel feature merged. Preserved Excel's cached
+export, download, documentation and recalculation CI job alongside PowerPoint.
+Updated the shared app assertion for all three downloads. Combined suite:
+190 passed, including the real spreadsheet-engine recalculation test.

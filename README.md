@@ -9,8 +9,7 @@ might look right against those bars, so I wanted a separate check. DistroFit fit
 each curve to some of my measurements, then scores it on the measurements set aside.
 I can inspect unusually high or low values, try another sample against the same
 curves and save the analysis as a PDF, an Excel workbook or an editable PowerPoint
-presentation. In Excel, I can change
-a cutoff and see how many measurements exceed it without rerunning the app.
+presentation. In Excel, I can change a cutoff and see how many measurements exceed it without rerunning the app.
 
 I also wanted to see where production time went, alongside the measurements.
 The equipment page splits lost time into stops, slow running and rejected parts.
