@@ -10,6 +10,11 @@ each curve to some of my measurements, then scores it on the measurements set as
 I can inspect unusually high or low values, try another sample against the same
 curves and save the analysis as a PDF.
 
+I also wanted to see where production time went, alongside the measurements.
+The equipment page splits lost time into stops, slow running and rejected parts.
+It ranks stop reasons by minutes lost and lets me compare a current changeover,
+the work needed to switch products, with a proposed shorter one.
+
 This is a personal project. It accepts a numeric CSV column, a column from a
 plain-text table, as well as pasted numbers or generated samples, and runs without an
 account. To try it, start the app below and choose Sample Data.
@@ -26,11 +31,45 @@ python -m streamlit run DistroFit.py --server.address=127.0.0.1 --server.port=85
 ```
 
 Open <http://127.0.0.1:8501>. Choose Sample Data or upload a CSV, then use Auto-Fit
-to compare curves. Tail & Q-Q checks the extremes and compares matching percentiles,
+to compare curves. For production time, choose **Equipment effectiveness** in the
+sidebar; it opens with a worked example I can edit immediately.
+Tail & Q-Q checks the extremes and compares matching percentiles,
 the values below which a given share of observations fall. Scenario tries new numbers
 against the same fitted curves; Manual lets me adjust a curve myself. Download
 reproducible report saves the analysis and its data in a PDF. Stop the app with
 Ctrl-C. Reports contain the input values, so keep private exports private.
+
+## Finding lost production time
+
+On **Equipment effectiveness**, I enter one machine's shift length, breaks, fastest
+time per part, total parts and parts that passed without rework. I enter each stop
+once in the editable log, including changeovers. I can replace the example tables
+with CSV files or delete their rows to start fresh.
+
+The page calculates overall equipment effectiveness (OEE): how much of the planned
+time became good output at the ideal speed. It shows availability (time running),
+performance (speed against the ideal) and quality (first-pass good parts) separately.
+The downtime Pareto chart puts the reasons that lost the most minutes first, so I
+can choose what to investigate instead of counting every short stop equally.
+I can download the calculation as JSON or the ranked downtime table as CSV.
+
+The changeover table separates tasks that need the machine stopped from preparation
+I could do while it runs. I can propose moving or shortening tasks and see the
+potential stopped minutes saved. This follows SMED, a method for shortening
+changeovers. It leaves the measured production result alone: a proposal is not
+evidence that I have saved time.
+
+I can also run the same calculations without the app:
+
+```sh
+python equipment.py --sample --out /tmp/distrofit-oee
+```
+
+The example gives **74.79% OEE** and a separate proposed changeover reduction from
+**20 to 11 minutes**. It saves JSON summaries, CSV tables and a downtime chart.
+[The input guide](docs/oee.md) explains how to use my own files, the calculations,
+and where the example numbers come from. The tool handles one machine and one
+product at a time; it does not infer overlapping stops or parallel changeover work.
 
 ## Comparing several datasets
 
@@ -54,8 +93,8 @@ A curve describes the spread of values; it doesn't say whether a process has cha
 The separate [calculation module](spc.py) makes control charts, which compare later
 measurements with a baseline, and compares the spread with chosen specification
 limits. I can also rank finding categories by frequency before choosing what to
-investigate. These calculations are called from Python and are not in the app
-interface yet.
+investigate. The control-chart and capability calculations are called from Python;
+the equipment calculations above also have an app page.
 
 Run the [worked example](docs/case-study-dmaic.md) with:
 
@@ -83,7 +122,9 @@ python -m pytest -q
 ```
 
 Tests cover the calculations, app controls, exported tables and worked example using
-synthetic samples. Dependency versions are in [requirements.txt](requirements.txt)
+synthetic samples. Equipment tests also check a published OEE example, hand-calculated
+losses and changeover savings, invalid inputs, zero-output periods and both ways of
+running the feature. Dependency versions are in [requirements.txt](requirements.txt)
 and [requirements-lock.txt](requirements-lock.txt).
 
 ## Demo
