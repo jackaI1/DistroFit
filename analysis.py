@@ -19,18 +19,18 @@ def get_supported_distributions():
             "Laplace": stats.laplace, "Maxwell": stats.maxwell}
 
 
-def read_csv(source):
+def read_csv(source, *, skip_blank_lines=True):
     """Preserve the first numeric observation in headerless CSVs."""
     text = source.read()
     if isinstance(text, bytes):
         text = text.decode("utf-8-sig")
-    df = pd.read_csv(StringIO(text))
+    df = pd.read_csv(StringIO(text), skip_blank_lines=skip_blank_lines)
     try:
         # Only infer no header when every field in the first row is numeric.
         [float(column) for column in df.columns]
     except (ValueError, TypeError):
         return df
-    df = pd.read_csv(StringIO(text), header=None)
+    df = pd.read_csv(StringIO(text), header=None, skip_blank_lines=skip_blank_lines)
     df.columns = [f"Column {i+1}" for i in range(df.shape[1])]
     return df
 
