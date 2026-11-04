@@ -1,127 +1,126 @@
-# DistroFit Power BI report — layout spec
+# Comparing DistroFit samples in Power BI
 
-A four-page report over the star schema written by
-[`export_powerbi.py`](../export_powerbi.py). The `.pbix` itself is built by hand
-in Power BI Desktop (Windows) from this spec; DAX lives in
-[`measures.dax`](measures.dax), the Power Query loader in
-[`queries.pq`](queries.pq), and a ready-made export from 12 public datasets in
-[`sample_export/`](sample_export/).
+I built this report because I wanted to see whether the same curves kept winning
+across different samples, and whether a winning curve actually fit well. The
+report opens as a complete local Power BI project. Its bundled snapshot contains
+12 public datasets, 14 curve families and 168 fitted results.
 
-## 1. Producing data
+## Open and use the report
+
+1. Install the free [Power BI Desktop for Windows](https://www.microsoft.com/download/details.aspx?id=58494).
+   I use the October 2026 release in CI. No Power BI Service account is required.
+2. Clone or download the **whole repository**. Keep the report and model folders
+   beside [DistroFit.pbip](DistroFit.pbip), then open that file in Desktop.
+3. Choose **Home → Refresh**. Project files contain the data definition, while
+   Desktop's local data cache is deliberately excluded from Git.
+4. Use the page tabs and the dataset, source, curve support and export-run filters.
+   Clear a filter with its eraser icon to return to the full sample.
+
+| Page | What I use it for |
+|---|---|
+| Overview | See dataset count, most frequent winner, fit success and winners by curve |
+| Information criteria | Compare AIC and BIC, scores that balance fit against complexity; lower differences are better |
+| Goodness of fit | See KS pass rates, a check of how close the test measurements are to each fitted curve, and tail warnings |
+| Dataset detail | Select one dataset, inspect its curve ranks and parameters, and compare Akaike weights, relative support based on AIC |
+
+The overview displays **12 datasets**, **Uniform** as the most frequent winner
+(tied families use the alphabetically last name), **39.3% KS pass rate** and
+**100.0% fit success**. The information-criteria total cards show 0.0 because at
+that level they compare the best candidate with itself; the per-family table and
+chart are the useful comparisons. The model always retains failed fits when an
+export contains them.
+
+## Use my own measurements
+
+From the repository root with the Python dependencies installed:
 
 ```sh
-# bundled public datasets (powerbi/sample_data, provenance in dataset_catalog.csv)
-python export_powerbi.py --sample --out powerbi/sample_export --created-utc 2026-11-03T00:00:00Z
-
-# your own numeric CSV: every numeric column becomes a dataset
 python export_powerbi.py measurements.csv --column weight --column length --out my_export
+python powerbi/build_project.py --export my_export
 ```
 
-Options: `--format csv|parquet|both`, `--seed`, `--held-out-fraction`, `--bins`,
-`--outliers None|Z-Score|IQR`. The same fitting code as the app is used
-(`analysis.fit_candidates`): parameters, AIC and BIC come from the training
-split; rank, KS statistic and tail flag from the held-out split.
+I close Desktop first, delete `DistroFit.SemanticModel/.pbi` if I previously opened
+the project, reopen `DistroFit.pbip`, and refresh. Deleting that generated cache
+avoids loading an older snapshot over the new model. The builder replaces the
+model and report definition. I make a copy before customizing the pages.
 
-## 2. Data model
+The builder also accepts `--out /path/to/report-copy` to leave the bundled example
+alone. It reads the four exported CSV files, preserves their declared types and
+blanks, and embeds their rows in native DAX calculated-table partitions. DAX is
+Power BI's calculation language. This small snapshot design avoids paths tied to
+my computer, cloud credentials and data gateways. Refresh calculates that snapshot;
+it does **not** reread a changed CSV. I export and rebuild to update it. This is a
+comparison report, not a continuously updated monitoring service.
 
-| Table | Grain | Key columns |
-|---|---|---|
-| `fact_fit` | run × dataset × distribution (168 rows in the sample) | `run_id`, `dataset_id`, `distribution_id`; `shape_1`, `shape_2`, `loc`, `scale`, `log_likelihood`, `aic`, `bic`, `heldout_nll`, `ks_statistic`, `ks_p_value`, `ks_pass`, `rank_heldout_nll`, `rank_aic`, `rank_bic`, `is_best_fit`, `delta_aic`, `akaike_weight`, `tail_flagged`, `fit_status` |
-| `dim_dataset` | dataset | `dataset_id`, `dataset_name`, `source`, `variable`, observation counts, `skewness`, `excess_kurtosis`, `analysis_status` |
-| `dim_distribution` | distribution family (14) | `distribution_id` (SciPy name), `distribution_name`, `support_type`, `tail_behaviour`, `parameter_count` |
-| `dim_run` | export run | `run_id`, `created_utc`, `seed`, `held_out_fraction`, `ks_alpha`, library versions |
+To recreate the original snapshot:
 
-Relationships (many-to-one, single direction, from `fact_fit`):
-`dataset_id → dim_dataset`, `distribution_id → dim_distribution`, `run_id → dim_run`.
+```sh
+python powerbi/build_project.py
+```
 
-Notes: failed fits are kept as rows (`fit_status = failed`, metrics blank).
-`heldout_outside_support` means the held-out sample has points outside the
-fitted support (held-out NLL is infinite and exported blank; the fit ranks last).
-Dataset too small/constant → `dim_dataset.analysis_status = skipped`.
+I never commit a rebuilt project containing private measurements. The bundled
+public-data provenance is in [dataset_catalog.csv](sample_data/dataset_catalog.csv).
+The original [Power Query loader](queries.pq) remains available for a separate
+CSV/Parquet import workflow; the committed project does not depend on it.
 
-## 3. Loading in Power BI Desktop
+## What is included
 
-1. Home → Get data → Blank query → Advanced editor; follow [`queries.pq`](queries.pq)
-   (Parquet), **or** Get data → Text/CSV for each file in `sample_export/csv/`.
-2. Name the four queries exactly `fact_fit`, `dim_dataset`, `dim_distribution`, `dim_run`.
-3. Model view: confirm the three relationships above (auto-detected on matching names).
-4. Create a `_Measures` table and paste the measures from `measures.dax`; apply
-   the display folders and format strings noted in comments.
-5. Sort `dim_distribution[distribution_name]` and set `dataset_name` as the display field.
+- [DistroFit.pbip](DistroFit.pbip): the entry point to the report.
+- [DistroFit.Report/](DistroFit.Report/): four PBIR pages with cards, tables, bar
+  charts and slicers, which are interactive filters.
+- [DistroFit.SemanticModel/model.bim](DistroFit.SemanticModel/model.bim): the actual
+  TMSL model, Microsoft's JSON model format, including data, relationships and
+  15 DAX measures. [measures.dax](measures.dax) is their editable source.
+- [build_project.py](build_project.py): deterministic builder for the project.
+- [checks.json](checks.json): native DAX queries and independent expected values.
+- [NativeCheck/](NativeCheck/): the Windows runner that processes the committed
+  model and executes the queries with Microsoft's Analysis Services client.
 
-## 4. Pages
+The model has one result table, `fact_fit`, at run × dataset × curve grain, and
+three lookup tables: `dim_dataset`, `dim_distribution` and `dim_run`. Each has a
+one-to-many, single-direction relationship to the result table on its matching
+ID. This makes filters reach the fitted results while keeping family-share
+denominators independent of the chart's family axis. I keep one export run per
+snapshot; the exporter creates one run at a time.
 
-### Page 1 — Overview
-- **Cards** (top row): `Datasets Analysed`, `Top Distribution`, `KS Pass Rate`, `Fit Success Rate`.
-- **Bar chart** — axis `dim_distribution[distribution_name]`, values `[Best Fit Share]`,
-  sorted descending, data labels on (how often each family wins on held-out NLL).
-- **Clustered bar** — axis `distribution_name`, values `[KS Pass Rate]` (is the winner actually adequate?).
-- **Slicers**: `dim_run[run_id]` (single select, default first), `dim_distribution[support_type]`, `dim_dataset[source]`.
+## Native calculation verification
 
-### Page 2 — Leaderboard (information criteria)
-- **Matrix** — rows `dataset_name`, columns `distribution_name`, values `[AIC Delta]`;
-  conditional formatting: white → red, minimum 0, diverging at 10 (delta > 10 = no support).
-- **Column chart** — axis `distribution_name`, values `[AIC Delta]` and `[BIC Delta]` (average over the filtered datasets).
-- **Scatter** — x `[AIC Delta]`, y `[Best Fit Share]`, details `distribution_name`, size `[Fits]`.
-- Slicers: `dim_dataset[skewness]` (range), `dim_distribution[tail_behaviour]`.
+The [Power BI native checks workflow](../.github/workflows/powerbi.yml) installs a
+hash-pinned Microsoft Power BI Desktop on a disposable Windows runner. It starts
+Desktop's real `msmdsrv.exe` calculation engine on a loopback port, deploys the
+**exact committed model.bim**, processes its tables and executes DAX through
+Microsoft's ADOMD client. It does not translate DAX into Python or substitute
+Python results for engine output.
 
-### Page 3 — Goodness of fit
-- **Table** — `dataset_name`, `distribution_name`, `ks_statistic`, `ks_p_value`,
-  `ks_pass` (icon: ✓/✗), `tail_flagged`; filter to `is_best_fit = TRUE` by default.
-- **100% stacked bar** — axis `dataset_name`, legend `ks_pass`, values `[Fits]`.
-- **Card** — `Datasets With Any KS Pass`; **Card** — `Tail Flag Rate`.
-- Slicer: `fit_status`.
+[build_checks.py](build_checks.py) prepares independent expected results from the
+CSV tables. The checks include all 15 measures, each dataset and family, source,
+support and run filters, a combined dataset/family selection, an empty run, and
+the data queries for every committed visual. The supplied
+[reference_measures.csv](sample_export/reference_measures.csv) is compared
+separately, covering all 14 families. Values are checked before display rounding,
+with relative tolerance `1e-8`; the report formats rates as percentages.
 
-### Page 4 — Dataset drill-through
-Drill-through target filtered by `dim_dataset[dataset_name]` (add as a drill-through field).
-- **Cards**: observation count, skewness, excess kurtosis (from `dim_dataset`).
-- **Table** — `distribution_name`, `rank_heldout_nll`, `aic`, `delta_aic`, `akaike_weight`, `shape_1`, `shape_2`, `loc`, `scale`.
-- **Bar** — `distribution_name` × `[Akaike Weight]`.
-- Back button.
+On Windows, with .NET 8 and Desktop installed, I can repeat it:
 
-Theme: one accent colour for "best/pass", grey for the rest; keep family names
-on the category axis rather than in legends (14 categories).
+```powershell
+dotnet run --project powerbi/NativeCheck -- powerbi "C:\Program Files\Microsoft Power BI Desktop\bin\msmdsrv.exe" native-evidence
+```
 
-## 5. Validate before screenshotting
+The workflow uploads `native-results.json` with actual returned values, query text,
+engine version and model SHA-256, plus `cleanup.json` with the owned process and
+port. The runner requests shutdown, waits for that exact process and removes its
+temporary directory in a finally block, including failure paths. The report's
+queries verify the values bound to visuals; the Python schema tests alone do not
+establish that the DAX works.
 
-The DAX was written without access to Power BI (macOS), so confirm the measures
-reproduce the independent pandas calculation
-(`export_powerbi.reference_measures`, saved as
-[`sample_export/reference_measures.csv`](sample_export/reference_measures.csv)).
-With the sample export and no slicers:
+## Reading the results
 
-| Distribution | Best Fit Count | Best Fit Share | AIC Delta (avg) | KS Pass Rate |
-|---|---:|---:|---:|---:|
-| Normal | 0 | 0.0% | 172.1 | 33.3% |
-| Gamma | 0 | 0.0% | 117.1 | 33.3% |
-| Weibull (Min) | 2 | 16.7% | 82.2 | 58.3% |
-| Exponential | 2 | 16.7% | 147.1 | 33.3% |
-| Log-Normal | 1 | 8.3% | 110.3 | 41.7% |
-| Beta | 1 | 8.3% | 59.8 | 50.0% |
-| Uniform | 2 | 16.7% | 177.6 | 25.0% |
-| Student's t | 0 | 0.0% | 149.4 | 41.7% |
-| Chi-Squared | 2 | 16.7% | 922.5 | 33.3% |
-| Cauchy | 0 | 0.0% | 249.2 | 41.7% |
-| Pareto | 1 | 8.3% | 142.4 | 41.7% |
-| Logistic | 0 | 0.0% | 178.4 | 50.0% |
-| Laplace | 0 | 0.0% | 202.8 | 25.0% |
-| Maxwell | 1 | 8.3% | 150.8 | 41.7% |
+A held-out winner has the lowest negative log-likelihood on measurements set
+aside before fitting. It can still fail the KS check: best among the candidates
+does not mean a good description of the process. AIC and BIC use the training
+measurements, while KS and held-out rankings use the test measurements.
 
-Overall: 12 datasets, 168 fits, KS pass rate 39.3%. If a number differs, fix the
-DAX (the repo's tests check the pandas side).
-
-## 6. Reading the sample honestly
-
-- The held-out-NLL winner often fails the KS test (e.g. Chi-Squared on
-  earthquake magnitudes): the ranking picks the best of 14 candidates, not a
-  good one. Page 3 exists to show this.
-- Some SciPy fits (e.g. Weibull with a huge negative `loc`) are numerically
-  unstable; extreme `loc`/`scale` values in the parameter table are real output.
-- KS p-values have no multiple-comparison correction across candidates.
-
-## 7. Files to commit after building
-
-- `powerbi/DistroFit.pbix`
-- `powerbi/screenshots/01-overview.png` … `04-drillthrough.png`
-- Publish to the web service only if the data are public (they are); a
-  "Publish to web" link may be added to the README.
+Some fitted parameters are extreme, especially for Weibull; the detail page shows
+the exported values rather than hiding numerical instability. KS p-values have
+no multiple-comparison correction across the candidates. Tail warnings are
+exploratory checks, not proof of a process problem.

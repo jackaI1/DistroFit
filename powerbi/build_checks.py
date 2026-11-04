@@ -65,7 +65,7 @@ def expression(table, column):
     return f"'{table}'[{column}]"
 
 
-def run():
+def run(out=HERE / 'checks.json'):
     cases = []
     contexts = [('overall', [])]
     for table, column in [('dim_distribution', 'distribution_id'), ('dim_dataset', 'dataset_id'),
@@ -125,7 +125,7 @@ def run():
         if groups:
             query += ' ORDER BY '+', '.join(expression(t,c) for t,c in groups)
         cases.append({'name':'visual:'+visual['name'], 'query':query, 'expected':rows})
-    write_json(HERE / 'checks.json', cases)
+    write_json(out, cases)
     print(f'{len(cases)} native queries prepared')
 
 
