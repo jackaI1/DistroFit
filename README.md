@@ -8,7 +8,8 @@ A histogram groups measurements into bars so I can see their spread. Several cur
 might look right against those bars, so I wanted a separate check. DistroFit fits
 each curve to some of my measurements, then scores it on the measurements set aside.
 I can inspect unusually high or low values, try another sample against the same
-curves and save the analysis as a PDF.
+curves and save the analysis as a PDF or an Excel workbook. In Excel, I can change
+a cutoff and see how many measurements exceed it without rerunning the app.
 
 I also wanted to see where production time went, alongside the measurements.
 The equipment page splits lost time into stops, slow running and rejected parts.
@@ -38,6 +39,30 @@ the values below which a given share of observations fall. Scenario tries new nu
 against the same fitted curves; Manual lets me adjust a curve myself. Download
 reproducible report saves the analysis and its data in a PDF. Stop the app with
 Ctrl-C. Reports contain the input values, so keep private exports private.
+
+## Reviewing measurements in Excel
+
+After fitting a sample, I choose **Download Excel review** beside the results.
+I open the workbook in Excel and change the yellow cell **B4** on **Review**.
+The counts, averages and shares above the cutoff use spreadsheet formulas.
+The chart follows those shares. A value exactly equal to the cutoff does not count
+as above it. I can also [download a worked example](examples/excel/distrofit_review.xlsx)
+made from generated measurements, or recreate it without starting the app:
+
+```sh
+python excel_report.py --sample --out /tmp/distrofit_review.xlsx
+```
+
+For my own CSV, I use:
+
+```sh
+python excel_report.py measurements.csv --column weight --out /tmp/weight_review.xlsx
+```
+
+I keep the original values, the values used for fitting and testing, and each model's
+scores together in the workbook. The model scores stay fixed when I change the
+cutoff. I rerun DistroFit to change the data or refit a curve. The
+[Excel guide](docs/excel-review.md) explains the formulas, export limits and tests.
 
 ## Finding lost production time
 

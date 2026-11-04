@@ -9,6 +9,7 @@ import streamlit as st
 from analysis import (adjust_parameters, calculate_bin_count, create_report, diagnostics, evaluate_scenario,
                       fit_candidates, get_supported_distributions, manual_curve,
                       prepare_data, read_csv, report_payload)
+from excel_report import create_excel_report
 
 st.set_page_config(page_title="DistroFit: Statistical Analytics", page_icon="📈", layout="wide")
 
@@ -33,6 +34,11 @@ def cached_fit(values, candidates, bins, fraction, seed):
 @st.cache_data(max_entries=2)
 def cached_report(payload):
     return create_report(payload)
+
+
+@st.cache_data(max_entries=2)
+def cached_excel_report(payload):
+    return create_excel_report(payload)
 
 
 def parse_numbers(text):
@@ -297,9 +303,17 @@ def main():
         st.caption("The PDF contains every source, prepared and scenario observation, split membership, "
                    "fitted and manual parameters, scores, failures, tail checks, plots and package versions. "
                    "Its first-page annotation also stores the full analysis as JSON.")
-    with report_slot:
+    with report_slot.container():
         st.download_button("Download reproducible report", cached_report(payload),
                            file_name="distrofit_report.pdf", mime="application/pdf", on_click="ignore")
+        try:
+            st.download_button("Download Excel review", cached_excel_report(payload),
+                               file_name="distrofit_review.xlsx",
+                               mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                               on_click="ignore")
+            st.caption("In Excel, edit Review!B4 to compare counts above a threshold. Model fits stay fixed.")
+        except ValueError as error:
+            st.warning(str(error))
 
 
 if __name__ == "__main__":

@@ -1,5 +1,17 @@
 # Third-party notices
 
+## Excel review additions
+
+The Excel exporter adds XlsxWriter 3.2.9 (BSD-2-Clause). Workbook tests add
+openpyxl 3.1.5 (MIT) and et_xmlfile 2.0.0 (MIT). Their unmodified upstream license
+texts are retained in [xlsxwriter](THIRD_PARTY_LICENSES/xlsxwriter/LICENSE.txt),
+[openpyxl](THIRD_PARTY_LICENSES/openpyxl/LICENCE.rst) and
+[et_xmlfile](THIRD_PARTY_LICENSES/et_xmlfile/LICENCE.rst). These additions are pinned
+separately from the original audit below. LibreOffice Calc is installed only in the
+recalculation CI job, not bundled with this project.
+
+## Original dependency audit
+
 Audit snapshot: 2026-10-19, fresh CPython 3.12 / macOS arm64 install. Project MIT terms apply only to original code. Dependencies, fonts, and native libraries retain their own licenses. Exact upstream license/NOTICE texts are preserved under [THIRD_PARTY_LICENSES](THIRD_PARTY_LICENSES/); retain that directory with this notice. No upstream dependency was modified.
 
 Install the audited runtime with `pip install -r requirements.txt` (which constrains the full resolution with `requirements-lock.txt`), or tests with `pip install -r requirements-dev.txt`. Other operating systems may add platform-specific dependencies; re-inventory a binary release on its target platform.

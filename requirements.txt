@@ -7,3 +7,4 @@ scipy==1.18.1
 matplotlib==3.11.2
 plotly==7.1.0
 pyarrow==26.0.0
+XlsxWriter==3.2.9
