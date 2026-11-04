@@ -38,3 +38,11 @@ layout overrides. Both now have failing-then-passing regression tests: titles
 are measured and rejected if too wide, and title placeholders inherit geometry
 and master font size. No deferred review findings. Local Quick Look thumbnail
 confirms the summary renders. Full chart rendering is the remaining local check.
+
+Final visual review: CI's LibreOffice PDFs exposed cropped score axes and a
+wrapped last label in the fourteen-candidate tail chart. Added red-to-green
+positive/negative/zero-axis regressions, forced score bounds to include zero,
+and used 12 pt labels for dense charts. The final local LibreOffice render
+shows the zero baseline and every candidate name without clipping. All 176
+Python tests pass, with zero schema errors across five files. The owned viewer
+process group 67087 exited and process/port checks found nothing remaining.

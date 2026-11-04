@@ -169,3 +169,17 @@ def test_title_placeholders_inherit_layout_geometry_and_master_type_size(payload
         assert titles[0].find('p:spPr/a:xfrm', NS) is None
         assert all('sz' not in run.attrib for run in titles[0].findall('.//a:rPr', NS))
         assert xml(deck, 'ppt/slideMasters/slideMaster1.xml').find('p:txStyles/p:titleStyle/a:lvl1pPr/a:defRPr', NS).get('sz') == '3200'
+
+
+@pytest.mark.parametrize('score, expected_min', [(2.5, 0), (-2.5, -2.5), (0, 0)])
+def test_score_bar_axis_includes_zero_without_hiding_negative_values(payload, score, expected_min):
+    payload['results'] = [payload['results'][0]]
+    payload['results'][0]['Held-out NLL'] = score
+    with export(payload) as deck:
+        axis = xml(deck, 'ppt/charts/chart1.xml').find('c:chart/c:plotArea/c:valAx/c:scaling/c:min', NS)
+        assert axis is not None
+        assert float(axis.get('val')) == expected_min
+        upper = xml(deck, 'ppt/charts/chart1.xml').find('c:chart/c:plotArea/c:valAx/c:scaling/c:max', NS)
+        assert upper is not None
+        assert float(upper.get('val')) >= max(0, score)
+        assert float(upper.get('val')) > expected_min

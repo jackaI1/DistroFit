@@ -78,7 +78,8 @@ There are no macros, remote workbook links or external relationships.
 Infinite loss means a model assigned zero or invalid density to a held-out value.
 It is excluded from the numeric chart and explicitly listed in the slide or notes.
 All-infinite and failed-fit analyses have no finite winner. Negative finite losses
-remain negative. Score and tail charts use horizontal bars so candidate names fit
+remain negative. Score bar axes always include zero, including all-negative
+and all-zero comparisons. Score and tail charts use horizontal bars so candidate names fit
 when all fourteen supported families are selected. More than fourteen candidates
 or a title longer than eighty characters is rejected rather than silently clipped.
 I also measure the summary title and reject text too wide for one line. Slide titles

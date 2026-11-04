@@ -154,11 +154,16 @@ def _chart(labels, series, percent=False):
                    '<c:numCache><c:formatCode>General</c:formatCode>'
                    + _cache('numCache', values).replace('<c:numCache>', '').replace('</c:numCache>', '')
                    + '</c:numCache></c:numRef></c:val></c:ser>')
+    numeric = [value for _, values in series for value in values]
+    lower, upper = min(0., min(numeric)), max(0., max(numeric))
+    if lower == upper:
+        upper = lower + 1.
     axes = ('<c:catAx><c:axId val="1"/><c:scaling><c:orientation val="minMax"/></c:scaling>'
             '<c:axPos val="l"/><c:tickLblPos val="nextTo"/>'
             '<c:crossAx val="2"/><c:crosses val="autoZero"/><c:lblAlgn val="ctr"/><c:lblOffset val="100"/></c:catAx>'
             '<c:valAx><c:axId val="2"/><c:scaling><c:orientation val="minMax"/>'
-            + ('<c:max val="1"/><c:min val="0"/>' if percent else '') + '</c:scaling>'
+            + ('<c:max val="1"/><c:min val="0"/>' if percent else
+               f'<c:max val="{upper}"/><c:min val="{lower}"/>') + '</c:scaling>'
             '<c:axPos val="b"/><c:majorGridlines/>'
             f'<c:numFmt formatCode="{"0%" if percent else "0.00"}" sourceLinked="0"/>'
             '<c:tickLblPos val="nextTo"/><c:crossAx val="1"/><c:crosses val="autoZero"/>'
@@ -168,7 +173,7 @@ def _chart(labels, series, percent=False):
             '<c:barDir val="bar"/><c:grouping val="clustered"/>'
             + result + '<c:gapWidth val="90"/><c:axId val="1"/><c:axId val="2"/></c:barChart>' + axes
             + '</c:plotArea><c:legend><c:legendPos val="b"/></c:legend><c:plotVisOnly val="1"/></c:chart>'
-            '<c:txPr><a:bodyPr/><a:lstStyle/><a:p><a:pPr><a:defRPr sz="1400">'
+            f'<c:txPr><a:bodyPr/><a:lstStyle/><a:p><a:pPr><a:defRPr sz="{1200 if len(labels) > 8 else 1400}">'
             '<a:latin typeface="Arial"/></a:defRPr></a:pPr><a:endParaRPr lang="en-US"/></a:p></c:txPr>'
             '<c:externalData r:id="rId1"><c:autoUpdate val="0"/></c:externalData></c:chartSpace>')
 
