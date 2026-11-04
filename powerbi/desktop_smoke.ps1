@@ -20,6 +20,13 @@ $beforePorts = @(Get-ChildItem $workspaceRoot -Filter msmdsrv.port.txt -Recurse 
 $owned = Start-Process $exe -ArgumentList "`"$project`"" -PassThru
 $ownedStarted = $owned.StartTime.ToUniversalTime().ToString('o')
 $children = @()
+function Get-CurrentWindow {
+ # Desktop can replace its splash window while loading the project. Never
+ # retain that initial AutomationElement across model loading or page changes.
+ $owned.Refresh()
+ if ($owned.HasExited -or $owned.MainWindowHandle -eq 0) { throw 'Owned Desktop window unavailable' }
+ return [System.Windows.Automation.AutomationElement]::FromHandle($owned.MainWindowHandle)
+}
 function Get-Elements($window) {
  return $window.FindAll([System.Windows.Automation.TreeScope]::Descendants, [System.Windows.Automation.Condition]::TrueCondition)
 }
@@ -64,15 +71,23 @@ try {
  dotnet run --project "$Root/NativeCheck" -- $Root $port $Output
  if ($LASTEXITCODE) { throw 'Native model checks failed' }
  Start-Sleep -Seconds 5
+ $window = Get-CurrentWindow
  $elements = Get-Elements $window
  $names = @($elements | ForEach-Object { $_.Current.Name } | Where-Object { $_ } | Select-Object -Unique -First 600)
- $names | ConvertTo-Json | Set-Content "$Output/desktop-controls.json"
+ ConvertTo-Json -InputObject @($names) | Set-Content "$Output/desktop-controls.json"
  # The report tab must be visible; schema validation is not a substitute for opening it.
  foreach ($page in @('Overview','Information criteria','Goodness of fit','Dataset detail')) {
-  $elements = Get-Elements $window
-  $tab = @($elements | Where-Object { $_.Current.Name -eq $page -and $_.Current.BoundingRectangle.Width -gt 0 }) | Select-Object -First 1
+  $tabDeadline = (Get-Date).AddSeconds(30)
+  $tab = $null
+  do {
+   $window = Get-CurrentWindow
+   $elements = Get-Elements $window
+   $tab = @($elements | Where-Object { $_.Current.Name -eq $page -and $_.Current.BoundingRectangle.Width -gt 0 }) | Select-Object -First 1
+   if (-not $tab) { Start-Sleep -Seconds 2 }
+  } while (-not $tab -and (Get-Date) -lt $tabDeadline)
   if (-not $tab) { throw "Report page not exposed: $page. See desktop-controls.json and desktop-initial.png" }
   Click-Element $tab
+  [DistroFitWindow]::SetCursorPos(100,140) | Out-Null
   Start-Sleep -Seconds 5
   Capture ($page.ToLower().Replace(' ','-'))
  }
