@@ -61,6 +61,13 @@ comparison a script can do exactly and a person does slowly. They account for 79
 of findings and are the automation targets (the fourth category crosses the 80%
 line and is also marked "vital few").
 
+**Investigate the causes.** Copy the [fishbone and 5-whys worksheet](root-cause-worksheet.md)
+to investigate a selected category. Its six fishbone branches organize possible
+causes; the why chain, evidence log and countermeasure plan support testing them.
+The Pareto ranking identifies frequent findings, not their causes or share of
+review time. The worksheet's starting example is an unverified hypothesis, not a
+completed investigation at D.L. Engineering.
+
 **How capable was the process?** Review times are right-skewed (they cannot go
 below zero and have a long tail), so a normal model is a poor fit. DistroFit's
 `fit_candidates` ranks Normal, Gamma, Log-Normal and Weibull (Min) on held-out
