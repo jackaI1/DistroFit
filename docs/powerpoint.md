@@ -59,6 +59,10 @@ report when I need every observation and exact split membership.
 
 ## File design
 
+I chose an offline exporter so I can edit chart data without a cloud account
+or service. Slide images would lose that editing ability. The command-line
+and app downloads share the same exporter and frozen analysis results.
+
 `powerpoint_report.py` writes a ZIP package containing PresentationML, the XML
 format used by PowerPoint, and SpreadsheetML, the embedded Excel data format.
 It uses Python's standard library and adds no runtime dependency or account.
