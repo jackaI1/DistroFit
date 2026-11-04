@@ -115,6 +115,16 @@ a disposable Windows runner; it does not touch an existing user session. The rep
 queries verify the values bound to visuals; the Python schema tests alone do not
 establish that the DAX works.
 
+## Recorded result
+
+I ran the complete report in Desktop's **17.0.93.23** engine on 4 November 2026:
+**79 queries and 2,796 value checks passed**, and all four report pages opened.
+The [execution record](verification/README.md) contains actual returned values,
+the model fingerprint, the supplied-reference comparison, four Desktop captures
+and evidence that no owned processes remained after the test. [The successful
+Windows run](https://github.com/jackaI1/DistroFit/actions/runs/41781560355) preserves
+the corresponding logs and artifacts.
+
 ## Reading the results
 
 A held-out winner has the lowest negative log-likelihood on measurements set

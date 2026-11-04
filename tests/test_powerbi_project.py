@@ -104,3 +104,19 @@ def test_detail_query_uses_fact_rows_to_avoid_cross_joining_dimensions():
     detail = next(c for c in cases if c['name'] == 'visual:dataset_comparison')
     assert 'COUNTROWS ( fact_fit )' in detail['query']
     assert len(detail['expected']) == 168
+
+
+def test_committed_native_evidence_is_for_this_model_and_cleaned_up():
+    import hashlib
+    folder = PBI / 'verification'
+    assert (folder / 'native-results.json').exists(), 'missing executed Power BI evidence'
+    results = json.loads((folder / 'native-results.json').read_text())
+    assert results['status'] == 'PASS'
+    assert results['queries'] == 79
+    assert results['checks'] == 2796
+    model_lf = (PBI / 'DistroFit.SemanticModel/model.bim').read_text().encode('utf-8')
+    # actions/checkout on Windows uses CRLF; both hashes bind the same text.
+    hashes = {hashlib.sha256(b).hexdigest() for b in (model_lf, model_lf.replace(b'\n', b'\r\n'))}
+    assert results['modelSha256'] in hashes
+    assert json.loads((folder / 'desktop-open.json').read_text())['pages'] == 4
+    assert json.loads((folder / 'desktop-cleanup.json').read_text())['remaining'] == 0
