@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "goodness_card_0",
+  "position": {
+    "x": 24,
+    "y": 24,
+    "z": 0,
+    "width": 264,
+    "height": 120,
+    "tabOrder": 24.0024
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Datasets With Any KS Pass"
+                }
+              },
+              "queryRef": "_Measures.Datasets With Any KS Pass",
+              "nativeQueryRef": "Datasets With Any KS Pass"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Datasets With Any KS Pass'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

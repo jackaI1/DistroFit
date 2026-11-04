@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "overview_chart",
+  "position": {
+    "x": 24,
+    "y": 540,
+    "z": 0,
+    "width": 1100,
+    "height": 330,
+    "tabOrder": 540.0024
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_distribution"
+                    }
+                  },
+                  "Property": "distribution_name"
+                }
+              },
+              "queryRef": "dim_distribution.distribution_name",
+              "nativeQueryRef": "distribution_name"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Best Fit Share"
+                }
+              },
+              "queryRef": "_Measures.Best Fit Share",
+              "nativeQueryRef": "Best Fit Share"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Best Fit Share by curve'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "overview_filter_0",
+  "position": {
+    "x": 1160,
+    "y": 24,
+    "z": 0,
+    "width": 256,
+    "height": 185,
+    "tabOrder": 24.116
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_dataset"
+                    }
+                  },
+                  "Property": "dataset_name"
+                }
+              },
+              "queryRef": "dim_dataset.dataset_name",
+              "nativeQueryRef": "dataset_name"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Choose datasets'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
