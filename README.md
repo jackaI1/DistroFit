@@ -163,6 +163,7 @@ powerbi/                     DAX measures, report spec, sample data and export
 spc.py                       control charts, capability and Pareto analysis
 docs/case-study-dmaic.md     DMAIC case study (illustrative data)
 docs/dmaic_case_study.py     seeded script that reproduces the case-study numbers
+docs/root-cause-worksheet.md fishbone, 5-whys, evidence and countermeasure templates
 tests/test_analysis.py      numerical and export regressions
 tests/test_app.py           synthetic Streamlit interaction tests
 tests/test_spc.py           SPC calculations against textbook values
@@ -192,6 +193,9 @@ THIRD_PARTY_NOTICES.md        dependency terms and attribution
   applies it to a drawing-revision review that went from about 2 hours to 30 minutes
   after automation; apart from that headline, its data are clearly labelled
   illustrative and reproducible with [`docs/dmaic_case_study.py`](docs/dmaic_case_study.py).
+  [`docs/root-cause-worksheet.md`](docs/root-cause-worksheet.md) supplies reusable
+  fishbone and 5-whys templates, an evidence log and a countermeasure/control plan
+  to investigate categories prioritized by the Pareto analysis.
   The SPC module is a library: it is not yet wired into the Streamlit interface.
 
 ## Limitations and known issues
