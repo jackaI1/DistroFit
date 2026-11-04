@@ -1,0 +1,13 @@
+dataset_id,dataset_name,source,variable,description,n_values
+faithful_eruptions,Old Faithful eruption duration (min),R datasets::faithful (Rdatasets mirror),eruptions,"Eruption durations at Old Faithful geyser, Yellowstone; bimodal.",272
+faithful_waiting,Old Faithful waiting time (min),R datasets::faithful (Rdatasets mirror),waiting,Time between Old Faithful eruptions; bimodal.,272
+quakes_magnitude,Fiji earthquake magnitude,R datasets::quakes (Rdatasets mirror),mag,"Richter magnitude of 1,000 seismic events near Fiji.",1000
+quakes_depth,Fiji earthquake depth (km),R datasets::quakes (Rdatasets mirror),depth,"Focal depth of the same 1,000 Fiji events; clustered.",1000
+airquality_wind,New York wind speed (mph),R datasets::airquality (Rdatasets mirror),Wind,"Daily mean wind speed, New York, May-Sep 1973.",153
+airquality_temp,New York max temperature (F),R datasets::airquality (Rdatasets mirror),Temp,"Daily maximum temperature, New York, May-Sep 1973.",153
+airquality_ozone,New York ozone (ppb),R datasets::airquality (Rdatasets mirror),Ozone,Mean ozone concentration; missing days dropped.,116
+precip_cities,"Annual precipitation, US cities (in)",R datasets::precip (Rdatasets mirror),dat,Average annual precipitation in 70 US cities.,70
+rivers_length,Length of major North American rivers (mi),R datasets::rivers (Rdatasets mirror),dat,Lengths of 141 rivers; right-skewed.,141
+islands_area,Area of major landmasses (1000 sq mi),R datasets::islands (Rdatasets mirror),dat,Areas of 48 landmasses; extremely heavy-tailed.,48
+chickweight_weight,Chick body weight (g),R datasets::ChickWeight (Rdatasets mirror),weight,All weigh-ins of the ChickWeight diet experiment.,578
+mtcars_mpg,Car fuel economy (mpg),R datasets::mtcars (Rdatasets mirror),mpg,Motor Trend 1974 road tests of 32 cars.,32

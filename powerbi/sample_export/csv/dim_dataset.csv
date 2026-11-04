@@ -1,0 +1,13 @@
+dataset_id,dataset_name,source,variable,analysis_status,skip_reason,source_observations,prepared_observations,removed_observations,train_observations,held_observations,tail_threshold,minimum,maximum,mean,std_dev,skewness,excess_kurtosis
+faithful_eruptions,Old Faithful eruption duration (min),R datasets::faithful (Rdatasets mirror),eruptions,fitted,,272,272,0,204,68,4.8306000000000004,1.6,5.1,3.4877830882352936,1.141371251105208,-0.4181504713408308,-1.506167098213807
+faithful_waiting,Old Faithful waiting time (min),R datasets::faithful (Rdatasets mirror),waiting,fitted,,272,272,0,204,68,88.85,43.0,96.0,70.8970588235294,13.594973789999397,-0.4186309490947913,-1.141528803160176
+quakes_magnitude,Fiji earthquake magnitude,R datasets::quakes (Rdatasets mirror),mag,fitted,,1000,1000,0,750,250,5.4,4.0,6.4,4.6204,0.4027729708732527,0.769754810941765,0.5188838889259553
+quakes_depth,Fiji earthquake depth (km),R datasets::quakes (Rdatasets mirror),depth,fitted,,1000,1000,0,750,250,620.6499999999999,40.0,680.0,311.371,215.53549802737808,0.19844692475568848,-1.597122722953126
+airquality_wind,New York wind speed (mph),R datasets::airquality (Rdatasets mirror),Wind,fitted,,153,153,0,114,39,15.5,1.7,20.7,9.957516339869281,3.5230013522125962,0.3478177747168126,0.11141825204271782
+airquality_temp,New York max temperature (F),R datasets::airquality (Rdatasets mirror),Temp,fitted,,153,153,0,114,39,92.35,56.0,97.0,77.88235294117646,9.465269740971456,-0.377884464276894,-0.4035053803957487
+airquality_ozone,New York ozone (ppb),R datasets::airquality (Rdatasets mirror),Ozone,fitted,,116,116,0,87,29,104.70000000000003,1.0,168.0,42.12931034482759,32.98788451443395,1.2417964044102106,1.2903026784985538
+precip_cities,"Annual precipitation, US cities (in)",R datasets::precip (Rdatasets mirror),dat,fitted,,70,70,0,52,18,55.64499999999999,7.0,67.0,34.885714285714286,13.70665009142564,-0.2979211683265008,-0.24101049817592823
+rivers_length,Length of major North American rivers (mi),R datasets::rivers (Rdatasets mirror),dat,fitted,,141,141,0,105,36,1457.2,135.0,3710.0,591.1843971631206,493.8708420345905,3.2182174419108045,13.82581202889856
+islands_area,Area of major landmasses (1000 sq mi),R datasets::islands (Rdatasets mirror),dat,fitted,,48,48,0,36,12,7972.75,12.0,16988.0,1252.7291666666667,3371.1457345220965,3.309808613497727,11.424893213408504
+chickweight_weight,Chick body weight (g),R datasets::ChickWeight (Rdatasets mirror),weight,fitted,,578,578,0,433,145,263.4,35.0,373.0,121.81833910034602,71.07195959910933,0.9637810476103245,0.3622812248264795
+mtcars_mpg,Car fuel economy (mpg),R datasets::mtcars (Rdatasets mirror),mpg,fitted,,32,32,0,24,8,26.624999999999993,10.4,33.9,20.090625000000003,6.026948052089104,0.6723771376290809,-0.022006291424085056

@@ -132,12 +132,15 @@ python -m pip install -r requirements-dev.txt
 python -m pytest -q
 ```
 
-The current suite has 24 passing tests:
+The current suite has 41 passing tests:
 
 - [`tests/test_analysis.py`](tests/test_analysis.py): 16 tests cover concurrent
   fitting, training-only estimation, reproducible splits, held-out selection,
   support violations, failed-fit recovery, tails, frozen scenario parameters,
   residual definitions, manual controls, preprocessing, CSV input and PDF payload.
+- [`tests/test_powerbi_export.py`](tests/test_powerbi_export.py): 17 tests cover star-schema grain and keys,
+  metric consistency with `fit_candidates`, CSV/Parquet agreement, skipped and failed
+  fits, the committed sample export and DAX column references.
 - [`tests/test_app.py`](tests/test_app.py): 8 Streamlit AppTest cases cover sample
   changes, invalid input/stale-result removal, manual adjustments/reset, histogram
   and filtering controls, scenario input and report availability.
@@ -151,12 +154,25 @@ typecheck or package build is configured.
 ```text
 DistroFit.py                 Streamlit input controls, plots and export
 analysis.py                  preparation, fitting, scoring, diagnostics and PDF
+export_powerbi.py            Power BI star-schema export (CSV/Parquet)
+powerbi/                     DAX measures, report spec, sample data and export
 tests/test_analysis.py      numerical and export regressions
 tests/test_app.py           synthetic Streamlit interaction tests
 requirements.txt             pinned direct dependencies
 requirements-lock.txt        audited transitive constraints
 THIRD_PARTY_NOTICES.md        dependency terms and attribution
 ```
+
+## Skills demonstrated
+
+- **Power BI / data modelling (DAX, star schema).** `export_powerbi.py` turns a
+  run into a star schema (`fact_fit`, `dim_dataset`, `dim_distribution`,
+  `dim_run`) as CSV and Parquet. [`powerbi/measures.dax`](powerbi/measures.dax)
+  defines best-fit share, AIC delta and KS pass rate;
+  [`powerbi/REPORT.md`](powerbi/REPORT.md) specifies the report pages, visuals and
+  slicers; [`powerbi/sample_export/`](powerbi/sample_export/) holds an export of 12
+  public datasets. Tests: [`tests/test_powerbi_export.py`](tests/test_powerbi_export.py).
+  The `.pbix` is authored separately in Power BI Desktop.
 
 ## Limitations and known issues
 
