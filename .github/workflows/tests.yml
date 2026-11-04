@@ -31,6 +31,13 @@ jobs:
           name: synthetic-root-cause-evidence
           path: ${{ runner.temp }}/distrofit-root-cause/
           retention-days: 7
+      - name: Analyze censored equipment lifetimes
+        run: python reliability_report.py --sample --out "$RUNNER_TEMP/distrofit-reliability"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-reliability-analysis
+          path: ${{ runner.temp }}/distrofit-reliability/
+          retention-days: 7
   excel-recalculation:
     runs-on: ubuntu-latest
     steps:
