@@ -89,6 +89,12 @@ try
         }
         results.Add(new { name = test.GetProperty("name").GetString(), query, rows });
     }
+    // A disposable cache lets the Desktop smoke test open this processed model.
+    // This remains ignored by Git; users can instead choose Home > Refresh.
+    var cacheFolder = Path.Combine(root, "DistroFit.SemanticModel", ".pbi");
+    Directory.CreateDirectory(cacheFolder);
+    using (var image = File.Create(Path.Combine(cacheFolder, "cache.abf")))
+        server.ImageSave(db.ID, image);
     success = true;
     Console.WriteLine($"PASS: {checks} native value checks in {results.Count} queries; engine {server.Version}");
     File.WriteAllText(Path.Combine(output, "native-results.json"), System.Text.Json.JsonSerializer.Serialize(new {
@@ -111,13 +117,14 @@ finally
         if (!process.WaitForExit(10000)) { process.Kill(); process.WaitForExit(10000); }
     }
     var stopped = process == null || process.HasExited;
-    File.WriteAllText(Path.Combine(output, "cleanup.json"), System.Text.Json.JsonSerializer.Serialize(new {
-        pid = process?.Id, started, port, stopped, success,
-        owner = "DistroFit NativeCheck", cleanup = "XMLA Shutdown; exact owned PID fallback",
-        workingDirectoryRemoved = true
-    }, new JsonSerializerOptions { WriteIndented = true }));
+    var ownedPid = process?.Id;
     process?.Dispose();
     Directory.Delete(work, true);
+    File.WriteAllText(Path.Combine(output, "cleanup.json"), System.Text.Json.JsonSerializer.Serialize(new {
+        pid = ownedPid, started, port, stopped, success,
+        owner = "DistroFit NativeCheck", cleanup = "XMLA Shutdown; exact owned PID fallback",
+        workingDirectoryRemoved = !Directory.Exists(work)
+    }, new JsonSerializerOptions { WriteIndented = true }));
     if (!stopped) throw new Exception("Owned engine failed to stop");
     Console.WriteLine("Cleanup: owned engine stopped and temporary data removed");
 }

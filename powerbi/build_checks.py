@@ -109,6 +109,8 @@ def run(out=HERE / 'checks.json'):
             data = TABLES[table][[c for t,c in groups]].drop_duplicates().sort_values([c for t,c in groups])
             rows = [{expression(t,c).replace("'",''): row[c] for t,c in groups} for _,row in data.iterrows()]
         else:
+            if not metric_names:
+                args.append('"__rows", COUNTROWS ( fact_fit )')
             query = 'EVALUATE SUMMARIZECOLUMNS ( '+', '.join(args)+' )'
             data = FACT.copy()
             for table in ('dim_dataset','dim_distribution','dim_run'):

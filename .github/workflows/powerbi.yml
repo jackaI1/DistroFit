@@ -18,6 +18,7 @@ jobs:
       - name: Install pinned Microsoft Power BI Desktop
         shell: pwsh
         run: |
+          $ProgressPreference = 'SilentlyContinue'
           $url = 'https://download.microsoft.com/download/8/8/0/880BCA75-79DD-466A-927D-1ABF1F5454B0/PBIDesktopSetup-2026-10_x64.exe'
           $installer = Join-Path $env:RUNNER_TEMP 'PBIDesktopSetup.exe'
           Invoke-WebRequest $url -OutFile $installer
@@ -32,6 +33,9 @@ jobs:
           $engine = 'C:\Program Files\Microsoft Power BI Desktop\bin\msmdsrv.exe'
           dotnet run --project powerbi/NativeCheck -- powerbi $engine native-evidence
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
+      - name: Open the complete report in Desktop and capture its pages
+        shell: pwsh
+        run: ./powerbi/desktop_smoke.ps1
       - uses: actions/upload-artifact@v4
         if: always()
         with:

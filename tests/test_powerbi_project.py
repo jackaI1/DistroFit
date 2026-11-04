@@ -81,3 +81,10 @@ def test_native_query_expectations_regenerate_exactly(tmp_path):
     target = tmp_path / 'checks.json'
     run(target)
     assert target.read_bytes() == (PBI / 'checks.json').read_bytes()
+
+
+def test_detail_query_uses_fact_rows_to_avoid_cross_joining_dimensions():
+    cases = json.loads((PBI / 'checks.json').read_text())
+    detail = next(c for c in cases if c['name'] == 'visual:dataset_comparison')
+    assert 'COUNTROWS ( fact_fit )' in detail['query']
+    assert len(detail['expected']) == 168

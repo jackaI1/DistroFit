@@ -1165,7 +1165,7 @@
   },
   {
     "name": "visual:dataset_comparison",
-    "query": "EVALUATE SUMMARIZECOLUMNS ( 'dim_dataset'[dataset_name], 'dim_distribution'[distribution_name], 'fact_fit'[rank_heldout_nll], 'fact_fit'[aic], 'fact_fit'[delta_aic], 'fact_fit'[akaike_weight], 'fact_fit'[shape_1], 'fact_fit'[shape_2], 'fact_fit'[loc], 'fact_fit'[scale] ) ORDER BY 'dim_dataset'[dataset_name], 'dim_distribution'[distribution_name], 'fact_fit'[rank_heldout_nll], 'fact_fit'[aic], 'fact_fit'[delta_aic], 'fact_fit'[akaike_weight], 'fact_fit'[shape_1], 'fact_fit'[shape_2], 'fact_fit'[loc], 'fact_fit'[scale]",
+    "query": "EVALUATE SUMMARIZECOLUMNS ( 'dim_dataset'[dataset_name], 'dim_distribution'[distribution_name], 'fact_fit'[rank_heldout_nll], 'fact_fit'[aic], 'fact_fit'[delta_aic], 'fact_fit'[akaike_weight], 'fact_fit'[shape_1], 'fact_fit'[shape_2], 'fact_fit'[loc], 'fact_fit'[scale], \"__rows\", COUNTROWS ( fact_fit ) ) ORDER BY 'dim_dataset'[dataset_name], 'dim_distribution'[distribution_name], 'fact_fit'[rank_heldout_nll], 'fact_fit'[aic], 'fact_fit'[delta_aic], 'fact_fit'[akaike_weight], 'fact_fit'[shape_1], 'fact_fit'[shape_2], 'fact_fit'[loc], 'fact_fit'[scale]",
     "expected": [
       {
         "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
