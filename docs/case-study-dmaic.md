@@ -66,7 +66,11 @@ to investigate a selected category. Its six fishbone branches organize possible
 causes; the why chain, evidence log and countermeasure plan support testing them.
 The Pareto ranking identifies frequent findings, not their causes or share of
 review time. The worksheet's starting example is an unverified hypothesis, not a
-completed investigation at D.L. Engineering.
+completed investigation at D.L. Engineering. The separate
+[completed synthetic investigation](root-cause-investigation.md) replays the
+leading category, tests a cache-selection cause, rejects alternatives and checks
+a countermeasure against the same inputs and a follow-up batch. Its modeled
+times are separate from this study's illustrative review-time samples.
 
 **How capable was the process?** Review times are right-skewed (they cannot go
 below zero and have a long tail), so a normal model is a poor fit. DistroFit's

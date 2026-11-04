@@ -24,6 +24,13 @@ jobs:
           name: synthetic-comparison
           path: ${{ runner.temp }}/distrofit-comparison/
           retention-days: 7
+      - name: Replay the synthetic root-cause investigation
+        run: python docs/root_cause_investigation.py --out "$RUNNER_TEMP/distrofit-root-cause"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-root-cause-evidence
+          path: ${{ runner.temp }}/distrofit-root-cause/
+          retention-days: 7
   excel-recalculation:
     runs-on: ubuntu-latest
     steps:
