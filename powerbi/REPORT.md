@@ -86,9 +86,10 @@ snapshot; the exporter creates one run at a time.
 ## Native calculation verification
 
 The [Power BI native checks workflow](../.github/workflows/powerbi.yml) installs a
-hash-pinned Microsoft Power BI Desktop on a disposable Windows runner. It starts
-Desktop's real `msmdsrv.exe` calculation engine on a loopback port, deploys the
-**exact committed model.bim**, processes its tables and executes DAX through
+hash-pinned Microsoft Power BI Desktop on a disposable Windows runner. It opens
+Desktop with the **committed PBIP report**, connects to its `msmdsrv.exe`
+calculation engine on a loopback port, checks the loaded table and measure
+expressions against `model.bim`, processes its tables and executes DAX through
 Microsoft's ADOMD client. It does not translate DAX into Python or substitute
 Python results for engine output.
 
@@ -103,13 +104,14 @@ with relative tolerance `1e-8`; the report formats rates as percentages.
 On Windows, with .NET 8 and Desktop installed, I can repeat it:
 
 ```powershell
-dotnet run --project powerbi/NativeCheck -- powerbi "C:\Program Files\Microsoft Power BI Desktop\bin\msmdsrv.exe" native-evidence
+pwsh -File powerbi/desktop_smoke.ps1
 ```
 
 The workflow uploads `native-results.json` with actual returned values, query text,
-engine version and model SHA-256, plus `cleanup.json` with the owned process and
-port. The runner requests shutdown, waits for that exact process and removes its
-temporary directory in a finally block, including failure paths. The report's
+engine version and model SHA-256, plus Desktop page screenshots and `desktop-cleanup.json` with the owned
+process, descendants and port. The wrapper closes Desktop and waits for its exact
+process, with cleanup in a finally block including failure paths. This happens on
+a disposable Windows runner; it does not touch an existing user session. The report's
 queries verify the values bound to visuals; the Python schema tests alone do not
 establish that the DAX works.
 

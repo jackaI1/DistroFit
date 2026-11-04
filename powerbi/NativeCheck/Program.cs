@@ -53,13 +53,14 @@ connection.Open();
         }
         var expected = test.GetProperty("expected");
         if (rows.Count != expected.GetArrayLength()) throw new Exception($"{test.GetProperty("name")}: row count {rows.Count} != {expected.GetArrayLength()}");
-        var index = 0;
-        foreach (var expectedRow in expected.EnumerateArray())
+        // Data order depends on Desktop's linguistic collation (for example
+        // punctuation in Log-Normal). Match grouped rows by values, not position.
+        var unmatched = new List<Dictionary<string, object?>>(rows);
+        bool Matches(Dictionary<string, object?> actualRow, JsonElement expectedRow)
         {
-            var row = rows[index++];
             foreach (var property in expectedRow.EnumerateObject())
             {
-                var actual = row[property.Name];
+                if (!actualRow.TryGetValue(property.Name, out var actual)) return false;
                 var value = property.Value;
                 var equal = value.ValueKind switch
                 {
@@ -67,9 +68,16 @@ connection.Open();
                     JsonValueKind.Number => actual != null && Math.Abs(Convert.ToDouble(actual, CultureInfo.InvariantCulture) - value.GetDouble()) <= 1e-8 * Math.Max(1, Math.Abs(value.GetDouble())),
                     _ => Convert.ToString(actual, CultureInfo.InvariantCulture) == value.GetString()
                 };
-                if (!equal) throw new Exception($"{test.GetProperty("name")} row {index} {property.Name}: {actual ?? "BLANK"} != {value}");
-                checks++;
+                if (!equal) return false;
             }
+            return true;
+        }
+        foreach (var expectedRow in expected.EnumerateArray())
+        {
+            var match = unmatched.FindIndex(row => Matches(row, expectedRow));
+            if (match < 0) throw new Exception($"{test.GetProperty("name")}: no native row matches {expectedRow}; first actual row: {System.Text.Json.JsonSerializer.Serialize(unmatched.FirstOrDefault())}");
+            unmatched.RemoveAt(match);
+            checks += expectedRow.EnumerateObject().Count();
         }
         results.Add(new { name = test.GetProperty("name").GetString(), query, rows });
     }

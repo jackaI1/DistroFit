@@ -78,7 +78,7 @@ try {
  }
  @{status='PASS';pages=4;pid=$owned.Id;started=$ownedStarted} | ConvertTo-Json | Set-Content "$Output/desktop-open.json"
 } finally {
- Capture 'desktop-final'
+ try { Capture 'desktop-final' } catch { Write-Warning "Final capture failed: $_" }
  # Record only descendants of the precise process launched above.
  $all = @(Get-CimInstance Win32_Process)
  $ids = @($owned.Id)
@@ -94,7 +94,10 @@ try {
  }
  foreach ($child in $children) {
   $current = Get-CimInstance Win32_Process -Filter "ProcessId=$($child.ProcessId)"
-  if ($current -and $current.CreationDate -eq $child.CreationDate) { Stop-Process -Id $child.ProcessId -ErrorAction SilentlyContinue }
+  if ($current -and $current.CreationDate -eq $child.CreationDate) { Stop-Process -Id $child.ProcessId -ErrorAction SilentlyContinue
+   $childHandle = Get-Process -Id $child.ProcessId -ErrorAction SilentlyContinue
+   if ($childHandle) { $childHandle.WaitForExit(10000) | Out-Null; $childHandle.Dispose() }
+  }
  }
  $remaining = @(Get-CimInstance Win32_Process | Where-Object { $_.ProcessId -in $ids })
  @{owner='DistroFit Desktop smoke';pid=$owned.Id;started=$ownedStarted;port=$port;remaining=$remaining.Count;cleanup='CloseMainWindow, wait, exact owned PID fallback; recorded descendant PIDs';descendants=@($children | Select-Object ProcessId,ParentProcessId,CreationDate,Name)} | ConvertTo-Json | Set-Content "$Output/desktop-cleanup.json"

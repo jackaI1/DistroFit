@@ -80,7 +80,23 @@ def test_native_query_expectations_regenerate_exactly(tmp_path):
     from powerbi.build_checks import run
     target = tmp_path / 'checks.json'
     run(target)
-    assert target.read_bytes() == (PBI / 'checks.json').read_bytes()
+    import math
+    actual = json.loads(target.read_text())
+    committed = json.loads((PBI / 'checks.json').read_text())
+    assert len(actual) == len(committed)
+    for got, want in zip(actual, committed):
+        assert got['name'] == want['name']
+        assert got['query'] == want['query']
+        assert len(got['expected']) == len(want['expected'])
+        for got_row, want_row in zip(got['expected'], want['expected']):
+            assert got_row.keys() == want_row.keys()
+            for key, value in want_row.items():
+                if isinstance(value, (int, float)):
+                    # BLAS/pandas reductions can differ in the final binary digit
+                    # between macOS ARM and Linux x64. Native tolerance is 1e-8.
+                    assert math.isclose(got_row[key], value, rel_tol=1e-12, abs_tol=1e-12), (got['name'], key)
+                else:
+                    assert got_row[key] == value, (got['name'], key)
 
 
 def test_detail_query_uses_fact_rows_to_avoid_cross_joining_dimensions():
