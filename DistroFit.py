@@ -6,6 +6,8 @@ import plotly.graph_objects as go
 from scipy import stats
 import streamlit as st
 
+from powerpoint_report import create_powerpoint
+
 from analysis import (adjust_parameters, calculate_bin_count, create_report, diagnostics, evaluate_scenario,
                       fit_candidates, get_supported_distributions, manual_curve,
                       prepare_data, read_csv, report_payload)
@@ -39,6 +41,11 @@ def cached_report(payload):
 @st.cache_data(max_entries=2)
 def cached_excel_report(payload):
     return create_excel_report(payload)
+
+
+@st.cache_data(max_entries=2)
+def cached_powerpoint(payload):
+    return create_powerpoint(payload)
 
 
 def parse_numbers(text):
@@ -314,6 +321,10 @@ def main():
             st.caption("In Excel, edit Review!B4 to compare counts above a threshold. Model fits stay fixed.")
         except ValueError as error:
             st.warning(str(error))
+        st.download_button("Download editable PowerPoint", cached_powerpoint(payload),
+                           file_name="distrofit_analysis.pptx",
+                           mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                           on_click="ignore")
 
 
 if __name__ == "__main__":

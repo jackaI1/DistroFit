@@ -8,7 +8,8 @@ A histogram groups measurements into bars so I can see their spread. Several cur
 might look right against those bars, so I wanted a separate check. DistroFit fits
 each curve to some of my measurements, then scores it on the measurements set aside.
 I can inspect unusually high or low values, try another sample against the same
-curves and save the analysis as a PDF or an Excel workbook. In Excel, I can change
+curves and save the analysis as a PDF, an Excel workbook or an editable PowerPoint
+presentation. In Excel, I can change
 a cutoff and see how many measurements exceed it without rerunning the app.
 
 I also wanted to see where production time went, alongside the measurements.
@@ -81,6 +82,35 @@ The second command checks the files and recalculates the saved scores without
 fitting the curves again. Each run needs a new output directory so I keep my earlier
 results. [The comparison guide](docs/saved-comparisons.md) explains how to use my own
 CSV files and what the checks can establish.
+
+## Discussing a result in PowerPoint
+
+I wanted to talk through a curve comparison without rebuilding charts from
+screenshots. **Download editable PowerPoint** saves the current comparison as a
+presentation. It starts with the result and links to the score chart, the check
+of unusually high values and the method. Each candidate has a detail slide with
+its fitted values. The [worked example](examples/powerpoint/synthetic-review.pptx)
+uses generated measurements and can be opened directly in Microsoft PowerPoint.
+
+I can create the same example without running the app:
+
+```sh
+python powerpoint_report.py --sample --out /tmp/distrofit-review.pptx
+# Or use my own CSV column:
+python powerpoint_report.py measurements.csv --column weight --out /tmp/my-review.pptx
+```
+
+In PowerPoint, I can select a chart and choose **Chart Design > Edit Data** to
+change its embedded table. **View > Slide Master** changes the shared design.
+**Slide Show > Custom Slide Show** offers a short discussion or the full review,
+and Presenter View shows the method notes beside each slide. Links on the slides
+work during the slide show. [The presentation guide](docs/powerpoint.md) walks
+through the editing steps and explains the file design.
+
+The charts contain a saved comparison. Editing a chart does not rerun the
+statistics. The presentation leaves out raw measurements, manual curve changes
+and the second scenario; the PDF remains the complete analysis record. Infinite
+scores appear as exclusions, and an analysis with no finite scores has no winner.
 
 ## Finding lost production time
 
