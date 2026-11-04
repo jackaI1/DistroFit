@@ -1,0 +1,88 @@
+{
+  "port": "63444",
+  "cleanup": "CloseMainWindow, wait, exact owned PID fallback; recorded descendant PIDs",
+  "descendants": [
+    {
+      "ProcessId": 4472,
+      "ParentProcessId": 6268,
+      "CreationDate": "2026-11-04T05:55:15.990289+00:00",
+      "Name": "msedgewebview2.exe"
+    },
+    {
+      "ProcessId": 7064,
+      "ParentProcessId": 6268,
+      "CreationDate": "2026-11-04T05:55:16.118184+00:00",
+      "Name": "msmdsrv.exe"
+    },
+    {
+      "ProcessId": 6720,
+      "ParentProcessId": 4472,
+      "CreationDate": "2026-11-04T05:55:16.006892+00:00",
+      "Name": "msedgewebview2.exe"
+    },
+    {
+      "ProcessId": 5864,
+      "ParentProcessId": 7064,
+      "CreationDate": "2026-11-04T05:55:16.126831+00:00",
+      "Name": "conhost.exe"
+    },
+    {
+      "ProcessId": 3888,
+      "ParentProcessId": 4472,
+      "CreationDate": "2026-11-04T05:55:16.681323+00:00",
+      "Name": "msedgewebview2.exe"
+    },
+    {
+      "ProcessId": 2632,
+      "ParentProcessId": 4472,
+      "CreationDate": "2026-11-04T05:55:16.681428+00:00",
+      "Name": "msedgewebview2.exe"
+    },
+    {
+      "ProcessId": 4484,
+      "ParentProcessId": 4472,
+      "CreationDate": "2026-11-04T05:55:16.737244+00:00",
+      "Name": "msedgewebview2.exe"
+    },
+    {
+      "ProcessId": 8904,
+      "ParentProcessId": 4472,
+      "CreationDate": "2026-11-04T05:55:17.157634+00:00",
+      "Name": "msedgewebview2.exe"
+    },
+    {
+      "ProcessId": 6884,
+      "ParentProcessId": 4472,
+      "CreationDate": "2026-11-04T05:55:28.37827+00:00",
+      "Name": "msedgewebview2.exe"
+    },
+    {
+      "ProcessId": 6592,
+      "ParentProcessId": 4472,
+      "CreationDate": "2026-11-04T05:55:30.241236+00:00",
+      "Name": "msedgewebview2.exe"
+    },
+    {
+      "ProcessId": 1348,
+      "ParentProcessId": 4472,
+      "CreationDate": "2026-11-04T05:55:32.591504+00:00",
+      "Name": "msedgewebview2.exe"
+    },
+    {
+      "ProcessId": 3804,
+      "ParentProcessId": 4472,
+      "CreationDate": "2026-11-04T05:55:36.096001+00:00",
+      "Name": "msedgewebview2.exe"
+    },
+    {
+      "ProcessId": 6680,
+      "ParentProcessId": 4472,
+      "CreationDate": "2026-11-04T05:55:39.309554+00:00",
+      "Name": "msedgewebview2.exe"
+    }
+  ],
+  "pid": 6268,
+  "remaining": 0,
+  "owner": "DistroFit Desktop smoke",
+  "started": "2026-11-04T05:55:13.5071647Z"
+}

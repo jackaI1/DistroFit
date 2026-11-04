@@ -5,8 +5,7 @@
 //   fact_fit[distribution_id] -> dim_distribution[distribution_id]
 //   fact_fit[run_id]          -> dim_run[run_id]
 //
-// Create every measure in a table named "_Measures" (Home > Enter data, one
-// blank column, then hide the column) and set its display folder as noted.
+// build_project.py installs these measures in the committed _Measures table.
 //
 // Conventions
 //   * "Fitted" means fit_status <> "failed"; failed fits stay in fact_fit so
@@ -17,8 +16,8 @@
 //     rank_heldout_nll use the held-out split.
 //   * Keep one run selected (dim_run slicer, single select) whenever several
 //     exports are loaded; the measures below assume one run per dataset.
-//   * These were written against the exported schema and cross-checked with the
-//     pandas reference in export_powerbi.reference_measures (see REPORT.md).
+//   * Windows CI executes the committed model and checks these measures against
+//     the independent CSV reference and dataset-filtered calculations.
 // ---------------------------------------------------------------------------
 
 
@@ -45,7 +44,7 @@ DIVIDE ( [Successful Fits], [Fits] )
 
 Best Fit Count =
 // Datasets whose held-out winner is the distribution(s) in the current filter.
-CALCULATE ( COUNTROWS ( fact_fit ), fact_fit[is_best_fit] = TRUE () )
+COALESCE ( CALCULATE ( COUNTROWS ( fact_fit ), fact_fit[is_best_fit] = TRUE () ), 0 )
 
 Best Fit Share =
 // Share of all datasets in the current slicers won by this distribution.

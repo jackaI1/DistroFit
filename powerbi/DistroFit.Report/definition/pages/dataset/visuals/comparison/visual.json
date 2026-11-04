@@ -1,0 +1,185 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "dataset_comparison",
+  "position": {
+    "x": 24,
+    "y": 168,
+    "z": 0,
+    "width": 1100,
+    "height": 350,
+    "tabOrder": 168.0024
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_dataset"
+                    }
+                  },
+                  "Property": "dataset_name"
+                }
+              },
+              "queryRef": "dim_dataset.dataset_name",
+              "nativeQueryRef": "dataset_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_distribution"
+                    }
+                  },
+                  "Property": "distribution_name"
+                }
+              },
+              "queryRef": "dim_distribution.distribution_name",
+              "nativeQueryRef": "distribution_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_fit"
+                    }
+                  },
+                  "Property": "rank_heldout_nll"
+                }
+              },
+              "queryRef": "fact_fit.rank_heldout_nll",
+              "nativeQueryRef": "rank_heldout_nll"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_fit"
+                    }
+                  },
+                  "Property": "aic"
+                }
+              },
+              "queryRef": "fact_fit.aic",
+              "nativeQueryRef": "aic"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_fit"
+                    }
+                  },
+                  "Property": "delta_aic"
+                }
+              },
+              "queryRef": "fact_fit.delta_aic",
+              "nativeQueryRef": "delta_aic"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_fit"
+                    }
+                  },
+                  "Property": "akaike_weight"
+                }
+              },
+              "queryRef": "fact_fit.akaike_weight",
+              "nativeQueryRef": "akaike_weight"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_fit"
+                    }
+                  },
+                  "Property": "shape_1"
+                }
+              },
+              "queryRef": "fact_fit.shape_1",
+              "nativeQueryRef": "shape_1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_fit"
+                    }
+                  },
+                  "Property": "shape_2"
+                }
+              },
+              "queryRef": "fact_fit.shape_2",
+              "nativeQueryRef": "shape_2"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_fit"
+                    }
+                  },
+                  "Property": "loc"
+                }
+              },
+              "queryRef": "fact_fit.loc",
+              "nativeQueryRef": "loc"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_fit"
+                    }
+                  },
+                  "Property": "scale"
+                }
+              },
+              "queryRef": "fact_fit.scale",
+              "nativeQueryRef": "scale"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dataset detail'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

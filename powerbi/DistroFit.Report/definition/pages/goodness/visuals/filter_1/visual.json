@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "goodness_filter_1",
+  "position": {
+    "x": 1160,
+    "y": 229,
+    "z": 0,
+    "width": 256,
+    "height": 185,
+    "tabOrder": 229.116
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_dataset"
+                    }
+                  },
+                  "Property": "source"
+                }
+              },
+              "queryRef": "dim_dataset.source",
+              "nativeQueryRef": "source"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data source'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

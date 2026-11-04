@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "leaderboard_card_1",
+  "position": {
+    "x": 304,
+    "y": 24,
+    "z": 0,
+    "width": 264,
+    "height": 120,
+    "tabOrder": 24.0304
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "AIC Delta"
+                }
+              },
+              "queryRef": "_Measures.AIC Delta",
+              "nativeQueryRef": "AIC Delta"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'AIC Delta'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

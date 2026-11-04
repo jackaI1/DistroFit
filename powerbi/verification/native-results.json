@@ -1,0 +1,4308 @@
+{
+  "status": "PASS",
+  "engine": "Microsoft Power BI Desktop Analysis Services",
+  "version": "17.0.93.23",
+  "modelSha256": "dd397a34849e4e2d31c1f3c2ee29dc99e8f4c390c5e96f009b12c794330dedca",
+  "checks": 2796,
+  "queries": 79,
+  "results": [
+    {
+      "name": "overall",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ) )",
+      "rows": [
+        {
+          "[Fits]": 168,
+          "[Successful Fits]": 168,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 12,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Weibull (Min)",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 12,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.39285714285714285,
+          "[Avg KS Statistic]": 0.24666073706708977,
+          "[Tail Flag Rate]": 0.32142857142857145,
+          "[Datasets With Any KS Pass]": 10
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.distribution_id=norm",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022norm\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 12,
+          "[Successful Fits]": 12,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[Top Distribution]": null,
+          "[AIC Delta]": 172.11038698146402,
+          "[BIC Delta]": 169.5224411918323,
+          "[Akaike Weight]": 0.556607560394578,
+          "[AIC Winner Share]": 0.16666666666666666,
+          "[KS Pass Rate]": 0.3333333333333333,
+          "[Avg KS Statistic]": 0.23188948889238312,
+          "[Tail Flag Rate]": 0.25,
+          "[Datasets With Any KS Pass]": 4
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.distribution_id=gamma",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022gamma\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 12,
+          "[Successful Fits]": 12,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[Top Distribution]": null,
+          "[AIC Delta]": 117.0993407213354,
+          "[BIC Delta]": 117.4490787635154,
+          "[Akaike Weight]": 0.2897048359886963,
+          "[AIC Winner Share]": null,
+          "[KS Pass Rate]": 0.3333333333333333,
+          "[Avg KS Statistic]": 0.23140356792179437,
+          "[Tail Flag Rate]": 0.25,
+          "[Datasets With Any KS Pass]": 4
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.distribution_id=weibull_min",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022weibull_min\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 12,
+          "[Successful Fits]": 12,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 2,
+          "[Best Fit Share]": 0.16666666666666666,
+          "[Top Distribution]": "Weibull (Min)",
+          "[AIC Delta]": 82.23778059678796,
+          "[BIC Delta]": 82.58751863896795,
+          "[Akaike Weight]": 0.6358916661567318,
+          "[AIC Winner Share]": null,
+          "[KS Pass Rate]": 0.5833333333333334,
+          "[Avg KS Statistic]": 0.207070747326857,
+          "[Tail Flag Rate]": 0.16666666666666666,
+          "[Datasets With Any KS Pass]": 7
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.distribution_id=expon",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022expon\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 12,
+          "[Successful Fits]": 12,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 2,
+          "[Best Fit Share]": 0.16666666666666666,
+          "[Top Distribution]": "Exponential",
+          "[AIC Delta]": 147.13181699827203,
+          "[BIC Delta]": 144.5438712086403,
+          "[Akaike Weight]": 0.17494328020166772,
+          "[AIC Winner Share]": null,
+          "[KS Pass Rate]": 0.3333333333333333,
+          "[Avg KS Statistic]": 0.2761977974732428,
+          "[Tail Flag Rate]": 0.4166666666666667,
+          "[Datasets With Any KS Pass]": 4
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.distribution_id=lognorm",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022lognorm\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 12,
+          "[Successful Fits]": 12,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 0.08333333333333333,
+          "[Top Distribution]": "Log-Normal",
+          "[AIC Delta]": 110.28700103204302,
+          "[BIC Delta]": 110.63673907422303,
+          "[Akaike Weight]": 1.2757569821573795,
+          "[AIC Winner Share]": 0.08333333333333333,
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Avg KS Statistic]": 0.2020202927606701,
+          "[Tail Flag Rate]": 0.16666666666666666,
+          "[Datasets With Any KS Pass]": 5
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.distribution_id=beta",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022beta\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 12,
+          "[Successful Fits]": 12,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 0.08333333333333333,
+          "[Top Distribution]": "Beta",
+          "[AIC Delta]": 59.757735739223676,
+          "[BIC Delta]": 63.04515761321514,
+          "[Akaike Weight]": 2.9741576025121925,
+          "[AIC Winner Share]": 0.3333333333333333,
+          "[KS Pass Rate]": 0.5,
+          "[Avg KS Statistic]": 0.20679412194536706,
+          "[Tail Flag Rate]": 0.4166666666666667,
+          "[Datasets With Any KS Pass]": 6
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.distribution_id=uniform",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022uniform\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 12,
+          "[Successful Fits]": 12,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 2,
+          "[Best Fit Share]": 0.16666666666666666,
+          "[Top Distribution]": "Uniform",
+          "[AIC Delta]": 177.61958543727224,
+          "[BIC Delta]": 175.0316396476405,
+          "[Akaike Weight]": 2.015070197290834,
+          "[AIC Winner Share]": 0.16666666666666666,
+          "[KS Pass Rate]": 0.25,
+          "[Avg KS Statistic]": 0.36887002980856193,
+          "[Tail Flag Rate]": 0.5833333333333334,
+          "[Datasets With Any KS Pass]": 3
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.distribution_id=t",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022t\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 12,
+          "[Successful Fits]": 12,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[Top Distribution]": null,
+          "[AIC Delta]": 149.42661882262004,
+          "[BIC Delta]": 149.77635686480002,
+          "[Akaike Weight]": 0.20654888753202313,
+          "[AIC Winner Share]": null,
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Avg KS Statistic]": 0.23145198089360589,
+          "[Tail Flag Rate]": 0.16666666666666666,
+          "[Datasets With Any KS Pass]": 5
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.distribution_id=chi2",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022chi2\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 12,
+          "[Successful Fits]": 12,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 2,
+          "[Best Fit Share]": 0.16666666666666666,
+          "[Top Distribution]": "Chi-Squared",
+          "[AIC Delta]": 922.482930360663,
+          "[BIC Delta]": 922.8326684028431,
+          "[Akaike Weight]": 3.267641507807798,
+          "[AIC Winner Share]": 0.25,
+          "[KS Pass Rate]": 0.3333333333333333,
+          "[Avg KS Statistic]": 0.3255698613341069,
+          "[Tail Flag Rate]": 0.4166666666666667,
+          "[Datasets With Any KS Pass]": 4
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.distribution_id=cauchy",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022cauchy\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 12,
+          "[Successful Fits]": 12,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[Top Distribution]": null,
+          "[AIC Delta]": 249.16306326906076,
+          "[BIC Delta]": 246.57511747942897,
+          "[Akaike Weight]": 0.0004901673309611781,
+          "[AIC Winner Share]": null,
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Avg KS Statistic]": 0.2244360479549744,
+          "[Tail Flag Rate]": 0.4166666666666667,
+          "[Datasets With Any KS Pass]": 5
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.distribution_id=pareto",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022pareto\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 12,
+          "[Successful Fits]": 12,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 0.08333333333333333,
+          "[Top Distribution]": "Pareto",
+          "[AIC Delta]": 142.35293282102933,
+          "[BIC Delta]": 142.7026708632093,
+          "[Akaike Weight]": 0.06438547747367163,
+          "[AIC Winner Share]": null,
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Avg KS Statistic]": 0.24842234579120429,
+          "[Tail Flag Rate]": 0.4166666666666667,
+          "[Datasets With Any KS Pass]": 5
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.distribution_id=logistic",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022logistic\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 12,
+          "[Successful Fits]": 12,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[Top Distribution]": null,
+          "[AIC Delta]": 178.3550980319261,
+          "[BIC Delta]": 175.7671522422944,
+          "[Akaike Weight]": 0.24615257099841664,
+          "[AIC Winner Share]": null,
+          "[KS Pass Rate]": 0.5,
+          "[Avg KS Statistic]": 0.21585000430318127,
+          "[Tail Flag Rate]": 0.25,
+          "[Datasets With Any KS Pass]": 6
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.distribution_id=laplace",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022laplace\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 12,
+          "[Successful Fits]": 12,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[Top Distribution]": null,
+          "[AIC Delta]": 202.8385353312839,
+          "[BIC Delta]": 200.25058954165218,
+          "[Akaike Weight]": 0.16896970488168092,
+          "[AIC Winner Share]": null,
+          "[KS Pass Rate]": 0.25,
+          "[Avg KS Statistic]": 0.23780355742782947,
+          "[Tail Flag Rate]": 0.3333333333333333,
+          "[Datasets With Any KS Pass]": 3
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.distribution_id=maxwell",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022maxwell\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 12,
+          "[Successful Fits]": 12,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 0.08333333333333333,
+          "[Top Distribution]": "Maxwell",
+          "[AIC Delta]": 150.7635959738091,
+          "[BIC Delta]": 148.17565018417736,
+          "[Akaike Weight]": 0.12367955927336897,
+          "[AIC Winner Share]": null,
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Avg KS Statistic]": 0.24547047510547748,
+          "[Tail Flag Rate]": 0.25,
+          "[Datasets With Any KS Pass]": 5
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.dataset_id=faithful_eruptions",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022faithful_eruptions\u0022 }, \u0027dim_dataset\u0027[dataset_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Uniform",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": null,
+          "[Avg KS Statistic]": 0.25406150035488434,
+          "[Tail Flag Rate]": 0.8571428571428571,
+          "[Datasets With Any KS Pass]": null
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.dataset_id=faithful_waiting",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022faithful_waiting\u0022 }, \u0027dim_dataset\u0027[dataset_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Weibull (Min)",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1.0000000000000002,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.14285714285714285,
+          "[Avg KS Statistic]": 0.18505086151012604,
+          "[Tail Flag Rate]": 0.35714285714285715,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.dataset_id=quakes_magnitude",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022quakes_magnitude\u0022 }, \u0027dim_dataset\u0027[dataset_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Chi-Squared",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.42857142857142855,
+          "[Avg KS Statistic]": 0.13628038611519622,
+          "[Tail Flag Rate]": 0.35714285714285715,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.dataset_id=quakes_depth",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022quakes_depth\u0022 }, \u0027dim_dataset\u0027[dataset_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Uniform",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": null,
+          "[Avg KS Statistic]": 0.15118609042141942,
+          "[Tail Flag Rate]": 0.7857142857142857,
+          "[Datasets With Any KS Pass]": null
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.dataset_id=airquality_wind",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022airquality_wind\u0022 }, \u0027dim_dataset\u0027[dataset_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Chi-Squared",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 0.9999999999999999,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.14285714285714285,
+          "[Avg KS Statistic]": 0.22917196083237062,
+          "[Tail Flag Rate]": 0.07142857142857142,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.dataset_id=airquality_temp",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022airquality_temp\u0022 }, \u0027dim_dataset\u0027[dataset_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Beta",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.8571428571428571,
+          "[Avg KS Statistic]": 0.16198926038400616,
+          "[Tail Flag Rate]": 0.14285714285714285,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.dataset_id=airquality_ozone",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022airquality_ozone\u0022 }, \u0027dim_dataset\u0027[dataset_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Maxwell",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.9285714285714286,
+          "[Avg KS Statistic]": 0.16338114603405088,
+          "[Tail Flag Rate]": 0.07142857142857142,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.dataset_id=precip_cities",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022precip_cities\u0022 }, \u0027dim_dataset\u0027[dataset_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Weibull (Min)",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 1,
+          "[Avg KS Statistic]": 0.16366489017043673,
+          "[Tail Flag Rate]": null,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.dataset_id=rivers_length",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022rivers_length\u0022 }, \u0027dim_dataset\u0027[dataset_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Log-Normal",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.6428571428571429,
+          "[Avg KS Statistic]": 0.2894288230378785,
+          "[Tail Flag Rate]": 0.14285714285714285,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.dataset_id=islands_area",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022islands_area\u0022 }, \u0027dim_dataset\u0027[dataset_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Pareto",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.35714285714285715,
+          "[Avg KS Statistic]": 0.5122152208022152,
+          "[Tail Flag Rate]": 0.2857142857142857,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.dataset_id=chickweight_weight",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022chickweight_weight\u0022 }, \u0027dim_dataset\u0027[dataset_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Exponential",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.14285714285714285,
+          "[Avg KS Statistic]": 0.17045661293327447,
+          "[Tail Flag Rate]": 0.14285714285714285,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.dataset_id=mtcars_mpg",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022mtcars_mpg\u0022 }, \u0027dim_dataset\u0027[dataset_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Exponential",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.07142857142857142,
+          "[Avg KS Statistic]": 0.5430420922092181,
+          "[Tail Flag Rate]": 0.6428571428571429,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.source=R datasets::faithful (Rdatasets mirror)",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022R datasets::faithful (Rdatasets mirror)\u0022 }, \u0027dim_dataset\u0027[source] ) )",
+      "rows": [
+        {
+          "[Fits]": 28,
+          "[Successful Fits]": 28,
+          "[Datasets Analysed]": 2,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 2,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Weibull (Min)",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 2.0000000000000004,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.07142857142857142,
+          "[Avg KS Statistic]": 0.2195561809325052,
+          "[Tail Flag Rate]": 0.6071428571428571,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.source=R datasets::quakes (Rdatasets mirror)",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022R datasets::quakes (Rdatasets mirror)\u0022 }, \u0027dim_dataset\u0027[source] ) )",
+      "rows": [
+        {
+          "[Fits]": 28,
+          "[Successful Fits]": 28,
+          "[Datasets Analysed]": 2,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 2,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Uniform",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 2,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.21428571428571427,
+          "[Avg KS Statistic]": 0.1437332382683078,
+          "[Tail Flag Rate]": 0.5714285714285714,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.source=R datasets::airquality (Rdatasets mirror)",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022R datasets::airquality (Rdatasets mirror)\u0022 }, \u0027dim_dataset\u0027[source] ) )",
+      "rows": [
+        {
+          "[Fits]": 42,
+          "[Successful Fits]": 42,
+          "[Datasets Analysed]": 3,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 3,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Maxwell",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 3,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.6428571428571429,
+          "[Avg KS Statistic]": 0.18484745575014264,
+          "[Tail Flag Rate]": 0.09523809523809523,
+          "[Datasets With Any KS Pass]": 3
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.source=R datasets::precip (Rdatasets mirror)",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022R datasets::precip (Rdatasets mirror)\u0022 }, \u0027dim_dataset\u0027[source] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Weibull (Min)",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 1,
+          "[Avg KS Statistic]": 0.16366489017043673,
+          "[Tail Flag Rate]": null,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.source=R datasets::rivers (Rdatasets mirror)",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022R datasets::rivers (Rdatasets mirror)\u0022 }, \u0027dim_dataset\u0027[source] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Log-Normal",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.6428571428571429,
+          "[Avg KS Statistic]": 0.2894288230378785,
+          "[Tail Flag Rate]": 0.14285714285714285,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.source=R datasets::islands (Rdatasets mirror)",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022R datasets::islands (Rdatasets mirror)\u0022 }, \u0027dim_dataset\u0027[source] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Pareto",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.35714285714285715,
+          "[Avg KS Statistic]": 0.5122152208022152,
+          "[Tail Flag Rate]": 0.2857142857142857,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.source=R datasets::ChickWeight (Rdatasets mirror)",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022R datasets::ChickWeight (Rdatasets mirror)\u0022 }, \u0027dim_dataset\u0027[source] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Exponential",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.14285714285714285,
+          "[Avg KS Statistic]": 0.17045661293327447,
+          "[Tail Flag Rate]": 0.14285714285714285,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_dataset.source=R datasets::mtcars (Rdatasets mirror)",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022R datasets::mtcars (Rdatasets mirror)\u0022 }, \u0027dim_dataset\u0027[source] ) )",
+      "rows": [
+        {
+          "[Fits]": 14,
+          "[Successful Fits]": 14,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Exponential",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.07142857142857142,
+          "[Avg KS Statistic]": 0.5430420922092181,
+          "[Tail Flag Rate]": 0.6428571428571429,
+          "[Datasets With Any KS Pass]": 1
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.support_type=Unbounded",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022Unbounded\u0022 }, \u0027dim_distribution\u0027[support_type] ) )",
+      "rows": [
+        {
+          "[Fits]": 60,
+          "[Successful Fits]": 60,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[Top Distribution]": null,
+          "[AIC Delta]": 147.91086334805766,
+          "[BIC Delta]": 145.46624069721867,
+          "[Akaike Weight]": 1.17876889113766,
+          "[AIC Winner Share]": 0.16666666666666666,
+          "[KS Pass Rate]": 0.38333333333333336,
+          "[Avg KS Statistic]": 0.22828621589439477,
+          "[Tail Flag Rate]": 0.2833333333333333,
+          "[Datasets With Any KS Pass]": 7
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.support_type=Lower-bounded",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022Lower-bounded\u0022 }, \u0027dim_distribution\u0027[support_type] ) )",
+      "rows": [
+        {
+          "[Fits]": 84,
+          "[Successful Fits]": 84,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 9,
+          "[Best Fit Share]": 0.75,
+          "[Top Distribution]": "Weibull (Min)",
+          "[AIC Delta]": 31.821150544684745,
+          "[BIC Delta]": 31.805410968557613,
+          "[Akaike Weight]": 5.832003309059314,
+          "[AIC Winner Share]": 0.3333333333333333,
+          "[KS Pass Rate]": 0.40476190476190477,
+          "[Avg KS Statistic]": 0.24802215538762187,
+          "[Tail Flag Rate]": 0.2976190476190476,
+          "[Datasets With Any KS Pass]": 9
+        }
+      ]
+    },
+    {
+      "name": "dim_distribution.support_type=Bounded",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022Bounded\u0022 }, \u0027dim_distribution\u0027[support_type] ) )",
+      "rows": [
+        {
+          "[Fits]": 24,
+          "[Successful Fits]": 24,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 3,
+          "[Best Fit Share]": 0.25,
+          "[Top Distribution]": "Uniform",
+          "[AIC Delta]": 50.019162496580385,
+          "[BIC Delta]": 51.961698570729425,
+          "[Akaike Weight]": 4.989227799803026,
+          "[AIC Winner Share]": 0.5,
+          "[KS Pass Rate]": 0.375,
+          "[Avg KS Statistic]": 0.28783207587696447,
+          "[Tail Flag Rate]": 0.5,
+          "[Datasets With Any KS Pass]": 7
+        }
+      ]
+    },
+    {
+      "name": "dim_run.run_id=e3bbe6e95c37",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022e3bbe6e95c37\u0022 }, \u0027dim_run\u0027[run_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 168,
+          "[Successful Fits]": 168,
+          "[Datasets Analysed]": 12,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 12,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Weibull (Min)",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 12,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": 0.39285714285714285,
+          "[Avg KS Statistic]": 0.24666073706708977,
+          "[Tail Flag Rate]": 0.32142857142857145,
+          "[Datasets With Any KS Pass]": 10
+        }
+      ]
+    },
+    {
+      "name": "dataset-and-family",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022faithful_eruptions\u0022 }, \u0027dim_dataset\u0027[dataset_id] ), TREATAS ( { \u0022uniform\u0022 }, \u0027dim_distribution\u0027[distribution_id] ) )",
+      "rows": [
+        {
+          "[Fits]": 1,
+          "[Successful Fits]": 1,
+          "[Datasets Analysed]": 1,
+          "[Fit Success Rate]": 1,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 1,
+          "[Top Distribution]": "Uniform",
+          "[AIC Delta]": 0,
+          "[BIC Delta]": 0,
+          "[Akaike Weight]": 1,
+          "[AIC Winner Share]": 1,
+          "[KS Pass Rate]": null,
+          "[Avg KS Statistic]": 0.25564705882352956,
+          "[Tail Flag Rate]": null,
+          "[Datasets With Any KS Pass]": null
+        }
+      ]
+    },
+    {
+      "name": "empty-run",
+      "query": "EVALUATE CALCULATETABLE ( ROW ( \u0022Fits\u0022, [Fits], \u0022Successful Fits\u0022, [Successful Fits], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Fit Success Rate\u0022, [Fit Success Rate], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022Top Distribution\u0022, [Top Distribution], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022Akaike Weight\u0022, [Akaike Weight], \u0022AIC Winner Share\u0022, [AIC Winner Share], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] ), TREATAS ( { \u0022missing\u0022 }, \u0027dim_run\u0027[run_id] ) )",
+      "rows": [
+        {
+          "[Fits]": null,
+          "[Successful Fits]": null,
+          "[Datasets Analysed]": null,
+          "[Fit Success Rate]": null,
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": null,
+          "[Top Distribution]": null,
+          "[AIC Delta]": null,
+          "[BIC Delta]": null,
+          "[Akaike Weight]": null,
+          "[AIC Winner Share]": null,
+          "[KS Pass Rate]": null,
+          "[Avg KS Statistic]": null,
+          "[Tail Flag Rate]": null,
+          "[Datasets With Any KS Pass]": null
+        }
+      ]
+    },
+    {
+      "name": "supplied-reference-14-families",
+      "query": "EVALUATE SUMMARIZECOLUMNS ( dim_distribution[distribution_id], \u0022Datasets Analysed\u0022, [Datasets Analysed], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022AIC Delta\u0022, [AIC Delta], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Fit Success Rate\u0022, [Fit Success Rate] ) ORDER BY dim_distribution[distribution_id]",
+      "rows": [
+        {
+          "dim_distribution[distribution_id]": "beta",
+          "[Datasets Analysed]": 12,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 0.08333333333333333,
+          "[AIC Delta]": 59.757735739223676,
+          "[KS Pass Rate]": 0.5,
+          "[Fit Success Rate]": 1
+        },
+        {
+          "dim_distribution[distribution_id]": "cauchy",
+          "[Datasets Analysed]": 12,
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[AIC Delta]": 249.16306326906076,
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Fit Success Rate]": 1
+        },
+        {
+          "dim_distribution[distribution_id]": "chi2",
+          "[Datasets Analysed]": 12,
+          "[Best Fit Count]": 2,
+          "[Best Fit Share]": 0.16666666666666666,
+          "[AIC Delta]": 922.482930360663,
+          "[KS Pass Rate]": 0.3333333333333333,
+          "[Fit Success Rate]": 1
+        },
+        {
+          "dim_distribution[distribution_id]": "expon",
+          "[Datasets Analysed]": 12,
+          "[Best Fit Count]": 2,
+          "[Best Fit Share]": 0.16666666666666666,
+          "[AIC Delta]": 147.13181699827203,
+          "[KS Pass Rate]": 0.3333333333333333,
+          "[Fit Success Rate]": 1
+        },
+        {
+          "dim_distribution[distribution_id]": "gamma",
+          "[Datasets Analysed]": 12,
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[AIC Delta]": 117.0993407213354,
+          "[KS Pass Rate]": 0.3333333333333333,
+          "[Fit Success Rate]": 1
+        },
+        {
+          "dim_distribution[distribution_id]": "laplace",
+          "[Datasets Analysed]": 12,
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[AIC Delta]": 202.8385353312839,
+          "[KS Pass Rate]": 0.25,
+          "[Fit Success Rate]": 1
+        },
+        {
+          "dim_distribution[distribution_id]": "logistic",
+          "[Datasets Analysed]": 12,
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[AIC Delta]": 178.3550980319261,
+          "[KS Pass Rate]": 0.5,
+          "[Fit Success Rate]": 1
+        },
+        {
+          "dim_distribution[distribution_id]": "lognorm",
+          "[Datasets Analysed]": 12,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 0.08333333333333333,
+          "[AIC Delta]": 110.28700103204302,
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Fit Success Rate]": 1
+        },
+        {
+          "dim_distribution[distribution_id]": "maxwell",
+          "[Datasets Analysed]": 12,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 0.08333333333333333,
+          "[AIC Delta]": 150.7635959738091,
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Fit Success Rate]": 1
+        },
+        {
+          "dim_distribution[distribution_id]": "norm",
+          "[Datasets Analysed]": 12,
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[AIC Delta]": 172.11038698146402,
+          "[KS Pass Rate]": 0.3333333333333333,
+          "[Fit Success Rate]": 1
+        },
+        {
+          "dim_distribution[distribution_id]": "pareto",
+          "[Datasets Analysed]": 12,
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 0.08333333333333333,
+          "[AIC Delta]": 142.35293282102933,
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Fit Success Rate]": 1
+        },
+        {
+          "dim_distribution[distribution_id]": "t",
+          "[Datasets Analysed]": 12,
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[AIC Delta]": 149.42661882262004,
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Fit Success Rate]": 1
+        },
+        {
+          "dim_distribution[distribution_id]": "uniform",
+          "[Datasets Analysed]": 12,
+          "[Best Fit Count]": 2,
+          "[Best Fit Share]": 0.16666666666666666,
+          "[AIC Delta]": 177.61958543727224,
+          "[KS Pass Rate]": 0.25,
+          "[Fit Success Rate]": 1
+        },
+        {
+          "dim_distribution[distribution_id]": "weibull_min",
+          "[Datasets Analysed]": 12,
+          "[Best Fit Count]": 2,
+          "[Best Fit Share]": 0.16666666666666666,
+          "[AIC Delta]": 82.23778059678796,
+          "[KS Pass Rate]": 0.5833333333333334,
+          "[Fit Success Rate]": 1
+        }
+      ]
+    },
+    {
+      "name": "visual:dataset_card_0",
+      "query": "EVALUATE ROW ( \u0022Fits\u0022, [Fits] )",
+      "rows": [
+        {
+          "[Fits]": 168
+        }
+      ]
+    },
+    {
+      "name": "visual:dataset_card_1",
+      "query": "EVALUATE ROW ( \u0022Datasets Analysed\u0022, [Datasets Analysed] )",
+      "rows": [
+        {
+          "[Datasets Analysed]": 12
+        }
+      ]
+    },
+    {
+      "name": "visual:dataset_card_2",
+      "query": "EVALUATE ROW ( \u0022Akaike Weight\u0022, [Akaike Weight] )",
+      "rows": [
+        {
+          "[Akaike Weight]": 12
+        }
+      ]
+    },
+    {
+      "name": "visual:dataset_chart",
+      "query": "EVALUATE SUMMARIZECOLUMNS ( \u0027dim_distribution\u0027[distribution_name], \u0022Akaike Weight\u0022, [Akaike Weight] ) ORDER BY \u0027dim_distribution\u0027[distribution_name]",
+      "rows": [
+        {
+          "dim_distribution[distribution_name]": "Beta",
+          "[Akaike Weight]": 2.9741576025121925
+        },
+        {
+          "dim_distribution[distribution_name]": "Cauchy",
+          "[Akaike Weight]": 0.0004901673309611781
+        },
+        {
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "[Akaike Weight]": 3.267641507807798
+        },
+        {
+          "dim_distribution[distribution_name]": "Exponential",
+          "[Akaike Weight]": 0.17494328020166772
+        },
+        {
+          "dim_distribution[distribution_name]": "Gamma",
+          "[Akaike Weight]": 0.2897048359886963
+        },
+        {
+          "dim_distribution[distribution_name]": "Laplace",
+          "[Akaike Weight]": 0.16896970488168092
+        },
+        {
+          "dim_distribution[distribution_name]": "Logistic",
+          "[Akaike Weight]": 0.24615257099841664
+        },
+        {
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "[Akaike Weight]": 1.2757569821573795
+        },
+        {
+          "dim_distribution[distribution_name]": "Maxwell",
+          "[Akaike Weight]": 0.12367955927336897
+        },
+        {
+          "dim_distribution[distribution_name]": "Normal",
+          "[Akaike Weight]": 0.556607560394578
+        },
+        {
+          "dim_distribution[distribution_name]": "Pareto",
+          "[Akaike Weight]": 0.06438547747367163
+        },
+        {
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "[Akaike Weight]": 0.20654888753202313
+        },
+        {
+          "dim_distribution[distribution_name]": "Uniform",
+          "[Akaike Weight]": 2.015070197290834
+        },
+        {
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "[Akaike Weight]": 0.6358916661567318
+        }
+      ]
+    },
+    {
+      "name": "visual:dataset_comparison",
+      "query": "EVALUATE SUMMARIZECOLUMNS ( \u0027dim_dataset\u0027[dataset_name], \u0027dim_distribution\u0027[distribution_name], \u0027fact_fit\u0027[rank_heldout_nll], \u0027fact_fit\u0027[aic], \u0027fact_fit\u0027[delta_aic], \u0027fact_fit\u0027[akaike_weight], \u0027fact_fit\u0027[shape_1], \u0027fact_fit\u0027[shape_2], \u0027fact_fit\u0027[loc], \u0027fact_fit\u0027[scale], \u0022__rows\u0022, COUNTROWS ( fact_fit ) ) ORDER BY \u0027dim_dataset\u0027[dataset_name], \u0027dim_distribution\u0027[distribution_name], \u0027fact_fit\u0027[rank_heldout_nll], \u0027fact_fit\u0027[aic], \u0027fact_fit\u0027[delta_aic], \u0027fact_fit\u0027[akaike_weight], \u0027fact_fit\u0027[shape_1], \u0027fact_fit\u0027[shape_2], \u0027fact_fit\u0027[loc], \u0027fact_fit\u0027[scale]",
+      "rows": [
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
+          "dim_distribution[distribution_name]": "Beta",
+          "fact_fit[rank_heldout_nll]": 2,
+          "fact_fit[aic]": 428.5628613176932,
+          "fact_fit[delta_aic]": 3.017803933931475,
+          "fact_fit[akaike_weight]": 0.04418146776383777,
+          "fact_fit[shape_1]": 66.88301184115446,
+          "fact_fit[shape_2]": 17.478542586515623,
+          "fact_fit[loc]": -216.56344604233936,
+          "fact_fit[scale]": 317.37278575077426,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
+          "dim_distribution[distribution_name]": "Cauchy",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 437.565541380901,
+          "fact_fit[delta_aic]": 12.020483997139252,
+          "fact_fit[akaike_weight]": 0.0004901545096311269,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 37.64213570727927,
+          "fact_fit[scale]": 7.032248976506935,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 428.6726645684783,
+          "fact_fit[delta_aic]": 3.1276071847165667,
+          "fact_fit[akaike_weight]": 0.041821216996706274,
+          "fact_fit[shape_1]": 270.829253233585,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -131.7460558863914,
+          "fact_fit[scale]": 0.6154008505853892,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
+          "dim_distribution[distribution_name]": "Exponential",
+          "fact_fit[rank_heldout_nll]": 13,
+          "fact_fit[aic]": 454.75620589962784,
+          "fact_fit[delta_aic]": 29.211148515866114,
+          "fact_fit[akaike_weight]": 9.066248786092061E-08,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 7,
+          "fact_fit[scale]": 28.05576923076923,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
+          "dim_distribution[distribution_name]": "Gamma",
+          "fact_fit[rank_heldout_nll]": 6,
+          "fact_fit[aic]": 428.2290789469396,
+          "fact_fit[delta_aic]": 2.6840215631778506,
+          "fact_fit[akaike_weight]": 0.05220595689688455,
+          "fact_fit[shape_1]": 323.797449483288,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -218.87343174024699,
+          "fact_fit[scale]": 0.7838633238399959,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
+          "dim_distribution[distribution_name]": "Laplace",
+          "fact_fit[rank_heldout_nll]": 10,
+          "fact_fit[aic]": 425.8987573650444,
+          "fact_fit[delta_aic]": 0.35369998128265934,
+          "fact_fit[akaike_weight]": 0.16739518532191397,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 37,
+          "fact_fit[scale]": 10.628846153846153,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
+          "dim_distribution[distribution_name]": "Logistic",
+          "fact_fit[rank_heldout_nll]": 8,
+          "fact_fit[aic]": 426.2535868349859,
+          "fact_fit[delta_aic]": 0.7085294512241944,
+          "fact_fit[akaike_weight]": 0.1401821517908655,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 35.82850031908559,
+          "fact_fit[scale]": 7.869299474088003,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "fact_fit[rank_heldout_nll]": 5,
+          "fact_fit[aic]": 427.5454015504206,
+          "fact_fit[delta_aic]": 2.000344166658863,
+          "fact_fit[akaike_weight]": 0.07348161974402367,
+          "fact_fit[shape_1]": 2.116442918931912E-05,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -658367.1573447065,
+          "fact_fit[scale]": 658402.2129664766,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
+          "dim_distribution[distribution_name]": "Maxwell",
+          "fact_fit[rank_heldout_nll]": 9,
+          "fact_fit[aic]": 429.2305043207992,
+          "fact_fit[delta_aic]": 3.6854469370374545,
+          "fact_fit[akaike_weight]": 0.0316419546323546,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -1.352542725654609,
+          "fact_fit[scale]": 22.50730753918429,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
+          "dim_distribution[distribution_name]": "Normal",
+          "fact_fit[rank_heldout_nll]": 4,
+          "fact_fit[aic]": 425.54505738376173,
+          "fact_fit[delta_aic]": 0,
+          "fact_fit[akaike_weight]": 0.19977812720338123,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 35.05576923076923,
+          "fact_fit[scale]": 13.93466090036941,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
+          "dim_distribution[distribution_name]": "Pareto",
+          "fact_fit[rank_heldout_nll]": 14,
+          "fact_fit[aic]": 456.75620818578017,
+          "fact_fit[delta_aic]": 31.211150802018437,
+          "fact_fit[akaike_weight]": 3.335282724464461E-08,
+          "fact_fit[shape_1]": 76543389.26458085,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -2147483641,
+          "fact_fit[scale]": 2147483647.9999998,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "fact_fit[rank_heldout_nll]": 3,
+          "fact_fit[aic]": 427.5450673882984,
+          "fact_fit[delta_aic]": 2.000010004536648,
+          "fact_fit[akaike_weight]": 0.07349389815673893,
+          "fact_fit[shape_1]": 669674.3477657742,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 35.057026689739416,
+          "fact_fit[scale]": 13.933620808315645,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
+          "dim_distribution[distribution_name]": "Uniform",
+          "fact_fit[rank_heldout_nll]": 11,
+          "fact_fit[aic]": 429.81183447109834,
+          "fact_fit[delta_aic]": 4.266777087336607,
+          "fact_fit[akaike_weight]": 0.02366078042724593,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 7,
+          "fact_fit[scale]": 60,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)",
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "fact_fit[rank_heldout_nll]": 1,
+          "fact_fit[aic]": 426.0960927203814,
+          "fact_fit[delta_aic]": 0.551035336619691,
+          "fact_fit[akaike_weight]": 0.15166736254110139,
+          "fact_fit[shape_1]": 4.7168513271843535,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -21.758274191299776,
+          "fact_fit[scale]": 62.12537042583355,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)",
+          "dim_distribution[distribution_name]": "Beta",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 494.30012160297485,
+          "fact_fit[delta_aic]": 69.5561447348386,
+          "fact_fit[akaike_weight]": 7.871775036390293E-16,
+          "fact_fit[shape_1]": 0.32772943069446936,
+          "fact_fit[shape_2]": 281.49947219080616,
+          "fact_fit[loc]": 11.999999999999998,
+          "fact_fit[scale]": 246392.92734613334,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)",
+          "dim_distribution[distribution_name]": "Cauchy",
+          "fact_fit[rank_heldout_nll]": 2,
+          "fact_fit[aic]": 515.0326314146748,
+          "fact_fit[delta_aic]": 90.28865454653857,
+          "fact_fit[akaike_weight]": 2.4777949900767627E-20,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 28.28799787638281,
+          "fact_fit[scale]": 23.892014207474,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)",
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "fact_fit[rank_heldout_nll]": 3,
+          "fact_fit[aic]": 424.74397686813626,
+          "fact_fit[delta_aic]": 0,
+          "fact_fit[akaike_weight]": 0.9999944611771864,
+          "fact_fit[shape_1]": 0.35785127727906296,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 11.999999999999996,
+          "fact_fit[scale]": 6516.633649266281,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)",
+          "dim_distribution[distribution_name]": "Exponential",
+          "fact_fit[rank_heldout_nll]": 9,
+          "fact_fit[aic]": 596.3001384464008,
+          "fact_fit[delta_aic]": 171.5561615782645,
+          "fact_fit[akaike_weight]": 5.585350599784967E-38,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 12,
+          "fact_fit[scale]": 1375.25,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)",
+          "dim_distribution[distribution_name]": "Gamma",
+          "fact_fit[rank_heldout_nll]": 8,
+          "fact_fit[aic]": 520.6531756539115,
+          "fact_fit[delta_aic]": 95.90919878577523,
+          "fact_fit[akaike_weight]": 1.4913504043499196E-21,
+          "fact_fit[shape_1]": 0.6221414021689016,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 11.999999999999998,
+          "fact_fit[scale]": 6891.734682389764,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)",
+          "dim_distribution[distribution_name]": "Laplace",
+          "fact_fit[rank_heldout_nll]": 10,
+          "fact_fit[aic]": 645.7076455241754,
+          "fact_fit[delta_aic]": 220.96366865603915,
+          "fact_fit[akaike_weight]": 1.043149598661384E-48,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 43,
+          "fact_fit[scale]": 1365.75,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)",
+          "dim_distribution[distribution_name]": "Logistic",
+          "fact_fit[rank_heldout_nll]": 11,
+          "fact_fit[aic]": 674.5812070205237,
+          "fact_fit[delta_aic]": 249.83723015238746,
+          "fact_fit[akaike_weight]": 5.604442011444273E-55,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 555.9447148683024,
+          "fact_fit[scale]": 1268.7842882436141,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)",
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "fact_fit[rank_heldout_nll]": 5,
+          "fact_fit[aic]": 452.6427211675725,
+          "fact_fit[delta_aic]": 27.89874429943626,
+          "fact_fit[akaike_weight]": 8.747062785879237E-07,
+          "fact_fit[shape_1]": 6.77545441534991,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 11.999999999999998,
+          "fact_fit[scale]": 17.656891443494082,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)",
+          "dim_distribution[distribution_name]": "Maxwell",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 681.6174533219183,
+          "fact_fit[delta_aic]": 256.8734764537821,
+          "fact_fit[akaike_weight]": 1.6619995770278868E-56,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -4955.960276940734,
+          "fact_fit[scale]": 4194.77013560611,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)",
+          "dim_distribution[distribution_name]": "Normal",
+          "fact_fit[rank_heldout_nll]": 13,
+          "fact_fit[aic]": 694.5975589294663,
+          "fact_fit[delta_aic]": 269.8535820613301,
+          "fact_fit[akaike_weight]": 2.523694544990133E-59,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 1387.25,
+          "fact_fit[scale]": 3542.8764394595783,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)",
+          "dim_distribution[distribution_name]": "Pareto",
+          "fact_fit[rank_heldout_nll]": 1,
+          "fact_fit[aic]": 452.40424628344704,
+          "fact_fit[delta_aic]": 27.66026941531078,
+          "fact_fit[akaike_weight]": 9.854768054070791E-07,
+          "fact_fit[shape_1]": 0.3917881260087599,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 6.467582235782579,
+          "fact_fit[scale]": 5.53241776421742,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)",
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "fact_fit[rank_heldout_nll]": 4,
+          "fact_fit[aic]": 494.07509579115253,
+          "fact_fit[delta_aic]": 69.33111892301628,
+          "fact_fit[akaike_weight]": 8.809198745885738E-16,
+          "fact_fit[shape_1]": 0.2935574020985675,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 15.487089659553666,
+          "fact_fit[scale]": 4.72620351224673,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)",
+          "dim_distribution[distribution_name]": "Uniform",
+          "fact_fit[rank_heldout_nll]": 14,
+          "fact_fit[aic]": 705.2480219814712,
+          "fact_fit[delta_aic]": 280.50404511333494,
+          "fact_fit[akaike_weight]": 1.2283386645056137E-61,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 12,
+          "fact_fit[scale]": 16976,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)",
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "fact_fit[rank_heldout_nll]": 6,
+          "fact_fit[aic]": 449.7699008169738,
+          "fact_fit[delta_aic]": 25.025923948837544,
+          "fact_fit[akaike_weight]": 3.6786397279644178E-06,
+          "fact_fit[shape_1]": 0.3294077024737062,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 11.999999999999996,
+          "fact_fit[scale]": 4438.079968346467,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)",
+          "dim_distribution[distribution_name]": "Beta",
+          "fact_fit[rank_heldout_nll]": 4,
+          "fact_fit[aic]": 150.2265654394779,
+          "fact_fit[delta_aic]": 32.39718504804253,
+          "fact_fit[akaike_weight]": 9.226324866580498E-08,
+          "fact_fit[shape_1]": 8.146687219532907,
+          "fact_fit[shape_2]": 192776665.62067598,
+          "fact_fit[loc]": 4.517636025493997,
+          "fact_fit[scale]": 329980090.9869877,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)",
+          "dim_distribution[distribution_name]": "Cauchy",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 154.3023791841044,
+          "fact_fit[delta_aic]": 36.472998792669046,
+          "fact_fit[akaike_weight]": 1.2022008567505086E-08,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 17.947179015048356,
+          "fact_fit[scale]": 2.8594858647327674,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)",
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 117.82938039143536,
+          "fact_fit[delta_aic]": 0,
+          "fact_fit[akaike_weight]": 0.9999725770330725,
+          "fact_fit[shape_1]": 0.5200431975590283,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 10.399999999999999,
+          "fact_fit[scale]": 3.0723686080122645,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)",
+          "dim_distribution[distribution_name]": "Exponential",
+          "fact_fit[rank_heldout_nll]": 1,
+          "fact_fit[aic]": 152.18673674185078,
+          "fact_fit[delta_aic]": 34.357356350415415,
+          "fact_fit[akaike_weight]": 3.462445548766244E-08,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 10.4,
+          "fact_fit[scale]": 8.062500000000002,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)",
+          "dim_distribution[distribution_name]": "Gamma",
+          "fact_fit[rank_heldout_nll]": 3,
+          "fact_fit[aic]": 148.2265654338476,
+          "fact_fit[delta_aic]": 30.397185042412247,
+          "fact_fit[akaike_weight]": 2.507975129888865E-07,
+          "fact_fit[shape_1]": 8.146683337071945,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 4.517648484540404,
+          "fact_fit[scale]": 1.711721790836322,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)",
+          "dim_distribution[distribution_name]": "Laplace",
+          "fact_fit[rank_heldout_nll]": 6,
+          "fact_fit[aic]": 149.1929608669808,
+          "fact_fit[delta_aic]": 31.363580475545433,
+          "fact_fit[akaike_weight]": 1.5469387682472646E-07,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 18.25,
+          "fact_fit[scale]": 3.7875,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)",
+          "dim_distribution[distribution_name]": "Logistic",
+          "fact_fit[rank_heldout_nll]": 9,
+          "fact_fit[aic]": 147.45223855902586,
+          "fact_fit[delta_aic]": 29.622858167590493,
+          "fact_fit[akaike_weight]": 3.69373870322905E-07,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 18.162559770999742,
+          "fact_fit[scale]": 2.6765402638226576,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)",
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "fact_fit[rank_heldout_nll]": 11,
+          "fact_fit[aic]": 139.00440526252228,
+          "fact_fit[delta_aic]": 21.17502487108692,
+          "fact_fit[akaike_weight]": 2.5228408956169323E-05,
+          "fact_fit[shape_1]": 9.966146444067808,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 10.399999999999999,
+          "fact_fit[scale]": 0.38782253900379643,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)",
+          "dim_distribution[distribution_name]": "Maxwell",
+          "fact_fit[rank_heldout_nll]": 5,
+          "fact_fit[aic]": 146.40258840067744,
+          "fact_fit[delta_aic]": 28.57320800924208,
+          "fact_fit[akaike_weight]": 6.243021144544458E-07,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 7.184455912250826,
+          "fact_fit[scale]": 7.0992538510660825,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)",
+          "dim_distribution[distribution_name]": "Normal",
+          "fact_fit[rank_heldout_nll]": 8,
+          "fact_fit[aic]": 148.38551839523814,
+          "fact_fit[delta_aic]": 30.556138003802772,
+          "fact_fit[akaike_weight]": 2.3163651832512414E-07,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 18.462500000000002,
+          "fact_fit[scale]": 4.899303734545689,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)",
+          "dim_distribution[distribution_name]": "Pareto",
+          "fact_fit[rank_heldout_nll]": 13,
+          "fact_fit[aic]": 219.7075507744666,
+          "fact_fit[delta_aic]": 101.87817038303123,
+          "fact_fit[akaike_weight]": 7.540922514994086E-23,
+          "fact_fit[shape_1]": 0.09091665339596024,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 10.399952016649076,
+          "fact_fit[scale]": 4.798335092459637E-05,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)",
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "fact_fit[rank_heldout_nll]": 10,
+          "fact_fit[aic]": 149.4438770466048,
+          "fact_fit[delta_aic]": 31.614496655169432,
+          "fact_fit[akaike_weight]": 1.3645434448220918E-07,
+          "fact_fit[shape_1]": 5.789874069332617,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 18.1086963177757,
+          "fact_fit[scale]": 4.015750301757251,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)",
+          "dim_distribution[distribution_name]": "Uniform",
+          "fact_fit[rank_heldout_nll]": 14,
+          "fact_fit[aic]": 152.37003776119917,
+          "fact_fit[delta_aic]": 34.54065736976381,
+          "fact_fit[akaike_weight]": 3.159218338379036E-08,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 10.4,
+          "fact_fit[scale]": 22,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)",
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "fact_fit[rank_heldout_nll]": 2,
+          "fact_fit[aic]": 148.17927891381544,
+          "fact_fit[delta_aic]": 30.349898522380073,
+          "fact_fit[akaike_weight]": 2.567978379065718E-07,
+          "fact_fit[shape_1]": 1.98711117708257,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 9.044056337265427,
+          "fact_fit[scale]": 10.601962217844903,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)",
+          "dim_distribution[distribution_name]": "Beta",
+          "fact_fit[rank_heldout_nll]": 3,
+          "fact_fit[aic]": 4725.84717484895,
+          "fact_fit[delta_aic]": 0,
+          "fact_fit[akaike_weight]": 0.9919333217065479,
+          "fact_fit[shape_1]": 1.0410998881313476,
+          "fact_fit[shape_2]": 3.4817794846362693,
+          "fact_fit[loc]": 34.987793579259865,
+          "fact_fit[scale]": 386.9842442060478,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)",
+          "dim_distribution[distribution_name]": "Cauchy",
+          "fact_fit[rank_heldout_nll]": 14,
+          "fact_fit[aic]": 5057.446059236613,
+          "fact_fit[delta_aic]": 331.598884387663,
+          "fact_fit[akaike_weight]": 9.788127824043572E-73,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 99.591930326875,
+          "fact_fit[scale]": 41.72950217051351,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)",
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "fact_fit[rank_heldout_nll]": 4,
+          "fact_fit[aic]": 4740.499153860688,
+          "fact_fit[delta_aic]": 14.651979011738149,
+          "fact_fit[akaike_weight]": 0.0006528984878361384,
+          "fact_fit[shape_1]": 2.6312112766784144,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 34.846038586359086,
+          "fact_fit[scale]": 33.82354390800694,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)",
+          "dim_distribution[distribution_name]": "Exponential",
+          "fact_fit[rank_heldout_nll]": 1,
+          "fact_fit[aic]": 4755.629656526022,
+          "fact_fit[delta_aic]": 29.7824816770717,
+          "fact_fit[akaike_weight]": 3.3829747380354357E-07,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 35,
+          "fact_fit[scale]": 88.84295612009238,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)",
+          "dim_distribution[distribution_name]": "Gamma",
+          "fact_fit[rank_heldout_nll]": 5,
+          "fact_fit[aic]": 4740.4991538604545,
+          "fact_fit[delta_aic]": 14.651979011504409,
+          "fact_fit[akaike_weight]": 0.0006528984879124427,
+          "fact_fit[shape_1]": 1.3156064763562323,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 34.84603474848623,
+          "fact_fit[scale]": 67.64703157942103,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)",
+          "dim_distribution[distribution_name]": "Laplace",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 4960.957043133615,
+          "fact_fit[delta_aic]": 235.10986828466503,
+          "fact_fit[akaike_weight]": 8.770477951676367E-52,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 107,
+          "fact_fit[scale]": 56.30715935334873,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)",
+          "dim_distribution[distribution_name]": "Logistic",
+          "fact_fit[rank_heldout_nll]": 9,
+          "fact_fit[aic]": 4918.627347701686,
+          "fact_fit[delta_aic]": 192.78017285273563,
+          "fact_fit[akaike_weight]": 1.3639543476605974E-42,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 116.4847373969651,
+          "fact_fit[scale]": 39.879010109846526,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)",
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 4780.314111929483,
+          "fact_fit[delta_aic]": 54.46693708053317,
+          "fact_fit[akaike_weight]": 1.4761733804127948E-12,
+          "fact_fit[shape_1]": 0.7554963156782298,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 21.087933340637537,
+          "fact_fit[scale]": 79.40065639188313,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)",
+          "dim_distribution[distribution_name]": "Maxwell",
+          "fact_fit[rank_heldout_nll]": 8,
+          "fact_fit[aic]": 4848.392627686528,
+          "fact_fit[delta_aic]": 122.54545283757761,
+          "fact_fit[akaike_weight]": 2.432626899523872E-27,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -25.42508439162642,
+          "fact_fit[scale]": 95.24123535634067,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)",
+          "dim_distribution[distribution_name]": "Normal",
+          "fact_fit[rank_heldout_nll]": 11,
+          "fact_fit[aic]": 4914.792552804714,
+          "fact_fit[delta_aic]": 188.94537795576434,
+          "fact_fit[akaike_weight]": 9.279294664136761E-42,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 123.84295612009238,
+          "fact_fit[scale]": 70.22628093188926,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)",
+          "dim_distribution[distribution_name]": "Pareto",
+          "fact_fit[rank_heldout_nll]": 2,
+          "fact_fit[aic]": 4757.629694550028,
+          "fact_fit[delta_aic]": 31.782519701077945,
+          "fact_fit[akaike_weight]": 1.244503195402028E-07,
+          "fact_fit[shape_1]": 193373453.6360331,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -17179869149,
+          "fact_fit[scale]": 17179869183.999998,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)",
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "fact_fit[rank_heldout_nll]": 10,
+          "fact_fit[aic]": 4916.339455253519,
+          "fact_fit[delta_aic]": 190.4922804045691,
+          "fact_fit[akaike_weight]": 4.281632291844772E-42,
+          "fact_fit[shape_1]": 50.02861032787487,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 122.2166683327753,
+          "fact_fit[scale]": 69.82035498073651,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)",
+          "dim_distribution[distribution_name]": "Uniform",
+          "fact_fit[rank_heldout_nll]": 13,
+          "fact_fit[aic]": 5046.757745488294,
+          "fact_fit[delta_aic]": 320.91057063934386,
+          "fact_fit[akaike_weight]": 2.0494506875143735E-70,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 35,
+          "fact_fit[scale]": 338,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)",
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "fact_fit[rank_heldout_nll]": 6,
+          "fact_fit[aic]": 4735.824317013868,
+          "fact_fit[delta_aic]": 9.977142164917495,
+          "fact_fit[akaike_weight]": 0.006760418568433989,
+          "fact_fit[shape_1]": 1.2120343860899376,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 34.90283926515141,
+          "fact_fit[scale]": 94.63637477736043,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)",
+          "dim_distribution[distribution_name]": "Beta",
+          "fact_fit[rank_heldout_nll]": 2,
+          "fact_fit[aic]": 9561.353863623975,
+          "fact_fit[delta_aic]": 0,
+          "fact_fit[akaike_weight]": 1,
+          "fact_fit[shape_1]": 0.7512741422356057,
+          "fact_fit[shape_2]": 0.7833492329849123,
+          "fact_fit[loc]": 39.99999999999999,
+          "fact_fit[scale]": 699.0059134821945,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)",
+          "dim_distribution[distribution_name]": "Cauchy",
+          "fact_fit[rank_heldout_nll]": 14,
+          "fact_fit[aic]": 10722.361747792369,
+          "fact_fit[delta_aic]": 1161.0078841683935,
+          "fact_fit[akaike_weight]": 7.768572618311108E-253,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 238.74608438514278,
+          "fact_fit[scale]": 170.85704645730647,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)",
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "fact_fit[rank_heldout_nll]": 3,
+          "fact_fit[aic]": 9819.137564751269,
+          "fact_fit[delta_aic]": 257.78370112729317,
+          "fact_fit[akaike_weight]": 1.0543396470846172E-56,
+          "fact_fit[shape_1]": 1.6630936676618435,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 39.999999999999986,
+          "fact_fit[scale]": 138.1661144728642,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)",
+          "dim_distribution[distribution_name]": "Exponential",
+          "fact_fit[rank_heldout_nll]": 4,
+          "fact_fit[aic]": 9927.249980676159,
+          "fact_fit[delta_aic]": 365.8961170521834,
+          "fact_fit[akaike_weight]": 3.52101363777149E-80,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 40,
+          "fact_fit[scale]": 274.65066666666667,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)",
+          "dim_distribution[distribution_name]": "Gamma",
+          "fact_fit[rank_heldout_nll]": 9,
+          "fact_fit[aic]": 10150.269007241259,
+          "fact_fit[delta_aic]": 588.9151436172833,
+          "fact_fit[akaike_weight]": 1.314320884511691E-128,
+          "fact_fit[shape_1]": 4.696072175386936,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -188.79341229015932,
+          "fact_fit[scale]": 107.22190840627755,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)",
+          "dim_distribution[distribution_name]": "Laplace",
+          "fact_fit[rank_heldout_nll]": 13,
+          "fact_fit[aic]": 10485.124546392119,
+          "fact_fit[delta_aic]": 923.7706827681432,
+          "fact_fit[akaike_weight]": 2.545335090978775E-201,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 248,
+          "fact_fit[scale]": 199.192,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)",
+          "dim_distribution[distribution_name]": "Logistic",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 10302.038342484939,
+          "fact_fit[delta_aic]": 740.6844788609633,
+          "fact_fit[akaike_weight]": 1.4534797972795392E-161,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 307.44779067987787,
+          "fact_fit[scale]": 136.85797986283288,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)",
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 10115.968047752449,
+          "fact_fit[delta_aic]": 554.6141841284734,
+          "fact_fit[akaike_weight]": 3.6902868348121885E-121,
+          "fact_fit[shape_1]": 1.0253396975920872,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 13.888314176113292,
+          "fact_fit[scale]": 199.54029488864808,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)",
+          "dim_distribution[distribution_name]": "Maxwell",
+          "fact_fit[rank_heldout_nll]": 8,
+          "fact_fit[aic]": 10144.882595474954,
+          "fact_fit[delta_aic]": 583.5287318509781,
+          "fact_fit[akaike_weight]": 1.9424321719883927E-127,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -173.03722228212064,
+          "fact_fit[scale]": 308.4100218635504,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)",
+          "dim_distribution[distribution_name]": "Normal",
+          "fact_fit[rank_heldout_nll]": 10,
+          "fact_fit[aic]": 10208.941427811711,
+          "fact_fit[delta_aic]": 647.5875641877356,
+          "fact_fit[akaike_weight]": 2.3886205373677713E-141,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 314.65066666666667,
+          "fact_fit[scale]": 217.96963236398065,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)",
+          "dim_distribution[distribution_name]": "Pareto",
+          "fact_fit[rank_heldout_nll]": 5,
+          "fact_fit[aic]": 9929.25002456309,
+          "fact_fit[delta_aic]": 367.89616093911536,
+          "fact_fit[akaike_weight]": 1.295280106173606E-80,
+          "fact_fit[shape_1]": 125103423.22787641,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -34359738328,
+          "fact_fit[scale]": 34359738367.999996,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)",
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "fact_fit[rank_heldout_nll]": 11,
+          "fact_fit[aic]": 10210.943040770027,
+          "fact_fit[delta_aic]": 649.589177146052,
+          "fact_fit[akaike_weight]": 8.780160012405511E-142,
+          "fact_fit[shape_1]": 478165.11249567557,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 314.7705137534051,
+          "fact_fit[scale]": 217.91072336839,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)",
+          "dim_distribution[distribution_name]": "Uniform",
+          "fact_fit[rank_heldout_nll]": 1,
+          "fact_fit[aic]": 9696.202264530577,
+          "fact_fit[delta_aic]": 134.84840090660146,
+          "fact_fit[akaike_weight]": 5.2244646669754745E-30,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 40,
+          "fact_fit[scale]": 640,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)",
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "fact_fit[rank_heldout_nll]": 6,
+          "fact_fit[aic]": 9875.359950402497,
+          "fact_fit[delta_aic]": 314.0060867785214,
+          "fact_fit[akaike_weight]": 6.522958478070123E-69,
+          "fact_fit[shape_1]": 0.9181989950251501,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 39.99999999999999,
+          "fact_fit[scale]": 291.0110533242774,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude",
+          "dim_distribution[distribution_name]": "Beta",
+          "fact_fit[rank_heldout_nll]": 4,
+          "fact_fit[aic]": 637.6924124861442,
+          "fact_fit[delta_aic]": 474.34832782144264,
+          "fact_fit[akaike_weight]": 9.921317854007002E-104,
+          "fact_fit[shape_1]": 1.6316925362969557,
+          "fact_fit[shape_2]": 4.713357947488078,
+          "fact_fit[loc]": 3.9635815968500396,
+          "fact_fit[scale]": 2.5300140521069485,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude",
+          "dim_distribution[distribution_name]": "Cauchy",
+          "fact_fit[rank_heldout_nll]": 13,
+          "fact_fit[aic]": 980.4847317872736,
+          "fact_fit[delta_aic]": 817.1406471225721,
+          "fact_fit[akaike_weight]": 3.632143579121312E-178,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 4.537582876901143,
+          "fact_fit[scale]": 0.2298938986117717,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude",
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "fact_fit[rank_heldout_nll]": 1,
+          "fact_fit[aic]": 163.3440846647016,
+          "fact_fit[delta_aic]": 0,
+          "fact_fit[akaike_weight]": 1,
+          "fact_fit[shape_1]": 1.0305878376632547,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 3.9999999999999996,
+          "fact_fit[scale]": 0.9655568441722908,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude",
+          "dim_distribution[distribution_name]": "Exponential",
+          "fact_fit[rank_heldout_nll]": 10,
+          "fact_fit[aic]": 776.9128163593055,
+          "fact_fit[delta_aic]": 613.5687316946039,
+          "fact_fit[akaike_weight]": 5.824287147784234E-134,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 4,
+          "fact_fit[scale]": 0.6158666666666672,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude",
+          "dim_distribution[distribution_name]": "Gamma",
+          "fact_fit[rank_heldout_nll]": 3,
+          "fact_fit[aic]": 652.1600495765066,
+          "fact_fit[delta_aic]": 488.815964911805,
+          "fact_fit[akaike_weight]": 7.160805641894842E-107,
+          "fact_fit[shape_1]": 3.5714647899180374,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 3.8383301648617776,
+          "fact_fit[scale]": 0.21770828115482338,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude",
+          "dim_distribution[distribution_name]": "Laplace",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 797.2335227896813,
+          "fact_fit[delta_aic]": 633.8894381249797,
+          "fact_fit[akaike_weight]": 2.252461843396838E-138,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 4.6,
+          "fact_fit[scale]": 0.31213333333333326,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude",
+          "dim_distribution[distribution_name]": "Logistic",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 753.94487423448,
+          "fact_fit[delta_aic]": 590.6007895697785,
+          "fact_fit[akaike_weight]": 5.658066416614986E-129,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 4.585484404057681,
+          "fact_fit[scale]": 0.22478533894874464,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude",
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "fact_fit[rank_heldout_nll]": 5,
+          "fact_fit[aic]": 662.1925123075625,
+          "fact_fit[delta_aic]": 498.84842764286094,
+          "fact_fit[akaike_weight]": 4.747230118070237E-109,
+          "fact_fit[shape_1]": 0.34346672605955697,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 3.459221684568565,
+          "fact_fit[scale]": 1.0911019851125343,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude",
+          "dim_distribution[distribution_name]": "Maxwell",
+          "fact_fit[rank_heldout_nll]": 6,
+          "fact_fit[aic]": 671.5793205062375,
+          "fact_fit[delta_aic]": 508.23523584153594,
+          "fact_fit[akaike_weight]": 4.346310835891727E-111,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 3.727317950066527,
+          "fact_fit[scale]": 0.5622708700127312,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude",
+          "dim_distribution[distribution_name]": "Normal",
+          "fact_fit[rank_heldout_nll]": 9,
+          "fact_fit[aic]": 753.3398453299014,
+          "fact_fit[delta_aic]": 589.9957606651999,
+          "fact_fit[akaike_weight]": 7.656819308424876E-129,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 4.615866666666667,
+          "fact_fit[scale]": 0.39876674329180906,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude",
+          "dim_distribution[distribution_name]": "Pareto",
+          "fact_fit[rank_heldout_nll]": 11,
+          "fact_fit[aic]": 778.9128430278828,
+          "fact_fit[delta_aic]": 615.5687583631811,
+          "fact_fit[akaike_weight]": 2.142606930819202E-134,
+          "fact_fit[shape_1]": 54483274.12627095,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -33554428,
+          "fact_fit[scale]": 33554431.999999996,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude",
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "fact_fit[rank_heldout_nll]": 8,
+          "fact_fit[aic]": 755.3322103477888,
+          "fact_fit[delta_aic]": 591.9881256830872,
+          "fact_fit[akaike_weight]": 2.8275600162475514E-129,
+          "fact_fit[shape_1]": 19480.27095874156,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 4.615851028386949,
+          "fact_fit[scale]": 0.3987419151111221,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude",
+          "dim_distribution[distribution_name]": "Uniform",
+          "fact_fit[rank_heldout_nll]": 14,
+          "fact_fit[aic]": 1116.9060170940659,
+          "fact_fit[delta_aic]": 953.5619324293643,
+          "fact_fit[akaike_weight]": 8.64285638313148E-208,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 4,
+          "fact_fit[scale]": 2.0999999999999996,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude",
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "fact_fit[rank_heldout_nll]": 2,
+          "fact_fit[aic]": 635.3400131470798,
+          "fact_fit[delta_aic]": 471.99592848237825,
+          "fact_fit[akaike_weight]": 3.216520988788127E-103,
+          "fact_fit[shape_1]": 1.6943478307046997,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 3.9501426216411675,
+          "fact_fit[scale]": 0.7443516944582331,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)",
+          "dim_distribution[distribution_name]": "Beta",
+          "fact_fit[rank_heldout_nll]": 2,
+          "fact_fit[aic]": 1510.0633851260707,
+          "fact_fit[delta_aic]": 18.298869164263806,
+          "fact_fit[akaike_weight]": 0.00010621075307825935,
+          "fact_fit[shape_1]": 1.3476313849135662,
+          "fact_fit[shape_2]": 9253336206.614882,
+          "fact_fit[loc]": 132.66558101533425,
+          "fact_fit[scale]": 3282215047819.5244,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)",
+          "dim_distribution[distribution_name]": "Cauchy",
+          "fact_fit[rank_heldout_nll]": 8,
+          "fact_fit[aic]": 1538.4037781678048,
+          "fact_fit[delta_aic]": 46.639262205997966,
+          "fact_fit[akaike_weight]": 7.449555013501192E-11,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 385.90112291502817,
+          "fact_fit[scale]": 135.0570412041106,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)",
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "fact_fit[rank_heldout_nll]": 14,
+          "fact_fit[aic]": 12102.468449877317,
+          "fact_fit[delta_aic]": 10610.703933915509,
+          "fact_fit[akaike_weight]": 0,
+          "fact_fit[shape_1]": 0.07674772868680996,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 134.99999999999997,
+          "fact_fit[scale]": 4.879295674639453,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)",
+          "dim_distribution[distribution_name]": "Exponential",
+          "fact_fit[rank_heldout_nll]": 5,
+          "fact_fit[aic]": 1509.8816868495976,
+          "fact_fit[delta_aic]": 18.117170887790735,
+          "fact_fit[akaike_weight]": 0.00011631179754523575,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 135,
+          "fact_fit[scale]": 478.6,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)",
+          "dim_distribution[distribution_name]": "Gamma",
+          "fact_fit[rank_heldout_nll]": 3,
+          "fact_fit[aic]": 1508.0449741428997,
+          "fact_fit[delta_aic]": 16.280458181092854,
+          "fact_fit[akaike_weight]": 0.0002913807550052158,
+          "fact_fit[shape_1]": 1.3267158743775238,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 132.84132679291906,
+          "fact_fit[scale]": 362.36745985850064,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)",
+          "dim_distribution[distribution_name]": "Laplace",
+          "fact_fit[rank_heldout_nll]": 9,
+          "fact_fit[aic]": 1560.6492571485267,
+          "fact_fit[delta_aic]": 68.8847411867198,
+          "fact_fit[akaike_weight]": 1.1004896118870737E-15,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 420,
+          "fact_fit[scale]": 304.74285714285713,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)",
+          "dim_distribution[distribution_name]": "Logistic",
+          "fact_fit[rank_heldout_nll]": 10,
+          "fact_fit[aic]": 1578.9918504301731,
+          "fact_fit[delta_aic]": 87.22733446836628,
+          "fact_fit[akaike_weight]": 1.144306656759036E-19,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 514.1373239446614,
+          "fact_fit[scale]": 225.26661987837198,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)",
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "fact_fit[rank_heldout_nll]": 1,
+          "fact_fit[aic]": 1491.7645159618069,
+          "fact_fit[delta_aic]": 0,
+          "fact_fit[akaike_weight]": 0.9993495925473593,
+          "fact_fit[shape_1]": 0.8147537040704634,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 110.48589140538985,
+          "fact_fit[scale]": 351.07504549133233,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)",
+          "dim_distribution[distribution_name]": "Maxwell",
+          "fact_fit[rank_heldout_nll]": 11,
+          "fact_fit[aic]": 1588.5094831232475,
+          "fact_fit[delta_aic]": 96.74496716144063,
+          "fact_fit[akaike_weight]": 9.813292518752132E-22,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -385.4372136728101,
+          "fact_fit[scale]": 654.9846166666832,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)",
+          "dim_distribution[distribution_name]": "Normal",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 1622.2440826941713,
+          "fact_fit[delta_aic]": 130.47956673236445,
+          "fact_fit[akaike_weight]": 4.6391618381241163E-29,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 613.6,
+          "fact_fit[scale]": 537.5305900486923,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)",
+          "dim_distribution[distribution_name]": "Pareto",
+          "fact_fit[rank_heldout_nll]": 6,
+          "fact_fit[aic]": 1510.9099924496304,
+          "fact_fit[delta_aic]": 19.145476487823544,
+          "fact_fit[akaike_weight]": 6.955527046386645E-05,
+          "fact_fit[shape_1]": 12.749394715891654,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -5480.504773042296,
+          "fact_fit[scale]": 5615.504773042295,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)",
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 1538.2674194407482,
+          "fact_fit[delta_aic]": 46.502903478941334,
+          "fact_fit[akaike_weight]": 7.975175577408189E-11,
+          "fact_fit[shape_1]": 1.379555310290443,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 404.7695303228236,
+          "fact_fit[scale]": 160.83743423022548,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)",
+          "dim_distribution[distribution_name]": "Uniform",
+          "fact_fit[rank_heldout_nll]": 13,
+          "fact_fit[aic]": 1722.1612955769024,
+          "fact_fit[delta_aic]": 230.3967796150955,
+          "fact_fit[akaike_weight]": 9.325935815920153E-51,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 135,
+          "fact_fit[scale]": 3575,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)",
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "fact_fit[rank_heldout_nll]": 4,
+          "fact_fit[aic]": 1510.986381864498,
+          "fact_fit[delta_aic]": 19.221865902691206,
+          "fact_fit[akaike_weight]": 6.694872229970602E-05,
+          "fact_fit[shape_1]": 1.0764762969706638,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 134.59374882550424,
+          "fact_fit[scale]": 494.7565254097551,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)",
+          "dim_distribution[distribution_name]": "Beta",
+          "fact_fit[rank_heldout_nll]": 1,
+          "fact_fit[aic]": 826.5271175587934,
+          "fact_fit[delta_aic]": 0,
+          "fact_fit[akaike_weight]": 0.3376820055403068,
+          "fact_fit[shape_1]": 3.434239210768209,
+          "fact_fit[shape_2]": 2.5614146384883347,
+          "fact_fit[loc]": 50.54548792573066,
+          "fact_fit[scale]": 48.15465907069959,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)",
+          "dim_distribution[distribution_name]": "Cauchy",
+          "fact_fit[rank_heldout_nll]": 11,
+          "fact_fit[aic]": 872.5431336253072,
+          "fact_fit[delta_aic]": 46.01601606651377,
+          "fact_fit[akaike_weight]": 3.437613055505455E-11,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 79.18700987206296,
+          "fact_fit[scale]": 5.500891033129471,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)",
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "fact_fit[rank_heldout_nll]": 9,
+          "fact_fit[aic]": 831.9581700217861,
+          "fact_fit[delta_aic]": 5.431052462992739,
+          "fact_fit[akaike_weight]": 0.022344459855233006,
+          "fact_fit[shape_1]": 265.9225093426385,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -26.974119848710195,
+          "fact_fit[scale]": 0.3947786413334038,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)",
+          "dim_distribution[distribution_name]": "Exponential",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 927.7644419913621,
+          "fact_fit[delta_aic]": 101.2373244325687,
+          "fact_fit[akaike_weight]": 3.508344536606519E-23,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 57,
+          "fact_fit[scale]": 21.149122807017548,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)",
+          "dim_distribution[distribution_name]": "Gamma",
+          "fact_fit[rank_heldout_nll]": 8,
+          "fact_fit[aic]": 831.1364779313798,
+          "fact_fit[delta_aic]": 4.609360372586366,
+          "fact_fit[akaike_weight]": 0.033697527082935136,
+          "fact_fit[shape_1]": 319.5917439099445,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -85.02523715610454,
+          "fact_fit[scale]": 0.5103573747480707,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)",
+          "dim_distribution[distribution_name]": "Laplace",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 841.2917230180298,
+          "fact_fit[delta_aic]": 14.76460545923635,
+          "fact_fit[akaike_weight]": 0.0002100944496817063,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 79,
+          "fact_fit[scale]": 7.2368421052631575,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)",
+          "dim_distribution[distribution_name]": "Logistic",
+          "fact_fit[rank_heldout_nll]": 6,
+          "fact_fit[aic]": 832.3043146097424,
+          "fact_fit[delta_aic]": 5.777197050948985,
+          "fact_fit[akaike_weight]": 0.0187934069683576,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 78.44892117840907,
+          "fact_fit[scale]": 5.2056143988184855,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)",
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "fact_fit[rank_heldout_nll]": 4,
+          "fact_fit[aic]": 829.8720354053153,
+          "fact_fit[delta_aic]": 3.3449178465218665,
+          "fact_fit[akaike_weight]": 0.06341153071417795,
+          "fact_fit[shape_1]": 1.2405911560607936E-06,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -7235044.423046793,
+          "fact_fit[scale]": 7235122.572164033,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)",
+          "dim_distribution[distribution_name]": "Maxwell",
+          "fact_fit[rank_heldout_nll]": 10,
+          "fact_fit[aic]": 837.0640724383009,
+          "fact_fit[delta_aic]": 10.536954879507448,
+          "fact_fit[akaike_weight]": 0.0017395512903782947,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 54.06277289268586,
+          "fact_fit[scale]": 14.840444728229766,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)",
+          "dim_distribution[distribution_name]": "Normal",
+          "fact_fit[rank_heldout_nll]": 3,
+          "fact_fit[aic]": 827.8719987293196,
+          "fact_fit[delta_aic]": 1.3448811705261505,
+          "fact_fit[akaike_weight]": 0.172373572612345,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 78.14912280701755,
+          "fact_fit[scale]": 8.975827632406542,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)",
+          "dim_distribution[distribution_name]": "Pareto",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 929.7644527327755,
+          "fact_fit[delta_aic]": 103.23733517398205,
+          "fact_fit[akaike_weight]": 1.2906408958914017E-23,
+          "fact_fit[shape_1]": 203080163.07201818,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -4294967239,
+          "fact_fit[scale]": 4294967295.9999995,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)",
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "fact_fit[rank_heldout_nll]": 5,
+          "fact_fit[aic]": 829.8721575639495,
+          "fact_fit[delta_aic]": 3.345040005156079,
+          "fact_fit[akaike_weight]": 0.06340765769946702,
+          "fact_fit[shape_1]": 183926.36567120638,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 78.14816036910645,
+          "fact_fit[scale]": 8.973762255839073,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)",
+          "dim_distribution[distribution_name]": "Uniform",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 845.0645155379776,
+          "fact_fit[delta_aic]": 18.53739797918422,
+          "fact_fit[akaike_weight]": 3.18539352469722E-05,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 57,
+          "fact_fit[scale]": 40,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)",
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "fact_fit[rank_heldout_nll]": 2,
+          "fact_fit[aic]": 826.8571881574043,
+          "fact_fit[delta_aic]": 0.33007059861085963,
+          "fact_fit[akaike_weight]": 0.28630833981749443,
+          "fact_fit[shape_1]": 4.794934725019219,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 41.00435109695063,
+          "fact_fit[scale]": 40.602050335849526,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)",
+          "dim_distribution[distribution_name]": "Beta",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 799.461135619439,
+          "fact_fit[delta_aic]": 0,
+          "fact_fit[akaike_weight]": 0.55027278961018,
+          "fact_fit[shape_1]": 0.9114036079937075,
+          "fact_fit[shape_2]": 7.018457600425159,
+          "fact_fit[loc]": 5.999999999999999,
+          "fact_fit[scale]": 310.1933464548275,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)",
+          "dim_distribution[distribution_name]": "Cauchy",
+          "fact_fit[rank_heldout_nll]": 6,
+          "fact_fit[aic]": 863.1620554535649,
+          "fact_fit[delta_aic]": 63.7009198341259,
+          "fact_fit[akaike_weight]": 8.09280451376086E-15,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 26.491182563285697,
+          "fact_fit[scale]": 14.318950721683443,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)",
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 803.6713443887535,
+          "fact_fit[delta_aic]": 4.210208769314477,
+          "fact_fit[akaike_weight]": 0.06704136062727101,
+          "fact_fit[shape_1]": 2.1396638918754007,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 5.965798091982038,
+          "fact_fit[scale]": 16.86253468968323,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)",
+          "dim_distribution[distribution_name]": "Exponential",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 801.7543757299345,
+          "fact_fit[delta_aic]": 2.2932401104955034,
+          "fact_fit[akaike_weight]": 0.17482650481970533,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 6,
+          "fact_fit[scale]": 36.04597701149425,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)",
+          "dim_distribution[distribution_name]": "Gamma",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 803.6713443886011,
+          "fact_fit[delta_aic]": 4.210208769162136,
+          "fact_fit[akaike_weight]": 0.06704136063237756,
+          "fact_fit[shape_1]": 1.0698344222002345,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 5.965797429246301,
+          "fact_fit[scale]": 33.72499893565992,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)",
+          "dim_distribution[distribution_name]": "Laplace",
+          "fact_fit[rank_heldout_nll]": 5,
+          "fact_fit[aic]": 854.3994883077963,
+          "fact_fit[delta_aic]": 54.93835268835733,
+          "fact_fit[akaike_weight]": 6.469434634869287E-13,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 30,
+          "fact_fit[scale]": 24.39080459770115,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)",
+          "dim_distribution[distribution_name]": "Logistic",
+          "fact_fit[rank_heldout_nll]": 3,
+          "fact_fit[aic]": 854.3723936682982,
+          "fact_fit[delta_aic]": 54.91125804885917,
+          "fact_fit[akaike_weight]": 6.557674491691112E-13,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 37.180898361531575,
+          "fact_fit[scale]": 17.770554935782908,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)",
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 809.2474897189674,
+          "fact_fit[delta_aic]": 9.786354099528353,
+          "fact_fit[akaike_weight]": 0.0041257057110220974,
+          "fact_fit[shape_1]": 0.891665545756006,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 2.7046084555735663,
+          "fact_fit[scale]": 27.44243438712826,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)",
+          "dim_distribution[distribution_name]": "Maxwell",
+          "fact_fit[rank_heldout_nll]": 1,
+          "fact_fit[aic]": 841.6668891211862,
+          "fact_fit[delta_aic]": 42.205753501747154,
+          "fact_fit[akaike_weight]": 3.764567709488141E-10,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -25.20551666812259,
+          "fact_fit[scale]": 43.25252718112861,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)",
+          "dim_distribution[distribution_name]": "Normal",
+          "fact_fit[rank_heldout_nll]": 2,
+          "fact_fit[aic]": 859.3342710412252,
+          "fact_fit[delta_aic]": 59.87313542178617,
+          "fact_fit[akaike_weight]": 5.486455663611658E-14,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 42.04597701149425,
+          "fact_fit[scale]": 33.00884870774753,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)",
+          "dim_distribution[distribution_name]": "Pareto",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 803.7543849959567,
+          "fact_fit[delta_aic]": 4.293249376517679,
+          "fact_fit[akaike_weight]": 0.06431477892325556,
+          "fact_fit[shape_1]": 238304946.55194563,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -8589934586,
+          "fact_fit[scale]": 8589934591.999999,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)",
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "fact_fit[rank_heldout_nll]": 4,
+          "fact_fit[aic]": 855.080822489607,
+          "fact_fit[delta_aic]": 55.61968687016804,
+          "fact_fit[akaike_weight]": 4.601680814606404E-13,
+          "fact_fit[shape_1]": 3.524780903239277,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 34.087117289440584,
+          "fact_fit[scale]": 23.596364592371444,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)",
+          "dim_distribution[distribution_name]": "Uniform",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 889.2417623304347,
+          "fact_fit[delta_aic]": 89.78062671099565,
+          "fact_fit[akaike_weight]": 1.7577724636291842E-20,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 6,
+          "fact_fit[scale]": 162,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)",
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 803.518172956374,
+          "fact_fit[delta_aic]": 4.057037336934968,
+          "fact_fit[akaike_weight]": 0.07237749929790589,
+          "fact_fit[shape_1]": 1.0529673183557102,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 5.973691900751593,
+          "fact_fit[scale]": 36.79834270923595,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)",
+          "dim_distribution[distribution_name]": "Beta",
+          "fact_fit[rank_heldout_nll]": 2,
+          "fact_fit[aic]": 606.5397333924058,
+          "fact_fit[delta_aic]": 2.6116192564456924,
+          "fact_fit[akaike_weight]": 0.04997687288890619,
+          "fact_fit[shape_1]": 50.87224352383552,
+          "fact_fit[shape_2]": 2575.9384305028516,
+          "fact_fit[loc]": -14.097226129067396,
+          "fact_fit[scale]": 1250.476048225637,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)",
+          "dim_distribution[distribution_name]": "Cauchy",
+          "fact_fit[rank_heldout_nll]": 11,
+          "fact_fit[aic]": 642.7347226736827,
+          "fact_fit[delta_aic]": 38.80660853772258,
+          "fact_fit[akaike_weight]": 6.904417102151602E-10,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 9.90596585769488,
+          "fact_fit[scale]": 2.0097492910931845,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)",
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "fact_fit[rank_heldout_nll]": 1,
+          "fact_fit[aic]": 604.5402752366766,
+          "fact_fit[delta_aic]": 0.6121611007165484,
+          "fact_fit[akaike_weight]": 0.13581442529823917,
+          "fact_fit[shape_1]": 107.50900507570492,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -14.530555825777558,
+          "fact_fit[scale]": 0.2292922728513842,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)",
+          "dim_distribution[distribution_name]": "Exponential",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 700.9291934711836,
+          "fact_fit[delta_aic]": 97.0010793352235,
+          "fact_fit[akaike_weight]": 1.5935226737912894E-22,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 2.3,
+          "fact_fit[scale]": 7.820175438596492,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)",
+          "dim_distribution[distribution_name]": "Gamma",
+          "fact_fit[rank_heldout_nll]": 3,
+          "fact_fit[aic]": 604.5402657249927,
+          "fact_fit[delta_aic]": 0.6121515890325782,
+          "fact_fit[akaike_weight]": 0.1358150712117211,
+          "fact_fit[shape_1]": 53.97301020115902,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -14.576897762598762,
+          "fact_fit[scale]": 0.4575819073223957,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)",
+          "dim_distribution[distribution_name]": "Laplace",
+          "fact_fit[rank_heldout_nll]": 10,
+          "fact_fit[aic]": 613.7416145215193,
+          "fact_fit[delta_aic]": 9.813500385559223,
+          "fact_fit[akaike_weight]": 0.0013642704155532555,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 10,
+          "fact_fit[scale]": 2.6675438596491223,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)",
+          "dim_distribution[distribution_name]": "Logistic",
+          "fact_fit[rank_heldout_nll]": 8,
+          "fact_fit[aic]": 605.4269812573289,
+          "fact_fit[delta_aic]": 1.4988671213687894,
+          "fact_fit[akaike_weight]": 0.08717664162334274,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 10.033869967589169,
+          "fact_fit[scale]": 1.9119302172218995,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)",
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "fact_fit[rank_heldout_nll]": 4,
+          "fact_fit[aic]": 604.5469814387378,
+          "fact_fit[delta_aic]": 0.618867302777744,
+          "fact_fit[akaike_weight]": 0.13535978845640065,
+          "fact_fit[shape_1]": 0.09075880971090179,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -26.84349721638853,
+          "fact_fit[scale]": 36.811756327645575,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)",
+          "dim_distribution[distribution_name]": "Maxwell",
+          "fact_fit[rank_heldout_nll]": 9,
+          "fact_fit[aic]": 605.3566408723564,
+          "fact_fit[delta_aic]": 1.428526736396293,
+          "fact_fit[akaike_weight]": 0.09029721481190844,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 1.5263158135985797,
+          "fact_fit[scale]": 5.327677549649491,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)",
+          "dim_distribution[distribution_name]": "Normal",
+          "fact_fit[rank_heldout_nll]": 6,
+          "fact_fit[aic]": 603.9281141359601,
+          "fact_fit[delta_aic]": 0,
+          "fact_fit[akaike_weight]": 0.1844484433188038,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 10.120175438596492,
+          "fact_fit[scale]": 3.3612909963589517,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)",
+          "dim_distribution[distribution_name]": "Pareto",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 702.9291957334226,
+          "fact_fit[delta_aic]": 99.00108159746253,
+          "fact_fit[akaike_weight]": 5.862235676390678E-23,
+          "fact_fit[shape_1]": 137304057.89452556,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -1073741821.7,
+          "fact_fit[scale]": 1073741824,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)",
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 605.8760451577967,
+          "fact_fit[delta_aic]": 1.9479310218366663,
+          "fact_fit[akaike_weight]": 0.06964455172200766,
+          "fact_fit[shape_1]": 56.43782168567067,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 10.105417937763153,
+          "fact_fit[scale]": 3.301247975838358,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)",
+          "dim_distribution[distribution_name]": "Uniform",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 668.0159515322065,
+          "fact_fit[delta_aic]": 64.08783739624641,
+          "fact_fit[akaike_weight]": 2.2355167339803885E-15,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 2.3,
+          "fact_fit[scale]": 18.4,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)",
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "fact_fit[rank_heldout_nll]": 5,
+          "fact_fit[aic]": 604.9600266162764,
+          "fact_fit[delta_aic]": 1.0319124803163504,
+          "fact_fit[akaike_weight]": 0.11010271956267292,
+          "fact_fit[shape_1]": 2.924415954787311,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 0.9941650462370113,
+          "fact_fit[scale]": 10.219910212053659,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)",
+          "dim_distribution[distribution_name]": "Beta",
+          "fact_fit[rank_heldout_nll]": 10,
+          "fact_fit[aic]": 607.5311186261899,
+          "fact_fit[delta_aic]": 92.40382748007983,
+          "fact_fit[akaike_weight]": 8.605256288007647E-21,
+          "fact_fit[shape_1]": 0.33860291986481394,
+          "fact_fit[shape_2]": 0.2776788784056824,
+          "fact_fit[loc]": 1.5999999999999999,
+          "fact_fit[scale]": 3.509238581410564,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)",
+          "dim_distribution[distribution_name]": "Cauchy",
+          "fact_fit[rank_heldout_nll]": 14,
+          "fact_fit[aic]": 741.9164597807178,
+          "fact_fit[delta_aic]": 226.78916863460768,
+          "fact_fit[akaike_weight]": 5.667059249990266E-50,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 4.111191398590943,
+          "fact_fit[scale]": 0.6550811313580467,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)",
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "fact_fit[rank_heldout_nll]": 9,
+          "fact_fit[aic]": 656.343005786821,
+          "fact_fit[delta_aic]": 141.21571464071087,
+          "fact_fit[akaike_weight]": 2.1646973563321E-31,
+          "fact_fit[shape_1]": 3.1947938379605993,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 1.5700438555388403,
+          "fact_fit[scale]": 0.6006870351145315,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)",
+          "dim_distribution[distribution_name]": "Exponential",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 671.5307081985225,
+          "fact_fit[delta_aic]": 156.40341705241235,
+          "fact_fit[akaike_weight]": 1.090007563918099E-34,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 1.6,
+          "fact_fit[scale]": 1.8891078431372548,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)",
+          "dim_distribution[distribution_name]": "Gamma",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 643.7374270537316,
+          "fact_fit[delta_aic]": 128.6101359076215,
+          "fact_fit[akaike_weight]": 1.182126162820278E-28,
+          "fact_fit[shape_1]": 200.39936186913326,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -13.053343461604648,
+          "fact_fit[scale]": 0.08251876150588999,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)",
+          "dim_distribution[distribution_name]": "Laplace",
+          "fact_fit[rank_heldout_nll]": 11,
+          "fact_fit[aic]": 690.2021946754942,
+          "fact_fit[delta_aic]": 175.07490352938407,
+          "fact_fit[akaike_weight]": 9.615408483058282E-39,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 3.958,
+          "fact_fit[scale]": 0.9887843137254901,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)",
+          "dim_distribution[distribution_name]": "Logistic",
+          "fact_fit[rank_heldout_nll]": 8,
+          "fact_fit[aic]": 660.7428980716988,
+          "fact_fit[delta_aic]": 145.61560692558874,
+          "fact_fit[akaike_weight]": 2.398682223497455E-32,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 3.579312484040827,
+          "fact_fit[scale]": 0.7079632719884894,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)",
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "fact_fit[rank_heldout_nll]": 5,
+          "fact_fit[aic]": 640.1467729382088,
+          "fact_fit[delta_aic]": 125.01948179209865,
+          "fact_fit[akaike_weight]": 7.118106206306146E-28,
+          "fact_fit[shape_1]": 4.79893272973575E-06,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -238576.46865044313,
+          "fact_fit[scale]": 238579.957755539,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)",
+          "dim_distribution[distribution_name]": "Maxwell",
+          "fact_fit[rank_heldout_nll]": 6,
+          "fact_fit[aic]": 639.2341213166196,
+          "fact_fit[delta_aic]": 124.10683017050951,
+          "fact_fit[akaike_weight]": 1.1234254166151864E-27,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 0.7185396496474739,
+          "fact_fit[scale]": 1.730806428001041,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)",
+          "dim_distribution[distribution_name]": "Normal",
+          "fact_fit[rank_heldout_nll]": 3,
+          "fact_fit[aic]": 638.1463919042114,
+          "fact_fit[delta_aic]": 123.01910075810133,
+          "fact_fit[akaike_weight]": 1.9352705421798777E-27,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 3.489107843137255,
+          "fact_fit[scale]": 1.1449280986660062,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)",
+          "dim_distribution[distribution_name]": "Pareto",
+          "fact_fit[rank_heldout_nll]": 13,
+          "fact_fit[aic]": 673.5307090659369,
+          "fact_fit[delta_aic]": 158.40341791982678,
+          "fact_fit[akaike_weight]": 4.009911995740217E-35,
+          "fact_fit[shape_1]": 142096417.78450134,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -268435454.4,
+          "fact_fit[scale]": 268435456,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)",
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "fact_fit[rank_heldout_nll]": 4,
+          "fact_fit[aic]": 640.1463919244311,
+          "fact_fit[delta_aic]": 125.01910077832099,
+          "fact_fit[akaike_weight]": 7.119462383750326E-28,
+          "fact_fit[shape_1]": 8587835006.546959,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 3.489106269087312,
+          "fact_fit[scale]": 1.1449305680835158,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)",
+          "dim_distribution[distribution_name]": "Uniform",
+          "fact_fit[rank_heldout_nll]": 1,
+          "fact_fit[aic]": 515.1272911461101,
+          "fact_fit[delta_aic]": 0,
+          "fact_fit[akaike_weight]": 1,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 1.6,
+          "fact_fit[scale]": 3.4999999999999996,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)",
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "fact_fit[rank_heldout_nll]": 2,
+          "fact_fit[aic]": 615.9401231235613,
+          "fact_fit[delta_aic]": 100.8128319774512,
+          "fact_fit[akaike_weight]": 1.2846111392026544E-22,
+          "fact_fit[shape_1]": 148072153.58839628,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -131162300.58712387,
+          "fact_fit[scale]": 131162304.6220909,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)",
+          "dim_distribution[distribution_name]": "Beta",
+          "fact_fit[rank_heldout_nll]": 10,
+          "fact_fit[aic]": 1648.3381521609053,
+          "fact_fit[delta_aic]": 24.459051431639637,
+          "fact_fit[akaike_weight]": 4.841986086075675E-06,
+          "fact_fit[shape_1]": 0.8935195785390637,
+          "fact_fit[shape_2]": 0.634071836858096,
+          "fact_fit[loc]": 42.95437315737993,
+          "fact_fit[scale]": 53.045626842620074,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)",
+          "dim_distribution[distribution_name]": "Cauchy",
+          "fact_fit[rank_heldout_nll]": 12,
+          "fact_fit[aic]": 1743.354331664051,
+          "fact_fit[delta_aic]": 119.47523093478526,
+          "fact_fit[akaike_weight]": 1.1285539164521106E-26,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 76.89131238488555,
+          "fact_fit[scale]": 7.943941349254837,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)",
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "fact_fit[rank_heldout_nll]": 7,
+          "fact_fit[aic]": 1655.9379068442308,
+          "fact_fit[delta_aic]": 32.05880611496514,
+          "fact_fit[akaike_weight]": 1.0833225310146336E-07,
+          "fact_fit[shape_1]": 146.44855008892415,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -48.300195300308815,
+          "fact_fit[scale]": 0.8123818837791259,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)",
+          "dim_distribution[distribution_name]": "Exponential",
+          "fact_fit[rank_heldout_nll]": 13,
+          "fact_fit[aic]": 1770.0366760216343,
+          "fact_fit[delta_aic]": 146.15757529236862,
+          "fact_fit[akaike_weight]": 1.8135304537469577E-32,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 43,
+          "fact_fit[scale]": 27.897058823529406,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)",
+          "dim_distribution[distribution_name]": "Gamma",
+          "fact_fit[rank_heldout_nll]": 6,
+          "fact_fit[aic]": 1653.3753816338372,
+          "fact_fit[delta_aic]": 29.49628090457145,
+          "fact_fit[akaike_weight]": 3.9012434726161724E-07,
+          "fact_fit[shape_1]": 201.2876167470597,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -125.46179608383977,
+          "fact_fit[scale]": 0.9749129914386154,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)",
+          "dim_distribution[distribution_name]": "Laplace",
+          "fact_fit[rank_heldout_nll]": 11,
+          "fact_fit[aic]": 1689.0144831647606,
+          "fact_fit[delta_aic]": 65.13538243549488,
+          "fact_fit[akaike_weight]": 7.116566101288619E-15,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 76,
+          "fact_fit[scale]": 11.436274509803921,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)",
+          "dim_distribution[distribution_name]": "Logistic",
+          "fact_fit[rank_heldout_nll]": 9,
+          "fact_fit[aic]": 1664.8759544425677,
+          "fact_fit[delta_aic]": 40.996853713302016,
+          "fact_fit[akaike_weight]": 1.2413247089835395E-09,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 71.88474985503817,
+          "fact_fit[scale]": 8.211580620773338,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)",
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "fact_fit[rank_heldout_nll]": 5,
+          "fact_fit[aic]": 1649.549829883806,
+          "fact_fit[delta_aic]": 25.670729154540368,
+          "fact_fit[akaike_weight]": 2.6418676850073387E-06,
+          "fact_fit[shape_1]": 1.4773199214060823E-05,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -919870.9673714908,
+          "fact_fit[scale]": 919941.8643299264,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)",
+          "dim_distribution[distribution_name]": "Maxwell",
+          "fact_fit[rank_heldout_nll]": 8,
+          "fact_fit[aic]": 1654.5776680352203,
+          "fact_fit[delta_aic]": 30.69856730595461,
+          "fact_fit[akaike_weight]": 2.1386015642101613E-07,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 36.81757643729763,
+          "fact_fit[scale]": 21.18261325144924,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)",
+          "dim_distribution[distribution_name]": "Normal",
+          "fact_fit[rank_heldout_nll]": 3,
+          "fact_fit[aic]": 1647.5486375502232,
+          "fact_fit[delta_aic]": 23.669536820957546,
+          "fact_fit[akaike_weight]": 7.185623474754942E-06,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 70.8970588235294,
+          "fact_fit[scale]": 13.590444710454195,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)",
+          "dim_distribution[distribution_name]": "Pareto",
+          "fact_fit[rank_heldout_nll]": 14,
+          "fact_fit[aic]": 1772.0367044222703,
+          "fact_fit[delta_aic]": 148.1576036930046,
+          "fact_fit[akaike_weight]": 6.671510960468451E-33,
+          "fact_fit[shape_1]": 307915420.89067286,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -8589934549,
+          "fact_fit[scale]": 8589934591.999999,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)",
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "fact_fit[rank_heldout_nll]": 4,
+          "fact_fit[aic]": 1649.5486556298524,
+          "fact_fit[delta_aic]": 25.669554900586718,
+          "fact_fit[akaike_weight]": 2.6434192522333253E-06,
+          "fact_fit[shape_1]": 8499792.644731503,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 70.89904400034399,
+          "fact_fit[scale]": 13.590529140883788,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)",
+          "dim_distribution[distribution_name]": "Uniform",
+          "fact_fit[rank_heldout_nll]": 2,
+          "fact_fit[aic]": 1623.8791007292657,
+          "fact_fit[delta_aic]": 0,
+          "fact_fit[akaike_weight]": 0.9913775313361559,
+          "fact_fit[shape_1]": null,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": 43,
+          "fact_fit[scale]": 53,
+          "[__rows]": 1
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)",
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "fact_fit[rank_heldout_nll]": 1,
+          "fact_fit[aic]": 1633.3727343610622,
+          "fact_fit[delta_aic]": 9.493633631796456,
+          "fact_fit[akaike_weight]": 0.008604442209257617,
+          "fact_fit[shape_1]": 21.80120937084154,
+          "fact_fit[shape_2]": null,
+          "fact_fit[loc]": -169.37187602028172,
+          "fact_fit[scale]": 246.46394406315065,
+          "[__rows]": 1
+        }
+      ]
+    },
+    {
+      "name": "visual:dataset_filter_0",
+      "query": "EVALUATE SUMMARIZE ( dim_dataset, \u0027dim_dataset\u0027[dataset_name] ) ORDER BY \u0027dim_dataset\u0027[dataset_name]",
+      "rows": [
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude"
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)"
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)"
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)"
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)"
+        }
+      ]
+    },
+    {
+      "name": "visual:dataset_filter_1",
+      "query": "EVALUATE SUMMARIZE ( dim_dataset, \u0027dim_dataset\u0027[source] ) ORDER BY \u0027dim_dataset\u0027[source]",
+      "rows": [
+        {
+          "dim_dataset[source]": "R datasets::airquality (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::ChickWeight (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::faithful (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::islands (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::mtcars (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::precip (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::quakes (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::rivers (Rdatasets mirror)"
+        }
+      ]
+    },
+    {
+      "name": "visual:dataset_filter_2",
+      "query": "EVALUATE SUMMARIZE ( dim_distribution, \u0027dim_distribution\u0027[support_type] ) ORDER BY \u0027dim_distribution\u0027[support_type]",
+      "rows": [
+        {
+          "dim_distribution[support_type]": "Bounded"
+        },
+        {
+          "dim_distribution[support_type]": "Lower-bounded"
+        },
+        {
+          "dim_distribution[support_type]": "Unbounded"
+        }
+      ]
+    },
+    {
+      "name": "visual:dataset_filter_3",
+      "query": "EVALUATE SUMMARIZE ( dim_run, \u0027dim_run\u0027[run_id] ) ORDER BY \u0027dim_run\u0027[run_id]",
+      "rows": [
+        {
+          "dim_run[run_id]": "e3bbe6e95c37"
+        }
+      ]
+    },
+    {
+      "name": "visual:goodness_card_0",
+      "query": "EVALUATE ROW ( \u0022Datasets With Any KS Pass\u0022, [Datasets With Any KS Pass] )",
+      "rows": [
+        {
+          "[Datasets With Any KS Pass]": 10
+        }
+      ]
+    },
+    {
+      "name": "visual:goodness_card_1",
+      "query": "EVALUATE ROW ( \u0022Tail Flag Rate\u0022, [Tail Flag Rate] )",
+      "rows": [
+        {
+          "[Tail Flag Rate]": 0.32142857142857145
+        }
+      ]
+    },
+    {
+      "name": "visual:goodness_card_2",
+      "query": "EVALUATE ROW ( \u0022Avg KS Statistic\u0022, [Avg KS Statistic] )",
+      "rows": [
+        {
+          "[Avg KS Statistic]": 0.24666073706708977
+        }
+      ]
+    },
+    {
+      "name": "visual:goodness_chart",
+      "query": "EVALUATE SUMMARIZECOLUMNS ( \u0027dim_distribution\u0027[distribution_name], \u0022KS Pass Rate\u0022, [KS Pass Rate] ) ORDER BY \u0027dim_distribution\u0027[distribution_name]",
+      "rows": [
+        {
+          "dim_distribution[distribution_name]": "Beta",
+          "[KS Pass Rate]": 0.5
+        },
+        {
+          "dim_distribution[distribution_name]": "Cauchy",
+          "[KS Pass Rate]": 0.4166666666666667
+        },
+        {
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "[KS Pass Rate]": 0.3333333333333333
+        },
+        {
+          "dim_distribution[distribution_name]": "Exponential",
+          "[KS Pass Rate]": 0.3333333333333333
+        },
+        {
+          "dim_distribution[distribution_name]": "Gamma",
+          "[KS Pass Rate]": 0.3333333333333333
+        },
+        {
+          "dim_distribution[distribution_name]": "Laplace",
+          "[KS Pass Rate]": 0.25
+        },
+        {
+          "dim_distribution[distribution_name]": "Logistic",
+          "[KS Pass Rate]": 0.5
+        },
+        {
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "[KS Pass Rate]": 0.4166666666666667
+        },
+        {
+          "dim_distribution[distribution_name]": "Maxwell",
+          "[KS Pass Rate]": 0.4166666666666667
+        },
+        {
+          "dim_distribution[distribution_name]": "Normal",
+          "[KS Pass Rate]": 0.3333333333333333
+        },
+        {
+          "dim_distribution[distribution_name]": "Pareto",
+          "[KS Pass Rate]": 0.4166666666666667
+        },
+        {
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "[KS Pass Rate]": 0.4166666666666667
+        },
+        {
+          "dim_distribution[distribution_name]": "Uniform",
+          "[KS Pass Rate]": 0.25
+        },
+        {
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "[KS Pass Rate]": 0.5833333333333334
+        }
+      ]
+    },
+    {
+      "name": "visual:goodness_comparison",
+      "query": "EVALUATE SUMMARIZECOLUMNS ( \u0027dim_distribution\u0027[distribution_name], \u0022KS Pass Rate\u0022, [KS Pass Rate], \u0022Tail Flag Rate\u0022, [Tail Flag Rate], \u0022Avg KS Statistic\u0022, [Avg KS Statistic], \u0022Successful Fits\u0022, [Successful Fits] ) ORDER BY \u0027dim_distribution\u0027[distribution_name]",
+      "rows": [
+        {
+          "dim_distribution[distribution_name]": "Beta",
+          "[KS Pass Rate]": 0.5,
+          "[Tail Flag Rate]": 0.4166666666666667,
+          "[Avg KS Statistic]": 0.20679412194536706,
+          "[Successful Fits]": 12
+        },
+        {
+          "dim_distribution[distribution_name]": "Cauchy",
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Tail Flag Rate]": 0.4166666666666667,
+          "[Avg KS Statistic]": 0.2244360479549744,
+          "[Successful Fits]": 12
+        },
+        {
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "[KS Pass Rate]": 0.3333333333333333,
+          "[Tail Flag Rate]": 0.4166666666666667,
+          "[Avg KS Statistic]": 0.3255698613341069,
+          "[Successful Fits]": 12
+        },
+        {
+          "dim_distribution[distribution_name]": "Exponential",
+          "[KS Pass Rate]": 0.3333333333333333,
+          "[Tail Flag Rate]": 0.4166666666666667,
+          "[Avg KS Statistic]": 0.2761977974732428,
+          "[Successful Fits]": 12
+        },
+        {
+          "dim_distribution[distribution_name]": "Gamma",
+          "[KS Pass Rate]": 0.3333333333333333,
+          "[Tail Flag Rate]": 0.25,
+          "[Avg KS Statistic]": 0.23140356792179437,
+          "[Successful Fits]": 12
+        },
+        {
+          "dim_distribution[distribution_name]": "Laplace",
+          "[KS Pass Rate]": 0.25,
+          "[Tail Flag Rate]": 0.3333333333333333,
+          "[Avg KS Statistic]": 0.23780355742782947,
+          "[Successful Fits]": 12
+        },
+        {
+          "dim_distribution[distribution_name]": "Logistic",
+          "[KS Pass Rate]": 0.5,
+          "[Tail Flag Rate]": 0.25,
+          "[Avg KS Statistic]": 0.21585000430318127,
+          "[Successful Fits]": 12
+        },
+        {
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Tail Flag Rate]": 0.16666666666666666,
+          "[Avg KS Statistic]": 0.2020202927606701,
+          "[Successful Fits]": 12
+        },
+        {
+          "dim_distribution[distribution_name]": "Maxwell",
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Tail Flag Rate]": 0.25,
+          "[Avg KS Statistic]": 0.24547047510547748,
+          "[Successful Fits]": 12
+        },
+        {
+          "dim_distribution[distribution_name]": "Normal",
+          "[KS Pass Rate]": 0.3333333333333333,
+          "[Tail Flag Rate]": 0.25,
+          "[Avg KS Statistic]": 0.23188948889238312,
+          "[Successful Fits]": 12
+        },
+        {
+          "dim_distribution[distribution_name]": "Pareto",
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Tail Flag Rate]": 0.4166666666666667,
+          "[Avg KS Statistic]": 0.24842234579120429,
+          "[Successful Fits]": 12
+        },
+        {
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "[KS Pass Rate]": 0.4166666666666667,
+          "[Tail Flag Rate]": 0.16666666666666666,
+          "[Avg KS Statistic]": 0.23145198089360589,
+          "[Successful Fits]": 12
+        },
+        {
+          "dim_distribution[distribution_name]": "Uniform",
+          "[KS Pass Rate]": 0.25,
+          "[Tail Flag Rate]": 0.5833333333333334,
+          "[Avg KS Statistic]": 0.36887002980856193,
+          "[Successful Fits]": 12
+        },
+        {
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "[KS Pass Rate]": 0.5833333333333334,
+          "[Tail Flag Rate]": 0.16666666666666666,
+          "[Avg KS Statistic]": 0.207070747326857,
+          "[Successful Fits]": 12
+        }
+      ]
+    },
+    {
+      "name": "visual:goodness_filter_0",
+      "query": "EVALUATE SUMMARIZE ( dim_dataset, \u0027dim_dataset\u0027[dataset_name] ) ORDER BY \u0027dim_dataset\u0027[dataset_name]",
+      "rows": [
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude"
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)"
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)"
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)"
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)"
+        }
+      ]
+    },
+    {
+      "name": "visual:goodness_filter_1",
+      "query": "EVALUATE SUMMARIZE ( dim_dataset, \u0027dim_dataset\u0027[source] ) ORDER BY \u0027dim_dataset\u0027[source]",
+      "rows": [
+        {
+          "dim_dataset[source]": "R datasets::airquality (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::ChickWeight (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::faithful (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::islands (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::mtcars (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::precip (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::quakes (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::rivers (Rdatasets mirror)"
+        }
+      ]
+    },
+    {
+      "name": "visual:goodness_filter_2",
+      "query": "EVALUATE SUMMARIZE ( dim_distribution, \u0027dim_distribution\u0027[support_type] ) ORDER BY \u0027dim_distribution\u0027[support_type]",
+      "rows": [
+        {
+          "dim_distribution[support_type]": "Bounded"
+        },
+        {
+          "dim_distribution[support_type]": "Lower-bounded"
+        },
+        {
+          "dim_distribution[support_type]": "Unbounded"
+        }
+      ]
+    },
+    {
+      "name": "visual:goodness_filter_3",
+      "query": "EVALUATE SUMMARIZE ( dim_run, \u0027dim_run\u0027[run_id] ) ORDER BY \u0027dim_run\u0027[run_id]",
+      "rows": [
+        {
+          "dim_run[run_id]": "e3bbe6e95c37"
+        }
+      ]
+    },
+    {
+      "name": "visual:leaderboard_card_0",
+      "query": "EVALUATE ROW ( \u0022Fits\u0022, [Fits] )",
+      "rows": [
+        {
+          "[Fits]": 168
+        }
+      ]
+    },
+    {
+      "name": "visual:leaderboard_card_1",
+      "query": "EVALUATE ROW ( \u0022AIC Delta\u0022, [AIC Delta] )",
+      "rows": [
+        {
+          "[AIC Delta]": 0
+        }
+      ]
+    },
+    {
+      "name": "visual:leaderboard_card_2",
+      "query": "EVALUATE ROW ( \u0022BIC Delta\u0022, [BIC Delta] )",
+      "rows": [
+        {
+          "[BIC Delta]": 0
+        }
+      ]
+    },
+    {
+      "name": "visual:leaderboard_chart",
+      "query": "EVALUATE SUMMARIZECOLUMNS ( \u0027dim_distribution\u0027[distribution_name], \u0022AIC Delta\u0022, [AIC Delta] ) ORDER BY \u0027dim_distribution\u0027[distribution_name]",
+      "rows": [
+        {
+          "dim_distribution[distribution_name]": "Beta",
+          "[AIC Delta]": 59.757735739223676
+        },
+        {
+          "dim_distribution[distribution_name]": "Cauchy",
+          "[AIC Delta]": 249.16306326906076
+        },
+        {
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "[AIC Delta]": 922.482930360663
+        },
+        {
+          "dim_distribution[distribution_name]": "Exponential",
+          "[AIC Delta]": 147.13181699827203
+        },
+        {
+          "dim_distribution[distribution_name]": "Gamma",
+          "[AIC Delta]": 117.0993407213354
+        },
+        {
+          "dim_distribution[distribution_name]": "Laplace",
+          "[AIC Delta]": 202.8385353312839
+        },
+        {
+          "dim_distribution[distribution_name]": "Logistic",
+          "[AIC Delta]": 178.3550980319261
+        },
+        {
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "[AIC Delta]": 110.28700103204302
+        },
+        {
+          "dim_distribution[distribution_name]": "Maxwell",
+          "[AIC Delta]": 150.7635959738091
+        },
+        {
+          "dim_distribution[distribution_name]": "Normal",
+          "[AIC Delta]": 172.11038698146402
+        },
+        {
+          "dim_distribution[distribution_name]": "Pareto",
+          "[AIC Delta]": 142.35293282102933
+        },
+        {
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "[AIC Delta]": 149.42661882262004
+        },
+        {
+          "dim_distribution[distribution_name]": "Uniform",
+          "[AIC Delta]": 177.61958543727224
+        },
+        {
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "[AIC Delta]": 82.23778059678796
+        }
+      ]
+    },
+    {
+      "name": "visual:leaderboard_comparison",
+      "query": "EVALUATE SUMMARIZECOLUMNS ( \u0027dim_distribution\u0027[distribution_name], \u0022AIC Delta\u0022, [AIC Delta], \u0022BIC Delta\u0022, [BIC Delta], \u0022AIC Winner Share\u0022, [AIC Winner Share] ) ORDER BY \u0027dim_distribution\u0027[distribution_name]",
+      "rows": [
+        {
+          "dim_distribution[distribution_name]": "Beta",
+          "[AIC Delta]": 59.757735739223676,
+          "[BIC Delta]": 63.04515761321514,
+          "[AIC Winner Share]": 0.3333333333333333
+        },
+        {
+          "dim_distribution[distribution_name]": "Cauchy",
+          "[AIC Delta]": 249.16306326906076,
+          "[BIC Delta]": 246.57511747942897,
+          "[AIC Winner Share]": null
+        },
+        {
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "[AIC Delta]": 922.482930360663,
+          "[BIC Delta]": 922.8326684028431,
+          "[AIC Winner Share]": 0.25
+        },
+        {
+          "dim_distribution[distribution_name]": "Exponential",
+          "[AIC Delta]": 147.13181699827203,
+          "[BIC Delta]": 144.5438712086403,
+          "[AIC Winner Share]": null
+        },
+        {
+          "dim_distribution[distribution_name]": "Gamma",
+          "[AIC Delta]": 117.0993407213354,
+          "[BIC Delta]": 117.4490787635154,
+          "[AIC Winner Share]": null
+        },
+        {
+          "dim_distribution[distribution_name]": "Laplace",
+          "[AIC Delta]": 202.8385353312839,
+          "[BIC Delta]": 200.25058954165218,
+          "[AIC Winner Share]": null
+        },
+        {
+          "dim_distribution[distribution_name]": "Logistic",
+          "[AIC Delta]": 178.3550980319261,
+          "[BIC Delta]": 175.7671522422944,
+          "[AIC Winner Share]": null
+        },
+        {
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "[AIC Delta]": 110.28700103204302,
+          "[BIC Delta]": 110.63673907422303,
+          "[AIC Winner Share]": 0.08333333333333333
+        },
+        {
+          "dim_distribution[distribution_name]": "Maxwell",
+          "[AIC Delta]": 150.7635959738091,
+          "[BIC Delta]": 148.17565018417736,
+          "[AIC Winner Share]": null
+        },
+        {
+          "dim_distribution[distribution_name]": "Normal",
+          "[AIC Delta]": 172.11038698146402,
+          "[BIC Delta]": 169.5224411918323,
+          "[AIC Winner Share]": 0.16666666666666666
+        },
+        {
+          "dim_distribution[distribution_name]": "Pareto",
+          "[AIC Delta]": 142.35293282102933,
+          "[BIC Delta]": 142.7026708632093,
+          "[AIC Winner Share]": null
+        },
+        {
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "[AIC Delta]": 149.42661882262004,
+          "[BIC Delta]": 149.77635686480002,
+          "[AIC Winner Share]": null
+        },
+        {
+          "dim_distribution[distribution_name]": "Uniform",
+          "[AIC Delta]": 177.61958543727224,
+          "[BIC Delta]": 175.0316396476405,
+          "[AIC Winner Share]": 0.16666666666666666
+        },
+        {
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "[AIC Delta]": 82.23778059678796,
+          "[BIC Delta]": 82.58751863896795,
+          "[AIC Winner Share]": null
+        }
+      ]
+    },
+    {
+      "name": "visual:leaderboard_filter_0",
+      "query": "EVALUATE SUMMARIZE ( dim_dataset, \u0027dim_dataset\u0027[dataset_name] ) ORDER BY \u0027dim_dataset\u0027[dataset_name]",
+      "rows": [
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude"
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)"
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)"
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)"
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)"
+        }
+      ]
+    },
+    {
+      "name": "visual:leaderboard_filter_1",
+      "query": "EVALUATE SUMMARIZE ( dim_dataset, \u0027dim_dataset\u0027[source] ) ORDER BY \u0027dim_dataset\u0027[source]",
+      "rows": [
+        {
+          "dim_dataset[source]": "R datasets::airquality (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::ChickWeight (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::faithful (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::islands (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::mtcars (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::precip (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::quakes (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::rivers (Rdatasets mirror)"
+        }
+      ]
+    },
+    {
+      "name": "visual:leaderboard_filter_2",
+      "query": "EVALUATE SUMMARIZE ( dim_distribution, \u0027dim_distribution\u0027[support_type] ) ORDER BY \u0027dim_distribution\u0027[support_type]",
+      "rows": [
+        {
+          "dim_distribution[support_type]": "Bounded"
+        },
+        {
+          "dim_distribution[support_type]": "Lower-bounded"
+        },
+        {
+          "dim_distribution[support_type]": "Unbounded"
+        }
+      ]
+    },
+    {
+      "name": "visual:leaderboard_filter_3",
+      "query": "EVALUATE SUMMARIZE ( dim_run, \u0027dim_run\u0027[run_id] ) ORDER BY \u0027dim_run\u0027[run_id]",
+      "rows": [
+        {
+          "dim_run[run_id]": "e3bbe6e95c37"
+        }
+      ]
+    },
+    {
+      "name": "visual:overview_card_0",
+      "query": "EVALUATE ROW ( \u0022Datasets Analysed\u0022, [Datasets Analysed] )",
+      "rows": [
+        {
+          "[Datasets Analysed]": 12
+        }
+      ]
+    },
+    {
+      "name": "visual:overview_card_1",
+      "query": "EVALUATE ROW ( \u0022Top Distribution\u0022, [Top Distribution] )",
+      "rows": [
+        {
+          "[Top Distribution]": "Weibull (Min)"
+        }
+      ]
+    },
+    {
+      "name": "visual:overview_card_2",
+      "query": "EVALUATE ROW ( \u0022KS Pass Rate\u0022, [KS Pass Rate] )",
+      "rows": [
+        {
+          "[KS Pass Rate]": 0.39285714285714285
+        }
+      ]
+    },
+    {
+      "name": "visual:overview_card_3",
+      "query": "EVALUATE ROW ( \u0022Fit Success Rate\u0022, [Fit Success Rate] )",
+      "rows": [
+        {
+          "[Fit Success Rate]": 1
+        }
+      ]
+    },
+    {
+      "name": "visual:overview_chart",
+      "query": "EVALUATE SUMMARIZECOLUMNS ( \u0027dim_distribution\u0027[distribution_name], \u0022Best Fit Share\u0022, [Best Fit Share] ) ORDER BY \u0027dim_distribution\u0027[distribution_name]",
+      "rows": [
+        {
+          "dim_distribution[distribution_name]": "Beta",
+          "[Best Fit Share]": 0.08333333333333333
+        },
+        {
+          "dim_distribution[distribution_name]": "Cauchy",
+          "[Best Fit Share]": 0
+        },
+        {
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "[Best Fit Share]": 0.16666666666666666
+        },
+        {
+          "dim_distribution[distribution_name]": "Exponential",
+          "[Best Fit Share]": 0.16666666666666666
+        },
+        {
+          "dim_distribution[distribution_name]": "Gamma",
+          "[Best Fit Share]": 0
+        },
+        {
+          "dim_distribution[distribution_name]": "Laplace",
+          "[Best Fit Share]": 0
+        },
+        {
+          "dim_distribution[distribution_name]": "Logistic",
+          "[Best Fit Share]": 0
+        },
+        {
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "[Best Fit Share]": 0.08333333333333333
+        },
+        {
+          "dim_distribution[distribution_name]": "Maxwell",
+          "[Best Fit Share]": 0.08333333333333333
+        },
+        {
+          "dim_distribution[distribution_name]": "Normal",
+          "[Best Fit Share]": 0
+        },
+        {
+          "dim_distribution[distribution_name]": "Pareto",
+          "[Best Fit Share]": 0.08333333333333333
+        },
+        {
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "[Best Fit Share]": 0
+        },
+        {
+          "dim_distribution[distribution_name]": "Uniform",
+          "[Best Fit Share]": 0.16666666666666666
+        },
+        {
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "[Best Fit Share]": 0.16666666666666666
+        }
+      ]
+    },
+    {
+      "name": "visual:overview_comparison",
+      "query": "EVALUATE SUMMARIZECOLUMNS ( \u0027dim_distribution\u0027[distribution_name], \u0022Best Fit Count\u0022, [Best Fit Count], \u0022Best Fit Share\u0022, [Best Fit Share], \u0022KS Pass Rate\u0022, [KS Pass Rate] ) ORDER BY \u0027dim_distribution\u0027[distribution_name]",
+      "rows": [
+        {
+          "dim_distribution[distribution_name]": "Beta",
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 0.08333333333333333,
+          "[KS Pass Rate]": 0.5
+        },
+        {
+          "dim_distribution[distribution_name]": "Cauchy",
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[KS Pass Rate]": 0.4166666666666667
+        },
+        {
+          "dim_distribution[distribution_name]": "Chi-Squared",
+          "[Best Fit Count]": 2,
+          "[Best Fit Share]": 0.16666666666666666,
+          "[KS Pass Rate]": 0.3333333333333333
+        },
+        {
+          "dim_distribution[distribution_name]": "Exponential",
+          "[Best Fit Count]": 2,
+          "[Best Fit Share]": 0.16666666666666666,
+          "[KS Pass Rate]": 0.3333333333333333
+        },
+        {
+          "dim_distribution[distribution_name]": "Gamma",
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[KS Pass Rate]": 0.3333333333333333
+        },
+        {
+          "dim_distribution[distribution_name]": "Laplace",
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[KS Pass Rate]": 0.25
+        },
+        {
+          "dim_distribution[distribution_name]": "Logistic",
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[KS Pass Rate]": 0.5
+        },
+        {
+          "dim_distribution[distribution_name]": "Log-Normal",
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 0.08333333333333333,
+          "[KS Pass Rate]": 0.4166666666666667
+        },
+        {
+          "dim_distribution[distribution_name]": "Maxwell",
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 0.08333333333333333,
+          "[KS Pass Rate]": 0.4166666666666667
+        },
+        {
+          "dim_distribution[distribution_name]": "Normal",
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[KS Pass Rate]": 0.3333333333333333
+        },
+        {
+          "dim_distribution[distribution_name]": "Pareto",
+          "[Best Fit Count]": 1,
+          "[Best Fit Share]": 0.08333333333333333,
+          "[KS Pass Rate]": 0.4166666666666667
+        },
+        {
+          "dim_distribution[distribution_name]": "Student\u0027s t",
+          "[Best Fit Count]": 0,
+          "[Best Fit Share]": 0,
+          "[KS Pass Rate]": 0.4166666666666667
+        },
+        {
+          "dim_distribution[distribution_name]": "Uniform",
+          "[Best Fit Count]": 2,
+          "[Best Fit Share]": 0.16666666666666666,
+          "[KS Pass Rate]": 0.25
+        },
+        {
+          "dim_distribution[distribution_name]": "Weibull (Min)",
+          "[Best Fit Count]": 2,
+          "[Best Fit Share]": 0.16666666666666666,
+          "[KS Pass Rate]": 0.5833333333333334
+        }
+      ]
+    },
+    {
+      "name": "visual:overview_filter_0",
+      "query": "EVALUATE SUMMARIZE ( dim_dataset, \u0027dim_dataset\u0027[dataset_name] ) ORDER BY \u0027dim_dataset\u0027[dataset_name]",
+      "rows": [
+        {
+          "dim_dataset[dataset_name]": "Annual precipitation, US cities (in)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Area of major landmasses (1000 sq mi)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Car fuel economy (mpg)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Chick body weight (g)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake depth (km)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Fiji earthquake magnitude"
+        },
+        {
+          "dim_dataset[dataset_name]": "Length of major North American rivers (mi)"
+        },
+        {
+          "dim_dataset[dataset_name]": "New York max temperature (F)"
+        },
+        {
+          "dim_dataset[dataset_name]": "New York ozone (ppb)"
+        },
+        {
+          "dim_dataset[dataset_name]": "New York wind speed (mph)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful eruption duration (min)"
+        },
+        {
+          "dim_dataset[dataset_name]": "Old Faithful waiting time (min)"
+        }
+      ]
+    },
+    {
+      "name": "visual:overview_filter_1",
+      "query": "EVALUATE SUMMARIZE ( dim_dataset, \u0027dim_dataset\u0027[source] ) ORDER BY \u0027dim_dataset\u0027[source]",
+      "rows": [
+        {
+          "dim_dataset[source]": "R datasets::airquality (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::ChickWeight (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::faithful (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::islands (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::mtcars (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::precip (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::quakes (Rdatasets mirror)"
+        },
+        {
+          "dim_dataset[source]": "R datasets::rivers (Rdatasets mirror)"
+        }
+      ]
+    },
+    {
+      "name": "visual:overview_filter_2",
+      "query": "EVALUATE SUMMARIZE ( dim_distribution, \u0027dim_distribution\u0027[support_type] ) ORDER BY \u0027dim_distribution\u0027[support_type]",
+      "rows": [
+        {
+          "dim_distribution[support_type]": "Bounded"
+        },
+        {
+          "dim_distribution[support_type]": "Lower-bounded"
+        },
+        {
+          "dim_distribution[support_type]": "Unbounded"
+        }
+      ]
+    },
+    {
+      "name": "visual:overview_filter_3",
+      "query": "EVALUATE SUMMARIZE ( dim_run, \u0027dim_run\u0027[run_id] ) ORDER BY \u0027dim_run\u0027[run_id]",
+      "rows": [
+        {
+          "dim_run[run_id]": "e3bbe6e95c37"
+        }
+      ]
+    }
+  ]
+}

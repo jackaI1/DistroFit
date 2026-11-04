@@ -146,19 +146,31 @@ product at a time; it does not infer overlapping stops or parallel changeover wo
 
 ## Comparing several datasets
 
-I can also export results as tables to compare datasets in Power BI, Microsoft's
-interactive reporting tool:
+I wanted to compare several samples without opening a separate analysis for each
+one. I use the [Power BI report](powerbi/DistroFit.pbip), an interactive report I can
+open in Microsoft's free Power BI Desktop on Windows. It includes twelve public
+sample datasets and four pages: an overview, curve rankings, fit checks and the
+parameters for each dataset. I choose a dataset or source in the filters to see
+which curves win and whether those winners pass the fit check.
+
+To try it, clone this repository, open **powerbi/DistroFit.pbip** in Power BI
+Desktop and choose **Home → Refresh** to populate the bundled sample. The report
+and its model, the tables and calculations behind the pages, are included as
+editable project files. I do not need an online account to use the sample.
+
+For my own measurements, I export the fitted results and rebuild the report's
+snapshot:
 
 ```sh
-python export_powerbi.py --sample --out powerbi_export
+python export_powerbi.py measurements.csv --column weight --out powerbi_export
+python powerbi/build_project.py --export powerbi_export
 ```
 
-This uses the bundled public datasets. For my own file, I can replace `--sample` with
-`measurements.csv --column weight`. The [report guide](powerbi/REPORT.md) explains
-how to load the CSV or Parquet tables (a compact table format) and assemble the
-report in Power BI Desktop. The repository includes the queries, measures and sample
-export, but no finished `.pbix` report. The measures still need checking in Power BI
-Desktop.
+I close Power BI before rebuilding, remove the local
+`powerbi/DistroFit.SemanticModel/.pbi` cache if it exists, then reopen the project
+and refresh. Rebuilding replaces the report's data; I keep private exports and
+rebuilt projects out of Git. The [report guide](powerbi/REPORT.md) explains the
+calculations, reference checks and how to repeat the native Windows test.
 
 ## Looking at measurements over time
 

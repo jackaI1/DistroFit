@@ -22,3 +22,7 @@ build/
 # Local .NET validation build output
 **/bin/
 **/obj/
+powerbi/**/.pbi/
+powerbi/NativeCheck/bin/
+powerbi/NativeCheck/obj/
+native-evidence/

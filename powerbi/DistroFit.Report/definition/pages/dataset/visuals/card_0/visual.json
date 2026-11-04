@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "dataset_card_0",
+  "position": {
+    "x": 24,
+    "y": 24,
+    "z": 0,
+    "width": 264,
+    "height": 120,
+    "tabOrder": 24.0024
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Fits"
+                }
+              },
+              "queryRef": "_Measures.Fits",
+              "nativeQueryRef": "Fits"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fits'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

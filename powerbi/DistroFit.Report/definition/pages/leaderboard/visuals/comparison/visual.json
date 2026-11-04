@@ -1,0 +1,101 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "leaderboard_comparison",
+  "position": {
+    "x": 24,
+    "y": 168,
+    "z": 0,
+    "width": 1100,
+    "height": 350,
+    "tabOrder": 168.0024
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_distribution"
+                    }
+                  },
+                  "Property": "distribution_name"
+                }
+              },
+              "queryRef": "dim_distribution.distribution_name",
+              "nativeQueryRef": "distribution_name"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "AIC Delta"
+                }
+              },
+              "queryRef": "_Measures.AIC Delta",
+              "nativeQueryRef": "AIC Delta"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "BIC Delta"
+                }
+              },
+              "queryRef": "_Measures.BIC Delta",
+              "nativeQueryRef": "BIC Delta"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "AIC Winner Share"
+                }
+              },
+              "queryRef": "_Measures.AIC Winner Share",
+              "nativeQueryRef": "AIC Winner Share"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Information criteria'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
