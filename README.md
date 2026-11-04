@@ -17,9 +17,14 @@ The equipment page splits lost time into stops, slow running and rejected parts.
 It ranks stop reasons by minutes lost and lets me compare a current changeover,
 the work needed to switch products, with a proposed shorter one.
 
+I also wanted to estimate equipment life without throwing away the operating hours
+from units that were still running. The Reliability page keeps those units in the
+calculation, compares possible life curves and shows how uncertain the estimates are.
+
 This is a personal project. It accepts a numeric CSV column, a column from a
 plain-text table, as well as pasted numbers or generated samples, and runs without an
-account. To try it, start the app below and choose Sample Data.
+account. To try it, start the app below and choose Sample Data, or open Reliability
+in the sidebar for a generated equipment log.
 
 ## Run it
 
@@ -40,6 +45,39 @@ the values below which a given share of observations fall. Scenario tries new nu
 against the same fitted curves; Manual lets me adjust a curve myself. Download
 reproducible report saves the analysis and its data in a PDF. Stop the app with
 Ctrl-C. Reports contain the input values, so keep private exports private.
+
+## Estimating equipment life
+
+On **Reliability**, I start with a generated log of 80 pump seals. Each row records
+the hours from installation until failure or the last observation. A seal that was
+still running gets `failed=0`; a failed seal gets `failed=1`. I can edit the table
+or upload a CSV with `time` and `failed` columns, using operating hours throughout.
+The example has 45 failures and 35 still-running seals.
+
+I compare the fitted curves with a stepped survival curve, the share of units still
+working at each age. I can inspect how failure risk changes with age and estimate
+the share lasting beyond a planning age. The page reports mean life and B10, the age
+by which the model expects 10% to fail, with confidence intervals to show uncertainty.
+For the example, the Weibull model gives **976 hours mean life** and **378 hours B10**.
+Mean life is mean time to failure for these first-life seals. It is mean time between
+failures (MTBF) only when each independent replacement cycle starts as good as new.
+
+I can save the calculation, life estimates and charts from the page, or run:
+
+```sh
+python reliability_report.py --sample --out /tmp/distrofit-reliability
+# Or use my own equipment log, with 99% confidence intervals:
+python reliability_report.py equipment_log.csv --confidence .99 --out /tmp/my-reliability
+```
+
+Each command needs a new output directory and saves JSON, CSV tables and a PNG chart.
+The [worked maintenance example](docs/reliability.md) explains why dropping the
+still-running seals changes the estimate, how to read the charts and what the
+intervals mean. It also covers Weibull, lognormal and exponential models, which
+describe different patterns of equipment life. These calculations assume comparable,
+independent lifetimes and observation stopping for reasons unrelated to hidden
+failure risk. They help me investigate a maintenance question; they do not choose
+a replacement schedule automatically.
 
 ## Reviewing measurements in Excel
 
@@ -229,6 +267,11 @@ in separate processes. Equipment tests also check a published OEE example, hand-
 losses and changeover savings, invalid inputs, zero-output periods and both ways of
 running the feature. Dependency versions are in [requirements.txt](requirements.txt)
 and [requirements-lock.txt](requirements-lock.txt).
+
+Reliability tests check NIST's published censored Weibull example, independent
+SciPy fits, hand-calculated survival and life intervals, time-unit changes,
+invalid and all-suspended logs, command-line exports and editable app controls.
+CI also runs the generated maintenance example and saves its report as an artifact.
 
 ## Demo
 
