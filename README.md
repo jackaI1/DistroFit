@@ -1,6 +1,6 @@
 # DistroFit
 
-A local app for finding a probability curve that describes a set of measurements.
+I built a local app for comparing curves against measurements because a histogram alone couldn't tell me which curve would describe new measurements.
 
 ## Overview
 
