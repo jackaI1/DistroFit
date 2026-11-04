@@ -101,21 +101,6 @@ the default split produces 750 training and 250 held-out observations. Changing
 the seed, family selection, filtering or input can change the winner and tail
 flags. No external-data accuracy or performance benchmark is claimed.
 
-## Skills demonstrated
-
-**Statistical Process Control / Lean Six Sigma (DMAIC).** [`spc.py`](spc.py) adds
-X-bar-R and I-MR control charts with the four Western Electric rules, process
-capability (Cp, Cpk, Pp, Ppk) and a Pareto table and chart. For non-normal data
-`spc.capability_from_fit` takes the best-fitting distribution that DistroFit's
-held-out comparison selects and computes Pp/Ppk by the ISO 22514-2 percentile
-method, so skewed processes are not judged with a normal assumption. Calculations
-are tested against hand-computed and closed-form values in
-[`tests/test_spc.py`](tests/test_spc.py). [`docs/case-study-dmaic.md`](docs/case-study-dmaic.md)
-applies it to a drawing-revision review that went from about 2 hours to 30 minutes
-after automation; apart from that headline, its data are clearly labelled
-illustrative and reproducible with [`docs/dmaic_case_study.py`](docs/dmaic_case_study.py).
-The SPC module is a library: it is not yet wired into the Streamlit interface.
-
 ## Getting started
 
 Use CPython 3.12; fresh-copy verification used 3.12.14 on macOS arm64.
@@ -196,6 +181,18 @@ THIRD_PARTY_NOTICES.md        dependency terms and attribution
   slicers; [`powerbi/sample_export/`](powerbi/sample_export/) holds an export of 12
   public datasets. Tests: [`tests/test_powerbi_export.py`](tests/test_powerbi_export.py).
   The `.pbix` is authored separately in Power BI Desktop.
+- **Statistical Process Control / Lean Six Sigma (DMAIC).** [`spc.py`](spc.py) adds
+  X-bar-R and I-MR control charts with the four Western Electric rules, process
+  capability (Cp, Cpk, Pp, Ppk) and a Pareto table and chart. For non-normal data
+  `spc.capability_from_fit` takes the best-fitting distribution that DistroFit's
+  held-out comparison selects and computes Pp/Ppk by the ISO 22514-2 percentile
+  method, so skewed processes are not judged with a normal assumption. Calculations
+  are tested against hand-computed and closed-form values in
+  [`tests/test_spc.py`](tests/test_spc.py). [`docs/case-study-dmaic.md`](docs/case-study-dmaic.md)
+  applies it to a drawing-revision review that went from about 2 hours to 30 minutes
+  after automation; apart from that headline, its data are clearly labelled
+  illustrative and reproducible with [`docs/dmaic_case_study.py`](docs/dmaic_case_study.py).
+  The SPC module is a library: it is not yet wired into the Streamlit interface.
 
 ## Limitations and known issues
 
