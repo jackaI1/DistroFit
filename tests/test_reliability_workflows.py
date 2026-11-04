@@ -138,3 +138,31 @@ def test_page_invalid_edit_clears_old_downloads_then_all_censored_stays_usable()
     assert not app.session_state["reliability_report"]["fits"]
     assert app.warning
     assert len(app.get("download_button")) == 3
+
+
+@pytest.mark.parametrize("content", [
+    "time,failed\n100,10,1\n200,20,0\n",
+    "time,failed\n100,1\n200,20,0\n",
+    "time,failed\n100,1\n200\n",
+])
+def test_csv_extra_or_missing_fields_are_rejected_not_reinterpreted(tmp_path, content):
+    path = tmp_path / "malformed.csv"
+    path.write_text(content)
+    result = run_cli(path, "--out", tmp_path / "report")
+    assert result.returncode == 2
+    assert "fields" in result.stderr
+    assert not (tmp_path / "report").exists()
+
+
+def test_clustered_lifetimes_keep_usable_curves_and_exports(tmp_path):
+    # Large Weibull shape is valid here; arbitrary 15% extrapolation used to
+    # overflow its hazard and abort the complete report.
+    table = pd.DataFrame({"time": [100, 100.02, 100.04] * 10, "failed": [1] * 30})
+    report = analyze_lifetimes(table)
+    assert {fit["model"] for fit in report["fits"]} == {"weibull", "lognormal", "exponential"}
+    export_report(report, tmp_path / "clustered")
+    curves = pd.read_csv(tmp_path / "clustered/curves.csv")
+    assert np.isfinite(curves[["time", "survival", "hazard"]].to_numpy()).all()
+    weibull = curves[curves.model == "weibull"]
+    assert (np.diff(weibull.hazard) >= 0).all()
+    assert weibull.time.max() >= table.time.max()

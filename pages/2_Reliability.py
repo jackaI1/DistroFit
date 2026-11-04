@@ -73,7 +73,7 @@ try:
     figure.savefig(png, format="png", dpi=150)
 finally:
     figure.clear()
-st.caption("The gray band is a pointwise confidence interval for empirical survival. Model curves beyond the last observed age are extrapolations. A final survival value of zero cannot be shown on the probability scale, so that endpoint is omitted.")
+st.caption("The gray band is a pointwise confidence interval for empirical survival. Model curves beyond the last observed age are extrapolations; very remote fitted tails are omitted. A final survival value of zero cannot be shown on the probability scale, so that endpoint is omitted.")
 with st.expander("Risk counts and assumptions"):
     st.dataframe(pd.DataFrame(report["kaplan_meier"]), hide_index=True, width="stretch")
     st.write("Suspensions must be unrelated to hidden failure risk. Removing a unit because it appears close to failure violates this assumption. Do not mix different failure modes, operating stresses, left or interval censoring, or units already in service when observation began. The page does not model repairable-system trends or choose a maintenance interval automatically.")

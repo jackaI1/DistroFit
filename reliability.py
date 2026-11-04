@@ -187,6 +187,16 @@ def life_curves(fit, times):
     if not np.all(np.isfinite(ages) & (ages >= 0)):
         raise ValueError("Curve ages must be finite and non-negative.")
     parameters = fit["parameters"]
+    if fit["model"] == "weibull":
+        shape, scale = parameters["shape"], parameters["scale"]
+        # Subtracting logpdf and logsf loses the hazard once the cumulative
+        # hazard is huge. The analytic log hazard avoids that cancellation.
+        with np.errstate(divide="ignore", over="ignore", under="ignore"):
+            log_ratio = np.log(ages) - np.log(scale)
+            survival = np.exp(-np.exp(shape * log_ratio))
+            hazard = (np.full_like(ages, 1 / scale) if shape == 1 else
+                      np.exp(np.log(shape) - np.log(scale) + (shape - 1) * log_ratio))
+        return {"survival": survival, "hazard": hazard}
     distribution = {"weibull": stats.weibull_min, "lognormal": stats.lognorm, "exponential": stats.expon}[fit["model"]]
     args = () if fit["model"] == "exponential" else (parameters["shape"],)
     log_survival = distribution.logsf(ages, *args, scale=parameters["scale"])

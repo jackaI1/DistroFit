@@ -35,7 +35,14 @@ def read_lifetime_csv(source):
     content = source.read() if hasattr(source, "read") else Path(source).read_bytes()
     if isinstance(content, bytes):
         content = content.decode("utf-8-sig")
-    header = next(csv.reader(io.StringIO(content)), [])
+    try:
+        records = csv.reader(io.StringIO(content), strict=True)
+        header = next(records, [])
+        for number, record in enumerate(records, start=2):
+            if record and len(record) != len(header):
+                raise ValueError(f"CSV record {number} has {len(record)} fields; expected {len(header)}.")
+    except csv.Error as error:
+        raise ValueError(f"Invalid CSV: {error}") from error
     if not header or len(header) != len(set(header)):
         raise ValueError("CSV must have unique column names, including time and failed.")
     return pd.read_csv(io.StringIO(content))
@@ -53,12 +60,24 @@ def model_table(report):
 
 def curve_table(report):
     times = np.array([row["time"] for row in report["observations"]])
-    grid = np.geomspace(times.min() * .5, times.max() * 1.15, 300)
     rows = []
     for fit in report["fits"]:
+        parameters = fit["parameters"]
+        distribution = {"weibull": stats.weibull_min, "lognormal": stats.lognorm,
+                        "exponential": stats.expon}[fit["model"]]
+        args = () if fit["model"] == "exponential" else (parameters["shape"],)
+        # Arbitrary extrapolation is especially misleading for nearly identical
+        # failure ages. Stop remote tails at survival 1e-8, before enormous or
+        # unrepresentable hazards can destroy an otherwise useful report.
+        with np.errstate(over="ignore", under="ignore"):
+            tail = float(distribution.isf(1e-8, *args, scale=parameters["scale"]))
+        upper = min(float(times.max()) * 1.15, tail)
+        lower = max(min(float(times.min()) * .5, upper * .5), np.nextafter(0., 1.))
+        grid = np.geomspace(lower, upper, 300)
         curves = life_curves(fit, grid)
+        finite = np.isfinite(curves["survival"]) & np.isfinite(curves["hazard"])
         rows.extend(dict(model=fit["model"], time=float(t), survival=float(s), hazard=float(h))
-                    for t, s, h in zip(grid, curves["survival"], curves["hazard"]))
+                    for t, s, h in zip(grid[finite], curves["survival"][finite], curves["hazard"][finite]))
     table = pd.DataFrame(rows, columns=CURVE_COLUMNS)
     if not table.empty and not np.isfinite(table[["time", "survival", "hazard"]].to_numpy()).all():
         raise ValueError("Curve values exceed the supported numeric range.")

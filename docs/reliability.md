@@ -173,6 +173,12 @@ failure jumps from that curve: Weibull uses `log(-log(S))` against log age,
 lognormal uses the normal failure quantile against log age, and exponential uses
 `-log(S)` against age. Undefined zero/one survival endpoints are omitted. The line
 comes from the censored MLE; no regression on plotting ranks is used for fitting.
+Weibull hazard is evaluated directly in log coordinates to avoid cancellation
+when survival is extremely small. Plotting grids stop at the smaller of 115% of
+the maximum observed age or the age with fitted survival `1e-8`; any remaining
+unrepresentable tail points are omitted. This keeps closely clustered lifetimes
+usable without displaying arbitrary, unstable extrapolations. It does not change
+the fitted likelihood, parameters or life intervals.
 
 ## References and checks
 

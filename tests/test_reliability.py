@@ -142,3 +142,17 @@ def test_report_is_sorted_and_json_safe_and_km_pure_suspension_does_not_drop():
     json.dumps(report, allow_nan=False)
     km = kaplan_meier(pd.DataFrame({"time": [1, 2, 3], "failed": [1, 0, 0]}))
     assert km.survival.tolist() == pytest.approx([1, 2/3, 2/3, 2/3])
+
+
+def test_weibull_hazard_does_not_cancel_when_survival_underflows():
+    # Direct Weibull formula: (500/100) * (120/100)**499.
+    fit = {"model": "weibull", "parameters": {"shape": 500., "scale": 100.}}
+    curves = life_curves(fit, [120])
+    assert curves["survival"][0] == 0
+    assert curves["hazard"][0] == pytest.approx(1.623348567461589e40, rel=1e-10)
+
+
+@pytest.mark.parametrize("shape,expected", [(.5, np.inf), (1., .01), (2., 0.)])
+def test_weibull_hazard_at_zero_handles_each_shape(shape, expected):
+    fit = {"model": "weibull", "parameters": {"shape": shape, "scale": 100.}}
+    assert life_curves(fit, [0])["hazard"][0] == pytest.approx(expected)
