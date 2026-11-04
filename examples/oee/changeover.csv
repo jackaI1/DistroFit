@@ -1,0 +1,6 @@
+step,minutes,kind,proposed_minutes,proposed_kind
+Fetch tools,6,internal,6,external
+Remove fixture,5,internal,4,internal
+Install and align,7,internal,5,internal
+First-piece check,2,internal,2,internal
+Prepare next material,4,external,4,external

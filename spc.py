@@ -1,4 +1,4 @@
-"""Statistical Process Control: control charts, capability and Pareto analysis.
+"""Statistical Process Control: charts, capability, Pareto, OEE and changeovers.
 
 Everything here is a pure function over NumPy/pandas data so it can be tested
 against hand-calculated textbook values. Non-normal capability reuses the
@@ -261,16 +261,16 @@ def pareto_table(data, threshold=80.0):
     return table.reset_index(drop=True)
 
 
-def pareto_chart(table, title="Pareto chart"):
-    """Matplotlib Figure: bars for counts, line for cumulative percent."""
+def pareto_chart(table, title="Pareto chart", value_column="Count", ylabel="Count"):
+    """Matplotlib Figure: bars for counts or durations, cumulative percent line."""
     from matplotlib.figure import Figure
     fig = Figure(figsize=(8, 4.5))
     ax = fig.subplots()
     x = np.arange(len(table))
     colors = ["#1f77b4" if few else "#9ecae1" for few in table["Vital few"]]
-    ax.bar(x, table["Count"], color=colors)
+    ax.bar(x, table[value_column], color=colors)
     ax.set_xticks(x, table["Category"], rotation=30, ha="right")
-    ax.set_ylabel("Count")
+    ax.set_ylabel(ylabel)
     ax.set_title(title)
     line = ax.twinx()
     line.plot(x, table["Cumulative %"], color="#d62728", marker="o")
@@ -279,6 +279,140 @@ def pareto_chart(table, title="Pareto chart"):
     line.set_ylabel("Cumulative %")
     fig.tight_layout()
     return fig
+
+
+# --------------------------------------------------------------------------
+# Equipment effectiveness and changeovers
+# --------------------------------------------------------------------------
+
+def _nonnegative_number(value, name):
+    from numbers import Real
+    if isinstance(value, (bool, np.bool_)) or not isinstance(value, Real):
+        raise ValueError(f"{name} must be a finite non-negative number.")
+    value = float(value)
+    if not np.isfinite(value) or value < 0:
+        raise ValueError(f"{name} must be a finite non-negative number.")
+    return value
+
+
+def calculate_oee(*, shift_minutes, excluded_minutes, stop_minutes,
+                  ideal_cycle_seconds, total_count, good_count):
+    """One machine/product period, with the same ideal cycle for every part.
+
+    Exclude only time with no production scheduled (e.g. breaks). Changeovers
+    during planned production remain stop time. Good means first-pass good,
+    excluding scrap AND rework. Factors are fractions, not percentages.
+    Undefined factors are None; a fully stopped/no-output period has OEE 0.
+    Inconsistent speeds/counts raise ValueError rather than hiding bad inputs.
+    See docs/oee.md for definitions and the published calculation reference.
+    """
+    shift = _nonnegative_number(shift_minutes, "shift_minutes")
+    excluded = _nonnegative_number(excluded_minutes, "excluded_minutes")
+    stop = _nonnegative_number(stop_minutes, "stop_minutes")
+    cycle = _nonnegative_number(ideal_cycle_seconds, "ideal_cycle_seconds")
+    total = _nonnegative_number(total_count, "total_count")
+    good = _nonnegative_number(good_count, "good_count")
+    if not total.is_integer() or not good.is_integer():
+        raise ValueError("Part counts must be whole numbers.")
+    if good > total:
+        raise ValueError("good_count cannot exceed total_count.")
+    planned = shift - excluded
+    if planned <= 0:
+        raise ValueError("Shift minus excluded time must leave positive planned production time.")
+    if cycle <= 0:
+        raise ValueError("ideal_cycle_seconds must be positive.")
+    if stop > planned:
+        raise ValueError("Stop time cannot exceed planned production time.")
+    run = planned - stop
+    net = total * (cycle / 60)
+    productive = good * (cycle / 60)
+    if (run == 0 and total > 0) or not np.isfinite(net) or net > run + 1e-9:
+        raise ValueError("Performance exceeds 100%: check ideal cycle, counts and stop time.")
+    net = min(net, run)  # absorb only floating-point roundoff at full speed
+    productive = min(productive, net)
+    return {
+        "planned_minutes": planned, "stop_minutes": stop, "run_minutes": run,
+        "ideal_cycle_seconds": cycle, "total_count": int(total), "good_count": int(good),
+        "availability": run / planned,
+        "performance": net / run if run else None,
+        "quality": good / total if total else None,
+        "oee": productive / planned,
+        "availability_loss_minutes": stop, "performance_loss_minutes": run - net,
+        "quality_loss_minutes": net - productive, "fully_productive_minutes": productive,
+    }
+
+
+def _records(data, columns, label):
+    try:
+        frame = pd.DataFrame(data).copy()
+    except (ValueError, TypeError) as error:
+        raise ValueError(f"{label} must be a table of records.") from error
+    if frame.empty and len(frame.columns) == 0:
+        return pd.DataFrame(columns=columns)
+    if not frame.columns.is_unique or not set(columns).issubset(frame.columns):
+        raise ValueError(f"{label} needs unique columns: {', '.join(columns)}.")
+    return frame.loc[:, columns].copy()
+
+
+def _labels(frame, column):
+    if not frame[column].map(lambda v: isinstance(v, str) and bool(v.strip())).all():
+        raise ValueError(f"{column} must contain non-empty text.")
+    frame[column] = frame[column].str.strip()
+
+
+def downtime_pareto(events):
+    """Rank non-overlapping stop events by MINUTES, not occurrence count.
+
+    Input records: category, minutes. Include changeovers; exclude breaks and
+    microstops already captured by performance. Caller must supply events for
+    one machine and period, with no overlapping or duplicated stop intervals.
+    """
+    frame = _records(events, ["category", "minutes"], "Downtime")
+    _labels(frame, "category")
+    frame["minutes"] = [_nonnegative_number(v, "minutes") for v in frame["minutes"]]
+    grouped = frame.groupby("category", sort=False)["minutes"].agg(["sum", "size"])
+    if not np.isfinite(grouped["sum"].sum()):
+        raise ValueError("Total downtime must be finite.")
+    if grouped["sum"].sum() > 0:
+        table = pareto_table(grouped["sum"].to_dict()).rename(columns={"Count": "Minutes"})
+    else:
+        table = pd.DataFrame({"Category": grouped.index, "Minutes": grouped["sum"].values,
+                              "Percent": 0.0, "Cumulative %": 0.0, "Vital few": False})
+    table["Events"] = table["Category"].map(grouped["size"]).astype(int)
+    return table[["Category", "Minutes", "Events", "Percent", "Cumulative %", "Vital few"]].reset_index(drop=True)
+
+
+def smed_analysis(tasks):
+    """Serial changeover task study, measured baseline versus proposed plan.
+
+    Each record has step, minutes, kind, proposed_minutes, proposed_kind.
+    'internal' occupies the stopped machine; 'external' happens while it runs.
+    Moving a task externally frees machine time, not necessarily labour time.
+    Proposed savings are estimates, never edits to measured OEE. No parallel
+    task/critical-path scheduling is inferred from task durations.
+    """
+    frame = _records(tasks, ["step", "minutes", "kind", "proposed_minutes", "proposed_kind"], "Changeover")
+    _labels(frame, "step")
+    if frame["step"].duplicated().any():
+        raise ValueError("Changeover step names must be unique.")
+    for column in ("kind", "proposed_kind"):
+        if not frame[column].isin(["internal", "external"]).all():
+            raise ValueError(f"{column} must be internal or external.")
+    for column in ("minutes", "proposed_minutes"):
+        frame[column] = [_nonnegative_number(v, column) for v in frame[column]]
+    baseline = frame["minutes"].where(frame["kind"] == "internal", 0.0)
+    proposed = frame["proposed_minutes"].where(frame["proposed_kind"] == "internal", 0.0)
+    before, after = float(baseline.sum()), float(proposed.sum())
+    external_before = float(frame.loc[frame["kind"] == "external", "minutes"].sum())
+    external_after = float(frame.loc[frame["proposed_kind"] == "external", "proposed_minutes"].sum())
+    if not np.isfinite([before, after, external_before, external_after]).all():
+        raise ValueError("Total changeover times must be finite.")
+    frame["saved_stop_minutes"] = baseline - proposed
+    return {"baseline_stop_minutes": before, "proposed_stop_minutes": after,
+            "saved_stop_minutes": before - after,
+            "reduction_percent": (before - after) / before * 100 if before else None,
+            "baseline_external_minutes": external_before, "proposed_external_minutes": external_after,
+            "tasks": frame.sort_values("saved_stop_minutes", ascending=False, kind="stable").reset_index(drop=True)}
 
 
 def control_chart_figure(chart, title=None):
