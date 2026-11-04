@@ -23,7 +23,7 @@ report opens as a complete local Power BI project. Its bundled snapshot contains
 | Goodness of fit | See KS pass rates, a check of how close the test measurements are to each fitted curve, and tail warnings |
 | Dataset detail | Select one dataset, inspect its curve ranks and parameters, and compare Akaike weights, relative support based on AIC |
 
-The overview displays **12 datasets**, **Uniform** as the most frequent winner
+The overview displays **12 datasets**, **Weibull (Min)** as the most frequent winner
 (tied families use the alphabetically last name), **39.3% KS pass rate** and
 **100.0% fit success**. The information-criteria total cards show 0.0 because at
 that level they compare the best candidate with itself; the per-family table and

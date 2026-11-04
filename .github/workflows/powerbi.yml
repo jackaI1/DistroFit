@@ -2,7 +2,7 @@ name: Power BI native checks
 on:
   pull_request:
   push:
-    branches: [main, skills/auto-fix-power-bi]
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -27,13 +27,7 @@ jobs:
           $install = Start-Process $installer -ArgumentList '-quiet','-norestart','ACCEPT_EULA=1' -Wait -PassThru
           if ($install.ExitCode -notin @(0,3010)) { throw "Install failed: $($install.ExitCode)" }
           Remove-Item $installer
-      - name: Execute the committed model and compare report values
-        shell: pwsh
-        run: |
-          $engine = 'C:\Program Files\Microsoft Power BI Desktop\bin\msmdsrv.exe'
-          dotnet run --project powerbi/NativeCheck -- powerbi $engine native-evidence
-          if ($LASTEXITCODE) { exit $LASTEXITCODE }
-      - name: Open the complete report in Desktop and capture its pages
+      - name: Open the committed report, execute native DAX and capture the pages
         shell: pwsh
         run: ./powerbi/desktop_smoke.ps1
       - uses: actions/upload-artifact@v4

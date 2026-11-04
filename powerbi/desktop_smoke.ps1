@@ -14,6 +14,9 @@ public class DistroFitWindow {
 $env:WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS = '--force-renderer-accessibility'
 $exe = 'C:\Program Files\Microsoft Power BI Desktop\bin\PBIDesktop.exe'
 $project = (Resolve-Path "$Root/DistroFit.pbip").Path
+New-Item -ItemType Directory -Path $Output -Force | Out-Null
+$workspaceRoot = Join-Path $env:LOCALAPPDATA 'Microsoft/Power BI Desktop/AnalysisServicesWorkspaces'
+$beforePorts = @(Get-ChildItem $workspaceRoot -Filter msmdsrv.port.txt -Recurse -ErrorAction SilentlyContinue | ForEach-Object FullName)
 $owned = Start-Process $exe -ArgumentList "`"$project`"" -PassThru
 $ownedStarted = $owned.StartTime.ToUniversalTime().ToString('o')
 $children = @()
@@ -47,8 +50,20 @@ try {
  } while (-not $window -and (Get-Date) -lt $deadline)
  if (-not $window) { throw 'No Desktop window' }
  [DistroFitWindow]::SetForegroundWindow($owned.MainWindowHandle) | Out-Null
- Start-Sleep -Seconds 30
+ Start-Sleep -Seconds 20
  Capture 'desktop-initial'
+ $portDeadline = (Get-Date).AddSeconds(120)
+ $portFile = $null
+ do {
+  $portFile = Get-ChildItem $workspaceRoot -Filter msmdsrv.port.txt -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.FullName -notin $beforePorts } | Select-Object -First 1
+  if (-not $portFile) { Start-Sleep -Seconds 2 }
+ } while (-not $portFile -and (Get-Date) -lt $portDeadline)
+ if (-not $portFile) { throw 'Desktop did not open a model. See desktop-initial.png' }
+ $port = [System.IO.File]::ReadAllText($portFile.FullName, [System.Text.Encoding]::Unicode).Trim()
+ Write-Host "Desktop-owned model port=$port, desktop PID=$($owned.Id), started=$ownedStarted"
+ dotnet run --project "$Root/NativeCheck" -- $Root $port $Output
+ if ($LASTEXITCODE) { throw 'Native model checks failed' }
+ Start-Sleep -Seconds 5
  $elements = Get-Elements $window
  $names = @($elements | ForEach-Object { $_.Current.Name } | Where-Object { $_ } | Select-Object -Unique -First 600)
  $names | ConvertTo-Json | Set-Content "$Output/desktop-controls.json"
@@ -63,6 +78,7 @@ try {
  }
  @{status='PASS';pages=4;pid=$owned.Id;started=$ownedStarted} | ConvertTo-Json | Set-Content "$Output/desktop-open.json"
 } finally {
+ Capture 'desktop-final'
  # Record only descendants of the precise process launched above.
  $all = @(Get-CimInstance Win32_Process)
  $ids = @($owned.Id)
@@ -81,7 +97,7 @@ try {
   if ($current -and $current.CreationDate -eq $child.CreationDate) { Stop-Process -Id $child.ProcessId -ErrorAction SilentlyContinue }
  }
  $remaining = @(Get-CimInstance Win32_Process | Where-Object { $_.ProcessId -in $ids })
- @{owner='DistroFit Desktop smoke';pid=$owned.Id;started=$ownedStarted;remaining=$remaining.Count} | ConvertTo-Json | Set-Content "$Output/desktop-cleanup.json"
+ @{owner='DistroFit Desktop smoke';pid=$owned.Id;started=$ownedStarted;port=$port;remaining=$remaining.Count;cleanup='CloseMainWindow, wait, exact owned PID fallback; recorded descendant PIDs';descendants=@($children | Select-Object ProcessId,ParentProcessId,CreationDate,Name)} | ConvertTo-Json | Set-Content "$Output/desktop-cleanup.json"
  if ($remaining.Count) { throw 'Owned Desktop resources remain' }
  $owned.Dispose()
 }
