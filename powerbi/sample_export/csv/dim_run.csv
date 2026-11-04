@@ -1,0 +1,2 @@
+run_id,created_utc,schema_version,seed,held_out_fraction,histogram_bins,outlier_method,outlier_threshold,ks_alpha,candidate_count,numpy_version,scipy_version,pandas_version
+e3bbe6e95c37,2026-11-03T00:00:00Z,1,42,0.25,30,None,,0.05,14,2.5.4,1.18.1,3.0.6

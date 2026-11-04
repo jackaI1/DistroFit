@@ -1,0 +1,152 @@
+// DistroFit — Power BI measures
+// ---------------------------------------------------------------------------
+// Model (all relationships many-to-one from fact_fit, single direction):
+//   fact_fit[dataset_id]      -> dim_dataset[dataset_id]
+//   fact_fit[distribution_id] -> dim_distribution[distribution_id]
+//   fact_fit[run_id]          -> dim_run[run_id]
+//
+// Create every measure in a table named "_Measures" (Home > Enter data, one
+// blank column, then hide the column) and set its display folder as noted.
+//
+// Conventions
+//   * "Fitted" means fit_status <> "failed"; failed fits stay in fact_fit so
+//     failure rates are visible instead of silently dropped.
+//   * Rank 1 on rank_heldout_nll is DistroFit's own selection rule (lowest
+//     held-out negative log-likelihood). is_best_fit marks it.
+//   * AIC, BIC and log_likelihood are training-split values; ks_* and
+//     rank_heldout_nll use the held-out split.
+//   * Keep one run selected (dim_run slicer, single select) whenever several
+//     exports are loaded; the measures below assume one run per dataset.
+//   * These were written against the exported schema and cross-checked with the
+//     pandas reference in export_powerbi.reference_measures (see REPORT.md).
+// ---------------------------------------------------------------------------
+
+
+// ===== Display folder: Counts ==============================================
+
+Fits =
+COUNTROWS ( fact_fit )
+
+Successful Fits =
+CALCULATE ( COUNTROWS ( fact_fit ), fact_fit[fit_status] <> "failed" )
+
+Datasets Analysed =
+CALCULATE (
+    DISTINCTCOUNT ( fact_fit[dataset_id] ),
+    fact_fit[fit_status] <> "failed"
+)
+
+Fit Success Rate =
+DIVIDE ( [Successful Fits], [Fits] )
+// Format: 0.0%
+
+
+// ===== Display folder: Best fit ============================================
+
+Best Fit Count =
+// Datasets whose held-out winner is the distribution(s) in the current filter.
+CALCULATE ( COUNTROWS ( fact_fit ), fact_fit[is_best_fit] = TRUE () )
+
+Best Fit Share =
+// Share of all datasets in the current slicers won by this distribution.
+// The denominator ignores the distribution axis so the shares across the
+// family sum to 100%.
+DIVIDE (
+    [Best Fit Count],
+    CALCULATE (
+        DISTINCTCOUNT ( fact_fit[dataset_id] ),
+        REMOVEFILTERS ( dim_distribution )
+    )
+)
+// Format: 0.0%
+
+Top Distribution =
+// Family that wins most datasets in the current filter. Ties return the
+// alphabetically last name; an empty selection returns blank.
+VAR Winner =
+    TOPN (
+        1,
+        VALUES ( dim_distribution[distribution_name] ),
+        [Best Fit Count], DESC
+    )
+RETURN
+    IF ( [Best Fit Count] > 0, MAXX ( Winner, dim_distribution[distribution_name] ) )
+
+
+// ===== Display folder: Information criteria ================================
+
+AIC Delta =
+// AIC minus the best (lowest) AIC among all candidates for the same dataset
+// and run; 0 for the AIC winner. Averaged over datasets when a visual groups
+// several. Differences > 10 are conventionally read as "no support".
+AVERAGEX (
+    SUMMARIZE ( fact_fit, fact_fit[run_id], fact_fit[dataset_id] ),
+    VAR Selected = CALCULATE ( MIN ( fact_fit[aic] ) )
+    VAR Best = CALCULATE ( MIN ( fact_fit[aic] ), REMOVEFILTERS ( dim_distribution ) )
+    RETURN
+        IF ( NOT ISBLANK ( Selected ), Selected - Best ) // blank if the fit failed
+)
+// Format: 0.0
+
+BIC Delta =
+AVERAGEX (
+    SUMMARIZE ( fact_fit, fact_fit[run_id], fact_fit[dataset_id] ),
+    VAR Selected = CALCULATE ( MIN ( fact_fit[bic] ) )
+    VAR Best = CALCULATE ( MIN ( fact_fit[bic] ), REMOVEFILTERS ( dim_distribution ) )
+    RETURN
+        IF ( NOT ISBLANK ( Selected ), Selected - Best ) // blank if the fit failed
+)
+// Format: 0.0
+
+Akaike Weight =
+// Probability-like weight of a model within its dataset (sums to 1 across the
+// candidates of one dataset). Sums over the filtered fits, so use it per dataset.
+SUM ( fact_fit[akaike_weight] )
+// Format: 0.0%
+
+AIC Winner Share =
+// Like Best Fit Share, but ranking by training AIC instead of held-out NLL.
+DIVIDE (
+    CALCULATE ( COUNTROWS ( fact_fit ), fact_fit[rank_aic] = 1 ),
+    CALCULATE (
+        DISTINCTCOUNT ( fact_fit[dataset_id] ),
+        REMOVEFILTERS ( dim_distribution )
+    )
+)
+// Format: 0.0%
+
+
+// ===== Display folder: Goodness of fit =====================================
+
+KS Pass Rate =
+// Share of fitted candidates whose held-out Kolmogorov-Smirnov p-value is
+// >= dim_run[ks_alpha] (0.05). The held-out split is independent of the
+// training-fitted parameters, so the p-value is valid. No multiple-comparison
+// correction is applied across the 14 candidates.
+DIVIDE (
+    CALCULATE ( COUNTROWS ( fact_fit ), fact_fit[ks_pass] = TRUE () ),
+    [Successful Fits]
+)
+// Format: 0.0%
+
+Avg KS Statistic =
+AVERAGE ( fact_fit[ks_statistic] )
+// Format: 0.000
+
+Tail Flag Rate =
+// Share of fitted candidates whose held-out tail exceedance count falls
+// outside the 95% binomial prediction interval (exploratory).
+DIVIDE (
+    CALCULATE ( COUNTROWS ( fact_fit ), fact_fit[tail_flagged] = TRUE () ),
+    [Successful Fits]
+)
+// Format: 0.0%
+
+Datasets With Any KS Pass =
+// Datasets for which at least one candidate passes the KS test.
+COUNTROWS (
+    FILTER (
+        SUMMARIZE ( fact_fit, fact_fit[run_id], fact_fit[dataset_id] ),
+        CALCULATE ( COUNTROWS ( fact_fit ), fact_fit[ks_pass] = TRUE () ) > 0
+    )
+)
