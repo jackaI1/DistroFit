@@ -1,6 +1,6 @@
 # DistroFit
 
-I built an app for comparing curves against measurements because a histogram alone couldn't tell me which curve would describe new measurements.
+I built a local app for comparing curves against measurements because a histogram alone couldn't tell me which curve would describe new measurements.
 
 ## Overview
 
