@@ -1,112 +1,21 @@
 # DistroFit
 
-A local Streamlit application that fits probability distributions on training observations, ranks them by held-out loss and exports the analysis with its data.
-
-https://github.com/user-attachments/assets/22ecb55e-d376-41b3-9a65-00a335085e1f
+A local app for finding a probability curve that describes a set of measurements.
 
 ## Overview
 
-A curve can fit the observations used to estimate it and still predict new
-observations poorly. Histogram appearance alone can also conceal tail mismatch
-or a model whose support excludes part of the data.
+When I have a column of measurements, a histogram helps me see its shape, but it
+doesn't tell me which curve will describe the next measurements well. DistroFit
+fits several curves to part of the data, then compares them on the part it kept
+aside. I can inspect the tails, try another sample and save the analysis as a PDF.
 
-DistroFit separates parameter estimation from comparison. It fits selected
-SciPy families to one training split, ranks the frozen models on held-out
-observations, and exposes tail checks and residual plots. Another scenario can
-challenge the same parameters without refitting. A PDF records the method,
-settings, scores and every observation used.
+This is a personal project. It accepts a numeric CSV column, pasted numbers or
+generated samples, and runs without an account. To try it, start the app below
+and choose Sample Data.
 
-This personal project accepts generated samples, pasted numbers or a numeric CSV
-column. The included evaluation fixtures are synthetic and require no external
-account or model service.
+## Run it
 
-## How it works
-
-1. **Load and prepare data.** [`DistroFit.py`](DistroFit.py) handles sample,
-   pasted and uploaded inputs. [`analysis.py`](analysis.py), `read_csv`, preserves
-   the first observation in a fully numeric headerless CSV. `prepare_data`
-   removes nonfinite values and optionally applies Z-score or IQR filtering.
-   Fitting requires at least eight finite, varying observations after filtering.
-2. **Create a fixed split.** `fit_candidates` in
-   [`analysis.py`](analysis.py) permutes observation indices using NumPy's seeded
-   generator. The held-out size is `max(2, ceil(N × fraction))`, with fraction
-   between 0.1 and 0.5. The default is 0.25 and seed 42. Remaining observations
-   form training data; returned indices retain the exact split membership.
-3. **Estimate candidate parameters.** Each selected family calls SciPy's `fit`
-   on training data only. At most four worker threads fit families concurrently.
-   Invalid default fits are retried from an interior location with free location
-   and scale; nonfinite final fits become visible failures. The 14 supported
-   families are listed by `get_supported_distributions` in `analysis.py`.
-4. **Select by held-out loss.** With parameters frozen, `score_values` computes
-   `-mean(logpdf(x))` on held-out observations. The lowest mean negative log
-   likelihood ranks first. A nonfinite density log value produces infinite loss;
-   observations outside support are not clipped into a finite score. Training
-   NLL, AIC, BIC and histogram SSE are displayed, but do not select the winner.
-5. **Inspect mismatch.** `tail_check` uses the training 95th percentile as a
-   fixed threshold, the model survival function for predicted exceedance share,
-   and held-out counts for the observed share. A central 95% binomial prediction
-   interval supplies an exploratory flag. `diagnostics` computes fixed-model
-   Q-Q values, empirical-minus-model CDF residuals and density residuals using
-   integrated model mass per histogram bin.
-6. **Challenge and adjust.** `evaluate_scenario` scores another numeric sample
-   without changing training parameters. `manual_curve` and `adjust_parameters`
-   provide PDF/CDF views and user adjustments. Relative location moves use the
-   training sample standard deviation; scale is multiplied. These edits do not
-   change the held-out candidate ranking.
-7. **Export a reproducible record.** `report_payload` and `create_report` in
-   [`analysis.py`](analysis.py) write a PDF containing method, versions, failures,
-   parameters, diagnostics, source/prepared/scenario data and split membership.
-   A first-page annotation stores the full JSON payload as well as the readable
-   report. The export control is in [`DistroFit.py`](DistroFit.py).
-
-The split, winner, support, scenario and export claims are tested in
-[`tests/test_analysis.py`](tests/test_analysis.py); interface state and controls
-are covered in [`tests/test_app.py`](tests/test_app.py).
-
-## Design decisions and trade-offs
-
-- Held-out loss compares predictive density rather than histogram appearance.
-  It reduces in-sample selection bias but has sampling variability, especially
-  with few observations. It is one split, not cross-validation.
-- Support violations retain infinite loss. This makes incompatible models
-  visible, although small held-out samples can expose a fitted boundary abruptly.
-- Filtering occurs before splitting. This makes the prepared population explicit
-  but can remove the tail behaviour a reader wants to investigate.
-- Fitting uses a bounded thread pool rather than one process per family. It
-  limits concurrent workers; SciPy optimiser cost still depends on the data and
-  family. No general constant runtime is claimed.
-- PDF export includes the data and machine-readable analysis rather than only
-  plots. Reports can become long, and an exported PDF contains the uploaded values.
-
-## Results and evaluation
-
-Reproducible here: the synthetic regression fixture draws 240 observations from
-`np.random.default_rng(27).gamma(2, 2, 240)`. With a 0.25 held-out fraction, 180
-observations train the candidates and 60 evaluate them. Normal, Gamma and
-Exponential are all fitted; Gamma has the lowest held-out loss in that fixture.
-Run the backing tests with:
-
-```sh
-python -m pytest tests/test_analysis.py -q
-```
-
-`test_split_is_reproducible_disjoint_and_parameters_use_training_only` checks
-split membership and Normal parameters against training mean/standard deviation.
-`test_winner_uses_held_out_loss_and_exposes_training_loss` independently computes
-Normal's held-out loss from SciPy log densities and checks the selected family.
-These are controlled regression results, not a claim that Gamma fits arbitrary data.
-
-The UI's generated Gamma sample has 1,000 observations with generator seed 42;
-the default split produces 750 training and 250 held-out observations. Changing
-the seed, family selection, filtering or input can change the winner and tail
-flags. No external-data accuracy or performance benchmark is claimed.
-
-## Getting started
-
-Use CPython 3.12; fresh-copy verification used 3.12.14 on macOS arm64.
-Direct versions are pinned in [`requirements.txt`](requirements.txt), including
-Streamlit 1.66.0 and SciPy 1.18.1; [`requirements-lock.txt`](requirements-lock.txt)
-constrains the transitive resolution. Run from the repository root:
+Use Python 3.12. From the repository root:
 
 ```sh
 python3.12 -m venv .venv
@@ -115,108 +24,68 @@ python -m pip install -r requirements.txt
 python -m streamlit run DistroFit.py --server.address=127.0.0.1 --server.port=8501 --server.headless=true --browser.gatherUsageStats=false
 ```
 
-Open `http://127.0.0.1:8501` and choose Sample Data in Data Import. The default
-Gamma sample displays 1,000 observations and a 750/250 training/held-out split,
-with candidate comparison and diagnostic tabs. The initial Upload CSV view waits
-for input. Stop the server with Ctrl-C.
+Open <http://127.0.0.1:8501>. Choose Sample Data or upload a CSV, then use Auto-Fit
+to compare curves. Tail & Q-Q checks how the tails differ; Scenario tries new
+numbers against the same fitted curves; Manual lets you adjust a curve yourself.
+Download reproducible report saves the analysis and its data in a PDF. Stop the
+app with Ctrl-C. Reports contain the input values, so keep private exports private.
 
-Use Auto-Fit to compare candidates, Tail & Q-Q to inspect mismatch, Scenario to
-paste another sample, and Manual to adjust a curve. Download reproducible report
-exports the current analysis as a PDF. Private source files should remain outside
-the repository; exported reports contain their values.
+## Comparing several datasets
 
-## Testing
+I can also export results as tables to compare datasets in Power BI:
+
+```sh
+python export_powerbi.py --sample --out powerbi_export
+```
+
+This uses the bundled public datasets. For my own file, I can replace `--sample`
+with `measurements.csv --column weight`. The [report guide](powerbi/REPORT.md)
+explains how to load the CSV or Parquet tables and assemble the report in Power BI
+Desktop. The repository includes the queries, measures and sample export, but no
+finished `.pbix` report. The measures still need checking in Power BI Desktop.
+
+## Looking at measurements over time
+
+A curve describes the spread of values; it doesn't say whether a process has
+changed. The separate [calculation module](spc.py) makes control charts, which
+compare later measurements with a baseline, and compares the spread with chosen
+specification limits. It also groups findings by frequency to help decide what
+to investigate first. These calculations are not in the app interface yet.
+
+Run the [worked example](docs/case-study-dmaic.md) with:
+
+```sh
+python docs/dmaic_case_study.py
+```
+
+The example uses generated drawing-review times. Its reported two-hour to
+thirty-minute real-use comparison is separate from the illustrative data used
+for the calculations. The [investigation worksheet](docs/root-cause-worksheet.md)
+helps record possible causes, evidence and follow-up checks without treating a
+frequent category as a proven cause.
+
+## Notes and tests
+
+[How the analysis works](docs/analysis.md) explains the split, scoring, tail
+checks and PDF contents. The comparison uses one random split, so a different
+sample can change the winner. A good score is not proof that a curve describes
+the real process. Correlated or time-ordered data need a different validation
+approach; filtering outliers can also hide the tails I want to inspect.
 
 ```sh
 python -m pip install -r requirements-dev.txt
 python -m pytest -q
 ```
 
-The current suite has 77 passing tests:
+Tests cover the calculations, app controls, exported tables and worked example
+using synthetic samples. Dependency versions are in [requirements.txt](requirements.txt)
+and [requirements-lock.txt](requirements-lock.txt).
 
-- [`tests/test_analysis.py`](tests/test_analysis.py): 16 tests cover concurrent
-  fitting, training-only estimation, reproducible splits, held-out selection,
-  support violations, failed-fit recovery, tails, frozen scenario parameters,
-  residual definitions, manual controls, preprocessing, CSV input and PDF payload.
-- [`tests/test_powerbi_export.py`](tests/test_powerbi_export.py): 17 tests cover star-schema grain and keys,
-  metric consistency with `fit_candidates`, CSV/Parquet agreement, skipped and failed
-  fits, the committed sample export and DAX column references.
-- [`tests/test_app.py`](tests/test_app.py): 8 Streamlit AppTest cases cover sample
-  changes, invalid input/stale-result removal, manual adjustments/reset, histogram
-  and filtering controls, scenario input and report availability.
-- [`tests/test_spc.py`](tests/test_spc.py): 36 tests check the SPC module against
-  hand-computed and closed-form values (control-chart constants, X-bar-R and I-MR
-  limits, each Western Electric rule, Cp/Cpk/Pp/Ppk, the exponential percentile
-  method, Pareto tables) and that the DMAIC case study reproduces its quoted numbers.
+## Demo
 
-Tests use synthetic samples and real SciPy fits. AppTest may print its standard
-missing ScriptRunContext warning outside a running server. No separate lint,
-typecheck or package build is configured.
-
-## Project structure
-
-```text
-DistroFit.py                 Streamlit input controls, plots and export
-analysis.py                  preparation, fitting, scoring, diagnostics and PDF
-export_powerbi.py            Power BI star-schema export (CSV/Parquet)
-powerbi/                     DAX measures, report spec, sample data and export
-spc.py                       control charts, capability and Pareto analysis
-docs/case-study-dmaic.md     DMAIC case study (illustrative data)
-docs/dmaic_case_study.py     seeded script that reproduces the case-study numbers
-docs/root-cause-worksheet.md fishbone, 5-whys, evidence and countermeasure templates
-tests/test_analysis.py      numerical and export regressions
-tests/test_app.py           synthetic Streamlit interaction tests
-tests/test_spc.py           SPC calculations against textbook values
-requirements.txt             pinned direct dependencies
-requirements-lock.txt        audited transitive constraints
-THIRD_PARTY_NOTICES.md        dependency terms and attribution
-```
-
-## Skills demonstrated
-
-- **Power BI / data modelling (DAX, star schema).** `export_powerbi.py` turns a
-  run into a star schema (`fact_fit`, `dim_dataset`, `dim_distribution`,
-  `dim_run`) as CSV and Parquet. [`powerbi/measures.dax`](powerbi/measures.dax)
-  defines best-fit share, AIC delta and KS pass rate;
-  [`powerbi/REPORT.md`](powerbi/REPORT.md) specifies the report pages, visuals and
-  slicers; [`powerbi/sample_export/`](powerbi/sample_export/) holds an export of 12
-  public datasets. Tests: [`tests/test_powerbi_export.py`](tests/test_powerbi_export.py).
-  The `.pbix` is authored separately in Power BI Desktop.
-- **Statistical Process Control / Lean Six Sigma (DMAIC).** [`spc.py`](spc.py) adds
-  X-bar-R and I-MR control charts with the four Western Electric rules, process
-  capability (Cp, Cpk, Pp, Ppk) and a Pareto table and chart. For non-normal data
-  `spc.capability_from_fit` takes the best-fitting distribution that DistroFit's
-  held-out comparison selects and computes Pp/Ppk by the ISO 22514-2 percentile
-  method, so skewed processes are not judged with a normal assumption. Calculations
-  are tested against hand-computed and closed-form values in
-  [`tests/test_spc.py`](tests/test_spc.py). [`docs/case-study-dmaic.md`](docs/case-study-dmaic.md)
-  applies it to a drawing-revision review that went from about 2 hours to 30 minutes
-  after automation; apart from that headline, its data are clearly labelled
-  illustrative and reproducible with [`docs/dmaic_case_study.py`](docs/dmaic_case_study.py).
-  [`docs/root-cause-worksheet.md`](docs/root-cause-worksheet.md) supplies reusable
-  fishbone and 5-whys templates, an evidence log and a countermeasure/control plan
-  to investigate categories prioritized by the Pareto analysis.
-  The SPC module is a library: it is not yet wired into the Streamlit interface.
-
-## Limitations and known issues
-
-- Observations are randomly split, without grouping or time-order constraints.
-  Correlated records or time series need an appropriate independent validation
-  design outside this app.
-- Repeatedly adjusting candidates against the same held-out data weakens its
-  independence. There is no untouched final test set or automatic cross-validation.
-- SciPy optimisation can reach local optima. A completed fit is not proof that a
-  family describes the generating process.
-- Tail flags are exploratory, use a 95% binomial prediction interval and have no
-  multiple-comparison correction. Held-out KS is a distance, not a calibrated
-  model-selection significance test.
-- Outlier filtering can hide tails. Mixtures, dependencies and discrete models
-  are not automatically inferred by the supported continuous families.
-- Fresh-copy checks cover macOS/Python 3.12; other platforms and future dependency
-  versions need their own validation.
+https://github.com/user-attachments/assets/22ecb55e-d376-41b3-9a65-00a335085e1f
 
 ## License
 
-MIT; see [`LICENSE`](LICENSE). Dependency licences remain applicable, including
-MPL/font terms and SciPy native-library LGPL/GCC-runtime obligations and exceptions.
-They are documented in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+MIT; see [LICENSE](LICENSE). Dependency terms, including native libraries and
+fonts, are recorded in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
