@@ -23,7 +23,8 @@ class AppTests(unittest.TestCase):
         app.text_area(key="scenario_input").set_value("100, 101, 102, 103").run()
         self.assertFalse(app.exception)
         self.assertEqual(app.session_state["report_payload"]["scenario_data"], [100, 101, 102, 103])
-        self.assertEqual(len(app.get("download_button")), 1)
+        self.assertEqual(len(app.get("download_button")), 2)
+        self.assertEqual(app.get("download_button")[1].label, "Download Excel review")
 
     def test_manual_large_negative_locations_and_adjustment(self):
         app = AppTest.from_file(APP, default_timeout=45).run()
