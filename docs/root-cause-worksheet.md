@@ -1,5 +1,9 @@
 # Root-cause worksheet: fishbone and 5 whys
 
+This is the reusable blank worksheet. For a populated evidence log, fishbone,
+why chain and measured replay result, see the
+[completed synthetic investigation](root-cause-investigation.md).
+
 Copy this worksheet for one review-process problem. Start with the Pareto table
 from [`spc.pareto_table`](../spc.py) to choose a frequent finding, then investigate
 why it occurs. Frequency ranks opportunities; it does not establish causes or
@@ -101,5 +105,7 @@ an older revision. A first why could ask why those versions were packaged
 together. Check anonymized revision metadata and the handoff record before
 answering; if the versions match, reject this candidate and investigate another.
 An automated revision-consistency check is a candidate countermeasure to pilot
-only after the cause is supported. No completed root-cause investigation or
-additional D.L. Engineering facts are claimed by this example.
+only after the cause is supported. This starting point is unverified; the
+[separate worked investigation](root-cause-investigation.md) tests a synthetic
+cache-selection mechanism and countermeasure. Neither example adds facts about
+D.L. Engineering.

@@ -177,9 +177,25 @@ python docs/dmaic_case_study.py
 
 The example uses generated drawing-review times. Its reported two-hour to
 thirty-minute real-use comparison is separate from the illustrative data used for the
-calculations. The [investigation worksheet](docs/root-cause-worksheet.md) helps
-record possible causes, evidence and follow-up checks without treating a frequent
-category as a proven cause.
+calculations.
+
+I also wanted to work out why a frequent finding happened before choosing a fix.
+The [completed investigation](docs/root-cause-investigation.md) uses generated
+drawing packages to trace revision mismatches to a rule that accepts an old cached
+parts list. I compare possible causes, test that rule, then check a replacement
+that requires the approved parts list to match the drawing. It reduces revision
+mismatches from 38 to zero in the same 100 synthetic packages and retains all 62
+other findings. A second generated batch checks whether the fix still works.
+These are replay results, not production measurements.
+
+```sh
+python docs/root_cause_investigation.py --out /tmp/distrofit-root-cause
+```
+
+I can inspect the package-by-package evidence and ranked finding tables in that
+folder, then copy the [blank worksheet](docs/root-cause-worksheet.md) for a new
+investigation. The worked case explains the evidence, rejected alternatives,
+time assumptions and follow-up checks.
 
 ## Notes and tests
 
