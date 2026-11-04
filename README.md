@@ -101,6 +101,21 @@ the default split produces 750 training and 250 held-out observations. Changing
 the seed, family selection, filtering or input can change the winner and tail
 flags. No external-data accuracy or performance benchmark is claimed.
 
+## Skills demonstrated
+
+**Statistical Process Control / Lean Six Sigma (DMAIC).** [`spc.py`](spc.py) adds
+X-bar-R and I-MR control charts with the four Western Electric rules, process
+capability (Cp, Cpk, Pp, Ppk) and a Pareto table and chart. For non-normal data
+`spc.capability_from_fit` takes the best-fitting distribution that DistroFit's
+held-out comparison selects and computes Pp/Ppk by the ISO 22514-2 percentile
+method, so skewed processes are not judged with a normal assumption. Calculations
+are tested against hand-computed and closed-form values in
+[`tests/test_spc.py`](tests/test_spc.py). [`docs/case-study-dmaic.md`](docs/case-study-dmaic.md)
+applies it to a drawing-revision review that went from about 2 hours to 30 minutes
+after automation; apart from that headline, its data are clearly labelled
+illustrative and reproducible with [`docs/dmaic_case_study.py`](docs/dmaic_case_study.py).
+The SPC module is a library: it is not yet wired into the Streamlit interface.
+
 ## Getting started
 
 Use CPython 3.12; fresh-copy verification used 3.12.14 on macOS arm64.
@@ -132,7 +147,7 @@ python -m pip install -r requirements-dev.txt
 python -m pytest -q
 ```
 
-The current suite has 41 passing tests:
+The current suite has 77 passing tests:
 
 - [`tests/test_analysis.py`](tests/test_analysis.py): 16 tests cover concurrent
   fitting, training-only estimation, reproducible splits, held-out selection,
@@ -144,6 +159,10 @@ The current suite has 41 passing tests:
 - [`tests/test_app.py`](tests/test_app.py): 8 Streamlit AppTest cases cover sample
   changes, invalid input/stale-result removal, manual adjustments/reset, histogram
   and filtering controls, scenario input and report availability.
+- [`tests/test_spc.py`](tests/test_spc.py): 36 tests check the SPC module against
+  hand-computed and closed-form values (control-chart constants, X-bar-R and I-MR
+  limits, each Western Electric rule, Cp/Cpk/Pp/Ppk, the exponential percentile
+  method, Pareto tables) and that the DMAIC case study reproduces its quoted numbers.
 
 Tests use synthetic samples and real SciPy fits. AppTest may print its standard
 missing ScriptRunContext warning outside a running server. No separate lint,
@@ -156,8 +175,12 @@ DistroFit.py                 Streamlit input controls, plots and export
 analysis.py                  preparation, fitting, scoring, diagnostics and PDF
 export_powerbi.py            Power BI star-schema export (CSV/Parquet)
 powerbi/                     DAX measures, report spec, sample data and export
+spc.py                       control charts, capability and Pareto analysis
+docs/case-study-dmaic.md     DMAIC case study (illustrative data)
+docs/dmaic_case_study.py     seeded script that reproduces the case-study numbers
 tests/test_analysis.py      numerical and export regressions
 tests/test_app.py           synthetic Streamlit interaction tests
+tests/test_spc.py           SPC calculations against textbook values
 requirements.txt             pinned direct dependencies
 requirements-lock.txt        audited transitive constraints
 THIRD_PARTY_NOTICES.md        dependency terms and attribution
