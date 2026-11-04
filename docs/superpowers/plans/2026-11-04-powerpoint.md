@@ -51,3 +51,7 @@ Rebased onto 722f316 after the Excel feature merged. Preserved Excel's cached
 export, download, documentation and recalculation CI job alongside PowerPoint.
 Updated the shared app assertion for all three downloads. Combined suite:
 190 passed, including the real spreadsheet-engine recalculation test.
+
+Rebased again onto e4c5a68 after saved comparisons merged before the merge call.
+Preserved both README sections and the existing CLI artifact CI steps. Full
+combined local suite now passes 214 tests. No feature code changed in this rebase.
