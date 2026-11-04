@@ -41,3 +41,28 @@ jobs:
         with:
           name: synthetic-excel-review
           path: excel-example/distrofit_review.xlsx
+  powerpoint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - run: python -m pip install -r requirements.txt -r requirements-dev.txt
+      - run: python powerpoint_report.py --sample --out /tmp/distrofit-review.pptx
+      - run: python tools/powerpoint_fixtures.py /tmp/powerpoint-fixtures
+      - run: dotnet run --project tools/ValidatePowerPoint -p:UseSharedCompilation=false -- examples/powerpoint/synthetic-review.pptx /tmp/distrofit-review.pptx /tmp/powerpoint-fixtures/*.pptx
+      - run: sudo apt-get update -qq && sudo apt-get install -y libreoffice-impress
+      - name: Render with a separate temporary viewer profile
+        run: |
+          timeout 90s libreoffice -env:UserInstallation=file:///tmp/distrofit-lo --headless --convert-to pdf --outdir /tmp/rendered /tmp/distrofit-review.pptx /tmp/powerpoint-fixtures/*.pptx
+          for name in distrofit-review all-candidates empty infinite negative; do test -s "/tmp/rendered/$name.pdf"; done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: powerpoint-example
+          path: |
+            /tmp/distrofit-review.pptx
+            /tmp/rendered/*.pdf

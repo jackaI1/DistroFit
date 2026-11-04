@@ -613,3 +613,12 @@ Copyright 2019 Kenneth Reitz
 ```
 
 Streamlit’s full release-specific third-party NOTICES is reproduced as a separate [preserved file](THIRD_PARTY_LICENSES/streamlit/upstream/NOTICES) (approximately 0.8–0.9 MB), with its per-component inventory above. Retain that file with distributions.
+
+## Optional presentation validation tools
+
+The PowerPoint export itself adds no runtime dependency. The separate .NET 8
+validator restores DocumentFormat.OpenXml 3.3.0 (MIT) and its NuGet dependencies
+for local checks and CI. The SDK source and license are available at
+<https://github.com/dotnet/Open-XML-SDK>. CI also installs LibreOffice through
+Ubuntu's package manager to render test reports. Neither tool is bundled in the
+Python app or exported presentations.

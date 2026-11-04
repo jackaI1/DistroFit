@@ -19,3 +19,6 @@ recordings/
 dist/
 build/
 .DS_Store
+# Local .NET validation build output
+**/bin/
+**/obj/

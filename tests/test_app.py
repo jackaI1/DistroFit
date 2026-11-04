@@ -23,7 +23,7 @@ class AppTests(unittest.TestCase):
         app.text_area(key="scenario_input").set_value("100, 101, 102, 103").run()
         self.assertFalse(app.exception)
         self.assertEqual(app.session_state["report_payload"]["scenario_data"], [100, 101, 102, 103])
-        self.assertEqual(len(app.get("download_button")), 2)
+        self.assertEqual(len(app.get("download_button")), 3)
         self.assertEqual(app.get("download_button")[1].label, "Download Excel review")
 
     def test_manual_large_negative_locations_and_adjustment(self):
@@ -100,3 +100,14 @@ class AppTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+def test_powerpoint_download_is_available_for_current_analysis_only():
+    app = AppTest.from_file(APP, default_timeout=45).run()
+    app.radio[0].set_value('Sample Data').run()
+    assert not app.exception
+    downloads = {w.label: w for w in app.get('download_button')}
+    assert 'Download editable PowerPoint' in downloads
+    assert downloads['Download editable PowerPoint'].proto.url
+    app.multiselect[0].set_value([]).run()
+    assert not app.get('download_button')
