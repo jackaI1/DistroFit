@@ -64,6 +64,24 @@ scores together in the workbook. The model scores stay fixed when I change the
 cutoff. I rerun DistroFit to change the data or refit a curve. The
 [Excel guide](docs/excel-review.md) explains the formulas, export limits and tests.
 
+## Keeping a comparison I can check later
+
+I can save the same analysis without opening the app:
+
+```sh
+python compare_distributions.py fit --sample --out /tmp/distrofit-comparison
+python compare_distributions.py verify /tmp/distrofit-comparison
+```
+
+The example compares three curves using 180 measurements for fitting and 60 for
+checking. It also tries a deliberately shifted sample against the original curves
+to show when the high values stop matching. All example measurements are generated.
+I get a readable PDF, the complete calculation as JSON, and a CSV score table.
+The second command checks the files and recalculates the saved scores without
+fitting the curves again. Each run needs a new output directory so I keep my earlier
+results. [The comparison guide](docs/saved-comparisons.md) explains how to use my own
+CSV files and what the checks can establish.
+
 ## Finding lost production time
 
 On **Equipment effectiveness**, I enter one machine's shift length, breaks, fastest
@@ -147,7 +165,9 @@ python -m pytest -q
 ```
 
 Tests cover the calculations, app controls, exported tables and worked example using
-synthetic samples. Equipment tests also check a published OEE example, hand-calculated
+synthetic samples. Saved-comparison tests check training-only parameters, frozen
+scenario scores, changed files and statistics, invalid inputs, and both commands
+in separate processes. Equipment tests also check a published OEE example, hand-calculated
 losses and changeover savings, invalid inputs, zero-output periods and both ways of
 running the feature. Dependency versions are in [requirements.txt](requirements.txt)
 and [requirements-lock.txt](requirements-lock.txt).
