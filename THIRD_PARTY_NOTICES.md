@@ -24,6 +24,39 @@ Node tooling (TypeScript, ESLint and typescript-eslint) is development-only,
 version-pinned through package-lock.json and installed by CI, not bundled in the
 workbook. TypeScript uses Apache-2.0; ESLint and typescript-eslint use MIT.
 
+## Grouped measurement additions
+
+The PyMC runtime and its added dependencies are pinned in requirements-lock.txt.
+NumPy is now 2.4.6 to match Numba support; the original audit below remains a historical snapshot.
+Unmodified upstream terms for these additions are preserved in THIRD_PARTY_LICENSES/bayesian/.
+The wheel inventory is:
+
+| Package | Version | Preserved license files |
+|---|---|---|
+| arviz | 0.23.4 | 1 |
+| pymc | 5.28.5 | 1 |
+| pytensor | 2.38.3 | 1 |
+| numba | 0.65.1 | 2 |
+| llvmlite | 0.47.0 | 2 |
+| cachetools | 6.2.6 | 1 |
+| cloudpickle | 3.1.2 | 1 |
+| cons | 0.4.7 | 1 |
+| etuples | 0.3.10 | 1 |
+| filelock | 4.2.9 | 1 |
+| h5netcdf | 1.8.2 | 2 |
+| h5py | 3.16.0 | 7 |
+| logical-unification | 0.4.7 | 1 |
+| minikanren | 1.0.5 | 1 |
+| multipledispatch | 1.0.0 | 1 |
+| platformdirs | 4.14.5 | 1 |
+| rich | 15.0.0 | 1 |
+| setuptools | 84.2.1 | 19 |
+| threadpoolctl | 3.8.0 | 1 |
+| toolz | 1.2.0 | 1 |
+| xarray | 2026.9.0 | 1 |
+| xarray-einstats | 0.11.0 | 1 |
+| numpy | 2.4.6 | 20 |
+
 ## Original dependency audit
 
 Audit snapshot: 2026-10-19, fresh CPython 3.12 / macOS arm64 install. Project MIT terms apply only to original code. Dependencies, fonts, and native libraries retain their own licenses. Exact upstream license/NOTICE texts are preserved under [THIRD_PARTY_LICENSES](THIRD_PARTY_LICENSES/); retain that directory with this notice. No upstream dependency was modified.

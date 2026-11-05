@@ -2,9 +2,11 @@
 -c requirements-lock.txt
 streamlit==1.66.0
 pandas==3.0.6
-numpy==2.5.4
+numpy==2.4.6
 scipy==1.18.1
 matplotlib==3.11.2
 plotly==7.1.0
 pyarrow==26.0.0
 XlsxWriter==3.2.9
+pymc==5.28.5
+arviz==0.23.4
