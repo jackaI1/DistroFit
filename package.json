@@ -1,0 +1,14 @@
+{
+  "name": "distrofit-excel-automation",
+  "private": true,
+  "scripts": {
+    "lint": "tsc --noEmit && eslint automation/office-script/clean.ts",
+    "test": "tsc && node --test automation/office-script/clean.test.cjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.1",
+    "eslint": "9.39.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.48.1"
+  }
+}

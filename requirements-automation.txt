@@ -1,0 +1,2 @@
+-r requirements.txt
+pyOpenVBA==6.6.0
