@@ -103,6 +103,35 @@ scores together in the workbook. The model scores stay fixed when I change the
 cutoff. I rerun DistroFit to change the data or refit a curve. The
 [Excel guide](docs/excel-review.md) explains the formulas, export limits and tests.
 
+## Switching batches and checking pasted measurements
+
+I wanted to review several batches without rebuilding the Excel charts each time.
+I open the [worked workbook](examples/excel/distrofit_automation.xlsm) in desktop
+Excel, enable its macros and click **Choose dataset and curve** on **Comparison**.
+The selection window updates the batch's model comparison table and plots the
+chosen saved curve. A [reusable template](examples/excel/distrofit_automation.xltm)
+starts a new copy with the same controls.
+
+Before fitting new measurements, I paste `dataset`, `value` and `unit` columns into
+**Raw** and run [Check measurements](automation/office-script/clean.ts) from Excel's
+**Automate** tab. I enter my measurement limits and get cleaned values, a reason
+beside each rejected row and a **QAQC** quality-check summary. The original paste
+stays intact. The included older CSV import also fixes semicolon-separated columns,
+header spacing and decimal commas through Power Query, Excel's repeatable import tool.
+
+```sh
+python -m pip install -r requirements-automation.txt
+python excel_automation.py --sample --out /tmp/distrofit_automation.xlsm
+# Or compare my own batches:
+python excel_automation.py batch_a.csv batch_b.csv --column weight --out /tmp/batches.xlsm
+```
+
+The form uses VBA, Excel's desktop macro language. The cleaning step is an Office
+Script, a TypeScript program run from Automate. The fitted scores stay in Python;
+I export accepted new values as CSV and rebuild to fit them. The
+[step-by-step guide](docs/excel-automation.md) covers macro setup, installing the
+script, importing the sample CSV and the limits of the local test environment.
+
 ## Keeping a comparison I can check later
 
 I can save the same analysis without opening the app:
@@ -272,6 +301,12 @@ Reliability tests check NIST's published censored Weibull example, independent
 SciPy fits, hand-calculated survival and life intervals, time-unit changes,
 invalid and all-suspended logs, command-line exports and editable app controls.
 CI also runs the generated maintenance example and saves its report as an artifact.
+
+The Excel automation checks add 24 pytest cases and 9 Office Script sandbox cases.
+CI parses the VBA and Power Query source, runs TypeScript checks and ESLint,
+executes the refresh and import logic in local interpreters, and builds the macro
+workbook and reusable template. Native Microsoft Excel GUI and service checks are
+manual; the [automation guide](docs/excel-automation.md) makes that boundary explicit.
 
 ## Demo
 

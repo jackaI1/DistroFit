@@ -1,0 +1,38 @@
+name: Excel automation
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  automation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: python -m pip install -r requirements-dev.txt
+      - run: npm ci --ignore-scripts
+      - name: Lint actual VBA, M and Office Script source
+        run: |
+          python automation/lint.py
+          npm run lint
+      - name: Exercise workbook, embedded VBA and legacy M query
+        run: python -m pytest tests/test_excel_automation.py -q
+      - name: Execute the Office Script main in a workbook API sandbox
+        run: npm test
+      - name: Build reusable template and worked workbook
+        run: |
+          python excel_automation.py --sample --out excel-automation/distrofit_automation.xlsm
+          python excel_automation.py --sample --out excel-automation/distrofit_automation.xltm
+      - uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-excel-automation
+          path: excel-automation/
+          retention-days: 7

@@ -10,6 +10,20 @@ texts are retained in [xlsxwriter](THIRD_PARTY_LICENSES/xlsxwriter/LICENSE.txt),
 separately from the original audit below. LibreOffice Calc is installed only in the
 recalculation CI job, not bundled with this project.
 
+## Excel automation additions
+
+The optional builder and test interpreter add pyOpenVBA 6.6.0 (MIT), from
+[its upstream repository](https://github.com/WilliamSmithEdward/pyOpenVBA).
+Its license is retained in [pyOpenVBA](THIRD_PARTY_LICENSES/pyOpenVBA/LICENSE.md).
+The unmodified `automation/office-script/excelscript.d.ts` comes from Microsoft's
+[Office Scripts reference](https://github.com/OfficeDev/office-scripts-docs-reference/blob/97f8f415842e13e004d7c53c1d24fe45653e50c0/generate-docs/api-extractor-inputs-excelscript/excelscript.d.ts)
+at commit `97f8f415842e13e004d7c53c1d24fe45653e50c0`, under the retained
+[MIT code license](THIRD_PARTY_LICENSES/office-scripts-docs-reference/LICENSE-CODE).
+The upstream CC-BY-4.0 documentation license is also retained alongside it.
+Node tooling (TypeScript, ESLint and typescript-eslint) is development-only,
+version-pinned through package-lock.json and installed by CI, not bundled in the
+workbook. TypeScript uses Apache-2.0; ESLint and typescript-eslint use MIT.
+
 ## Original dependency audit
 
 Audit snapshot: 2026-10-19, fresh CPython 3.12 / macOS arm64 install. Project MIT terms apply only to original code. Dependencies, fonts, and native libraries retain their own licenses. Exact upstream license/NOTICE texts are preserved under [THIRD_PARTY_LICENSES](THIRD_PARTY_LICENSES/); retain that directory with this notice. No upstream dependency was modified.
