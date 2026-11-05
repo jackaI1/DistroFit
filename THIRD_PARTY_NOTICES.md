@@ -50,7 +50,7 @@ The wheel inventory is:
 | multipledispatch | 1.0.0 | 1 |
 | platformdirs | 4.14.5 | 1 |
 | rich | 15.0.0 | 1 |
-| setuptools | 84.2.1 | 19 |
+| setuptools | 84.2.1 | 17 |
 | threadpoolctl | 3.8.0 | 1 |
 | toolz | 1.2.0 | 1 |
 | xarray | 2026.9.0 | 1 |
