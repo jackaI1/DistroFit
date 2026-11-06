@@ -1,0 +1,31 @@
+name: Battery measurements and thermal model
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  battery:
+    runs-on: ubuntu-latest
+    env:
+      PYBAMM_DISABLE_TELEMETRY: 'true'
+      BATTERY_TEST_DATA: .runtime/battery-data
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-battery.txt -r requirements-dev.txt
+      - name: Download and verify pinned public measurements
+        run: python -m battery_fleet --download-only
+      - run: python -m pytest tests/test_battery_fleet.py tests/test_battery_thermal.py -q
+      - name: Fit 1C, evaluate three held-out rates, and sweep cooling
+        run: python -m battery_fleet --out .runtime/battery-report
+      - name: Check reproducible study results
+        run: python tools/check_battery_study.py .runtime/battery-report/results.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: measured-battery-review
+          path: .runtime/battery-report/
+          retention-days: 7

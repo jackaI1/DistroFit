@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "distrofit-battery"
+version = "0.1.0"
+description = "Measured battery fleet review and held-out thermal model comparison for DistroFit"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2", "pandas>=2", "scipy>=1.14", "plotly>=6"]
+
+[project.optional-dependencies]
+thermal = ["pybamm==25.10.2", "casadi==3.6.7", "pybammsolvers==0.3.3"]
+
+[project.scripts]
+distrofit-battery = "battery_fleet.__main__:main"
+
+[tool.setuptools]
+packages = ["battery_fleet"]
+
+[tool.setuptools.package-data]
+battery_fleet = ["data_manifest.json"]

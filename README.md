@@ -37,6 +37,12 @@ account. To try it, start the app below and choose Sample Data, or open Reliabil
 in the sidebar for a generated equipment log. Choose **Grouped measurements** to
 compare related batches and see how uncertain their averages are.
 
+I can also inspect real battery measurements on **Battery fleet**. The saved study
+shows how three laboratory cells lost capacity over repeated use and marks cycles
+that differ from their recent history. A second experiment lets me compare a cell
+model with measured discharge and heating at rates left out of my fit. Start the
+app below and choose **Battery fleet** to try it without a data download.
+
 ## Run it
 
 Use Python 3.12. From the repository root:
@@ -58,6 +64,45 @@ the values below which a given share of observations fall. Scenario tries new nu
 against the same fitted curves; Manual lets me adjust a curve myself. Download
 reproducible report saves the analysis and its data in a PDF. Stop the app with
 Ctrl-C. Reports contain the input values, so keep private exports private.
+
+## Reviewing battery fade and heating
+
+I wanted to try the measurement checks on public battery experiments and learn
+how well a physical cell model predicted readings I left out of its fit. On
+**Battery fleet**, I choose cells, inspect flagged cycles and download their
+measurements. Capacity means how much charge a cell can supply; fade is its loss
+with repeated use. The saved run has **504 discharge cycles across three cells**.
+It flags **29 cycles** and one cell for inspection, not confirmed failures.
+
+The lower charts compare a separate experiment's measured voltage and surface
+temperature with a model of discharge and heating. I fitted it at a rate that would
+empty the nominal cell in one hour, then checked three other rates without fitting
+again. Across nine held-out curves, voltage error was **0.060 to 0.070 V** and
+temperature error was **0.40 to 2.95 °C**. The simulation covered at least **97.1%**
+of each measured discharge duration. These are rates held out of my own fit;
+the published starting parameters already used this experiment, so this is not
+independent validation of those parameters.
+
+To download the public data, check its file fingerprints and reproduce the report:
+
+```sh
+python -m pip install -r requirements-battery.txt
+python -m battery_fleet --out .runtime/my-battery-report
+```
+
+Open `.runtime/my-battery-report/index.html` in a browser. It includes interactive
+charts and works offline. The command needs a new output folder. It saves the
+source fingerprints, cycle and cell tables, fitted parameters, errors and cooling
+study beside the dashboard. The app shows the committed run, so I can inspect it
+without installing the optional model. The download is under 50 MB.
+
+Further down, the model uses PyBaMM's Doyle-Fuller-Newman equations, which describe
+lithium movement and reactions, coupled to one average cell temperature. A cooling
+study changes how easily heat escapes through the surface. At the highest tested
+rate, changing that coefficient from 2 to 40 W/m²/K lowered predicted peak
+temperature from **80.0 to 36.5 °C**. This is a simulation, not a measured cooling
+improvement. The [battery guide](docs/battery.md) explains the public sources,
+calculations, charge-pair exclusions, model assumptions and full results.
 
 ## Improving a production process
 
@@ -481,6 +526,11 @@ Power BI bindings and real app edits. CI runs the full pytest suite, saves the
 generated anomaly report, and opens both Power BI projects on Windows to execute
 native calculations and capture their pages. The [event guide](docs/anomalies.md)
 records the test results and assumptions.
+
+Battery checks add synthetic fault injection, public-file parsing, checksum
+rejection, unit checks and real DFN charge/energy conservation tests. Battery CI
+reruns the measured-data calibration and held-out study, checks error and coverage
+limits, and saves the offline dashboard. See the [battery guide](docs/battery.md).
 
 ## Demo
 

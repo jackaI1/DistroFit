@@ -1,0 +1,4 @@
+-r requirements.txt
+pybamm==25.10.2
+casadi==3.6.7
+pybammsolvers==0.3.3
