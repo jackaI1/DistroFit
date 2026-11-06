@@ -24,7 +24,8 @@ calculation, compares possible life curves and shows how uncertain the estimates
 This is a personal project. It accepts a numeric CSV column, a column from a
 plain-text table, as well as pasted numbers or generated samples, and runs without an
 account. To try it, start the app below and choose Sample Data, or open Reliability
-in the sidebar for a generated equipment log.
+in the sidebar for a generated equipment log. Choose **Grouped measurements** to
+compare related batches and see how uncertain their averages are.
 
 ## Run it
 
@@ -45,6 +46,38 @@ the values below which a given share of observations fall. Scenario tries new nu
 against the same fitted curves; Manual lets me adjust a curve myself. Download
 reproducible report saves the analysis and its data in a PDF. Stop the app with
 Ctrl-C. Reports contain the input values, so keep private exports private.
+
+## Comparing batches with different sample sizes
+
+I wanted to compare related batches without letting a handful of readings make a
+small batch look more certain than it is. On **Grouped measurements**, I start
+with 80 generated readings across four batches, or upload a CSV with `group` and
+`value` columns. I choose **Fit grouped model** to estimate each batch's average
+and a range of plausible values. Small batches borrow information from the others,
+called partial pooling, while keeping their own averages.
+
+The blue charts show plausible averages after fitting, called posterior
+distributions, beside separate fits for each batch. I check whether the sampling
+was reliable and whether simulated readings resemble the input. Both methods use
+the same training rows and are scored on the same readings set aside. Changing
+the input clears the old results, so I cannot download a stale comparison.
+
+The model uses PyMC and assumes independent, roughly bell-shaped readings with a
+shared noise level. It is useful for related batches or machines; it does not
+replace the other curve choices or censored lifetime analysis. The page explains
+its assumptions and withholds results when sampling checks fail.
+
+I can also save the complete example, including sampled values and interactive
+charts, without opening the app:
+
+```sh
+python bayesian.py --sample --out /tmp/distrofit-grouped
+```
+
+The output folder must be new. The [grouped comparison guide](docs/bayesian.md)
+explains the CSV format, priors (assumptions before fitting), uncertainty intervals,
+held-out scores and convergence checks. On macOS 27, that guide includes the
+Numba fallback for an upstream compiler issue.
 
 ## Estimating equipment life
 
@@ -307,6 +340,13 @@ CI parses the VBA and Power Query source, runs TypeScript checks and ESLint,
 executes the refresh and import logic in local interpreters, and builds the macro
 workbook and reusable template. Native Microsoft Excel GUI and service checks are
 manual; the [automation guide](docs/excel-automation.md) makes that boundary explicit.
+
+The full Python suite contains 328 tests. The 25 grouped-model tests run real
+NUTS sampling with fixed seeds, recover known batch averages and noise, check
+partial pooling and predictive scores, and reject
+poor or missing convergence diagnostics. The app tests fit the generated sample
+and check that edits remove stale downloads. CI also saves a sampled comparison
+with posterior draws and diagnostic tables.
 
 ## Demo
 

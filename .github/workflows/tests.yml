@@ -38,6 +38,13 @@ jobs:
           name: synthetic-reliability-analysis
           path: ${{ runner.temp }}/distrofit-reliability/
           retention-days: 7
+      - name: Fit and check a hierarchical Bayesian sample
+        run: python bayesian.py --sample --out "$RUNNER_TEMP/distrofit-grouped"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-grouped-bayesian-analysis
+          path: ${{ runner.temp }}/distrofit-grouped/
+          retention-days: 7
   excel-recalculation:
     runs-on: ubuntu-latest
     steps:
