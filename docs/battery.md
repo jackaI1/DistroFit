@@ -60,3 +60,9 @@ cycles and one flagged cell (B0006, with 59.1% retention). Fitted cooling is
 curves have voltage RMSE 0.0601–0.0697 V and temperature RMSE 0.402–2.954 K,
 with 97.15–100% time coverage. The 1.5C cooling sweep predicts peak temperature
 falling from 79.98 °C at 2 W/m²/K to 36.54 °C at 40 W/m²/K.
+
+Local validation passed all 434 pytest cases, including 15 battery cases. On this
+Mac I used the existing documented `PYTENSOR_FLAGS='cxx=,mode=NUMBA'` workaround
+for the Bayesian feature and set `BATTERY_TEST_DATA=.runtime/data` to exercise the
+actual public battery files. The installed package's command also ran successfully.
+The build stayed near 1.1 GB, without a container or a downloaded browser.

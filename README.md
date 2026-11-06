@@ -527,7 +527,8 @@ generated anomaly report, and opens both Power BI projects on Windows to execute
 native calculations and capture their pages. The [event guide](docs/anomalies.md)
 records the test results and assumptions.
 
-Battery checks add synthetic fault injection, public-file parsing, checksum
+The complete local suite passed 434 tests, including 15 battery checks.
+Battery checks cover synthetic fault injection, public-file parsing, checksum
 rejection, unit checks and real DFN charge/energy conservation tests. Battery CI
 reruns the measured-data calibration and held-out study, checks error and coverage
 limits, and saves the offline dashboard. See the [battery guide](docs/battery.md).
