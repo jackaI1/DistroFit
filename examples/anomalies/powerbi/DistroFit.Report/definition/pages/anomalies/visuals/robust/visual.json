@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "anomalies_robust",
+  "position": {
+    "x": 1150,
+    "y": 370,
+    "z": 0,
+    "width": 265,
+    "height": 150,
+    "tabOrder": 370.115
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "events"
+                    }
+                  },
+                  "Property": "robust_flag"
+                }
+              },
+              "queryRef": "events.robust_flag",
+              "nativeQueryRef": "robust_flag"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Robust: True selects flagged events'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

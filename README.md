@@ -16,6 +16,9 @@ I also wanted to see where production time went, alongside the measurements.
 The equipment page splits lost time into stops, slow running and rejected parts.
 It ranks stop reasons by minutes lost and lets me compare a current changeover,
 the work needed to switch products, with a proposed shorter one.
+On **Production anomalies**, I can also find individual stops and cycle times
+that look unusual compared with earlier production. I can inspect the flagged
+records and compare two ways of finding them before deciding what to investigate.
 
 Before collecting those measurements, I can check that the bench is ready. On
 **Workplace organization**, I score a 6S checklist, six areas for keeping work
@@ -48,6 +51,8 @@ python -m streamlit run DistroFit.py --server.address=127.0.0.1 --server.port=85
 Open <http://127.0.0.1:8501>. Choose Sample Data or upload a CSV, then use Auto-Fit
 to compare curves. For production time, choose **Equipment effectiveness** in the
 sidebar; it opens with a worked example I can edit immediately.
+For unusual stops or cycle times, open **Production anomalies** and click
+**Analyze events** to try a generated log with known faults.
 Tail & Q-Q checks the extremes and compares matching percentiles,
 the values below which a given share of observations fall. Scenario tries new numbers
 against the same fitted curves; Manual lets me adjust a curve myself. Download
@@ -129,6 +134,40 @@ The [bench audit guide](docs/6s.md) explains the scoring, backup format, process
 routes and limitations. I can also inspect the
 [generated flow chart](examples/lean/process.svg) and
 [SOP page](examples/lean/sop.html) in the repository.
+
+## Finding unusual stops and cycle times
+
+I wanted to see which individual production events deserved a closer look, beyond
+the total minutes lost. On **Production anomalies**, I start with 800 generated
+events, edit the table or upload an event CSV, then click **Analyze events**.
+The chart marks unusually long stops and unusually fast or slow cycles. The table
+keeps each event's ID so I can find it in the original log.
+
+I compare IsolationForest, a method that finds values easy to separate from the
+rest, with a robust baseline that measures distance from the typical duration.
+Both learn from earlier events and check later ones. The first quarter of the log
+is reference data and has no flags. The generated faults let me count false alarms
+and missed faults; my own unlabelled data gets flags without an accuracy claim.
+
+I can save the comparison without opening the app:
+
+```sh
+python anomaly_report.py --sample --out /tmp/distrofit-anomalies
+# Or use one machine/product log:
+python anomaly_report.py events.csv --out /tmp/my-production-review
+```
+
+The output folder must be new. I open `events.html` for the offline interactive
+chart, or `powerbi/DistroFit.pbip` in Power BI Desktop on Windows for the event
+table and flag filters. CSV files keep all events, both methods' flags and scores,
+and the comparison results. The [production event guide](docs/anomalies.md) gives
+the input format and explains the report.
+
+In the generated example, the forest finds **21 of 26 faults** in the later
+periods, with **7 false alarms**. The robust baseline finds all 26 without false
+alarms. That is a useful warning against assuming the more complex method wins.
+These faults are deliberately large changes, so this result says nothing about
+accuracy at a factory. Flags need inspection, especially after a product change.
 
 ## Comparing batches with different sample sizes
 
@@ -424,7 +463,7 @@ executes the refresh and import logic in local interpreters, and builds the macr
 workbook and reusable template. Native Microsoft Excel GUI and service checks are
 manual; the [automation guide](docs/excel-automation.md) makes that boundary explicit.
 
-The full Python suite contains 387 tests. The 25 grouped-model tests run real
+The grouped-model tests run real
 NUTS sampling with fixed seeds, recover known batch averages and noise, check
 partial pooling and predictive scores, and reject
 poor or missing convergence diagnostics. The app tests fit the generated sample
@@ -435,6 +474,13 @@ The 59 bench-audit and process checks include hand-calculated scores, portable
 history, real Graphviz output, invalid routes, and the app and command-line
 workflows. CI installs Graphviz, generates the complete bench-review bundle and
 saves it as an artifact alongside the existing reports.
+
+The anomaly tests check fixed-seed fault recovery, training-only scaling, future
+data leakage, constant durations, missing labels, invalid logs, exported flags,
+Power BI bindings and real app edits. CI runs the full pytest suite, saves the
+generated anomaly report, and opens both Power BI projects on Windows to execute
+native calculations and capture their pages. The [event guide](docs/anomalies.md)
+records the test results and assumptions.
 
 ## Demo
 

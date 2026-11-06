@@ -1,0 +1,88 @@
+[
+  {
+    "name": "duration-event-counts",
+    "query": "EVALUATE ROW ( \"Events\", COUNTROWS(events), \"Evaluated\", COALESCE(COUNTROWS(FILTER(events, events[evaluated] = TRUE())), 0), \"Forest flags\", COALESCE(COUNTROWS(FILTER(events, events[iforest_flag] = TRUE())), 0), \"Robust flags\", COALESCE(COUNTROWS(FILTER(events, events[robust_flag] = TRUE())), 0) )",
+    "expected": [
+      {
+        "[Events]": 800,
+        "[Evaluated]": 600,
+        "[Forest flags]": 28,
+        "[Robust flags]": 26
+      }
+    ]
+  },
+  {
+    "name": "empty-context-has-zero-flags",
+    "query": "EVALUATE CALCULATETABLE ( ROW ( \"Forest flags\", COALESCE(COUNTROWS(FILTER(events, events[iforest_flag] = TRUE())), 0), \"Robust flags\", COALESCE(COUNTROWS(FILTER(events, events[robust_flag] = TRUE())), 0) ), FILTER(events, FALSE()) )",
+    "expected": [
+      {
+        "[Forest flags]": 0,
+        "[Robust flags]": 0
+      }
+    ]
+  },
+  {
+    "name": "cycle-iforest",
+    "query": "EVALUATE CALCULATETABLE ( ROW ( \"evaluated\", MAX(metrics[evaluated]), \"flagged\", MAX(metrics[flagged]), \"tp\", MAX(metrics[tp]), \"fp\", MAX(metrics[fp]), \"tn\", MAX(metrics[tn]), \"fn\", MAX(metrics[fn]), \"precision\", MAX(metrics[precision]), \"recall\", MAX(metrics[recall]) ), metrics[event_type] = \"cycle\", metrics[method] = \"iforest\" )",
+    "expected": [
+      {
+        "[evaluated]": 300,
+        "[flagged]": 10,
+        "[tp]": 10,
+        "[fp]": 0,
+        "[tn]": 285,
+        "[fn]": 5,
+        "[precision]": 1.0,
+        "[recall]": 0.6666666666666666
+      }
+    ]
+  },
+  {
+    "name": "cycle-robust",
+    "query": "EVALUATE CALCULATETABLE ( ROW ( \"evaluated\", MAX(metrics[evaluated]), \"flagged\", MAX(metrics[flagged]), \"tp\", MAX(metrics[tp]), \"fp\", MAX(metrics[fp]), \"tn\", MAX(metrics[tn]), \"fn\", MAX(metrics[fn]), \"precision\", MAX(metrics[precision]), \"recall\", MAX(metrics[recall]) ), metrics[event_type] = \"cycle\", metrics[method] = \"robust\" )",
+    "expected": [
+      {
+        "[evaluated]": 300,
+        "[flagged]": 15,
+        "[tp]": 15,
+        "[fp]": 0,
+        "[tn]": 285,
+        "[fn]": 0,
+        "[precision]": 1.0,
+        "[recall]": 1.0
+      }
+    ]
+  },
+  {
+    "name": "downtime-iforest",
+    "query": "EVALUATE CALCULATETABLE ( ROW ( \"evaluated\", MAX(metrics[evaluated]), \"flagged\", MAX(metrics[flagged]), \"tp\", MAX(metrics[tp]), \"fp\", MAX(metrics[fp]), \"tn\", MAX(metrics[tn]), \"fn\", MAX(metrics[fn]), \"precision\", MAX(metrics[precision]), \"recall\", MAX(metrics[recall]) ), metrics[event_type] = \"downtime\", metrics[method] = \"iforest\" )",
+    "expected": [
+      {
+        "[evaluated]": 300,
+        "[flagged]": 18,
+        "[tp]": 11,
+        "[fp]": 7,
+        "[tn]": 282,
+        "[fn]": 0,
+        "[precision]": 0.6111111111111112,
+        "[recall]": 1.0
+      }
+    ]
+  },
+  {
+    "name": "downtime-robust",
+    "query": "EVALUATE CALCULATETABLE ( ROW ( \"evaluated\", MAX(metrics[evaluated]), \"flagged\", MAX(metrics[flagged]), \"tp\", MAX(metrics[tp]), \"fp\", MAX(metrics[fp]), \"tn\", MAX(metrics[tn]), \"fn\", MAX(metrics[fn]), \"precision\", MAX(metrics[precision]), \"recall\", MAX(metrics[recall]) ), metrics[event_type] = \"downtime\", metrics[method] = \"robust\" )",
+    "expected": [
+      {
+        "[evaluated]": 300,
+        "[flagged]": 11,
+        "[tp]": 11,
+        "[fp]": 0,
+        "[tn]": 289,
+        "[fn]": 0,
+        "[precision]": 1.0,
+        "[recall]": 1.0
+      }
+    ]
+  }
+]

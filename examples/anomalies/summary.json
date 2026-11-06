@@ -1,0 +1,103 @@
+{
+  "seed": 42,
+  "events": 800,
+  "evaluated_events": 600,
+  "validation": "Three expanding chronological folds; first quarter is reference only.",
+  "settings": {
+    "iforest_trees": 200,
+    "iforest_contamination": 0.05,
+    "robust_threshold": 3.5
+  },
+  "metrics": [
+    {
+      "event_type": "cycle",
+      "method": "iforest",
+      "evaluated": 300,
+      "flagged": 10,
+      "tp": 10,
+      "fp": 0,
+      "tn": 285,
+      "fn": 5,
+      "precision": 1.0,
+      "recall": 0.6666666666666666
+    },
+    {
+      "event_type": "cycle",
+      "method": "robust",
+      "evaluated": 300,
+      "flagged": 15,
+      "tp": 15,
+      "fp": 0,
+      "tn": 285,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "event_type": "downtime",
+      "method": "iforest",
+      "evaluated": 300,
+      "flagged": 18,
+      "tp": 11,
+      "fp": 7,
+      "tn": 282,
+      "fn": 0,
+      "precision": 0.6111111111111112,
+      "recall": 1.0
+    },
+    {
+      "event_type": "downtime",
+      "method": "robust",
+      "evaluated": 300,
+      "flagged": 11,
+      "tp": 11,
+      "fp": 0,
+      "tn": 289,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  ],
+  "folds": [
+    {
+      "fold": 1,
+      "train_count": 200,
+      "test_count": 200,
+      "train_start": "2026-01-01T00:00:00+00:00",
+      "train_end": "2026-01-03T01:45:00+00:00",
+      "test_start": "2026-01-03T02:00:00+00:00",
+      "test_end": "2026-01-05T03:45:00+00:00",
+      "scaler_centers": {
+        "cycle": 45.20724030791263,
+        "downtime": 241.23223556649157
+      }
+    },
+    {
+      "fold": 2,
+      "train_count": 400,
+      "test_count": 200,
+      "train_start": "2026-01-01T00:00:00+00:00",
+      "train_end": "2026-01-05T03:45:00+00:00",
+      "test_start": "2026-01-05T04:00:00+00:00",
+      "test_end": "2026-01-07T05:45:00+00:00",
+      "scaler_centers": {
+        "cycle": 45.216244621419676,
+        "downtime": 241.73394570364417
+      }
+    },
+    {
+      "fold": 3,
+      "train_count": 600,
+      "test_count": 200,
+      "train_start": "2026-01-01T00:00:00+00:00",
+      "train_end": "2026-01-07T05:45:00+00:00",
+      "test_start": "2026-01-07T06:00:00+00:00",
+      "test_end": "2026-01-09T07:45:00+00:00",
+      "scaler_centers": {
+        "cycle": 45.09512037820602,
+        "downtime": 242.03712149568082
+      }
+    }
+  ],
+  "limitations": "Generated faults are not factory accuracy. Flags require investigation. Compare one machine/product at a time; do not mix operating regimes."
+}

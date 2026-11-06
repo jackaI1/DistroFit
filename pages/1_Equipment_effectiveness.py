@@ -10,6 +10,7 @@ from spc import pareto_chart
 st.set_page_config(page_title="DistroFit: Equipment effectiveness", layout="wide")
 st.title("Equipment effectiveness")
 st.write("Find where planned production time went: stopped equipment, slow running, or rejected parts.")
+st.caption("For individual unusual stop durations and cycle times, open Production anomalies in the sidebar.")
 st.caption("Use one machine and one product with a single ideal cycle time per report. The initial values are a worked example, not factory measurements.")
 st.session_state.pop("equipment_report", None)
 sample_shift, sample_stops, sample_tasks = load_example()

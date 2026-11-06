@@ -1,5 +1,6 @@
 # Run only on the disposable Windows CI desktop. Capture actual report rendering.
-param([string]$Root = 'powerbi', [string]$Output = 'native-evidence')
+param([string]$Root = 'powerbi', [string]$Output = 'native-evidence',
+      [string[]]$PageNames = @('Overview','Information criteria','Goodness of fit','Dataset detail'))
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName UIAutomationClient,UIAutomationTypes,System.Windows.Forms,System.Drawing
 Add-Type @'
@@ -68,7 +69,7 @@ try {
  if (-not $portFile) { throw 'Desktop did not open a model. See desktop-initial.png' }
  $port = [System.IO.File]::ReadAllText($portFile.FullName, [System.Text.Encoding]::Unicode).Trim()
  Write-Host "Desktop-owned model port=$port, desktop PID=$($owned.Id), started=$ownedStarted"
- dotnet run --project "$Root/NativeCheck" -- $Root $port $Output
+ dotnet run --project "$PSScriptRoot/NativeCheck" -- $Root $port $Output
  if ($LASTEXITCODE) { throw 'Native model checks failed' }
  Start-Sleep -Seconds 5
  $window = Get-CurrentWindow
@@ -76,7 +77,7 @@ try {
  $names = @($elements | ForEach-Object { $_.Current.Name } | Where-Object { $_ } | Select-Object -Unique -First 600)
  ConvertTo-Json -InputObject @($names) | Set-Content "$Output/desktop-controls.json"
  # The report tab must be visible; schema validation is not a substitute for opening it.
- foreach ($page in @('Overview','Information criteria','Goodness of fit','Dataset detail')) {
+ foreach ($page in $PageNames) {
   $tabDeadline = (Get-Date).AddSeconds(30)
   $tab = $null
   do {
@@ -91,7 +92,7 @@ try {
   Start-Sleep -Seconds 5
   Capture ($page.ToLower().Replace(' ','-'))
  }
- @{status='PASS';pages=4;pid=$owned.Id;started=$ownedStarted} | ConvertTo-Json | Set-Content "$Output/desktop-open.json"
+ @{status='PASS';pages=$PageNames.Count;pid=$owned.Id;started=$ownedStarted} | ConvertTo-Json | Set-Content "$Output/desktop-open.json"
 } finally {
  try { Capture 'desktop-final' } catch { Write-Warning "Final capture failed: $_" }
  # Record only descendants of the precise process launched above.
