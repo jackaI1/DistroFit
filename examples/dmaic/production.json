@@ -1,0 +1,14 @@
+{
+  "objective": "Reduce leaks and stoppages on the filling line while keeping fill volume between 9 and 11 mL.",
+  "measurements": [9.9, 10.1, 10.0, 10.2, 10.1, 10.3, 10.1, 10.2, 10.3, 10.2, 10.4, 10.3, 10.2, 10.4, 10.5, 10.3, 10.4, 10.6, 10.4, 10.5, 11.2],
+  "baseline": 12, "lsl": 9, "usl": 11,
+  "defects": {"Seal leak": 9, "Underfill": 4, "Label error": 2},
+  "downtime": [{"category":"Seal adjustment", "minutes":45}, {"category":"Material refill", "minutes":20}, {"category":"Seal adjustment", "minutes":15}, {"category":"Label reset", "minutes":10}],
+  "root_causes": {
+    "Seal leak": {"fishbone": "Machine", "whys": ["Why leak? Seal pressure varies.", "Why varies? Jaw alignment drifts.", "Why drift? Fasteners loosen.", "Why loosen? No torque check.", "Why no check? Setup checklist omitted it."], "evidence": "Hypothesis for trial; verify with torque and leak checks."},
+    "Underfill": {"fishbone": "Method", "whys": ["Why underfill? Feed interrupted.", "Why interrupted? Hopper ran low.", "Why low? Refill was late.", "Why late? No refill signal.", "Why no signal? Refill point was not defined."], "evidence": "Hypothesis; compare fill levels with hopper readings."},
+    "Label error": {"fishbone": "Material", "whys": ["Why error? Label skewed.", "Why skewed? Roll shifted.", "Why shift? Guide was loose.", "Why loose? Setup check missed it.", "Why missed? Guide position was not specified."], "evidence": "Hypothesis; inspect roll guides during the next run."}
+  },
+  "actions": [{"category":"Seal leak", "action":"Trial a jaw torque check", "owner":"Line lead", "due":"2026-12-01", "status":"Open"}, {"category":"Underfill", "action":"Mark and test a refill point", "owner":"Operator", "due":"2026-12-08", "status":"Planned"}, {"category":"Label error", "action":"Define guide position", "owner":"Technician", "due":"2026-12-15", "status":"Planned"}],
+  "control_plan": "Review the chart each shift against the first 12 readings; investigate signals and recheck capability after a stable trial."
+}

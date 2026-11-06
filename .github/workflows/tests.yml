@@ -17,6 +17,8 @@ jobs:
         run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends graphviz
       - run: python -m pip install -r requirements.txt -r requirements-dev.txt
       - run: python -m pytest -q
+      - name: Generate the DMAIC management board
+        run: python dmaic.py --input examples/dmaic/production.json --out "$RUNNER_TEMP/dmaic-board.html"
       - name: Generate the 6S audit review, flow chart and SOP
         run: python six_s_report.py --sample --out "$RUNNER_TEMP/distrofit-bench-review"
       - uses: actions/upload-artifact@v4
