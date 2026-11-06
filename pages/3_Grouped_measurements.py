@@ -34,7 +34,7 @@ with controls[0]:
                             value=1500, step=500, key="bayes_draws")
 with controls[1]:
     seed = st.number_input("Random seed", min_value=0, max_value=2147483646, value=42, step=1, key="bayes_seed")
-st.caption("Four NUTS chains, 1500 warm-up steps each, target acceptance 0.95, one CPU core. "
+st.caption("Four NUTS chains, 1500 warm-up steps each, target acceptance 0.99, one CPU core. "
            "NUTS explores plausible parameter values; warm-up steps are discarded. "
            "Allow a few minutes for the first run while the model compiles.")
 with st.expander("Model, priors and shared comparison rows"):

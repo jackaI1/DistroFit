@@ -124,7 +124,7 @@ def _predictive_checks(inference, training):
 
 
 def fit_grouped(table, *, seed=42, draws=1500, tune=1500, chains=4,
-                target_accept=.95, prior_draws=300, strict=True):
+                target_accept=.99, prior_draws=300, strict=True):
     """Fit on each group's training rows; holdouts never enter the model or priors.
 
     Default strict mode refuses an unreliable fit. strict=False returns diagnostics

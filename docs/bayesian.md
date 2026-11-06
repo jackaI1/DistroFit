@@ -86,7 +86,7 @@ from a common population of means, and all groups share one within-group SD.
 PyMC samples it using NUTS (No-U-Turn Sampler), an algorithm that explores plausible
 parameter combinations. Four chains run sequentially on one CPU core with one
 BLAS thread. Defaults are 1500 warm-up and 1500 retained draws per chain, with
-0.95 target acceptance. Increasing retained draws can improve Monte Carlo accuracy;
+0.99 target acceptance. Increasing retained draws can improve Monte Carlo accuracy;
 it cannot fix an inappropriate likelihood.
 
 Let `c` and `s` be the mean and population SD of **training** readings only. In
