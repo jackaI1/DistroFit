@@ -6,8 +6,9 @@ import sys
 import pandas as pd
 import pytest
 
-from anomaly import evaluate_events, sample_events
+from anomaly import AnomalyResult, evaluate_events, sample_events
 import anomaly_report
+from powerbi.anomaly_project import build_anomaly_project
 
 
 @pytest.fixture(scope='module')
@@ -82,11 +83,30 @@ def test_unlabelled_report_uses_null_accuracy_and_no_private_extra_columns(tmp_p
 
 
 def test_committed_sample_regenerates_and_native_counts_are_known(tmp_path, result):
-    anomaly_report.write_report(result, tmp_path / 'report')
     sample = Path(__file__).resolve().parents[1] / 'examples/anomalies'
-    for path in (tmp_path / 'report').rglob('*'):
-        if path.is_file() and path.name != 'events.html':
-            committed = sample / path.relative_to(tmp_path / 'report')
+    saved_events = pd.read_csv(sample / 'events.csv', float_precision='round_trip', dtype={
+        'fold': 'Int64', 'iforest_flag': 'boolean', 'robust_flag': 'boolean'})
+    saved_events['timestamp'] = pd.to_datetime(saved_events.timestamp, utc=True)
+    saved_metrics = pd.read_csv(sample / 'metrics.csv', float_precision='round_trip')
+    # ARM macOS and x64 Linux can differ in the last binary digit of generated
+    # durations and scores. Keep discrete results exact and float tolerance tight.
+    pd.testing.assert_frame_equal(result.events, saved_events, rtol=1e-12, atol=1e-12)
+    pd.testing.assert_frame_equal(result.metrics, saved_metrics, rtol=1e-12, atol=1e-12)
+    summary = json.loads((sample / 'summary.json').read_text())
+    generated = anomaly_report.summary_dict(result)
+    assert len(generated['folds']) == len(summary['folds'])
+    for got, want in zip(generated['folds'], summary['folds']):
+        assert got['scaler_centers'] == pytest.approx(want['scaler_centers'], rel=1e-12, abs=1e-12)
+        assert {k: v for k, v in got.items() if k != 'scaler_centers'} == {
+            k: v for k, v in want.items() if k != 'scaler_centers'}
+    assert {k: v for k, v in generated.items() if k != 'folds'} == {
+        k: v for k, v in summary.items() if k != 'folds'}
+    # The portable model must still regenerate byte-for-byte from the committed
+    # snapshot. Replaying it avoids treating platform float roundoff as a drift.
+    build_anomaly_project(AnomalyResult(saved_events, saved_metrics, summary['folds']), tmp_path / 'powerbi')
+    for path in (tmp_path / 'powerbi').rglob('*'):
+        if path.is_file():
+            committed = sample / path.relative_to(tmp_path)
             assert path.read_bytes() == committed.read_bytes(), str(committed)
     checks = json.loads((sample / 'powerbi/checks.json').read_text())
     assert checks[0]['expected'] == [{'[Events]': 800, '[Evaluated]': 600,
