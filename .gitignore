@@ -26,3 +26,6 @@ powerbi/**/.pbi/
 powerbi/NativeCheck/bin/
 powerbi/NativeCheck/obj/
 native-evidence/
+
+# Local Python package metadata
+*.egg-info/

@@ -678,3 +678,12 @@ for local checks and CI. The SDK source and license are available at
 <https://github.com/dotnet/Open-XML-SDK>. CI also installs LibreOffice through
 Ubuntu's package manager to render test reports. Neither tool is bundled in the
 Python app or exported presentations.
+
+## Battery study
+
+The raw Chen et al. validation dataset (Zenodo 4032561, version 1) is CC BY 4.0.
+Derived tables in `examples/battery/` retain attribution in `docs/battery.md` and
+provenance in `results.json`. NASA aging measurements are attributed to Saha and
+Goebel (2007), NASA Ames PCoE; the pinned public mirror is documented explicitly.
+Raw data are downloaded on demand and are not included in this repository.
+PyBaMM is BSD-3-Clause; CasADi is LGPL-3.0; pybammsolvers is BSD-3-Clause.

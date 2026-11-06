@@ -1,0 +1,270 @@
+{
+  "data_manifest": [
+    {
+      "name": "B0005.mat",
+      "url": "https://raw.githubusercontent.com/changyeon99/Battery-Data-Set/5301bd7e469dc8a1320b55719629571f2c02b6fc/B0005.mat",
+      "bytes": 15956874,
+      "sha256": "0eae4585baf3f200c09fe24c5ab884f1889679fc75206ca1aa19da704104f0b0",
+      "md5": "dfe2ff02edb765a418a61ca047f0a33f",
+      "dataset": "NASA aging",
+      "provenance": "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/"
+    },
+    {
+      "name": "B0006.mat",
+      "url": "https://raw.githubusercontent.com/changyeon99/Battery-Data-Set/5301bd7e469dc8a1320b55719629571f2c02b6fc/B0006.mat",
+      "bytes": 16028159,
+      "sha256": "fa818ab4db5db8ab21e910b6dd6c3e20d3761bb9672089e1a4de8f96074616c5",
+      "md5": "18c199f3d807f9535f7acfc0bb066213",
+      "dataset": "NASA aging",
+      "provenance": "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/"
+    },
+    {
+      "name": "B0007.mat",
+      "url": "https://raw.githubusercontent.com/changyeon99/Battery-Data-Set/5301bd7e469dc8a1320b55719629571f2c02b6fc/B0007.mat",
+      "bytes": 16049460,
+      "sha256": "d022afa086efaf54ab5b63f05220f5be178c8027e2fa8d68589db0e85a441a3b",
+      "md5": "250310fc53241aa1bccaa0fd6c9d468d",
+      "dataset": "NASA aging",
+      "provenance": "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/"
+    },
+    {
+      "name": "LGM50_cell03.csv",
+      "url": "https://zenodo.org/records/4032561/files/LGM50_cell03.csv",
+      "bytes": 590794,
+      "sha256": "fcc13423786d6044f3ec41b1b278fb1d42ff55018666be743243f7c34b1b98cb",
+      "md5": "a09cbd8eff0af55dfe9bc8728fa89908",
+      "dataset": "Chen2020 validation",
+      "provenance": "https://doi.org/10.5281/zenodo.4032561"
+    },
+    {
+      "name": "LGM50_cell04.csv",
+      "url": "https://zenodo.org/records/4032561/files/LGM50_cell04.csv",
+      "bytes": 595967,
+      "sha256": "e1cbb60e79911824d5559f12db8e8ecdd4781d077a45f5b1ecbcf103aa271d9e",
+      "md5": "f17615476283d2e15087165697ff9d7c",
+      "dataset": "Chen2020 validation",
+      "provenance": "https://doi.org/10.5281/zenodo.4032561"
+    },
+    {
+      "name": "LGM50_cell02.csv",
+      "url": "https://zenodo.org/records/4032561/files/LGM50_cell02.csv",
+      "bytes": 597715,
+      "sha256": "650e7f9ac5217b4db158047e50b6b464100b13f4859002421114edebca629b35",
+      "md5": "0bbf959cbfc367296ec69d7a74d2f5c1",
+      "dataset": "Chen2020 validation",
+      "provenance": "https://doi.org/10.5281/zenodo.4032561"
+    }
+  ],
+  "fleet": {
+    "cells": 3,
+    "cycles": 504,
+    "flagged_cycles": 29,
+    "flagged_cells": 1
+  },
+  "rejected_phases": [],
+  "calibration": {
+    "h_w_m2_k": 9.93355714120058,
+    "negative_diffusivity_scale": 0.6184727760595581,
+    "training_rate": 1.0,
+    "training_cells": [
+      "LGM50_cell02",
+      "LGM50_cell03",
+      "LGM50_cell04"
+    ],
+    "initial_weighted_sse": 421.8698617504077,
+    "weighted_sse": 374.7353922643084,
+    "optimizer_evaluations": 4,
+    "converged": true,
+    "at_bound": false
+  },
+  "model_errors": [
+    {
+      "cell": "LGM50_cell02",
+      "rate": 0.1,
+      "split": "held-out rate",
+      "voltage_rmse_v": 0.06381666674901339,
+      "temperature_rmse_k": 0.40187013034886027,
+      "time_coverage": 1.0,
+      "compared_points": 101,
+      "measured_peak_c": 28.533500000000004,
+      "predicted_peak_c": 26.985206123110686,
+      "measured_duration_s": 35985.22998,
+      "predicted_duration_s": 35985.22998
+    },
+    {
+      "cell": "LGM50_cell02",
+      "rate": 0.5,
+      "split": "held-out rate",
+      "voltage_rmse_v": 0.06512262239874446,
+      "temperature_rmse_k": 0.8598598523158321,
+      "time_coverage": 1.0,
+      "compared_points": 101,
+      "measured_peak_c": 34.4126,
+      "predicted_peak_c": 31.263392733540684,
+      "measured_duration_s": 7090.53,
+      "predicted_duration_s": 7090.53
+    },
+    {
+      "cell": "LGM50_cell02",
+      "rate": 1.0,
+      "split": "calibration",
+      "voltage_rmse_v": 0.06255435843581579,
+      "temperature_rmse_k": 1.2450621466556264,
+      "time_coverage": 0.9922872159414702,
+      "compared_points": 100,
+      "measured_peak_c": 43.58949999999999,
+      "predicted_peak_c": 40.885924542178145,
+      "measured_duration_s": 3549.37002,
+      "predicted_duration_s": 3521.99449549192
+    },
+    {
+      "cell": "LGM50_cell02",
+      "rate": 1.5,
+      "split": "held-out rate",
+      "voltage_rmse_v": 0.06966073633534874,
+      "temperature_rmse_k": 1.5363095681668988,
+      "time_coverage": 0.9733045024691689,
+      "compared_points": 98,
+      "measured_peak_c": 54.743600000000015,
+      "predicted_peak_c": 53.92263493215347,
+      "measured_duration_s": 2362.8399600000002,
+      "predicted_duration_s": 2299.762771682071
+    },
+    {
+      "cell": "LGM50_cell03",
+      "rate": 0.1,
+      "split": "held-out rate",
+      "voltage_rmse_v": 0.062704414569535,
+      "temperature_rmse_k": 0.45421108238752833,
+      "time_coverage": 1.0,
+      "compared_points": 101,
+      "measured_peak_c": 27.9033,
+      "predicted_peak_c": 26.9863617159437,
+      "measured_duration_s": 36014.35998,
+      "predicted_duration_s": 36014.35998
+    },
+    {
+      "cell": "LGM50_cell03",
+      "rate": 0.5,
+      "split": "held-out rate",
+      "voltage_rmse_v": 0.06285895018325968,
+      "temperature_rmse_k": 1.0329696472155387,
+      "time_coverage": 1.0,
+      "compared_points": 101,
+      "measured_peak_c": 33.21940000000001,
+      "predicted_peak_c": 31.263091881425623,
+      "measured_duration_s": 7090.30998,
+      "predicted_duration_s": 7090.30998
+    },
+    {
+      "cell": "LGM50_cell03",
+      "rate": 1.0,
+      "split": "calibration",
+      "voltage_rmse_v": 0.056953256312508055,
+      "temperature_rmse_k": 1.8640646319461913,
+      "time_coverage": 0.9912886584186786,
+      "compared_points": 100,
+      "measured_peak_c": 41.8621,
+      "predicted_peak_c": 40.89629325952882,
+      "measured_duration_s": 3552.94998,
+      "predicted_duration_s": 3521.999019102871
+    },
+    {
+      "cell": "LGM50_cell03",
+      "rate": 1.5,
+      "split": "held-out rate",
+      "voltage_rmse_v": 0.06294919928352201,
+      "temperature_rmse_k": 2.9541099781440607,
+      "time_coverage": 0.9714762471694791,
+      "compared_points": 98,
+      "measured_peak_c": 52.23219999999998,
+      "predicted_peak_c": 53.90030170439252,
+      "measured_duration_s": 2367.2800199999997,
+      "predicted_duration_s": 2299.7563098288892
+    },
+    {
+      "cell": "LGM50_cell04",
+      "rate": 0.1,
+      "split": "held-out rate",
+      "voltage_rmse_v": 0.06547165622147107,
+      "temperature_rmse_k": 0.5003926935179592,
+      "time_coverage": 1.0,
+      "compared_points": 101,
+      "measured_peak_c": 28.428200000000004,
+      "predicted_peak_c": 26.98395601832391,
+      "measured_duration_s": 35953.06998,
+      "predicted_duration_s": 35953.06998
+    },
+    {
+      "cell": "LGM50_cell04",
+      "rate": 0.5,
+      "split": "held-out rate",
+      "voltage_rmse_v": 0.06138832864294455,
+      "temperature_rmse_k": 1.0797183324526707,
+      "time_coverage": 1.0,
+      "compared_points": 101,
+      "measured_peak_c": 35.17739999999998,
+      "predicted_peak_c": 31.26945180308951,
+      "measured_duration_s": 7096.30998,
+      "predicted_duration_s": 7096.30998
+    },
+    {
+      "cell": "LGM50_cell04",
+      "rate": 1.0,
+      "split": "calibration",
+      "voltage_rmse_v": 0.055245119466264786,
+      "temperature_rmse_k": 1.8490713121515814,
+      "time_coverage": 0.9919917435555187,
+      "compared_points": 100,
+      "measured_peak_c": 45.58600000000001,
+      "predicted_peak_c": 40.86859991536426,
+      "measured_duration_s": 3550.41996,
+      "predicted_duration_s": 3521.987286474715
+    },
+    {
+      "cell": "LGM50_cell04",
+      "rate": 1.5,
+      "split": "held-out rate",
+      "voltage_rmse_v": 0.060088298471317976,
+      "temperature_rmse_k": 1.7919711968517464,
+      "time_coverage": 0.9732108190421813,
+      "compared_points": 98,
+      "measured_peak_c": 58.12149999999997,
+      "predicted_peak_c": 53.80452599179637,
+      "measured_duration_s": 2363.0299800000003,
+      "predicted_duration_s": 2299.7263422570295
+    }
+  ],
+  "cooling_sweep": [
+    {
+      "h_w_m2_k": 2.0,
+      "peak_temperature_c": 79.98479989130766,
+      "duration_s": 2306.1262624011497,
+      "rate": 1.5
+    },
+    {
+      "h_w_m2_k": 5.0,
+      "peak_temperature_c": 66.21550967764404,
+      "duration_s": 2303.215267605072,
+      "rate": 1.5
+    },
+    {
+      "h_w_m2_k": 10.0,
+      "peak_temperature_c": 53.80767721190807,
+      "duration_s": 2299.726711982046,
+      "rate": 1.5
+    },
+    {
+      "h_w_m2_k": 20.0,
+      "peak_temperature_c": 43.392431514443274,
+      "duration_s": 2296.183533668445,
+      "rate": 1.5
+    },
+    {
+      "h_w_m2_k": 40.0,
+      "peak_temperature_c": 36.54443091322668,
+      "duration_s": 2293.561940224221,
+      "rate": 1.5
+    }
+  ]
+}

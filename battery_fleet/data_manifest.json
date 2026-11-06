@@ -1,0 +1,56 @@
+[
+  {
+    "name": "B0005.mat",
+    "url": "https://raw.githubusercontent.com/changyeon99/Battery-Data-Set/5301bd7e469dc8a1320b55719629571f2c02b6fc/B0005.mat",
+    "bytes": 15956874,
+    "sha256": "0eae4585baf3f200c09fe24c5ab884f1889679fc75206ca1aa19da704104f0b0",
+    "md5": "dfe2ff02edb765a418a61ca047f0a33f",
+    "dataset": "NASA aging",
+    "provenance": "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/"
+  },
+  {
+    "name": "B0006.mat",
+    "url": "https://raw.githubusercontent.com/changyeon99/Battery-Data-Set/5301bd7e469dc8a1320b55719629571f2c02b6fc/B0006.mat",
+    "bytes": 16028159,
+    "sha256": "fa818ab4db5db8ab21e910b6dd6c3e20d3761bb9672089e1a4de8f96074616c5",
+    "md5": "18c199f3d807f9535f7acfc0bb066213",
+    "dataset": "NASA aging",
+    "provenance": "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/"
+  },
+  {
+    "name": "B0007.mat",
+    "url": "https://raw.githubusercontent.com/changyeon99/Battery-Data-Set/5301bd7e469dc8a1320b55719629571f2c02b6fc/B0007.mat",
+    "bytes": 16049460,
+    "sha256": "d022afa086efaf54ab5b63f05220f5be178c8027e2fa8d68589db0e85a441a3b",
+    "md5": "250310fc53241aa1bccaa0fd6c9d468d",
+    "dataset": "NASA aging",
+    "provenance": "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/"
+  },
+  {
+    "name": "LGM50_cell03.csv",
+    "url": "https://zenodo.org/records/4032561/files/LGM50_cell03.csv",
+    "bytes": 590794,
+    "sha256": "fcc13423786d6044f3ec41b1b278fb1d42ff55018666be743243f7c34b1b98cb",
+    "md5": "a09cbd8eff0af55dfe9bc8728fa89908",
+    "dataset": "Chen2020 validation",
+    "provenance": "https://doi.org/10.5281/zenodo.4032561"
+  },
+  {
+    "name": "LGM50_cell04.csv",
+    "url": "https://zenodo.org/records/4032561/files/LGM50_cell04.csv",
+    "bytes": 595967,
+    "sha256": "e1cbb60e79911824d5559f12db8e8ecdd4781d077a45f5b1ecbcf103aa271d9e",
+    "md5": "f17615476283d2e15087165697ff9d7c",
+    "dataset": "Chen2020 validation",
+    "provenance": "https://doi.org/10.5281/zenodo.4032561"
+  },
+  {
+    "name": "LGM50_cell02.csv",
+    "url": "https://zenodo.org/records/4032561/files/LGM50_cell02.csv",
+    "bytes": 597715,
+    "sha256": "650e7f9ac5217b4db158047e50b6b464100b13f4859002421114edebca629b35",
+    "md5": "0bbf959cbfc367296ec69d7a74d2f5c1",
+    "dataset": "Chen2020 validation",
+    "provenance": "https://doi.org/10.5281/zenodo.4032561"
+  }
+]
