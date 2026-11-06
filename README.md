@@ -17,6 +17,13 @@ The equipment page splits lost time into stops, slow running and rejected parts.
 It ranks stop reasons by minutes lost and lets me compare a current changeover,
 the work needed to switch products, with a proposed shorter one.
 
+Before collecting those measurements, I can check that the bench is ready. On
+**Workplace organization**, I score a 6S checklist, six areas for keeping work
+organized, consistent and safe, and record evidence and follow-up actions. I can
+compare dated audits, see which gaps repeat, and turn the measurement steps into
+a flow chart and written procedure. To try it, open that page and load the
+generated audits under **History and findings**.
+
 I also wanted to estimate equipment life without throwing away the operating hours
 from units that were still running. The Reliability page keeps those units in the
 calculation, compares possible life curves and shows how uncertain the estimates are.
@@ -46,6 +53,47 @@ the values below which a given share of observations fall. Scenario tries new nu
 against the same fitted curves; Manual lets me adjust a curve myself. Download
 reproducible report saves the analysis and its data in a PDF. Stop the app with
 Ctrl-C. Reports contain the input values, so keep private exports private.
+
+## Checking the bench and keeping the process clear
+
+I wanted a record of bench readiness alongside the measurement results. On
+**Workplace organization**, I open each of the six checklist sections: sort,
+set in order, shine, standardize, sustain and safety. I enter what I observed,
+score each check from 0 to 4, and assign an action, responsible role and due date
+for every gap. A check that does not apply needs a reason and is excluded from
+the possible points. Safety findings stay visible beside the overall score.
+
+**History and findings** compares dated audits for one area. The Pareto chart,
+bars ranked from most frequent to least frequent, shows which kinds of gaps keep
+returning. I download the JSON history, a portable text backup, before closing
+the app and restore it next time. This is session storage, so restarting the app
+without a backup loses the entered history. Old action records stay as audit
+snapshots rather than becoming a shared task tracker.
+
+Under **Process and SOP**, I edit a documented step list and choose **Generate
+flow chart and SOP**. An SOP is a standard operating procedure, the written
+instructions for doing the work consistently. The diagram and instructions come
+from the same steps, including who is responsible, what record to keep and where
+to go when a check fails. The example follows samples from receipt through bench
+preparation, calibration checks, measurement, review and a saved DistroFit analysis.
+
+The diagram generator needs Graphviz. I can also create the complete worked
+review without opening the app:
+
+```sh
+brew install graphviz
+# Ubuntu or Debian: sudo apt-get install graphviz
+python six_s_report.py --sample --out /tmp/distrofit-bench-review
+```
+
+I open `/tmp/distrofit-bench-review/index.html` in a browser to see the charts
+and SOP. The folder must be new. The three generated audits score 50%, 75% and
+91.67%, while the last audit still has two safety findings. These are example
+observations, not a measured workplace improvement or a safety certification.
+The [bench audit guide](docs/6s.md) explains the scoring, backup format, process
+routes and limitations. I can also inspect the
+[generated flow chart](examples/lean/process.svg) and
+[SOP page](examples/lean/sop.html) in the repository.
 
 ## Comparing batches with different sample sizes
 
@@ -341,12 +389,17 @@ executes the refresh and import logic in local interpreters, and builds the macr
 workbook and reusable template. Native Microsoft Excel GUI and service checks are
 manual; the [automation guide](docs/excel-automation.md) makes that boundary explicit.
 
-The full Python suite contains 328 tests. The 25 grouped-model tests run real
+The full Python suite contains 387 tests. The 25 grouped-model tests run real
 NUTS sampling with fixed seeds, recover known batch averages and noise, check
 partial pooling and predictive scores, and reject
 poor or missing convergence diagnostics. The app tests fit the generated sample
 and check that edits remove stale downloads. CI also saves a sampled comparison
 with posterior draws and diagnostic tables.
+
+The 59 bench-audit and process checks include hand-calculated scores, portable
+history, real Graphviz output, invalid routes, and the app and command-line
+workflows. CI installs Graphviz, generates the complete bench-review bundle and
+saves it as an artifact alongside the existing reports.
 
 ## Demo
 

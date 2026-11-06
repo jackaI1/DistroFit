@@ -1,0 +1,26 @@
+digraph process {
+graph [rankdir=TB, bgcolor="white", nodesep=0.45, ranksep=0.55];
+node [fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+edge [fontname="Helvetica", fontsize=11];
+_start [shape=oval, label="Start"];
+_start -> "receive";
+"receive" [shape=box, label="1. Receive and identify samples"];
+"receive" -> "prepare" [label=""];
+"prepare" [shape=box, label="2. Prepare the bench with the 6S\nchecklist"];
+"prepare" -> "calibration" [label=""];
+"calibration" [shape=diamond, label="3. Instrument and method ready?"];
+"calibration" -> "measure" [label="Yes"];
+"calibration" -> "hold" [label="No"];
+"hold" [shape=box, label="4. Hold the samples and resolve the issue"];
+"hold" -> "calibration" [label="Recheck after resolution", tailport=e, headport=e];
+"measure" [shape=box, label="5. Measure and record original values"];
+"measure" -> "review" [label=""];
+"review" [shape=diamond, label="6. Measurement log complete and valid?"];
+"review" -> "analyze" [label="Yes"];
+"review" -> "resolve" [label="No"];
+"resolve" [shape=box, label="7. Resolve missing or questionable\nreadings"];
+"resolve" -> "review" [label="Review again", tailport=e, headport=e];
+"analyze" [shape=box, label="8. Compare curves in DistroFit"];
+"analyze" -> "archive" [label=""];
+"archive" [shape=oval, label="9. Archive the reviewed result and reset\nthe bench"];
+}
