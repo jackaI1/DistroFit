@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "audits": [
+    {
+      "audit_id": "DEMO-1",
+      "area": "Measurement bench (synthetic)",
+      "date": "2026-10-07",
+      "auditor": "Example reviewer",
+      "checklist_version": 1,
+      "responses": [
+        {
+          "item_id": "sort-1",
+          "score": 2,
+          "evidence": "Synthetic inspection 1: standard partially met; follow-up needed.",
+          "action": "Restore the posted sort standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-14"
+        },
+        {
+          "item_id": "sort-2",
+          "score": 2,
+          "evidence": "Synthetic inspection 1: standard partially met; follow-up needed.",
+          "action": "Restore the posted sort standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-14"
+        },
+        {
+          "item_id": "order-1",
+          "score": 2,
+          "evidence": "Synthetic inspection 1: standard partially met; follow-up needed.",
+          "action": "Restore the posted set in order standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-14"
+        },
+        {
+          "item_id": "order-2",
+          "score": 2,
+          "evidence": "Synthetic inspection 1: standard partially met; follow-up needed.",
+          "action": "Restore the posted set in order standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-14"
+        },
+        {
+          "item_id": "shine-1",
+          "score": 2,
+          "evidence": "Synthetic inspection 1: standard partially met; follow-up needed.",
+          "action": "Restore the posted shine standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-14"
+        },
+        {
+          "item_id": "shine-2",
+          "score": 2,
+          "evidence": "Synthetic inspection 1: standard partially met; follow-up needed.",
+          "action": "Restore the posted shine standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-14"
+        },
+        {
+          "item_id": "standard-1",
+          "score": 2,
+          "evidence": "Synthetic inspection 1: standard partially met; follow-up needed.",
+          "action": "Restore the posted standardize standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-14"
+        },
+        {
+          "item_id": "standard-2",
+          "score": 2,
+          "evidence": "Synthetic inspection 1: standard partially met; follow-up needed.",
+          "action": "Restore the posted standardize standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-14"
+        },
+        {
+          "item_id": "sustain-1",
+          "score": 2,
+          "evidence": "Synthetic inspection 1: standard partially met; follow-up needed.",
+          "action": "Restore the posted sustain standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-14"
+        },
+        {
+          "item_id": "sustain-2",
+          "score": 2,
+          "evidence": "Synthetic inspection 1: standard partially met; follow-up needed.",
+          "action": "Restore the posted sustain standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-14"
+        },
+        {
+          "item_id": "safety-1",
+          "score": 2,
+          "evidence": "Synthetic inspection 1: standard partially met; follow-up needed.",
+          "action": "Restore clear access and verify required protective equipment.",
+          "owner": "Bench lead",
+          "due": "2026-10-14"
+        },
+        {
+          "item_id": "safety-2",
+          "score": 2,
+          "evidence": "Synthetic inspection 1: standard partially met; follow-up needed.",
+          "action": "Restore clear access and verify required protective equipment.",
+          "owner": "Bench lead",
+          "due": "2026-10-14"
+        }
+      ]
+    },
+    {
+      "audit_id": "DEMO-2",
+      "area": "Measurement bench (synthetic)",
+      "date": "2026-10-14",
+      "auditor": "Example reviewer",
+      "checklist_version": 1,
+      "responses": [
+        {
+          "item_id": "sort-1",
+          "score": 3,
+          "evidence": "Synthetic inspection 2: standard partially met; follow-up needed.",
+          "action": "Restore the posted sort standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-21"
+        },
+        {
+          "item_id": "sort-2",
+          "score": 3,
+          "evidence": "Synthetic inspection 2: standard partially met; follow-up needed.",
+          "action": "Restore the posted sort standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-21"
+        },
+        {
+          "item_id": "order-1",
+          "score": 3,
+          "evidence": "Synthetic inspection 2: standard partially met; follow-up needed.",
+          "action": "Restore the posted set in order standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-21"
+        },
+        {
+          "item_id": "order-2",
+          "score": 3,
+          "evidence": "Synthetic inspection 2: standard partially met; follow-up needed.",
+          "action": "Restore the posted set in order standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-21"
+        },
+        {
+          "item_id": "shine-1",
+          "score": 3,
+          "evidence": "Synthetic inspection 2: standard partially met; follow-up needed.",
+          "action": "Restore the posted shine standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-21"
+        },
+        {
+          "item_id": "shine-2",
+          "score": 3,
+          "evidence": "Synthetic inspection 2: standard partially met; follow-up needed.",
+          "action": "Restore the posted shine standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-21"
+        },
+        {
+          "item_id": "standard-1",
+          "score": 3,
+          "evidence": "Synthetic inspection 2: standard partially met; follow-up needed.",
+          "action": "Restore the posted standardize standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-21"
+        },
+        {
+          "item_id": "standard-2",
+          "score": 3,
+          "evidence": "Synthetic inspection 2: standard partially met; follow-up needed.",
+          "action": "Restore the posted standardize standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-21"
+        },
+        {
+          "item_id": "sustain-1",
+          "score": 3,
+          "evidence": "Synthetic inspection 2: standard partially met; follow-up needed.",
+          "action": "Restore the posted sustain standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-21"
+        },
+        {
+          "item_id": "sustain-2",
+          "score": 3,
+          "evidence": "Synthetic inspection 2: standard partially met; follow-up needed.",
+          "action": "Restore the posted sustain standard and verify at the next audit.",
+          "owner": "Bench lead",
+          "due": "2026-10-21"
+        },
+        {
+          "item_id": "safety-1",
+          "score": 3,
+          "evidence": "Synthetic inspection 2: standard partially met; follow-up needed.",
+          "action": "Restore clear access and verify required protective equipment.",
+          "owner": "Bench lead",
+          "due": "2026-10-21"
+        },
+        {
+          "item_id": "safety-2",
+          "score": 3,
+          "evidence": "Synthetic inspection 2: standard partially met; follow-up needed.",
+          "action": "Restore clear access and verify required protective equipment.",
+          "owner": "Bench lead",
+          "due": "2026-10-21"
+        }
+      ]
+    },
+    {
+      "audit_id": "DEMO-3",
+      "area": "Measurement bench (synthetic)",
+      "date": "2026-10-21",
+      "auditor": "Example reviewer",
+      "checklist_version": 1,
+      "responses": [
+        {
+          "item_id": "sort-1",
+          "score": 4,
+          "evidence": "Synthetic inspection 3: standard observed in full.",
+          "action": "",
+          "owner": "",
+          "due": ""
+        },
+        {
+          "item_id": "sort-2",
+          "score": 4,
+          "evidence": "Synthetic inspection 3: standard observed in full.",
+          "action": "",
+          "owner": "",
+          "due": ""
+        },
+        {
+          "item_id": "order-1",
+          "score": 4,
+          "evidence": "Synthetic inspection 3: standard observed in full.",
+          "action": "",
+          "owner": "",
+          "due": ""
+        },
+        {
+          "item_id": "order-2",
+          "score": 4,
+          "evidence": "Synthetic inspection 3: standard observed in full.",
+          "action": "",
+          "owner": "",
+          "due": ""
+        },
+        {
+          "item_id": "shine-1",
+          "score": 4,
+          "evidence": "Synthetic inspection 3: standard observed in full.",
+          "action": "",
+          "owner": "",
+          "due": ""
+        },
+        {
+          "item_id": "shine-2",
+          "score": 4,
+          "evidence": "Synthetic inspection 3: standard observed in full.",
+          "action": "",
+          "owner": "",
+          "due": ""
+        },
+        {
+          "item_id": "standard-1",
+          "score": 4,
+          "evidence": "Synthetic inspection 3: standard observed in full.",
+          "action": "",
+          "owner": "",
+          "due": ""
+        },
+        {
+          "item_id": "standard-2",
+          "score": 4,
+          "evidence": "Synthetic inspection 3: standard observed in full.",
+          "action": "",
+          "owner": "",
+          "due": ""
+        },
+        {
+          "item_id": "sustain-1",
+          "score": 4,
+          "evidence": "Synthetic inspection 3: standard observed in full.",
+          "action": "",
+          "owner": "",
+          "due": ""
+        },
+        {
+          "item_id": "sustain-2",
+          "score": 4,
+          "evidence": "Synthetic inspection 3: standard observed in full.",
+          "action": "",
+          "owner": "",
+          "due": ""
+        },
+        {
+          "item_id": "safety-1",
+          "score": 2,
+          "evidence": "Synthetic inspection 3: standard partially met; follow-up needed.",
+          "action": "Restore clear access and verify required protective equipment.",
+          "owner": "Bench lead",
+          "due": "2026-10-28"
+        },
+        {
+          "item_id": "safety-2",
+          "score": 2,
+          "evidence": "Synthetic inspection 3: standard partially met; follow-up needed.",
+          "action": "Restore clear access and verify required protective equipment.",
+          "owner": "Bench lead",
+          "due": "2026-10-28"
+        }
+      ]
+    }
+  ]
+}
