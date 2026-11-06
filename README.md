@@ -54,6 +54,41 @@ against the same fitted curves; Manual lets me adjust a curve myself. Download
 reproducible report saves the analysis and its data in a PDF. Stop the app with
 Ctrl-C. Reports contain the input values, so keep private exports private.
 
+## Improving a production process
+
+I use the DMAIC board to organize a production problem from definition through
+measurement, analysis, improvement and control. The worked example looks at fill
+volume, defects and stopped time. It shows whether readings fall outside the
+specification, ranks the reasons for defects and downtime, and keeps a five-why
+investigation and actions beside each category. The example is invented, so its
+causes and improvements still need to be checked in a real process.
+
+```sh
+python dmaic.py --input examples/dmaic/production.json --out /tmp/dmaic-board.html
+```
+
+Open the resulting page in a browser and print it in landscape to make a one-page
+board. Edit a copy of the JSON input to use another process. Cp compares the
+allowed range to process variation; Cpk also accounts for an off-centre average.
+The chart uses the first 12 readings as its reference period. Investigate signals
+and check that the process is stable and approximately normal before relying on
+capability as a prediction. The [guide](docs/dmaic.md) explains the inputs and
+limitations.
+
+I also keep an example grease-trap inspection and change-review register. It
+stores inspections in SQLite, a local database, exports open notices to Excel,
+and tracks a process drawing so a changed file flags its reviewed nodes for
+another look. The drawing opens in draw.io, a free diagram editor. Try it with:
+
+```sh
+python process_safety.py sample --db /tmp/grease-trap.db
+python process_safety.py notices --db /tmp/grease-trap.db --out /tmp/notices.xlsx
+python process_safety.py changes --db /tmp/grease-trap.db
+```
+
+Use a new database path for each sample. The [process safety guide](docs/process-safety.md)
+explains the example hazard review, change tracking and practical limits.
+
 ## Checking the bench and keeping the process clear
 
 I wanted a record of bench readiness alongside the measurement results. On
