@@ -1,0 +1,185 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "anomalies_metrics",
+  "position": {
+    "x": 24,
+    "y": 24,
+    "z": 0,
+    "width": 1100,
+    "height": 160,
+    "tabOrder": 24.0024
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "metrics"
+                    }
+                  },
+                  "Property": "event_type"
+                }
+              },
+              "queryRef": "metrics.event_type",
+              "nativeQueryRef": "event_type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "metrics"
+                    }
+                  },
+                  "Property": "method"
+                }
+              },
+              "queryRef": "metrics.method",
+              "nativeQueryRef": "method"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "metrics"
+                    }
+                  },
+                  "Property": "evaluated"
+                }
+              },
+              "queryRef": "metrics.evaluated",
+              "nativeQueryRef": "evaluated"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "metrics"
+                    }
+                  },
+                  "Property": "flagged"
+                }
+              },
+              "queryRef": "metrics.flagged",
+              "nativeQueryRef": "flagged"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "metrics"
+                    }
+                  },
+                  "Property": "tp"
+                }
+              },
+              "queryRef": "metrics.tp",
+              "nativeQueryRef": "tp"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "metrics"
+                    }
+                  },
+                  "Property": "fp"
+                }
+              },
+              "queryRef": "metrics.fp",
+              "nativeQueryRef": "fp"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "metrics"
+                    }
+                  },
+                  "Property": "tn"
+                }
+              },
+              "queryRef": "metrics.tn",
+              "nativeQueryRef": "tn"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "metrics"
+                    }
+                  },
+                  "Property": "fn"
+                }
+              },
+              "queryRef": "metrics.fn",
+              "nativeQueryRef": "fn"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "metrics"
+                    }
+                  },
+                  "Property": "precision"
+                }
+              },
+              "queryRef": "metrics.precision",
+              "nativeQueryRef": "precision"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "metrics"
+                    }
+                  },
+                  "Property": "recall"
+                }
+              },
+              "queryRef": "metrics.recall",
+              "nativeQueryRef": "recall"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Held-out results: accuracy needs known fault labels'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

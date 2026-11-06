@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "anomalies_kind",
+  "position": {
+    "x": 1150,
+    "y": 24,
+    "z": 0,
+    "width": 265,
+    "height": 150,
+    "tabOrder": 24.115
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "events"
+                    }
+                  },
+                  "Property": "event_type"
+                }
+              },
+              "queryRef": "events.event_type",
+              "nativeQueryRef": "event_type"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Choose event type'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

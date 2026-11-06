@@ -1,0 +1,5 @@
+event_type,method,evaluated,flagged,tp,fp,tn,fn,precision,recall
+cycle,iforest,300,10,10,0,285,5,1.0,0.6666666666666666
+cycle,robust,300,15,15,0,285,0,1.0,1.0
+downtime,iforest,300,18,11,7,282,0,0.6111111111111112,1.0
+downtime,robust,300,11,11,0,289,0,1.0,1.0

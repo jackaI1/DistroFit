@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Production anomaly analysis additions
+
+The duration detector adds scikit-learn 1.9.1 and joblib 1.6.0 under BSD-3-Clause
+terms. Unmodified upstream license files, including the scikit-learn wheel's
+bundled native components, are retained in
+[scikit-learn](THIRD_PARTY_LICENSES/scikit-learn/) and
+[joblib](THIRD_PARTY_LICENSES/joblib/). NumPy, SciPy and threadpoolctl were already
+part of the pinned runtime. The dependency pins are recorded in the runtime lock.
+
 ## Excel review additions
 
 The Excel exporter adds XlsxWriter 3.2.9 (BSD-2-Clause). Workbook tests add

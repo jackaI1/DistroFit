@@ -1,0 +1,185 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "anomalies_events",
+  "position": {
+    "x": 24,
+    "y": 200,
+    "z": 0,
+    "width": 1100,
+    "height": 440,
+    "tabOrder": 200.0024
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "events"
+                    }
+                  },
+                  "Property": "event_id"
+                }
+              },
+              "queryRef": "events.event_id",
+              "nativeQueryRef": "event_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "events"
+                    }
+                  },
+                  "Property": "timestamp"
+                }
+              },
+              "queryRef": "events.timestamp",
+              "nativeQueryRef": "timestamp"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "events"
+                    }
+                  },
+                  "Property": "event_type"
+                }
+              },
+              "queryRef": "events.event_type",
+              "nativeQueryRef": "event_type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "events"
+                    }
+                  },
+                  "Property": "duration_seconds"
+                }
+              },
+              "queryRef": "events.duration_seconds",
+              "nativeQueryRef": "duration_seconds"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "events"
+                    }
+                  },
+                  "Property": "evaluated"
+                }
+              },
+              "queryRef": "events.evaluated",
+              "nativeQueryRef": "evaluated"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "events"
+                    }
+                  },
+                  "Property": "fold"
+                }
+              },
+              "queryRef": "events.fold",
+              "nativeQueryRef": "fold"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "events"
+                    }
+                  },
+                  "Property": "iforest_flag"
+                }
+              },
+              "queryRef": "events.iforest_flag",
+              "nativeQueryRef": "iforest_flag"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "events"
+                    }
+                  },
+                  "Property": "robust_flag"
+                }
+              },
+              "queryRef": "events.robust_flag",
+              "nativeQueryRef": "robust_flag"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "events"
+                    }
+                  },
+                  "Property": "iforest_score"
+                }
+              },
+              "queryRef": "events.iforest_score",
+              "nativeQueryRef": "iforest_score"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "events"
+                    }
+                  },
+                  "Property": "robust_score"
+                }
+              },
+              "queryRef": "events.robust_score",
+              "nativeQueryRef": "robust_score"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Event flags: blank means reference only'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

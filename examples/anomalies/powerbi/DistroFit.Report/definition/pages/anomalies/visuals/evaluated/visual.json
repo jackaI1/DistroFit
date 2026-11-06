@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "anomalies_evaluated",
+  "position": {
+    "x": 1150,
+    "y": 540,
+    "z": 0,
+    "width": 265,
+    "height": 150,
+    "tabOrder": 540.115
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "events"
+                    }
+                  },
+                  "Property": "evaluated"
+                }
+              },
+              "queryRef": "events.evaluated",
+              "nativeQueryRef": "evaluated"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Evaluated: False selects warm-up'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

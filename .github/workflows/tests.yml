@@ -26,6 +26,13 @@ jobs:
           name: synthetic-bench-audit-and-process
           path: ${{ runner.temp }}/distrofit-bench-review/
           retention-days: 7
+      - name: Compare production anomaly detectors on seeded faults
+        run: python anomaly_report.py --sample --out "$RUNNER_TEMP/distrofit-anomalies"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-production-anomalies
+          path: ${{ runner.temp }}/distrofit-anomalies/
+          retention-days: 7
       - name: Run and verify a saved comparison
         run: |
           python compare_distributions.py fit --sample --out "$RUNNER_TEMP/distrofit-comparison"

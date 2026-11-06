@@ -30,6 +30,9 @@ jobs:
       - name: Open the committed report, execute native DAX and capture the pages
         shell: pwsh
         run: ./powerbi/desktop_smoke.ps1
+      - name: Open the anomaly report and verify flagged event counts in native DAX
+        shell: pwsh
+        run: ./powerbi/desktop_smoke.ps1 -Root examples/anomalies/powerbi -Output native-evidence/anomalies -PageNames @('Production anomalies')
       - uses: actions/upload-artifact@v4
         if: always()
         with:

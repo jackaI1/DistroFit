@@ -32,7 +32,7 @@ foreach (var table in committed.Model.Tables)
         if (loaded.Measures[measure.Name].Expression.Trim() != measure.Expression.Trim())
             throw new Exception("Desktop measure differs: " + measure.Name);
 }
-if (db.Model.Relationships.Count != 3) throw new Exception("Desktop relationships differ");
+if (db.Model.Relationships.Count != committed.Model.Relationships.Count) throw new Exception("Desktop relationships differ");
 db.Model.RequestRefresh(RefreshType.Full);
 db.Model.SaveChanges();
 using var connection = new AdomdConnection($"Data Source=localhost:{port};Initial Catalog={db.Name}");
