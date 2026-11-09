@@ -65,6 +65,39 @@ against the same fitted curves; Manual lets me adjust a curve myself. Download
 reproducible report saves the analysis and its data in a PDF. Stop the app with
 Ctrl-C. Reports contain the input values, so keep private exports private.
 
+## Comparing daily price changes
+
+I wanted to learn how daily price changes behave under the same curve checks.
+I added an importer using Bloomberg's Python SDK, the library for requesting
+Bloomberg data. It turns closing prices into returns, the fractional change
+from one available trading date to the next. A return of `0.01` means 1%.
+I can try it without an account using invented prices:
+
+```sh
+python -m pip install --index-url https://blpapi.bloomberg.com/repository/releases/python/simple -r requirements-bloomberg.txt
+python bloomberg_history.py --sample --compare --out .runtime/price-example
+```
+
+After the normal installation above, these commands save 40 synthetic prices,
+39 returns and a comparison in `.runtime/price-example/metadata.json`.
+In the app, I choose **Upload CSV**, select that folder's `returns.csv` and
+use `simple_return` as the target column. The folder also keeps dated prices,
+dated returns and the request settings so I can trace each number.
+Each export needs a new folder to protect saved results.
+
+For this time-ordered input, `--compare` fits Normal and Student's t curves to
+the earlier 29 returns and checks the later 10. Student's t allows heavier tails,
+meaning unusually large changes can be more likely than under a Normal curve.
+The app's ordinary Auto-Fit uses a random split, so I use the saved chronological
+comparison when I want to preserve time order. Neither result is a price forecast.
+
+The sample builds real requests and response messages with Bloomberg's SDK test
+facilities; its connection is simulated and every price is invented. I have not
+used a licensed Bloomberg Terminal or verified live market-data access.
+The separate `--live` command is implemented for an authorised Desktop API
+session. The [price-history guide](docs/bloomberg.md) explains setup, error handling,
+adjustments and why licensed exports should stay private.
+
 ## Reviewing battery fade and heating
 
 I wanted to try the measurement checks on public battery experiments and learn
@@ -532,6 +565,12 @@ Battery checks cover synthetic fault injection, public-file parsing, checksum
 rejection, unit checks and real DFN charge/energy conservation tests. Battery CI
 reruns the measured-data calibration and held-out study, checks error and coverage
 limits, and saves the offline dashboard. See the [battery guide](docs/battery.md).
+
+The Bloomberg history job installs the real native SDK and runs 33 importer
+checks plus the 16 existing analysis checks. They cover real request construction,
+partial messages, missing prices, provider errors, timeouts, session cleanup,
+protected exports and chronological fitting. CI saves the synthetic example;
+no licensed prices or credentials are published.
 
 ## Demo
 

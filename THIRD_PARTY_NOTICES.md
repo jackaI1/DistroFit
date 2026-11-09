@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Optional Bloomberg history importer
+
+The optional `blpapi` 3.26.9.1 SDK is installed from Bloomberg's own package
+index and is not vendored in this repository. Its Python and bundled native
+components carry their own terms in the installed wheel's `blpapi-3.26.9.1.dist-info/licenses/` directory. The project MIT licence does
+not replace those terms or grant Bloomberg data access. The synthetic schema
+and transport are project-owned fixtures. See [the guide](docs/bloomberg.md)
+for the upstream API references and the live-access boundary.
+
 ## Production anomaly analysis additions
 
 The duration detector adds scikit-learn 1.9.1 and joblib 1.6.0 under BSD-3-Clause

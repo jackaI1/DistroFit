@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Minimal historical-service schema for synthetic SDK tests, not a server schema export. -->
+<ServiceDefinition name="blp.refdata" version="1.0.0.0">
+  <service name="//blp/refdata" version="1.0.0.0">
+    <operation name="HistoricalDataRequest">
+      <request>HistoryRequest</request><response>HistoryResponse</response>
+      <responseSelection>HistoricalDataResponse</responseSelection>
+    </operation>
+  </service>
+  <schema>
+    <sequenceType name="HistoryRequest">
+      <element name="securities" type="String" maxOccurs="unbounded"/>
+      <element name="fields" type="String" maxOccurs="unbounded"/>
+      <element name="startDate" type="String"/>
+      <element name="endDate" type="String"/>
+      <element name="periodicitySelection" type="String"/>
+      <element name="nonTradingDayFillOption" type="String"/>
+      <element name="adjustmentNormal" type="Boolean"/>
+      <element name="adjustmentAbnormal" type="Boolean"/>
+      <element name="adjustmentSplit" type="Boolean"/>
+    </sequenceType>
+    <choiceType name="HistoryResponse">
+      <element name="HistoricalDataResponse" type="HistoryBody"/>
+    </choiceType>
+    <sequenceType name="HistoryBody">
+      <element name="responseError" type="Error" minOccurs="0"/>
+      <element name="securityData" type="SecurityData" minOccurs="0"/>
+    </sequenceType>
+    <sequenceType name="SecurityData">
+      <element name="security" type="String"/>
+      <element name="securityError" type="Error" minOccurs="0"/>
+      <element name="fieldExceptions" type="FieldError" minOccurs="0" maxOccurs="unbounded"/>
+      <element name="fieldData" type="Price" minOccurs="0" maxOccurs="unbounded"/>
+    </sequenceType>
+    <sequenceType name="Price">
+      <element name="date" type="Date" minOccurs="0"/>
+      <element name="PX_LAST" type="Float64" minOccurs="0"/>
+    </sequenceType>
+    <sequenceType name="FieldError">
+      <element name="fieldId" type="String"/><element name="errorInfo" type="Error"/>
+    </sequenceType>
+    <sequenceType name="Error">
+      <element name="category" type="String"/><element name="message" type="String"/>
+    </sequenceType>
+  </schema>
+</ServiceDefinition>
