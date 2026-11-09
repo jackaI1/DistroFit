@@ -1,0 +1,30 @@
+name: Bloomberg history
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  native-sdk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install analysis dependencies
+        run: python -m pip install -r requirements.txt -r requirements-dev.txt
+      - name: Install native Bloomberg SDK from its publisher
+        run: python -m pip install --index-url https://blpapi.bloomberg.com/repository/releases/python/simple -r requirements-bloomberg.txt
+      - name: Require the SDK and exercise real native messages
+        run: |
+          python -c 'import blpapi; print(blpapi.version())'
+          python -m pytest -q tests/test_bloomberg_history.py tests/test_analysis.py
+      - name: Export and compare the labelled synthetic history
+        run: python bloomberg_history.py --sample --compare --out "$RUNNER_TEMP/bloomberg-history"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-bloomberg-sdk-history
+          path: ${{ runner.temp }}/bloomberg-history/
+          retention-days: 7

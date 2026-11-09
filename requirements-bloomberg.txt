@@ -1,0 +1,3 @@
+# Optional Bloomberg SDK. Install separately from Bloomberg's own package index:
+# python -m pip install --index-url https://blpapi.bloomberg.com/repository/releases/python/simple -r requirements-bloomberg.txt
+blpapi==3.26.9.1
