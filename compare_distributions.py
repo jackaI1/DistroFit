@@ -13,7 +13,7 @@ from scipy import stats
 
 from analysis import (create_report, evaluate_scenario, fit_candidates,
                       get_supported_distributions, manual_curve, read_csv,
-                      report_payload, score_values, tail_check)
+                      report_payload, reservoir_sample_column, score_values, tail_check)
 
 
 FORMAT = "distrofit-comparison-v1"
@@ -49,7 +49,7 @@ def sample_data():
 
 
 def build_comparison(values, candidates=DEFAULT_CANDIDATES, *, scenario=None,
-                     seed=42, held_out_fraction=.25, bins=30):
+                     seed=42, held_out_fraction=.25, bins=30, sampling=None):
     data = _values(values, minimum=8)
     if not candidates or any(name not in get_supported_distributions() for name in candidates):
         raise ValueError("Choose supported distribution names.")
@@ -62,7 +62,8 @@ def build_comparison(values, candidates=DEFAULT_CANDIDATES, *, scenario=None,
                          validation_fraction=held_out_fraction, seed=seed)
     if not any(np.isfinite(row["Held-out NLL"]) for row in fit["results"]):
         raise ValueError("No candidate has a finite held-out score. Change the candidates or inspect the data.")
-    payload = report_payload(fit, data, {"outlier_method": "None"}, scenario=scenario_data)
+    settings = {"outlier_method": "None", **({"sampling": sampling} if sampling else {})}
+    payload = report_payload(fit, data, settings, scenario=scenario_data)
     return {"format": FORMAT, "analysis": payload}
 
 
@@ -239,13 +240,18 @@ def main(argv=None):
     create.add_argument("--seed", type=int, default=42)
     create.add_argument("--held-out-fraction", type=float, default=.25)
     create.add_argument("--bins", type=int, default=30)
+    create.add_argument("--sample-size", type=int, dest="sample_size",
+                        help="Stream --input in chunks and keep this many random rows (for files too large to load)")
     create.add_argument("--out", type=Path, required=True, help="New output directory")
     check = commands.add_parser("verify", help="Check a bundle's files and recompute frozen-model scores")
     check.add_argument("directory", type=Path)
     args = parser.parse_args(argv)
     try:
         if args.command == "fit":
+            sampling = None
             if args.sample:
+                if args.sample_size is not None:
+                    raise ValueError("--sample-size applies to --input files only.")
                 if args.column or args.scenario or args.scenario_column:
                     raise ValueError("--sample includes its own measurements and scenario; do not add column or scenario options.")
                 values, scenario = sample_data()
@@ -254,12 +260,22 @@ def main(argv=None):
                     raise ValueError("--input requires --column.")
                 if args.scenario_column and not args.scenario:
                     raise ValueError("--scenario-column requires --scenario.")
-                values = load_column(args.input, args.column)
+                if args.sample_size is None:
+                    values = load_column(args.input, args.column)
+                else:
+                    streamed = reservoir_sample_column(args.input, args.column, args.sample_size, seed=args.seed)
+                    values = streamed["values"]
+                    sampling = {"method": "uniform random rows, streamed in chunks (reservoir sampling)",
+                                "column": streamed["column"], "rows_scanned": streamed["rows_scanned"],
+                                "rows_skipped": streamed["rows_skipped"], "chunks": streamed["chunks"],
+                                "chunksize": streamed["chunksize"], "sample_size": streamed["sample_size"],
+                                "seed": streamed["seed"]}
                 scenario = None if args.scenario is None else load_column(
                     args.scenario, args.scenario_column or args.column)
             comparison = build_comparison(values, args.candidate or DEFAULT_CANDIDATES,
                                           scenario=scenario, seed=args.seed,
-                                          held_out_fraction=args.held_out_fraction, bins=args.bins)
+                                          held_out_fraction=args.held_out_fraction, bins=args.bins,
+                                          sampling=sampling)
             write_bundle(comparison, args.out)
             summary = verify_bundle(args.out)
             print(f"Saved and checked {args.out}")

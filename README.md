@@ -645,6 +645,41 @@ formulas are checked against scipy in every CI run. `tests/test_gpu_bootstrap.py
 fallback, the error for a missing GPU, the repeatability of seeded results and the benchmark
 report. GitHub's hosted runners have no GPU, so CI runs the CPU tests and a small CPU benchmark.
 
+## Fitting a CSV too big to load at once
+
+I built a streaming sampler because the upload path reads a whole CSV into memory before
+anything happens. That is fine for a few thousand rows, but a long export with millions of
+rows is slow to load and uses a lot of memory on my laptop. I wanted DistroFit to fit a
+column from a file like that without holding every row at once.
+
+The command reads the file in chunks of 100,000 rows. For each row with a number in the
+chosen column, it draws a random number and keeps only the rows with the smallest numbers
+seen so far. That keeps a uniform random sample of the size I ask for, so every row has the
+same chance of being kept, and the memory use stays about the same whether the file has
+thousands of rows or millions. Blank cells, text and infinite values are skipped and counted.
+The saved report records how many rows were scanned, how many were skipped, the chunk size,
+the sample size and the seed, so the sample can be explained later.
+
+To fit a random 5,000-row sample from a large file:
+
+```sh
+python compare_distributions.py fit --input measurements.csv --column Gamma_Measurement \
+  --sample-size 5000 --out .runtime/large-fit
+python compare_distributions.py verify .runtime/large-fit
+```
+
+The file needs a header row with the column name. To make a test file of two million rows:
+
+```sh
+python tools/make_large_csv.py --rows 2000000 --out .runtime/large/measurements.csv
+```
+
+The fit then works on the sample, not the whole file. The winner can differ from a fit of
+every row, and the report says so through its sample settings. `tests/test_large_csv.py`
+checks that every sampled value matches its source row, that the same seed repeats the
+sample, that the chunk size does not change it, and that the command line writes the sampling
+record. CI generates a two-million-row file on each run and fits a 5,000-row sample from it.
+
 ## Notes and tests
 
 [How the analysis works](docs/analysis.md) explains the split, scoring, tail checks

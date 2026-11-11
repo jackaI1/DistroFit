@@ -77,6 +77,16 @@ jobs:
           name: bootstrap-backend-benchmark
           path: ${{ runner.temp }}/distrofit-bootstrap-bench/
           retention-days: 7
+      - name: Stream a 2-million-row CSV and fit a 5,000-row random sample
+        run: |
+          python tools/make_large_csv.py --rows 2000000 --out "$RUNNER_TEMP/large-csv/measurements.csv"
+          python compare_distributions.py fit --input "$RUNNER_TEMP/large-csv/measurements.csv" --column Gamma_Measurement --sample-size 5000 --out "$RUNNER_TEMP/distrofit-large-csv"
+          python compare_distributions.py verify "$RUNNER_TEMP/distrofit-large-csv"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: streamed-large-csv-fit
+          path: ${{ runner.temp }}/distrofit-large-csv/
+          retention-days: 7
   notebooks:
     runs-on: ubuntu-latest
     steps:

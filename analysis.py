@@ -35,6 +35,63 @@ def read_csv(source, *, skip_blank_lines=True):
     return df
 
 
+def _cell_to_float(cell):
+    try:
+        return float(cell)
+    except (TypeError, ValueError):
+        return float("nan")
+
+
+def reservoir_sample_column(path, column, sample_size, *, seed=42, chunksize=100_000):
+    """Keep a uniform random sample of one CSV column without loading the whole file.
+
+    The file is streamed in chunks of ``chunksize`` rows. Each finite numeric row gets an
+    independent uniform random key, and only the ``sample_size`` smallest keys are kept, so
+    memory use stays near ``sample_size + chunksize`` rows however long the file is. Every
+    row is equally likely to be kept. Rows whose value is blank, text or infinite are counted
+    as skipped. The returned values keep their original file order.
+    """
+    if isinstance(sample_size, bool) or not isinstance(sample_size, int) or sample_size < 1:
+        raise ValueError("Sample size must be a positive whole number.")
+    if isinstance(chunksize, bool) or not isinstance(chunksize, int) or chunksize < 1:
+        raise ValueError("Chunk size must be a positive whole number.")
+    header = pd.read_csv(path, nrows=0, encoding="utf-8-sig").columns
+    if column not in header:
+        raise ValueError("The requested column is missing from the CSV header.")
+    rng = np.random.default_rng(seed)
+    keys = np.empty(0)
+    values = np.empty(0)
+    row_numbers = np.empty(0, dtype=np.int64)
+    scanned = skipped = chunks = 0
+    reader = pd.read_csv(path, usecols=[column], chunksize=chunksize, encoding="utf-8-sig",
+                         float_precision="round_trip")
+    for chunk in reader:
+        chunks += 1
+        cells = chunk[column]
+        if not pd.api.types.is_numeric_dtype(cells):
+            # A text cell makes the whole chunk strings; Python's float() keeps every digit.
+            numbers = np.array([_cell_to_float(cell) for cell in cells], dtype=float)
+        else:
+            numbers = cells.to_numpy(dtype=float)
+        good = np.isfinite(numbers)
+        ids = scanned + np.flatnonzero(good)
+        scanned += len(numbers)
+        skipped += int(len(numbers) - np.count_nonzero(good))
+        keys = np.concatenate([keys, rng.random(np.count_nonzero(good))])
+        values = np.concatenate([values, numbers[good]])
+        row_numbers = np.concatenate([row_numbers, ids])
+        if len(keys) > sample_size:
+            # Keep the smallest keys: an unbiased uniform subset of all rows seen so far.
+            keep = np.argpartition(keys, sample_size - 1)[:sample_size]
+            keys, values, row_numbers = keys[keep], values[keep], row_numbers[keep]
+    if len(values) == 0:
+        raise ValueError("The selected column has no finite numeric observations.")
+    order = np.argsort(row_numbers)
+    return {"values": values[order], "row_numbers": row_numbers[order], "column": column,
+            "rows_scanned": scanned, "rows_skipped": skipped, "chunks": chunks,
+            "sample_size": int(min(sample_size, len(values))), "seed": seed, "chunksize": chunksize}
+
+
 def prepare_data(values, method="None", threshold=3.):
     data = np.asarray(values, dtype=float)
     clean = data[np.isfinite(data)]
