@@ -11,3 +11,4 @@ XlsxWriter==3.2.9
 pymc==5.28.5
 arviz==0.23.4
 scikit-learn==1.9.1
+statsmodels==0.15.0

@@ -556,6 +556,94 @@ Continuous integration (CI) runs the notebook headlessly with `nbmake` in a sepa
 and the tests in `tests/test_failure_modes.py` in the main job. The full method, limits and
 how each choice was made are in [the notebook guide](docs/failure-modes.md).
 
+## Testing changeover options with designed experiments
+
+I built a planner for designed experiments because I want to compare changeover options
+without guessing which change made the difference. A changeover is the time it takes to
+switch a line from one product to the next. I can change the crew size, how long the
+tooling takes to set up and whether the kit is pre-staged. Changing one thing at a time
+misses cases where two changes work better together, such as a bigger crew helping only
+when the tooling is slow.
+
+A designed experiment changes several factors at once in a fixed pattern. Each factor has
+a low and a high setting, and the runs cover combinations of them. The run order is shuffled
+with a fixed seed, so the order looks random but I can reproduce it. Centre points are runs
+halfway between the settings. If they come out differently from the other runs, the response
+bends and a straight-line model is not enough.
+
+After I run the trials and type in the measured minutes, DistroFit reports each factor and
+each pair of factors. For every one it gives the effect, which is how many minutes the change
+from low to high moves the changeover, a 95% interval and a p-value from an ANOVA test.
+A p-value below 0.05 means the effect is unlikely to be noise. Two charts show the results:
+a half-normal plot, where noise falls along a line through zero, and a Pareto chart that
+ranks the effects by size.
+
+To plan and analyse a study:
+
+```sh
+python -m pip install -r requirements.txt
+python doe.py plan --factor crew_size=2:4 --factor tooling_minutes=5:15 \
+  --factor kit=0:1 --factor fixture=0:1 --fraction fixture=ABC \
+  --centre 4 --replicates 2 --out .runtime/changeover-plan
+python doe.py analyse --plan .runtime/changeover-plan --out .runtime/changeover-report
+```
+
+The plan step writes `run_sheet.csv` in random order. I run the trials in that order, type
+the minutes into the `response` column and run the analysis. To see a complete example
+without any shop data, run `python doe.py --sample --out .runtime/doe-sample`. It simulates
+a changeover study with effects I set in advance and fits it.
+
+In that simulated study, the tooling setup time moves the changeover by **12.6 minutes**
+(the built-in value was 12), the kit by **-10.2** and the crew size by **-7.8**. The fixture
+came out at **3.0 minutes** against a built-in 4.0. The interval does not include 4, so
+that is noise from the simulated readings, not a model failure, and it shows why I want more
+replicates before I trust a small effect. The crew-and-tooling interaction is **2.8 minutes**,
+but it shares its estimate with the kit-and-fixture interaction, so the table cannot say which
+one produced it.
+
+The technical side: `doe.py` builds the designs with coded values of -1, 0 and +1. A fractional
+design such as `fixture=ABC` uses fewer runs, and the fit reports which effects share an
+estimate in an `aliased_with` column. The least-squares fit is done with statsmodels, and
+each ANOVA p-value comes from the sum of squares of its term. The tests in `tests/test_doe.py`
+recover known effects exactly from noise-free data, recover them within tolerance from noisy
+replicated data, check the sums of squares against the drop in residual error and check the
+command line. The full method, the saved numbers and the limits are in
+[the design-of-experiments guide](docs/doe.md).
+
+## Faster bootstrap intervals on a GPU
+
+I built an optional GPU path because bootstrap intervals are slow when I want them for all 14
+of my candidate curves at once. A bootstrap interval comes from drawing many resamples, which
+are new samples of the same size taken from my data with replacement, and seeing how much a
+score moves across them. With 1,000 resamples and 14 curves, that is 14,000 full-sample
+likelihood calculations. The likelihood is a score for how well a curve explains the data.
+
+The CPU path is the default and works on any computer. When a CUDA graphics card is present
+and I install the optional GPU requirements, the same calculation runs as a custom CUDA kernel
+through CuPy, which evaluates all resamples in parallel. If no GPU is found, DistroFit falls
+back to the CPU without asking me.
+
+The intervals describe how much each curve's score moves with the resampled data. The curves
+are fitted once on the full sample and their parameters are not refitted for each resample, so
+the intervals do not show how much the parameters themselves would move. The
+[GPU guide](docs/gpu-bootstrap.md) explains that limit.
+
+On this Mac's CPU, a full run over 1,000 resamples took **0.04 s** for 200 values, **0.19 s**
+for 1,000 values and **0.94 s** for 5,000 values. I have not yet run the GPU path on a GPU, and
+the GPU-to-CPU agreement test is skipped on machines without one. To benchmark on a machine
+with an NVIDIA card:
+
+```sh
+python -m pip install -r requirements.txt -r requirements-gpu.txt
+python bench_bootstrap.py --sizes 200 1000 5000 --resamples 1000 --out .runtime/bench
+```
+
+Technically, `gpu_bootstrap.py` holds the closed-form log-densities for all 14 families in a
+CUDA kernel, and `standard_logpdf_reference` in the same file mirrors them in NumPy so the
+formulas are checked against scipy in every CI run. `tests/test_gpu_bootstrap.py` covers the
+fallback, the error for a missing GPU, the repeatability of seeded results and the benchmark
+report. GitHub's hosted runners have no GPU, so CI runs the CPU tests and a small CPU benchmark.
+
 ## Notes and tests
 
 [How the analysis works](docs/analysis.md) explains the split, scoring, tail checks

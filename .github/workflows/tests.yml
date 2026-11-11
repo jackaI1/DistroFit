@@ -63,6 +63,20 @@ jobs:
           name: synthetic-grouped-bayesian-analysis
           path: ${{ runner.temp }}/distrofit-grouped/
           retention-days: 7
+      - name: Plan, simulate and analyse a fractional factorial changeover study
+        run: python doe.py --sample --out "$RUNNER_TEMP/distrofit-doe"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-changeover-doe
+          path: ${{ runner.temp }}/distrofit-doe/
+          retention-days: 7
+      - name: Benchmark the bootstrap likelihood backend (CPU only on hosted runners)
+        run: python bench_bootstrap.py --sizes 200 1000 --resamples 200 --repeats 1 --out "$RUNNER_TEMP/distrofit-bootstrap-bench"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bootstrap-backend-benchmark
+          path: ${{ runner.temp }}/distrofit-bootstrap-bench/
+          retention-days: 7
   notebooks:
     runs-on: ubuntu-latest
     steps:

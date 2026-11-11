@@ -1,0 +1,4 @@
+# Optional: CUDA backend for gpu_bootstrap.py (needs an NVIDIA GPU and a CUDA 12 driver).
+# Install with: python -m pip install -r requirements.txt -r requirements-gpu.txt
+# CI does not install this file, because GitHub's standard runners have no GPU.
+cupy-cuda12x==14.2.0
