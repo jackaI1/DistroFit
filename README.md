@@ -10,7 +10,9 @@ each curve to some of my measurements, then scores it on the measurements set as
 I can inspect unusually high or low values, try another sample against the same
 curves and save the analysis as a PDF, an Excel workbook or an editable PowerPoint
 presentation. In Excel, I can change a cutoff and see how many measurements exceed
-it without rerunning the app.
+it without rerunning the app. For a very large file, the command line can fit a random
+sample of its rows instead of the whole file, as described in
+[Fitting a very large data file](#fitting-a-very-large-data-file).
 
 I also wanted to see where production time went, alongside the measurements.
 The equipment page splits lost time into stops, slow running and rejected parts.
@@ -645,19 +647,19 @@ formulas are checked against scipy in every CI run. `tests/test_gpu_bootstrap.py
 fallback, the error for a missing GPU, the repeatability of seeded results and the benchmark
 report. GitHub's hosted runners have no GPU, so CI runs the CPU tests and a small CPU benchmark.
 
-## Fitting a CSV too big to load at once
+## Fitting a very large data file
 
-I built a streaming sampler because the upload path reads a whole CSV into memory before
-anything happens. That is fine for a few thousand rows, but a long export with millions of
-rows is slow to load and uses a lot of memory on my laptop. I wanted DistroFit to fit a
-column from a file like that without holding every row at once.
+I built a way to fit a curve to a huge file of measurements without opening the whole
+file, because my laptop slows to a crawl on files with millions of rows. A CSV is a plain
+text spreadsheet, one row per line. I wanted DistroFit to read a file like that a piece at
+a time and keep a random handful of rows to work with.
 
-The command reads the file in chunks of 100,000 rows. For each row with a number in the
-chosen column, it draws a random number and keeps only the rows with the smallest numbers
-seen so far. That keeps a uniform random sample of the size I ask for, so every row has the
-same chance of being kept, and the memory use stays about the same whether the file has
-thousands of rows or millions. Blank cells, text and infinite values are skipped and counted.
-The saved report records how many rows were scanned, how many were skipped, the chunk size,
+The command reads the file in pieces of 100,000 rows. For each row with a number in the
+chosen column, it gives that row a random score and keeps only the rows with the lowest
+scores seen so far. That leaves a random sample of the size I ask for, where every row has
+the same chance of being picked, and the memory use stays about the same whether the file
+has thousands of rows or millions. Blank cells, text and infinite values are skipped and counted.
+The saved report records how many rows were scanned, how many were skipped, the piece size,
 the sample size and the seed, so the sample can be explained later.
 
 To fit a random 5,000-row sample from a large file:
@@ -677,7 +679,7 @@ python tools/make_large_csv.py --rows 2000000 --out .runtime/large/measurements.
 The fit then works on the sample, not the whole file. The winner can differ from a fit of
 every row, and the report says so through its sample settings. `tests/test_large_csv.py`
 checks that every sampled value matches its source row, that the same seed repeats the
-sample, that the chunk size does not change it, and that the command line writes the sampling
+sample, that the piece size does not change it, and that the command line writes the sampling
 record. CI generates a two-million-row file on each run and fits a 5,000-row sample from it.
 
 ## Notes and tests

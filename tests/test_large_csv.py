@@ -51,6 +51,10 @@ def test_same_seed_repeats_and_chunk_size_does_not_change_the_sample(big_csv):
     other_seed = analysis.reservoir_sample_column(path, "Value", 300, seed=10, chunksize=1_000)
     assert np.array_equal(first["row_numbers"], again["row_numbers"])
     assert not np.array_equal(first["row_numbers"], other_seed["row_numbers"])
+    # Chunk size must not matter: the same seed gives the same sample at every piece size.
+    for chunksize in (1, 7, 999, 50_000, ROWS + 1):
+        other = analysis.reservoir_sample_column(path, "Value", 300, seed=9, chunksize=chunksize)
+        assert np.array_equal(other["row_numbers"], first["row_numbers"]), chunksize
 
 
 def test_sample_mean_is_close_to_the_whole_column(big_csv):
