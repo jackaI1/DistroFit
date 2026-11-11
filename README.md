@@ -519,9 +519,10 @@ records, fits a curve to each group and compares it with the curve for the whole
 It also asks whether readings taken at installation can flag the early failures.
 
 The records are invented, so the notebook runs anywhere and every number can be
-checked. In the saved run, the whole sample gives a Weibull shape of **0.80**. The
-groups it finds give **0.71** and **1.72**. The pooled curve sits between them and
-describes neither. Shape is the number that says whether the failure rate rises with
+checked. In the saved run, the whole sample gives a Weibull shape of **0.80**. Two of
+the three groups it finds have failures, and their shapes are **0.71** and **1.72**. The
+third group has 275 units and no failures, so no curve can be fitted to it. The pooled
+curve sits between the two fitted shapes and describes neither. Shape is the number that says whether the failure rate rises with
 age (above 1) or falls (below 1).
 
 The notebook uses a Jupyter notebook, a document that mixes code, text and charts
