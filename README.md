@@ -509,6 +509,53 @@ folder, then copy the [blank worksheet](docs/root-cause-worksheet.md) for a new
 investigation. The worked case explains the evidence, rejected alternatives,
 time assumptions and follow-up checks.
 
+## Finding mixed failure modes in a notebook
+
+I built a notebook because my Reliability page can give a misleading life estimate
+when one sample mixes two kinds of failure. Some bearings wear out late, and others
+fail soon after installation, usually from dirt or a poor fit. One curve fitted to
+both groups describes neither group well. The notebook looks for groups in the
+records, fits a curve to each group and compares it with the curve for the whole sample.
+It also asks whether readings taken at installation can flag the early failures.
+
+The records are invented, so the notebook runs anywhere and every number can be
+checked. In the saved run, the whole sample gives a Weibull shape of **0.80**. The
+groups it finds give **0.71** and **1.72**. The pooled curve sits between them and
+describes neither. Shape is the number that says whether the failure rate rises with
+age (above 1) or falls (below 1).
+
+The notebook uses a Jupyter notebook, a document that mixes code, text and charts
+so I can read each step. To try it, install the notebook tools and open the file:
+
+```sh
+python -m pip install -r requirements.txt -r requirements-notebook.txt
+python -m jupyter lab notebooks/failure_modes.ipynb
+```
+
+Run the cells from the top. The first cell prints the seed, the fixed number that
+makes every random step repeat. To use my own records, replace the generated table
+with a CSV that has `time` (hours), `failed` (1 for a failure, 0 for a unit still
+running), `load` and `contamination` columns.
+
+I choose the number of groups two ways. For 2, 3 and 4 groups, K-means shows how
+tight each group is, and a Gaussian mixture model shows how well a set of overlapping
+bell-shaped groups explains the data. Both picked **3 groups** in the saved run. If
+they had disagreed, I would compare the fits before trusting either one.
+
+The early-failure test uses install-time readings, load and contamination, to predict
+failures before 300 hours. Each bearing is scored by a model that did not see it,
+using 5-fold cross-validation. On the saved run, logistic regression reaches an AUC of
+**0.75**, where 0.5 is chance, and the prevalence-only reference reaches 0.50. At the
+usual 0.5 cutoff it catches only about a fifth of early failures, so I check the
+calibration plot before treating its probabilities as risk.
+
+The technical side: `failure_modes.py` holds the functions (scaling, the cluster scans,
+the per-group Weibull fits from `reliability.py`, and the cross-validated baselines), and
+the notebook shows them with charts. The seeds are fixed, so the results repeat.
+Continuous integration (CI) runs the notebook headlessly with `nbmake` in a separate job
+and the tests in `tests/test_failure_modes.py` in the main job. The full method, limits and
+how each choice was made are in [the notebook guide](docs/failure-modes.md).
+
 ## Notes and tests
 
 [How the analysis works](docs/analysis.md) explains the split, scoring, tail checks
