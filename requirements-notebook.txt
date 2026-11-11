@@ -1,0 +1,6 @@
+# Notebook checks: run the Jupyter notebooks headlessly with nbmake.
+# Install with: python -m pip install -r requirements.txt -r requirements-notebook.txt
+-r requirements.txt
+jupyterlab==4.6.6
+nbmake==1.5.5
+ipykernel==7.4.0
