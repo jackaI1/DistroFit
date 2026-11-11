@@ -34,7 +34,8 @@ zero or negative values. If I delete it or paste text over it, formulas show
 `n.a.` for the dependent tail results. A missing scenario has count zero and
 unavailable statistics, rather than a misleading zero mean or zero tail share.
 
-I leave **Candidates** and **Observations** as the exported record. Filtering
+**Families**, **Summary** and **Pivot** also follow B4, so the family counts above
+the cutoff change with it. I leave **Candidates** and **Observations** as the exported record. Filtering
 or sorting a table is fine. I regenerate the file to add observations or change
 the fitted models; formulas use the bounded exported range, not arbitrary new rows.
 
@@ -58,6 +59,31 @@ Removed NaN and infinite source values remain explicit text. The source index an
 prepared index are different after filtering; the export does not claim a row-level
 mapping between them. The settings on Review record filtering and split choices.
 
+## Families, summaries and the pivot
+
+Each measurement needs a family before the groups can be summarized. A family is a
+plain-language shape for a fitted curve: **Symmetric, unbounded** (the normal, Student's t,
+Cauchy and similar curves), **Positive and skewed** (gamma, exponential, Weibull, lognormal
+and similar), and **Bounded between two limits** (beta and uniform). When no fitted curve gives
+a value a positive density, the value goes to **Outside every fitted family**.
+
+**Families** has one row per observation. Its **Best-fit distribution** column names the
+fitted curve with the highest density at that value. That choice was made when the workbook
+was written, from the frozen fits. Its **Family** column is a `VLOOKUP` on **Lookup**, the
+table that maps each distribution to its family and plain meaning. If I rename a family on
+Lookup, the lookups, Summary and pivot change after recalculation or a refresh.
+
+**Summary** uses `COUNTIF` for observations per family, `SUMIF` for their total value,
+`AVERAGEIF` for the average and `COUNTIFS` for those above the cutoff. A second grid uses
+`SUMIFS` to total values by family and sample group. Its final check cell confirms that the
+grid adds back to the overall total.
+
+**Pivot** is a native Excel PivotTable over the Families rows. Families are the rows, sample
+groups are the columns, and each cell counts observations. A PivotChart beside it is linked to
+the same pivot. Excel refreshes the pivot when the file opens, and **Data > Refresh All**
+updates it after edits. A pivot is a summary I can rearrange in Excel. The pivot is not
+recalculated from Families by formulas, so its layout must be refreshed.
+
 ## Implementation and checks
 
 `excel_report.py` uses XlsxWriter to create an in-memory `.xlsx` file, Excel's
@@ -74,9 +100,15 @@ The summary uses `COUNTIF` for sample size, `AVERAGEIF` for the sample mean and
 Python supplies independently calculated cached results so previews work before
 the first recalculation. Those caches alone are not evidence of live formulas.
 
+XlsxWriter cannot write pivot tables. `excel_pivot.py` adds the standard pivot cache,
+records, pivot definition and the chart's pivot link after the workbook is saved, and
+the tests read those parts back. Excel refreshes the pivot on open. I have not opened
+the file in desktop Excel here; the structure is checked by XML parsing, openpyxl and
+LibreOffice in CI.
+
 ```sh
 python -m pip install -r requirements.txt -r requirements-dev.txt
-python -m pytest tests/test_excel_report.py -q
+python -m pytest tests/test_excel_report.py tests/test_excel_families.py -q
 ```
 
 CI also installs LibreOffice Calc, an independent spreadsheet engine, and opens
@@ -87,7 +119,10 @@ keeps those headless runs separate from any open user session. Set
 `REQUIRE_SPREADSHEET_ENGINE=1` to fail rather than skip when that engine is missing.
 The CI run publishes a synthetic workbook as a downloadable artifact.
 
-The tests cover the generated and CSV command lines, literal formula-like input,
+The family tests compare VLOOKUP results, SUMIF and SUMIFS totals, and the pivot's
+counts with pandas calculated from the same rows. The pivot definition is checked in the
+XML, including its source range, row and column fields and count measure. The tests also
+cover the generated and CSV command lines, literal formula-like input,
 nonfinite source labels, missing scenarios, failed candidates, infinite loss,
 invalid partitions and export limits. The app tests exercise the download control
 and stale-result removal. Formula execution is tested in LibreOffice, not Microsoft
