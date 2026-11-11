@@ -29,7 +29,7 @@ def workbook(payload, cached=False):
 def test_values_split_indices_formulas_and_caches_match_analysis(payload):
     book = workbook(payload)
     cached = workbook(payload, cached=True)
-    assert book.sheetnames == ["Review", "Candidates", "Observations"]
+    assert book.sheetnames == ["Review", "Candidates", "Observations", "Lookup", "Families", "Summary", "Pivot"]
     threshold = payload["settings"]["tail_threshold"]
     for row, key in [(7, "train_indices"), (8, "held_indices"), (9, None)]:
         data = np.asarray(payload["scenario_data"] if key is None else
@@ -79,8 +79,10 @@ def test_untrusted_strings_never_become_formulas_or_external_links(payload):
     for sheet in book:
         for row in sheet:
             for cell in row:
-                if sheet.title != "Review" or cell.coordinate not in {
-                        f"{column}{r}" for column in "BCDE" for r in (7, 8, 9)}:
+                # Formulas are allowed only where the workbook defines them, never from text fields.
+                allowed = sheet.title in {"Families", "Summary"} or (
+                    sheet.title == "Review" and cell.coordinate in {f"{column}{r}" for column in "BCDE" for r in (7, 8, 9)})
+                if not allowed:
                     assert cell.data_type != "f"
                 assert cell.hyperlink is None
     assert book["Observations"]["G7"].value == "=1+2"

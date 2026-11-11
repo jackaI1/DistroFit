@@ -335,8 +335,17 @@ python excel_report.py measurements.csv --column weight --out /tmp/weight_review
 
 I keep the original values, the values used for fitting and testing, and each model's
 scores together in the workbook. The model scores stay fixed when I change the
-cutoff. I rerun DistroFit to change the data or refit a curve. The
-[Excel guide](docs/excel-review.md) explains the formulas, export limits and tests.
+cutoff. I rerun DistroFit to change the data or refit a curve.
+
+The workbook also sorts each measurement into a plain-language family, such as
+"symmetric, unbounded" for bell-shaped curves or "positive and skewed" for curves
+with a long tail toward high values. A **Lookup** sheet holds that mapping, so I
+can rename a family in one place. **Summary** totals the measurements per family
+with `SUMIF` and `COUNTIFS` formulas. **Pivot** is a real Excel pivot table, with a
+chart linked to it, that counts measurements by family and by training, held-out
+or scenario group. I can rearrange it in Excel, and **Data > Refresh All** updates it
+after I change the lookup. The [Excel guide](docs/excel-review.md) explains how each
+family and summary is calculated, along with the export limits and tests.
 
 ## Switching batches and checking pasted measurements
 
